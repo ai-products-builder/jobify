@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Jobify — AI Job Tracker</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --bg: #f7f6f3; --surface: #ffffff; --border: #e8e6e1;
+    --text: #1a1a1a; --muted: #6b6b6b; --hint: #a0a0a0;
+    --msft: #0078d4; --goog: #34a853; --amzn: #ff9900; --meta: #0866ff;
+    --accent: #5b4fcf; --accent-bg: #f0eeff;
+    --green: #16a34a; --green-bg: #dcfce7;
+    --yellow: #ca8a04; --yellow-bg: #fef9c3;
+    --red: #dc2626; --red-bg: #fee2e2;
+    --radius: 12px; --sidebar: 240px;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; }
+
+  .sidebar { width: var(--sidebar); min-height: 100vh; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; position: fixed; top: 0; left: 0; z-index: 100; padding: 20px 0; }
+  .logo { padding: 0 20px 20px; border-bottom: 1px solid var(--border); }
+  .logo-name { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--accent); }
+  .logo-sub { font-size: 11px; color: var(--hint); margin-top: 2px; }
+  .nav { padding: 16px 12px; flex: 1; }
+  .nav-item { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 8px; font-size: 14px; font-weight: 500; color: var(--muted); cursor: pointer; transition: all 0.15s; margin-bottom: 2px; }
+  .nav-item:hover { background: var(--bg); color: var(--text); }
+  .nav-item.active { background: var(--accent-bg); color: var(--accent); }
+  .nav-section { font-size: 11px; font-weight: 600; color: var(--hint); text-transform: uppercase; letter-spacing: 0.06em; padding: 12px 12px 6px; }
+  .company-filter { padding: 0 12px; }
+  .company-item { display: flex; align-items: center; gap: 8px; padding: 6px 4px; font-size: 13px; color: var(--muted); cursor: pointer; }
+  .company-item input { cursor: pointer; accent-color: var(--accent); }
+  .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; display: inline-block; }
+  .sidebar-footer { padding: 16px 20px; border-top: 1px solid var(--border); }
+  .sync-time { font-size: 11px; color: var(--hint); margin-bottom: 8px; }
+  .refresh-btn { width: 100%; padding: 8px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--muted); font-size: 13px; font-family: 'DM Sans', sans-serif; cursor: pointer; font-weight: 500; }
+  .refresh-btn:hover { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+
+  .main { margin-left: var(--sidebar); flex: 1; min-height: 100vh; }
+  .topbar { background: var(--surface); border-bottom: 1px solid var(--border); padding: 14px 28px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 50; }
+  .page-title { font-size: 18px; font-weight: 600; }
+  .topbar-right { display: flex; gap: 10px; align-items: center; }
+  .search-input { padding: 8px 14px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); outline: none; width: 200px; }
+  .search-input:focus { border-color: var(--accent); background: var(--surface); }
+  select.filter { padding: 8px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); outline: none; cursor: pointer; }
+  .content { padding: 24px 28px; }
+
+  .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 12px; margin-bottom: 24px; }
+  .stat-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 16px 18px; }
+  .stat-label { font-size: 12px; color: var(--hint); font-weight: 500; margin-bottom: 6px; }
+  .stat-value { font-size: 28px; font-weight: 600; line-height: 1; }
+  .stat-sub { font-size: 11px; color: var(--hint); margin-top: 4px; }
+
+  .jobs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
+  .job-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; cursor: pointer; transition: all 0.2s; border-left: 3px solid transparent; }
+  .job-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
+  .job-card.msft { border-left-color: var(--msft); }
+  .job-card.goog { border-left-color: var(--goog); }
+  .job-card.amzn { border-left-color: var(--amzn); }
+  .job-card.meta { border-left-color: var(--meta); }
+  .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
+  .card-company { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
+  .card-time { font-size: 11px; color: var(--hint); }
+  .card-title { font-size: 15px; font-weight: 600; margin-bottom: 10px; line-height: 1.3; }
+  .card-badges { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .badge { font-size: 11px; font-weight: 500; padding: 3px 9px; border-radius: 99px; }
+  .badge-remote { background: #dcfce7; color: #16a34a; }
+  .badge-atlanta { background: #dbeafe; color: #1d4ed8; }
+  .badge-new { background: #fef9c3; color: #ca8a04; }
+  .badge-status { background: var(--accent-bg); color: var(--accent); }
+  .card-summary { font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 14px; }
+  .card-bottom { display: flex; justify-content: space-between; align-items: center; }
+  .fit-score { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; }
+  .fit-high { background: var(--green-bg); color: var(--green); }
+  .fit-mid { background: var(--yellow-bg); color: var(--yellow); }
+  .fit-low { background: var(--red-bg); color: var(--red); }
+  .card-btn { font-size: 12px; padding: 5px 12px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg); color: var(--muted); cursor: pointer; font-family: 'DM Sans', sans-serif; font-weight: 500; }
+  .card-btn:hover { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+
+  .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
+  .overlay.open { opacity: 1; pointer-events: all; }
+  .detail-panel { position: fixed; top: 0; right: 0; width: 440px; height: 100vh; background: var(--surface); border-left: 1px solid var(--border); z-index: 201; transform: translateX(100%); transition: transform 0.3s ease; display: flex; flex-direction: column; }
+  .detail-panel.open { transform: translateX(0); }
+  .panel-header { padding: 20px 24px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; }
+  .panel-company { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
+  .panel-title { font-size: 17px; font-weight: 600; line-height: 1.3; }
+  .close-btn { font-size: 22px; cursor: pointer; color: var(--hint); background: none; border: none; line-height: 1; padding: 2px; }
+  .panel-body { flex: 1; overflow-y: auto; padding: 20px 24px; }
+  .panel-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
+  .panel-section { margin-bottom: 22px; }
+  .panel-section-title { font-size: 11px; font-weight: 600; color: var(--hint); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
+  .fit-large { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+  .pros-list, .cons-list { list-style: none; }
+  .pros-list li, .cons-list li { padding: 5px 0; font-size: 13px; color: var(--muted); display: flex; gap: 8px; line-height: 1.4; }
+  .pros-list li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
+  .cons-list li::before { content: '!'; color: var(--yellow); font-weight: 700; flex-shrink: 0; }
+  .status-select-full { width: 100%; padding: 9px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); outline: none; margin-bottom: 10px; }
+  .notes-area { width: 100%; padding: 10px 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); outline: none; resize: vertical; min-height: 80px; }
+  .notes-area:focus { border-color: var(--accent); }
+  .save-note-btn { width: 100%; padding: 9px; border-radius: 8px; border: none; background: var(--accent); color: #fff; font-size: 13px; font-family: 'DM Sans', sans-serif; font-weight: 500; cursor: pointer; margin-top: 8px; }
+  .panel-actions { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 10px; }
+  .panel-btn { flex: 1; padding: 10px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--muted); font-size: 13px; font-family: 'DM Sans', sans-serif; font-weight: 500; cursor: pointer; }
+  .panel-btn:hover { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+  .open-link { display: block; text-align: center; padding: 10px; border-radius: 8px; background: var(--text); color: #fff; font-size: 13px; font-weight: 500; text-decoration: none; margin-top: 8px; }
+  .open-link:hover { background: #333; }
+  .panel-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  .pipeline { display: flex; margin-bottom: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+  .pipe-stage { flex: 1; padding: 14px 16px; text-align: center; border-right: 1px solid var(--border); }
+  .pipe-stage:last-child { border-right: none; }
+  .pipe-count { font-size: 22px; font-weight: 600; }
+  .pipe-label { font-size: 11px; color: var(--hint); margin-top: 2px; }
+
+  .table-wrap { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
+  table { width: 100%; border-collapse: collapse; }
+  th { font-size: 11px; font-weight: 600; color: var(--hint); text-transform: uppercase; letter-spacing: 0.06em; padding: 12px 16px; border-bottom: 1px solid var(--border); text-align: left; background: var(--bg); }
+  td { padding: 14px 16px; font-size: 13px; border-bottom: 1px solid var(--border); }
+  tr:last-child td { border-bottom: none; }
+  tr:hover td { background: var(--bg); }
+  .table-title { font-weight: 500; color: var(--accent); cursor: pointer; }
+  .table-title:hover { text-decoration: underline; }
+  .status-pill { font-size: 11px; font-weight: 600; padding: 3px 10px; border-radius: 99px; white-space: nowrap; }
+  .s-new { background: #f3f4f6; color: #6b7280; }
+  .s-saved { background: #ede9fe; color: #7c3aed; }
+  .s-applied { background: #dbeafe; color: #1d4ed8; }
+  .s-phone_screen { background: #e0f2fe; color: #0369a1; }
+  .s-interview { background: #dcfce7; color: #16a34a; }
+  .s-offer { background: #fef9c3; color: #ca8a04; }
+  .s-rejected { background: #fee2e2; color: #dc2626; }
+
+  .modal-overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.4); z-index: 300; display: none; align-items: center; justify-content: center; }
+  .modal-overlay.open { display: flex; }
+  .modal { background: var(--surface); border-radius: 16px; width: 560px; max-height: 80vh; display: flex; flex-direction: column; overflow: hidden; }
+  .modal-header { padding: 20px 24px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: center; }
+  .modal-title { font-size: 16px; font-weight: 600; }
+  .modal-body { padding: 20px 24px; overflow-y: auto; flex: 1; }
+  .modal-textarea { width: 100%; min-height: 240px; padding: 12px; border: 1px solid var(--border); border-radius: 8px; font-size: 13px; font-family: 'DM Sans', sans-serif; line-height: 1.6; background: var(--bg); color: var(--text); resize: vertical; outline: none; }
+  .modal-footer { padding: 16px 24px; border-top: 1px solid var(--border); display: flex; gap: 8px; justify-content: flex-end; }
+  .modal-btn { padding: 8px 18px; border-radius: 8px; font-size: 13px; font-family: 'DM Sans', sans-serif; font-weight: 500; cursor: pointer; border: 1px solid var(--border); background: var(--bg); color: var(--muted); }
+  .modal-btn.primary { background: var(--accent); color: #fff; border-color: var(--accent); }
+  .prep-question { background: var(--bg); border: 1px solid var(--border); border-radius: 10px; padding: 14px; margin-bottom: 10px; }
+  .prep-q-num { font-size: 11px; font-weight: 600; color: var(--accent); margin-bottom: 6px; }
+  .prep-q-text { font-size: 14px; font-weight: 500; margin-bottom: 10px; line-height: 1.4; }
+  .prep-textarea { width: 100%; padding: 8px 10px; border: 1px solid var(--border); border-radius: 6px; font-size: 12px; font-family: 'DM Sans', sans-serif; background: var(--surface); color: var(--muted); resize: vertical; outline: none; min-height: 60px; }
+  .loading-text { color: var(--hint); font-size: 14px; text-align: center; padding: 20px; }
+  .empty { text-align: center; padding: 60px 24px; color: var(--hint); font-size: 14px; }
+  .empty-title { font-size: 16px; font-weight: 500; color: var(--muted); margin-bottom: 6px; }
+
+  @media (max-width: 900px) {
+    .jobs-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .sidebar { display: none; }
+    .main { margin-left: 0; }
+    .detail-panel { width: 100%; }
+  }
+</style>
+</head>
+<body>
+
+<aside class="sidebar">
+  <div class="logo">
+    <div class="logo-name">Jobify</div>
+    <div class="logo-sub">AI-powered job tracker</div>
+  </div>
+  <nav class="nav">
+    <div class="nav-item active" onclick="showPage('feed')" id="nav-feed">
+      <span>🔍</span> Job Feed
+    </div>
+    <div class="nav-item" onclick="showPage('applications')" id="nav-applications">
+      <span>📋</span> My Applications
+    </div>
+    <div class="nav-section">Companies</div>
+    <div class="company-filter">
+      <label class="company-item"><input type="checkbox" checked onchange="renderJobs()" id="f-Microsoft"> <span class="dot" style="background:var(--msft)"></span> Microsoft</label>
+      <label class="company-item"><input type="checkbox" checked onchange="renderJobs()" id="f-Google"> <span class="dot" style="background:var(--goog)"></span> Google</label>
+      <label class="company-item"><input type="checkbox" checked onchange="renderJobs()" id="f-Amazon"> <span class="dot" style="background:var(--amzn)"></span> Amazon</label>
+      <label class="company-item"><input type="checkbox" checked onchange="renderJobs()" id="f-Meta"> <span class="dot" style="background:var(--meta)"></span> Meta</label>
+    </div>
+  </nav>
+  <div class="sidebar-footer">
+    <div class="sync-time" id="sync-time">Loading...</div>
+    <button class="refresh-btn" onclick="loadJobs()">↻ Refresh Jobs</button>
+  </div>
+</aside>
+
+<main class="main">
+  <div class="topbar">
+    <div class="page-title" id="page-title">Job Feed</div>
+    <div class="topbar-right">
+      <input type="text" class="search-input" placeholder="Search jobs..." oninput="renderJobs()" id="search">
+      <select class="filter" onchange="renderJobs()" id="loc-filter">
+        <option value="">All locations</option>
+        <option value="atlanta">Atlanta</option>
+        <option value="remote">Remote</option>
+      </select>
+      <select class="filter" onchange="renderJobs()" id="time-filter">
+        <option value="0">All time</option>
+        <option value="1">Last 24h</option>
+        <option value="3">Last 3 days</option>
+        <option value="7">Last 7 days</option>
+        <option value="30">Last 30 days</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="content" id="page-feed">
+    <div class="stats-grid" id="stats-grid"></div>
+    <div class="jobs-grid" id="jobs-grid">
+      <div class="empty" style="grid-column:1/-1"><div class="empty-title">Loading jobs...</div></div>
+    </div>
+  </div>
+
+  <div class="content" id="page-applications" style="display:none">
+    <div class="pipeline" id="pipeline"></div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Company</th><th>Job Title</th><th>Location</th><th>Status</th><th>Fit</th><th>Found</th></tr></thead>
+        <tbody id="app-table-body"></tbody>
+      </table>
+    </div>
+  </div>
+</main>
+
+<div class="overlay" id="overlay" onclick="closePanel()"></div>
+<div class="detail-panel" id="detail-panel">
+  <div class="panel-header">
+    <div>
+      <div class="panel-company" id="panel-company"></div>
+      <div class="panel-title" id="panel-title"></div>
+    </div>
+    <button class="close-btn" onclick="closePanel()">×</button>
+  </div>
+  <div class="panel-body">
+    <div class="panel-meta" id="panel-meta"></div>
+    <div class="panel-section">
+      <div class="panel-section-title">AI Fit Analysis</div>
+      <div id="panel-fit-score"></div>
+      <ul class="pros-list" id="panel-pros"></ul>
+      <ul class="cons-list" id="panel-cons" style="margin-top:8px"></ul>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">Track Application</div>
+      <select class="status-select-full" id="panel-status-select" onchange="saveStatus()">
+        <option value="new">New</option>
+        <option value="saved">Saved</option>
+        <option value="applied">Applied</option>
+        <option value="phone_screen">Phone Screen</option>
+        <option value="interview">Interview</option>
+        <option value="offer">Offer</option>
+        <option value="rejected">Rejected</option>
+      </select>
+      <textarea class="notes-area" id="panel-notes" placeholder="Add notes..."></textarea>
+      <button class="save-note-btn" onclick="saveNotes()">Save Notes</button>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">AI Tools</div>
+      <div class="panel-actions">
+        <button class="panel-btn" onclick="generateCoverLetter()">✉ Cover Letter</button>
+        <button class="panel-btn" onclick="generateInterviewPrep()">🎯 Interview Prep</button>
+      </div>
+      <a href="#" class="open-link" id="panel-link" target="_blank">Open Job Posting →</a>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">Description</div>
+      <div class="panel-desc" id="panel-desc"></div>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="cl-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">✉ Cover Letter</div>
+      <button class="close-btn" onclick="closeModal('cl-modal')">×</button>
+    </div>
+    <div class="modal-body"><div id="cl-content"><div class="loading-text">Generating with Claude AI...</div></div></div>
+    <div class="modal-footer">
+      <button class="modal-btn" onclick="copyText('cl-textarea')">Copy</button>
+      <button class="modal-btn primary" onclick="closeModal('cl-modal')">Done</button>
+    </div>
+  </div>
+</div>
+
+<div class="modal-overlay" id="prep-modal">
+  <div class="modal">
+    <div class="modal-header">
+      <div class="modal-title">🎯 Interview Prep</div>
+      <button class="close-btn" onclick="closeModal('prep-modal')">×</button>
+    </div>
+    <div class="modal-body" id="prep-content"><div class="loading-text">Generating questions...</div></div>
+    <div class="modal-footer">
+      <button class="modal-btn primary" onclick="closeModal('prep-modal')">Done</button>
+    </div>
+  </div>
+</div>
+
+<script>
+const COLORS = { Microsoft:'#0078d4', Google:'#34a853', Amazon:'#ff9900', Meta:'#0866ff' };
+const CLASSES = { Microsoft:'msft', Google:'goog', Amazon:'amzn', Meta:'meta' };
+const NOW_S = Math.floor(Date.now()/1000);
+let allJobs = {}, currentJob = null;
+let tracker = JSON.parse(localStorage.getItem('jobify_tracker')||'{}');
+let apiKey = localStorage.getItem('jobify_api_key')||'';
+
+const SAMPLES = {
+  "msft_1":{ id:"msft_1", company:"Microsoft", title:"Senior Product Manager – Ads Platform", location:"United States, Georgia, Atlanta", url:"https://apply.careers.microsoft.com/careers", posted_ts:NOW_S-3600, found_date:new Date().toISOString(), fit_score:9, ai_summary:"Excellent match for your ads and data background. This role focuses on ML-driven ad targeting products, directly aligned with your 8 years of PM experience.", ai_pros:["Direct match to ads platform experience","Atlanta-based, no relocation needed","Senior IC level — right seniority"], ai_cons:["May require Azure ML knowledge"], description:"Lead product strategy for Microsoft's advertising platform, working with data scientists and engineers to build next-gen ad targeting systems." },
+  "goog_1":{ id:"goog_1", company:"Google", title:"Product Manager, Data Analytics", location:"Remote", url:"https://careers.google.com", posted_ts:NOW_S-7200, found_date:new Date().toISOString(), fit_score:8, ai_summary:"Strong fit for your data product background. Role involves building analytics tools used by millions of advertisers globally.", ai_pros:["Core data analytics focus","Remote-friendly","High impact product"], ai_cons:["Google PM process is highly structured"], description:"Drive product vision for Google's advertiser analytics suite. Work cross-functionally with engineering, UX, and sales." },
+  "amzn_1":{ id:"amzn_1", company:"Amazon", title:"Sr. PM – Advertising Data Products", location:"Remote", url:"https://amazon.jobs", posted_ts:NOW_S-86400, found_date:new Date().toISOString(), fit_score:9, ai_summary:"Near-perfect match. Amazon Ads is one of the fastest-growing ad businesses and this role sits at the intersection of ads and data.", ai_pros:["Ads + data intersection","Fully remote","High comp potential"], ai_cons:["Amazon culture can be intense"], description:"Own the roadmap for Amazon's advertising data products, enabling brands to measure and optimize their ad spend." },
+  "meta_1":{ id:"meta_1", company:"Meta", title:"Product Manager, Monetization Analytics", location:"Remote", url:"https://metacareers.com", posted_ts:NOW_S-172800, found_date:new Date().toISOString(), fit_score:7, ai_summary:"Good match on the analytics side. Meta's monetization team works on ad measurement and attribution at massive scale.", ai_pros:["Analytics focus aligns well","Remote role","Massive scale exposure"], ai_cons:["Less data infrastructure focus","Competitive interview process"], description:"Build products that help advertisers measure effectiveness of their Meta ad campaigns across Facebook, Instagram, and WhatsApp." },
+  "msft_2":{ id:"msft_2", company:"Microsoft", title:"Principal PM – Data Platform", location:"United States, Georgia, Atlanta", url:"https://apply.careers.microsoft.com/careers", posted_ts:NOW_S-259200, found_date:new Date().toISOString(), fit_score:8, ai_summary:"Strong match for your data background. This role leads product strategy for Microsoft's enterprise data platform.", ai_pros:["Data platform leadership","Atlanta location","Principal level"], ai_cons:["Requires Azure Synapse knowledge"], description:"Define and execute the product roadmap for Microsoft Fabric data platform serving enterprise customers globally." },
+  "goog_2":{ id:"goog_2", company:"Google", title:"Group PM, Search Ads", location:"Remote", url:"https://careers.google.com", posted_ts:NOW_S-345600, found_date:new Date().toISOString(), fit_score:6, ai_summary:"Moderate match. Strong ads focus but search-specific domain is a stretch from your background.", ai_pros:["Ads domain expertise valued","Remote flexibility","Leadership opportunity"], ai_cons:["Search ads is specialized","Requires search ranking knowledge"], description:"Lead a team of PMs building the next generation of Google Search advertising products." }
+};
+
+function getStatus(id){ return (tracker[id]&&tracker[id].status)||'new'; }
+function getNotes(id){ return (tracker[id]&&tracker[id].notes)||''; }
+function saveTracker(){ localStorage.setItem('jobify_tracker',JSON.stringify(tracker)); }
+
+function timeAgo(ts){
+  if(!ts) return '';
+  const d=NOW_S-ts;
+  if(d<3600) return 'Just posted';
+  if(d<86400) return Math.floor(d/3600)+'h ago';
+  if(d<172800) return 'Yesterday';
+  return Math.floor(d/86400)+'d ago';
+}
+
+function fitClass(s){ return s>=8?'fit-high':s>=6?'fit-mid':'fit-low'; }
+
+function statusLabel(s){
+  return {new:'New',saved:'Saved',applied:'Applied',phone_screen:'Phone Screen',interview:'Interview',offer:'Offer',rejected:'Rejected'}[s]||'New';
+}
+function statusPillClass(s){
+  return {new:'s-new',saved:'s-saved',applied:'s-applied',phone_screen:'s-phone_screen',interview:'s-interview',offer:'s-offer',rejected:'s-rejected'}[s]||'s-new';
+}
+
+async function loadJobs(){
+  document.getElementById('sync-time').textContent='Syncing...';
+  try {
+    const isLocal = window.location.hostname==='localhost'||window.location.hostname==='127.0.0.1'||window.location.protocol==='file:';
+    const url = isLocal ? 'jobs.json?t='+Date.now() : 'https://raw.githubusercontent.com/ai-products-builder/jobify/main/jobs.json?t='+Date.now();
+    const r = await fetch(url);
+    if(!r.ok) throw new Error();
+    allJobs = await r.json();
+    document.getElementById('sync-time').textContent='Synced '+new Date().toLocaleTimeString();
+  } catch(e){
+    allJobs = SAMPLES;
+    document.getElementById('sync-time').textContent='Showing sample data';
+  }
+  renderJobs();
+  renderApplications();
+}
+
+function getFiltered(){
+  const search=document.getElementById('search').value.toLowerCase();
+  const loc=document.getElementById('loc-filter').value;
+  const days=parseInt(document.getElementById('time-filter').value);
+  const companies=['Microsoft','Google','Amazon','Meta'].filter(c=>document.getElementById('f-'+c)?.checked);
+  return Object.values(allJobs).filter(j=>{
+    if(search&&!(j.title||'').toLowerCase().includes(search)) return false;
+    if(!companies.includes(j.company)) return false;
+    const l=(j.location||'').toLowerCase();
+    if(loc==='atlanta'&&!l.includes('atlanta')) return false;
+    if(loc==='remote'&&!l.includes('remote')) return false;
+    if(days>0&&j.posted_ts&&(NOW_S-j.posted_ts)>days*86400) return false;
+    return true;
+  }).sort((a,b)=>(b.posted_ts||0)-(a.posted_ts||0));
+}
+
+function renderJobs(){
+  const jobs=getFiltered();
+  const newToday=jobs.filter(j=>j.posted_ts&&(NOW_S-j.posted_ts)<86400).length;
+  const remote=jobs.filter(j=>(j.location||'').toLowerCase().includes('remote')).length;
+  const atlanta=jobs.filter(j=>(j.location||'').toLowerCase().includes('atlanta')).length;
+
+  document.getElementById('stats-grid').innerHTML=`
+    <div class="stat-card"><div class="stat-label">New Today</div><div class="stat-value" style="color:var(--yellow)">${newToday}</div><div class="stat-sub">posted in last 24h</div></div>
+    <div class="stat-card"><div class="stat-label">Total Jobs</div><div class="stat-value" style="color:var(--accent)">${jobs.length}</div><div class="stat-sub">matching filters</div></div>
+    <div class="stat-card"><div class="stat-label">Remote</div><div class="stat-value" style="color:var(--green)">${remote}</div><div class="stat-sub">work from anywhere</div></div>
+    <div class="stat-card"><div class="stat-label">Atlanta</div><div class="stat-value" style="color:var(--msft)">${atlanta}</div><div class="stat-sub">local opportunities</div></div>`;
+
+  if(!jobs.length){ document.getElementById('jobs-grid').innerHTML='<div class="empty" style="grid-column:1/-1"><div class="empty-title">No jobs found</div>Try adjusting your filters</div>'; return; }
+
+  document.getElementById('jobs-grid').innerHTML=jobs.map(j=>{
+    const l=(j.location||'').toLowerCase();
+    const isRemote=l.includes('remote'), isAtlanta=l.includes('atlanta');
+    const isNew=j.posted_ts&&(NOW_S-j.posted_ts)<86400;
+    const status=getStatus(j.id);
+    const color=COLORS[j.company]||'#888';
+    const cls=CLASSES[j.company]||'';
+    const score=j.fit_score;
+    return `<div class="job-card ${cls}" onclick="openPanel('${j.id}')">
+      <div class="card-top">
+        <div class="card-company"><span class="dot" style="background:${color}"></span>${j.company}</div>
+        <span class="card-time">${timeAgo(j.posted_ts)}</span>
+      </div>
+      <div class="card-title">${j.title||'Untitled'}</div>
+      <div class="card-badges">
+        ${isNew?'<span class="badge badge-new">New</span>':''}
+        ${isRemote?'<span class="badge badge-remote">Remote</span>':''}
+        ${isAtlanta?'<span class="badge badge-atlanta">Atlanta</span>':''}
+        ${status!=='new'?`<span class="badge badge-status">${statusLabel(status)}</span>`:''}
+      </div>
+      ${j.ai_summary?`<div class="card-summary">${j.ai_summary}</div>`:''}
+      <div class="card-bottom">
+        ${score?`<div class="fit-score ${fitClass(score)}">${score}</div>`:'<div></div>'}
+        <button class="card-btn" onclick="event.stopPropagation();openPanel('${j.id}')">View Details</button>
+      </div>
+    </div>`;
+  }).join('');
+}
+
+function renderApplications(){
+  const jobs=Object.values(allJobs);
+  const stages=['saved','applied','phone_screen','interview','offer'];
+  document.getElementById('pipeline').innerHTML=stages.map(s=>`
+    <div class="pipe-stage">
+      <div class="pipe-count">${jobs.filter(j=>getStatus(j.id)===s).length}</div>
+      <div class="pipe-label">${statusLabel(s)}</div>
+    </div>`).join('');
+
+  const tracked=jobs.filter(j=>getStatus(j.id)!=='new').sort((a,b)=>(b.posted_ts||0)-(a.posted_ts||0));
+  if(!tracked.length){ document.getElementById('app-table-body').innerHTML=`<tr><td colspan="6" style="text-align:center;color:var(--hint);padding:40px">No applications yet. Open a job and set its status.</td></tr>`; return; }
+
+  document.getElementById('app-table-body').innerHTML=tracked.map(j=>{
+    const color=COLORS[j.company]||'#888';
+    const s=getStatus(j.id);
+    const l=(j.location||'').toLowerCase();
+    const locShort=l.includes('remote')?'Remote':l.includes('atlanta')?'Atlanta':(j.location||'').split(',').slice(-1)[0]?.trim()||'';
+    return `<tr>
+      <td><div style="display:flex;align-items:center;gap:6px"><span class="dot" style="background:${color}"></span>${j.company}</div></td>
+      <td><span class="table-title" onclick="openPanel('${j.id}')">${j.title||'Untitled'}</span></td>
+      <td>${locShort}</td>
+      <td><span class="status-pill ${statusPillClass(s)}">${statusLabel(s)}</span></td>
+      <td>${j.fit_score?`<span style="font-weight:600;color:${j.fit_score>=8?'var(--green)':j.fit_score>=6?'var(--yellow)':'var(--red)'}">${j.fit_score}/10</span>`:'—'}</td>
+      <td>${j.found_date?new Date(j.found_date).toLocaleDateString():'—'}</td>
+    </tr>`;
+  }).join('');
+}
+
+function openPanel(id){
+  currentJob=allJobs[id]; if(!currentJob) return;
+  const j=currentJob, color=COLORS[j.company]||'#888';
+  const l=(j.location||'').toLowerCase();
+  document.getElementById('panel-company').innerHTML=`<span class="dot" style="background:${color}"></span>${j.company}`;
+  document.getElementById('panel-title').textContent=j.title||'Untitled';
+  document.getElementById('panel-meta').innerHTML=`
+    ${l.includes('remote')?'<span class="badge badge-remote">Remote</span>':''}
+    ${l.includes('atlanta')?'<span class="badge badge-atlanta">Atlanta</span>':''}
+    <span class="badge" style="background:var(--bg);color:var(--muted)">${timeAgo(j.posted_ts)}</span>`;
+  const score=j.fit_score;
+  document.getElementById('panel-fit-score').innerHTML=score
+    ?`<div class="fit-large ${fitClass(score)}">${score}</div><div style="font-size:13px;color:var(--muted);margin-bottom:10px">out of 10 match score</div>`
+    :'<div style="font-size:13px;color:var(--hint);margin-bottom:10px">No AI score yet — run scraper with API key</div>';
+  document.getElementById('panel-pros').innerHTML=(j.ai_pros||[]).map(p=>`<li>${p}</li>`).join('');
+  document.getElementById('panel-cons').innerHTML=(j.ai_cons||[]).map(c=>`<li>${c}</li>`).join('');
+  document.getElementById('panel-status-select').value=getStatus(j.id);
+  document.getElementById('panel-notes').value=getNotes(j.id);
+  document.getElementById('panel-link').href=j.url||'#';
+  document.getElementById('panel-desc').textContent=j.description||'Click "Open Job Posting" to view the full description on the company site.';
+  document.getElementById('overlay').classList.add('open');
+  document.getElementById('detail-panel').classList.add('open');
+}
+
+function closePanel(){ document.getElementById('overlay').classList.remove('open'); document.getElementById('detail-panel').classList.remove('open'); currentJob=null; }
+
+function saveStatus(){
+  if(!currentJob) return;
+  if(!tracker[currentJob.id]) tracker[currentJob.id]={};
+  tracker[currentJob.id].status=document.getElementById('panel-status-select').value;
+  saveTracker(); renderJobs(); renderApplications();
+}
+
+function saveNotes(){
+  if(!currentJob) return;
+  if(!tracker[currentJob.id]) tracker[currentJob.id]={};
+  tracker[currentJob.id].notes=document.getElementById('panel-notes').value;
+  saveTracker();
+  document.getElementById('save-note-btn') && (document.getElementById('save-note-btn').textContent='Saved!');
+}
+
+function showPage(page){
+  ['feed','applications'].forEach(p=>{
+    document.getElementById('page-'+p).style.display=p===page?'block':'none';
+    document.getElementById('nav-'+p).classList.toggle('active',p===page);
+  });
+  document.getElementById('page-title').textContent=page==='feed'?'Job Feed':'My Applications';
+  if(page==='applications') renderApplications();
+}
+
+async function callClaude(prompt){
+  if(!apiKey){
+    apiKey=window.prompt('Enter your Anthropic API key (sk-ant-...) to use AI features:')||'';
+    if(!apiKey) return null;
+    localStorage.setItem('jobify_api_key',apiKey);
+  }
+  const res=await fetch('https://api.anthropic.com/v1/messages',{
+    method:'POST',
+    headers:{'Content-Type':'application/json','x-api-key':apiKey,'anthropic-version':'2023-06-01','anthropic-dangerous-direct-browser-access':'true'},
+    body:JSON.stringify({model:'claude-haiku-4-5-20251001',max_tokens:1000,messages:[{role:'user',content:prompt}]})
+  });
+  const data=await res.json();
+  return data.content?.[0]?.text||null;
+}
+
+async function generateCoverLetter(){
+  if(!currentJob) return;
+  document.getElementById('cl-modal').classList.add('open');
+  document.getElementById('cl-content').innerHTML='<div class="loading-text">Generating with Claude AI...</div>';
+  const j=currentJob;
+  const text=await callClaude(`Write a professional 3-paragraph cover letter for:\nJob: ${j.title} at ${j.company}\nDescription: ${j.description||''}\n\nMy background: 8 years in product management, strong background in ads, data products, and analytics, based in Atlanta GA, targeting senior IC or manager roles at big tech.\n\nBe specific, natural, and compelling.`);
+  document.getElementById('cl-content').innerHTML=text
+    ?`<textarea class="modal-textarea" id="cl-textarea">${text}</textarea>`
+    :'<div class="loading-text">Error generating. Check your API key and credits.</div>';
+}
+
+async function generateInterviewPrep(){
+  if(!currentJob) return;
+  document.getElementById('prep-modal').classList.add('open');
+  document.getElementById('prep-content').innerHTML='<div class="loading-text">Generating questions with Claude AI...</div>';
+  const j=currentJob;
+  const text=await callClaude(`Generate 5 interview questions for: ${j.title} at ${j.company}\nDescription: ${j.description||''}\n\nMix behavioral and technical PM questions. Return ONLY a JSON array of strings, no other text. Example: ["Q1","Q2"]`);
+  try{
+    const questions=JSON.parse(text.replace(/```json|```/g,'').trim());
+    document.getElementById('prep-content').innerHTML=questions.map((q,i)=>`
+      <div class="prep-question">
+        <div class="prep-q-num">Question ${i+1}</div>
+        <div class="prep-q-text">${q}</div>
+        <textarea class="prep-textarea" placeholder="Practice your answer..."></textarea>
+      </div>`).join('');
+  } catch(e){
+    document.getElementById('prep-content').innerHTML=`<div style="font-size:13px;line-height:1.6;color:var(--muted)">${text||'Error generating questions.'}</div>`;
+  }
+}
+
+function closeModal(id){ document.getElementById(id).classList.remove('open'); }
+function copyText(id){ const el=document.getElementById(id); if(el){el.select();document.execCommand('copy');} }
+
+loadJobs();
+</script>
+</body>
+</html>
