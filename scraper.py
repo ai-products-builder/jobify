@@ -24,7 +24,12 @@ EXCLUDE_TITLES = [
     "sales", "recruiter", "designer", "scientist",
     "attorney", "lawyer", "finance", "accounting",
     "hr ", "human resources", "coordinator", "assistant",
-    "technician", "operator", "specialist"
+    "technician", "operator", "specialist",
+    "data center", "data science manager", "accountant",
+    "partner growth manager", "media manager",
+    "associate general counsel", "commercial ctv",
+    "gm business development", "intern", "internship",
+    "growth manager analyst", "general manager", "architect"
 ]
 
 LOCATION_KEYWORDS = [
@@ -32,9 +37,8 @@ LOCATION_KEYWORDS = [
     "los angeles", "irvine", "santa monica", "culver city", "ventura"
 ]
 
-# Used when querying APIs that accept keyword/location params
 SEARCH_QUERIES = ["product manager", "data", "advertising", "analytics", "AI product manager", "generative AI", "director of product", "program manager"]
-SEARCH_LOCATIONS = LOCATION_KEYWORDS  # single source of truth
+SEARCH_LOCATIONS = LOCATION_KEYWORDS
 
 
 # ─── FILTER FUNCTIONS ─────────────────────────────────────────────────────────
@@ -307,7 +311,7 @@ def fetch_builtin():
     return results
 
 
-# ─── BROWSE LINKS (sites that block scraping) ─────────────────────────────────
+# ─── BROWSE LINKS ─────────────────────────────────────────────────────────────
 def fetch_browse_links():
     print("Adding browse links...")
     results = []
@@ -384,7 +388,6 @@ def run():
         ("taboola", "Taboola"),
         ("nativo", "Nativo"),
         ("applovin", "AppLovin"),
-        ("moloco", "Moloco"),
         ("criteo", "Criteo"),
         ("mediamath", "MediaMath"),
         ("openx", "OpenX"),
@@ -435,12 +438,17 @@ def run():
     all_fresh += fetch_builtin()
     all_fresh += fetch_browse_links()
 
-    seen = set()
+    seen_ids = set()
+    seen_titles = set()
     for job in all_fresh:
         jid = job["id"]
-        if jid in seen:
+        if jid in seen_ids:
             continue
-        seen.add(jid)
+        seen_ids.add(jid)
+        title_key = f"{job.get('company','').lower()}::{job.get('title','').lower().strip()}"
+        if title_key in seen_titles:
+            continue
+        seen_titles.add(title_key)
         if jid not in existing:
             existing[jid] = job
             new_count += 1
