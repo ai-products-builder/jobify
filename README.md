@@ -21,6 +21,7 @@ A personal job search dashboard that automatically scrapes PM, data, and ads rol
 | `index.html` | Dashboard UI — hosted on GitHub Pages |
 | `scraper.py` | Fetches jobs from all company APIs |
 | `jobs.json` | Job database — auto-updated daily |
+| `score_jobs.py` | Provides a Score based on matching Resume and the Job Description | 
 | `.github/workflows/scraper.yml` | GitHub Actions daily schedule |
 | `requirements.txt` | Python dependencies |
 
