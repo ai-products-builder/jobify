@@ -59,9 +59,9 @@ def main():
         jobs = json.load(f)
 
     scored = 0
-    for job in jobs:
-        # Only score jobs that haven't been scored yet
-        if job.get("score") is not None:
+    for job in jobs.values():
+        # Skip jobs already scored (but re-score fallback 50s from previous errors)
+        if job.get("score") is not None and job.get("score") != 50:
             continue
         try:
             result = score_job(job)
@@ -72,7 +72,7 @@ def main():
             scored += 1
             print(f"✅ {job['company']} | {job['title']} → {result['score']}")
         except Exception as e:
-            print(f"❌ Failed: {job.get('company')} | {e}")
+            print(f"❌ Failed: {job.get('company')} | {job.get('title')} | {e}")
             job["score"] = 50  # fallback neutral score
 
     with open(jobs_path, "w") as f:
