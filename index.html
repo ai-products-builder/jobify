@@ -451,7 +451,26 @@ function renderJobs(){
     const status=getStatus(j.id);
     const color=COLORS[j.company]||'#888';
     const cls=CLASSES[j.company]||'';
-    const score=j.fit_score;
+
+    // Use new scoring fields, fall back to old fit_score for sample data
+    const matchScore = j.match_score || (j.fit_score ? j.fit_score * 10 : null);
+    const atsScore = j.ats_score || null;
+    const confidence = j.confidence || null;
+    const reason = j.reason || j.ai_summary || '';
+    const skillsGap = j.skills_gap || '';
+    const descSource = j.description_source || '';
+
+    // Score color helpers (0-100 scale)
+    const scoreClass100 = s => s>=80?'fit-high':s>=60?'fit-mid':'fit-low';
+    const confidenceBadge = confidence && confidence !== 'N/A'
+      ? `<span class="badge" style="background:${confidence==='high'?'var(--green-bg)':confidence==='medium'?'var(--yellow-bg)':'var(--red-bg)'}; color:${confidence==='high'?'var(--green)':confidence==='medium'?'var(--yellow)':'var(--red)'}">⚡ ${confidence} conf</span>`
+      : '';
+    const descBadge = descSource==='none'
+      ? '<span class="badge" style="background:#f3f4f6;color:#9ca3af">📄 title only</span>'
+      : descSource==='fetched'
+      ? '<span class="badge" style="background:#ede9fe;color:#7c3aed">🌐 fetched</span>'
+      : '';
+
     return `<div class="job-card ${cls}" onclick="openPanel('${j.id}')">
       <div class="card-top">
         <div class="card-company"><span class="dot" style="background:${color}"></span>${j.company}</div>
@@ -463,12 +482,15 @@ function renderJobs(){
         ${isRemote?'<span class="badge badge-remote">Remote</span>':''}
         ${isAtlanta?'<span class="badge badge-atlanta">Atlanta</span>':''}
         ${status!=='new'?`<span class="badge badge-status">${statusLabel(status)}</span>`:''}
+        ${confidenceBadge}
+        ${descBadge}
       </div>
-      ${j.ai_summary?`<div class="card-summary">${j.ai_summary}</div>`:''}
+      ${reason?`<div class="card-summary">${reason}</div>`:''}
+      ${skillsGap && skillsGap!=='N/A'?`<div style="font-size:12px;color:var(--yellow);margin-bottom:10px;line-height:1.4">⚠️ Gap: ${skillsGap}</div>`:''}
       <div class="card-bottom">
         <div style="display:flex;gap:6px;align-items:center">
-          ${score?`<div class="fit-score ${fitClass(score)}" title="Claude Score">${score}</div>`:''}
-          ${j.ats_score?`<div class="fit-score ${fitClass(Math.round(j.ats_score/10))}" title="ATS Score">${j.ats_score}</div>`:''}
+          ${matchScore!=null?`<div class="fit-score ${scoreClass100(matchScore)}" title="Match Score">${matchScore}</div>`:''}
+          ${atsScore!=null?`<div class="fit-score ${scoreClass100(atsScore)}" title="ATS Score" style="font-size:10px">ATS<br>${atsScore}</div>`:''}
         </div>
         <div style="display:flex;gap:6px">
           <button class="card-btn" onclick="event.stopPropagation();openPanel('${j.id}')">Details</button>
