@@ -54,7 +54,7 @@ Respond ONLY with valid JSON, no markdown:
     return result
 
 def main():
-    jobs_path = "docs/jobs.json"
+    jobs_path = "jobs.json"
     with open(jobs_path) as f:
         jobs = json.load(f)
 
