@@ -15,12 +15,13 @@ SKIP_COMPANIES = {
     "wellfound", "underdog", "trueup", "techfetch", "pmhq",
     "mindtheproduct", "productfolks", "productjobs",
     "roundel", "adcolony", "target roundel",
-    "dice", "indeed", "glassdoor", "mind the product", "innovid" , "moloco", "product manager HQ", "product jobs", "tech fetch", "the product folks" , "builtin" , "we work", "remotely" , "true up"
+    "dice", "indeed", "glassdoor", "mind the product", "innovid", "moloco",
+    "product manager hq", "product jobs", "tech fetch", "the product folks",
+    "builtin", "we work", "remotely", "true up"
 }
 
 
 class HTMLTextExtractor(HTMLParser):
-    """Strip HTML tags and return clean text."""
     def __init__(self):
         super().__init__()
         self.result = []
@@ -44,7 +45,6 @@ class HTMLTextExtractor(HTMLParser):
 
 
 def fetch_description(url: str) -> str:
-    """Fetch job page and extract clean text description."""
     try:
         req = urllib.request.Request(
             url,
@@ -57,12 +57,11 @@ def fetch_description(url: str) -> str:
         text = parser.get_text()
         return text[500:4000]
     except Exception as e:
-        print(f"   ⚠️  Could not fetch description: {e}")
+        print(f"   ⚠️  Fetch failed ({url[:60]}...): {e}")
         return ""
 
 
 def clean_html(raw: str) -> str:
-    """Clean HTML from stored description field."""
     if not raw:
         return ""
     parser = HTMLTextExtractor()
@@ -71,18 +70,15 @@ def clean_html(raw: str) -> str:
 
 
 def should_skip(job: dict) -> tuple[bool, str]:
-    """Only skip job board aggregators."""
     company = job.get("company", "").lower()
     job_id = job.get("id", "").lower()
-
     for skip in SKIP_COMPANIES:
         if skip in company or job_id.startswith(skip):
             return True, f"Job board aggregator: {company}"
-
     return False, ""
 
 
-def score_job(job: dict, description: str) -> dict:
+def score_job(job: dict, description: str, desc_source: str) -> dict:
     title = job.get("title", "")
     company = job.get("company", "")
     location = job.get("location", "")
@@ -95,7 +91,12 @@ def score_job(job: dict, description: str) -> dict:
     resume_label = "ADS" if any(k in title.lower() for k in ads_keywords) else "DATA"
     resume_text = RESUME_ADS if resume_label == "ADS" else RESUME_DATA
 
-    prompt = f"""You are an expert technical recruiter evaluating job fit for a senior product leader.
+    # Warn Claude if no description available so it adjusts confidence
+    desc_note = ""
+    if desc_source == "none":
+        desc_note = "\nNOTE: No job description available. Score based on title/company only. Lower confidence — reflect this with conservative scores."
+
+    prompt = f"""You are an expert technical recruiter evaluating job fit for a senior product leader with 15+ years in AdTech and Data platforms.
 
 RESUME ({resume_label}):
 {resume_text}
@@ -104,26 +105,28 @@ JOB:
 Title: {title}
 Company: {company}
 Location: {location}
-Description: {description}
+Description: {description if description else "Not available"}{desc_note}
 
-Respond ONLY with valid JSON, no markdown:
+Respond ONLY with valid JSON, no markdown, no extra text:
 {{
   "match_score": <integer 0-100, overall resume-to-job fit>,
-  "ats_score": <integer 0-100, keyword overlap with likely ATS filters>,
+  "ats_score": <integer 0-100, keyword overlap between resume and likely ATS filters for this role>,
   "resume_used": "{resume_label}",
-  "reason": "<one concise sentence on why this score>",
-  "skills_gap": "<one concise sentence on what is missing, or 'Strong match' if none>"
+  "reason": "<one concise sentence explaining the score>",
+  "skills_gap": "<one concise sentence on key missing skills, or 'Strong match — no significant gaps' if well aligned>",
+  "confidence": "<high|medium|low depending on how much job info was available>"
 }}
 
 Scoring guide:
 - match_score 80+: Strong fit, should apply
 - match_score 60-79: Decent fit, worth considering
-- match_score <60: Weak fit
-- ats_score reflects keyword overlap between resume and ATS filters for this specific role"""
+- match_score <60: Weak fit, likely not worth applying
+- ats_score: how well resume keywords match what an ATS would filter for in this specific role
+- If no description available, set confidence to low and be conservative with scores"""
 
     message = client.messages.create(
         model="claude-haiku-4-5-20251001",
-        max_tokens=250,
+        max_tokens=300,
         messages=[{"role": "user", "content": prompt}]
     )
 
@@ -141,6 +144,7 @@ def main():
     skipped = 0
     already_done = 0
     failed = 0
+    no_desc = 0
 
     for job in jobs.values():
         # Skip already properly scored jobs
@@ -157,45 +161,58 @@ def main():
             job["resume_used"] = "N/A"
             job["reason"] = f"Auto-skipped: {reason}"
             job["skills_gap"] = "N/A"
+            job["confidence"] = "N/A"
+            job["description_source"] = "skipped"
             skipped += 1
             print(f"⏭️  SKIP | {job.get('company')} | {job.get('title')}")
             continue
 
-        # Use stored description if available, else fetch live
+        # Determine description source
         stored_desc = clean_html(job.get("description", ""))
         if len(stored_desc) > 200:
             description = stored_desc
-            print(f"📄 Stored | {job.get('company')} | {job.get('title')}")
+            desc_source = "stored"
+            print(f"📄 Stored desc | {job.get('company')} | {job.get('title')}")
         else:
-            print(f"🌐 Fetching | {job.get('company')} | {job.get('title')}")
+            print(f"🌐 Fetching desc | {job.get('company')} | {job.get('title')}")
             description = fetch_description(job.get("url", ""))
             time.sleep(1)
+            if len(description) > 200:
+                desc_source = "fetched"
+            else:
+                desc_source = "none"
+                no_desc += 1
+                print(f"   ⚠️  No description found — scoring on title/company only")
+
+        job["description_source"] = desc_source
 
         try:
-            result = score_job(job, description)
+            result = score_job(job, description, desc_source)
             job["match_score"] = result["match_score"]
             job["ats_score"] = result["ats_score"]
             job["resume_used"] = result["resume_used"]
             job["reason"] = result["reason"]
             job["skills_gap"] = result["skills_gap"]
+            job["confidence"] = result.get("confidence", "medium")
             job.pop("score", None)  # remove old score field
             scored += 1
-            print(f"✅ match:{result['match_score']} ats:{result['ats_score']} | {job['company']} | {job['title']}")
+            print(f"✅ match:{result['match_score']} ats:{result['ats_score']} conf:{result.get('confidence','?')} | {job['company']} | {job['title']}")
         except Exception as e:
             print(f"❌ Failed: {job.get('company')} | {job.get('title')} | {e}")
             failed += 1
 
-        time.sleep(0.5)  # rate limit Claude calls
+        time.sleep(0.5)
 
     with open(jobs_path, "w") as f:
         json.dump(jobs, f, indent=2)
 
     print(f"\n{'='*50}")
-    print(f"✅ Scored:        {scored}")
-    print(f"⏭️  Skipped:       {skipped}")
-    print(f"✔️  Already done:  {already_done}")
-    print(f"❌ Failed:        {failed}")
-    print(f"💰 API calls used: {scored}")
+    print(f"✅ Scored:            {scored}")
+    print(f"⏭️  Skipped:           {skipped}")
+    print(f"✔️  Already done:      {already_done}")
+    print(f"⚠️  No description:   {no_desc}")
+    print(f"❌ Failed:            {failed}")
+    print(f"💰 API calls used:    {scored}")
 
 if __name__ == "__main__":
     main()
