@@ -84,6 +84,16 @@ def make_job(id, company, title, location, url, posted_ts=0, description=""):
     }
 
 
+def safe_fetch(fn, *args, **kwargs):
+    """Defensive wrapper — ensures a broken scraper never crashes the full pipeline."""
+    try:
+        result = fn(*args, **kwargs)
+        return result if result is not None else []
+    except Exception as e:
+        print(f"  ⚠️  {fn.__name__} crashed: {e}")
+        return []
+
+
 # ─── MICROSOFT ────────────────────────────────────────────────────────────────
 def fetch_microsoft():
     print("Fetching Microsoft...")
@@ -136,6 +146,45 @@ def fetch_amazon():
     return results
 
 
+# ─── NETFLIX ──────────────────────────────────────────────────────────────────
+def fetch_netflix():
+    print("Fetching Netflix...")
+    results = []
+    for kw in SEARCH_QUERIES:
+        for loc in ["remote", "los angeles", "atlanta"]:
+            try:
+                url = (
+                    f"https://explore.jobs.netflix.net/api/apply/v2/jobs"
+                    f"?domain=netflix.com&start=0&num=50"
+                    f"&keyword={requests.utils.quote(kw)}"
+                    f"&location={requests.utils.quote(loc)}"
+                )
+                r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+                print(f"  Netflix status: {r.status_code} | {kw} / {loc}")
+                if r.status_code != 200:
+                    continue
+                data = r.json()
+                positions = data.get("positions", [])
+                print(f"  Netflix positions: {len(positions)}")
+                for j in positions:
+                    title = j.get("name", "")
+                    locs = ", ".join(j.get("locations", []))
+                    if not passes(title, locs, loc):
+                        continue
+                    results.append(make_job(
+                        id=f"netflix_{j.get('id', '')}",
+                        company="Netflix",
+                        title=title,
+                        location=locs,
+                        url="https://explore.jobs.netflix.net/careers?pid="
+                            + str(j.get("id", "")) + "&domain=netflix.com"
+                    ))
+            except Exception as e:
+                print(f"  Netflix error ({kw}/{loc}): {e}")
+    print(f"  Found {len(results)} Netflix jobs")
+    return results
+
+
 # ─── GREENHOUSE BOARDS ────────────────────────────────────────────────────────
 def fetch_greenhouse(board, company):
     print(f"Fetching {company}...")
@@ -182,28 +231,6 @@ def fetch_trade_desk():
             print(f"  Trade Desk error ({kw}): {e}")
     print(f"  Found {len(results)} Trade Desk jobs")
     return results
-
-
-# ─── NETFLIX ──────────────────────────────────────────────────────────────────
-def fetch_netflix():
-    print("Fetching Netflix...")
-    results = []
-    
-    # DEBUG — run once to see actual response shape
-    try:
-        url = "https://jobs.netflix.com/api/search?q=product+manager&limit=10"
-        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
-        print(f"  Netflix status: {r.status_code}")
-        data = r.json()
-        print(f"  Netflix top-level keys: {list(data.keys())}")
-        # Print first job raw so we can see the structure
-        for key, val in data.items():
-            if isinstance(val, (list, dict)):
-                print(f"  [{key}] type={type(val).__name__} len={len(val)}")
-                if isinstance(val, list) and len(val) > 0:
-                    print(f"  First item keys: {list(val[0].keys()) if isinstance(val[0], dict) else val[0]}")
-    except Exception as e:
-        print(f"  Netflix debug error: {e}")
 
 
 # ─── Y COMBINATOR ─────────────────────────────────────────────────────────────
@@ -358,9 +385,9 @@ def run():
     new_count = 0
 
     all_fresh = []
-    all_fresh += fetch_microsoft()
-    all_fresh += fetch_amazon()
-    all_fresh += fetch_netflix()
+    all_fresh += safe_fetch(fetch_microsoft)
+    all_fresh += safe_fetch(fetch_amazon)
+    all_fresh += safe_fetch(fetch_netflix)
 
     greenhouse_companies = [
         ("reddit", "Reddit"),
@@ -425,15 +452,15 @@ def run():
         ("cox", "Cox"),
     ]
     for board, company in greenhouse_companies:
-        all_fresh += fetch_greenhouse(board, company)
+        all_fresh += safe_fetch(fetch_greenhouse, board, company)
         sleep(0.2)
 
-    all_fresh += fetch_trade_desk()
-    all_fresh += fetch_ycombinator()
-    all_fresh += fetch_weworkremotely()
-    all_fresh += fetch_dice()
-    all_fresh += fetch_builtin()
-    all_fresh += fetch_browse_links()
+    all_fresh += safe_fetch(fetch_trade_desk)
+    all_fresh += safe_fetch(fetch_ycombinator)
+    all_fresh += safe_fetch(fetch_weworkremotely)
+    all_fresh += safe_fetch(fetch_dice)
+    all_fresh += safe_fetch(fetch_builtin)
+    all_fresh += safe_fetch(fetch_browse_links)
 
     seen_ids = set()
     seen_titles = set()
