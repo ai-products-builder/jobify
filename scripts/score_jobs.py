@@ -10,7 +10,6 @@ RESUME_DATA = os.environ["RESUME_DATA"]
 
 client = anthropic.Anthropic(api_key=os.environ["ANTHROPIC_API_KEY"])
 
-# ── Only skip job board aggregators — not real job postings ─────────────────
 SKIP_COMPANIES = {
     "wellfound", "underdog", "trueup", "techfetch", "pmhq",
     "mindtheproduct", "productfolks", "productjobs",
@@ -78,6 +77,23 @@ def should_skip(job: dict) -> tuple[bool, str]:
     return False, ""
 
 
+def is_properly_scored(job: dict) -> bool:
+    """
+    Bug fix: treat 0 scores as unscored — they indicate a failed run.
+    Only skip if score is a real non-zero value OR was intentionally skipped.
+    """
+    if job.get("description_source") == "skipped":
+        return True  # aggregators — intentionally skipped
+    score = job.get("match_score")
+    ats = job.get("ats_score")
+    # Must be a real number > 0 to count as properly scored
+    return (
+        score is not None and ats is not None and
+        isinstance(score, (int, float)) and isinstance(ats, (int, float)) and
+        (score > 0 or ats > 0)
+    )
+
+
 def score_job(job: dict, description: str, desc_source: str) -> dict:
     title = job.get("title", "")
     company = job.get("company", "")
@@ -91,7 +107,6 @@ def score_job(job: dict, description: str, desc_source: str) -> dict:
     resume_label = "ADS" if any(k in title.lower() for k in ads_keywords) else "DATA"
     resume_text = RESUME_ADS if resume_label == "ADS" else RESUME_DATA
 
-    # Warn Claude if no description available so it adjusts confidence
     desc_note = ""
     if desc_source == "none":
         desc_note = "\nNOTE: No job description available. Score based on title/company only. Lower confidence — reflect this with conservative scores."
@@ -131,7 +146,24 @@ Scoring guide:
     )
 
     raw = message.content[0].text.strip()
+
+    # Bug fix: strip markdown fences if Claude wraps response in ```json ... ```
+    if raw.startswith("```"):
+        raw = raw.split("```")[1]
+        if raw.startswith("json"):
+            raw = raw[4:]
+        raw = raw.strip()
+
+    if not raw:
+        raise ValueError("Claude returned empty response")
+
     result = json.loads(raw)
+
+    # Validate required fields came back
+    for field in ["match_score", "ats_score", "reason", "skills_gap", "confidence"]:
+        if field not in result:
+            raise ValueError(f"Missing field in Claude response: {field}")
+
     return result
 
 
@@ -147,13 +179,11 @@ def main():
     no_desc = 0
 
     for job in jobs.values():
-        # Skip already properly scored jobs
-        if (job.get("match_score") is not None and
-                job.get("ats_score") is not None):
+        # ── Bug fix: use is_properly_scored() instead of checking != None ──
+        if is_properly_scored(job):
             already_done += 1
             continue
 
-        # Only skip job board aggregators
         skip, reason = should_skip(job)
         if skip:
             job["match_score"] = 0
@@ -194,7 +224,7 @@ def main():
             job["reason"] = result["reason"]
             job["skills_gap"] = result["skills_gap"]
             job["confidence"] = result.get("confidence", "medium")
-            job.pop("score", None)  # remove old score field
+            job.pop("score", None)
             scored += 1
             print(f"✅ match:{result['match_score']} ats:{result['ats_score']} conf:{result.get('confidence','?')} | {job['company']} | {job['title']}")
         except Exception as e:
@@ -213,6 +243,7 @@ def main():
     print(f"⚠️  No description:   {no_desc}")
     print(f"❌ Failed:            {failed}")
     print(f"💰 API calls used:    {scored}")
+
 
 if __name__ == "__main__":
     main()
