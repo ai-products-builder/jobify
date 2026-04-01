@@ -9976,7 +9976,14 @@
     "posted_ts": 1771958207,
     "found_date": "2026-04-01T23:39:10.614694",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep product leadership and data platform expertise don't align with a Technical Program Manager role, which typically requires strong delivery/PMO execution skills rather than product strategy and data governance focus.",
+    "skills_gap": "Missing core TPM competencies: program/project management methodologies (PgMP, PMI), cross-org dependency orchestration, risk/budget tracking, and Microsoft-specific delivery frameworks; her strength is product strategy, not program execution.",
+    "confidence": "low"
   },
   "netflix_790314692063": {
     "id": "netflix_790314692063",
@@ -9987,7 +9994,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-01T23:39:58.576912",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise in data platforms and AdTech is misaligned with a Games Platform design program management role that requires consumer gaming product experience and design systems leadership.",
+    "skills_gap": "Missing: games industry experience, consumer product design, design program management, game mechanics, player engagement/monetization, design systems leadership; core strength in enterprise data infrastructure is irrelevant to this role.",
+    "confidence": "high"
   },
   "netflix_790314250407": {
     "id": "netflix_790314250407",
@@ -9998,7 +10012,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-01T23:39:58.866597",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep AdTech/data platform expertise doesn't align with Netflix's Live Media Management role, which requires live TV/streaming operations, broadcast infrastructure, and media workflow management\u2014a fundamentally different domain from ad tech data platforms.",
+    "skills_gap": "Missing critical live media operations experience: broadcast infrastructure, live streaming workflows, video delivery systems, live event management, and media playout systems; expertise is in AdTech data platforms, not live content delivery or media management.",
+    "confidence": "low"
   },
   "wwr_100877496136414168": {
     "id": "wwr_100877496136414168",
@@ -10009,7 +10030,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-01T23:40:30.463662",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_b2c74b996093f2ec43f318aca6f732f6": {
     "id": "dice_b2c74b996093f2ec43f318aca6f732f6",
@@ -10020,7 +10048,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-01T23:40:30.851094",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_fef013c10e8e71495550c98b551bba86": {
     "id": "dice_fef013c10e8e71495550c98b551bba86",
@@ -10031,7 +10066,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-01T23:40:30.851148",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ba88e532bede3e44bb529cccec8da1d7": {
     "id": "dice_ba88e532bede3e44bb529cccec8da1d7",
@@ -10042,7 +10084,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-01T23:40:31.425918",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ceeafda80507567f15144d82e757cc07": {
     "id": "dice_ceeafda80507567f15144d82e757cc07",
@@ -10053,7 +10102,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-01T23:40:31.992657",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_4bd831e1a883ee9db431cf4aefce9d9d": {
     "id": "dice_4bd831e1a883ee9db431cf4aefce9d9d",
@@ -10064,7 +10120,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-01T23:40:37.920441",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_15e5ee3dc03158141e14ed7a4fcd749d": {
     "id": "dice_15e5ee3dc03158141e14ed7a4fcd749d",
@@ -10075,7 +10138,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-01T23:40:39.985195",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_666c51f3e61b80ded2d4527898886bb5": {
     "id": "dice_666c51f3e61b80ded2d4527898886bb5",
@@ -10086,7 +10156,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-01T23:40:39.985200",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_91a74cda9ad1a417ae78532d8018f4b1": {
     "id": "dice_91a74cda9ad1a417ae78532d8018f4b1",
@@ -10097,7 +10174,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-01T23:40:46.253004",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_dbd48b25a6043916830bfa69210aa1e6": {
     "id": "dice_dbd48b25a6043916830bfa69210aa1e6",
@@ -10108,7 +10192,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-01T23:40:46.500753",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_22cab0666a0116e2f82140b44734b964": {
     "id": "dice_22cab0666a0116e2f82140b44734b964",
@@ -10119,6 +10210,13 @@
     "posted_ts": 0,
     "found_date": "2026-04-01T23:40:46.958366",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
