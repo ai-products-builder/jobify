@@ -188,25 +188,22 @@ def fetch_trade_desk():
 def fetch_netflix():
     print("Fetching Netflix...")
     results = []
-    for kw in SEARCH_QUERIES:
-        for loc in SEARCH_LOCATIONS:
-            try:
-                url = f"https://jobs.netflix.com/api/search?q={requests.utils.quote(kw)}&location={loc}&limit=50"
-                r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
-                for j in r.json().get("records", {}).get("postings", []):
-                    title = j.get("text", "")
-                    location = ", ".join(j.get("tags", {}).get("location", []))
-                    if not passes(title, location, loc):
-                        continue
-                    results.append(make_job(
-                        id=f"netflix_{j.get('id', '')}",
-                        company="Netflix", title=title, location=location,
-                        url="https://jobs.netflix.com/jobs/" + j.get("id", "")
-                    ))
-            except Exception as e:
-                print(f"  Netflix error ({kw}/{loc}): {e}")
-    print(f"  Found {len(results)} Netflix jobs")
-    return results
+    
+    # DEBUG — run once to see actual response shape
+    try:
+        url = "https://jobs.netflix.com/api/search?q=product+manager&limit=10"
+        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+        print(f"  Netflix status: {r.status_code}")
+        data = r.json()
+        print(f"  Netflix top-level keys: {list(data.keys())}")
+        # Print first job raw so we can see the structure
+        for key, val in data.items():
+            if isinstance(val, (list, dict)):
+                print(f"  [{key}] type={type(val).__name__} len={len(val)}")
+                if isinstance(val, list) and len(val) > 0:
+                    print(f"  First item keys: {list(val[0].keys()) if isinstance(val[0], dict) else val[0]}")
+    except Exception as e:
+        print(f"  Netflix debug error: {e}")
 
 
 # ─── Y COMBINATOR ─────────────────────────────────────────────────────────────
