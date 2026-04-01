@@ -7,6 +7,9 @@ on:
       - completed
   workflow_dispatch:
 
+permissions:
+  contents: write
+
 jobs:
   score:
     runs-on: ubuntu-latest
@@ -33,6 +36,7 @@ jobs:
         run: |
           git config user.name "github-actions"
           git config user.email "actions@github.com"
+          git remote set-url origin https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}
           git add jobs.json
           git diff --cached --quiet || git commit -m "Auto-score jobs with Claude"
           git push
