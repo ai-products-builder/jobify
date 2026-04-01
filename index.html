@@ -20,7 +20,7 @@
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; }
 
   .sidebar { width: var(--sidebar); height: 100vh; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; position: fixed; top: 0; left: 0; z-index: 100; padding: 20px 0; overflow: hidden; }
-  .logo { padding: 0 20px 20px; border-bottom: 1px solid var(--border); }
+  .logo { padding: 0 20px 20px; border-bottom: 1px solid var(--border); flex-shrink: 0; }
   .logo-name { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--accent); }
   .logo-sub { font-size: 11px; color: var(--hint); margin-top: 2px; }
   .nav { padding: 16px 12px; flex: 1; overflow-y: auto; min-height: 0; }
@@ -32,7 +32,7 @@
   .company-item { display: flex; align-items: center; gap: 8px; padding: 6px 4px; font-size: 13px; color: var(--muted); cursor: pointer; }
   .company-item input { cursor: pointer; accent-color: var(--accent); }
   .dot { width: 8px; height: 8px; border-radius: 50%; flex-shrink: 0; display: inline-block; }
-  .sidebar-footer { padding: 16px 20px; border-top: 1px solid var(--border); }
+  .sidebar-footer { padding: 16px 20px; border-top: 1px solid var(--border); flex-shrink: 0; }
   .sync-time { font-size: 11px; color: var(--hint); margin-bottom: 8px; }
   .refresh-btn { width: 100%; padding: 8px; border-radius: 8px; border: 1px solid var(--border); background: var(--bg); color: var(--muted); font-size: 13px; font-family: 'DM Sans', sans-serif; cursor: pointer; font-weight: 500; }
   .refresh-btn:hover { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
@@ -55,10 +55,6 @@
   .jobs-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 12px; }
   .job-card { background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); padding: 18px; cursor: pointer; transition: all 0.2s; border-left: 3px solid transparent; }
   .job-card:hover { transform: translateY(-2px); box-shadow: 0 4px 16px rgba(0,0,0,0.06); }
-  .job-card.msft { border-left-color: var(--msft); }
-  .job-card.goog { border-left-color: var(--goog); }
-  .job-card.amzn { border-left-color: var(--amzn); }
-  .job-card.meta { border-left-color: var(--meta); }
   .card-top { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px; }
   .card-company { display: flex; align-items: center; gap: 6px; font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; }
   .card-time { font-size: 11px; color: var(--hint); }
@@ -69,22 +65,22 @@
   .badge-atlanta { background: #dbeafe; color: #1d4ed8; }
   .badge-new { background: #fef9c3; color: #ca8a04; }
   .badge-status { background: var(--accent-bg); color: var(--accent); }
-  .card-summary { font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 14px; }
+  .card-summary { font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 10px; }
+  .card-gap { font-size: 12px; color: var(--yellow); margin-bottom: 10px; line-height: 1.4; }
   .card-bottom { display: flex; justify-content: space-between; align-items: center; }
-  .fit-score { width: 36px; height: 36px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; }
+  .fit-score { width: 38px; height: 38px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 12px; font-weight: 700; flex-direction: column; line-height: 1.1; }
   .fit-high { background: var(--green-bg); color: var(--green); }
   .fit-mid { background: var(--yellow-bg); color: var(--yellow); }
   .fit-low { background: var(--red-bg); color: var(--red); }
   .card-btn { font-size: 12px; padding: 5px 12px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg); color: var(--muted); cursor: pointer; font-family: 'DM Sans', sans-serif; font-weight: 500; }
   .card-btn:hover { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
   .card-btn.irrelevant { background: var(--red-bg); color: var(--red); border-color: var(--red); }
-  .job-card.hidden-irrelevant { display: none; }
 
   .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
   .overlay.open { opacity: 1; pointer-events: all; }
-  .detail-panel { position: fixed; top: 0; right: 0; width: 440px; height: 100vh; background: var(--surface); border-left: 1px solid var(--border); z-index: 201; transform: translateX(100%); transition: transform 0.3s ease; display: flex; flex-direction: column; }
+  .detail-panel { position: fixed; top: 0; right: 0; width: 460px; height: 100vh; background: var(--surface); border-left: 1px solid var(--border); z-index: 201; transform: translateX(100%); transition: transform 0.3s ease; display: flex; flex-direction: column; }
   .detail-panel.open { transform: translateX(0); }
-  .panel-header { padding: 20px 24px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; }
+  .panel-header { padding: 20px 24px; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; align-items: flex-start; flex-shrink: 0; }
   .panel-company { font-size: 12px; font-weight: 600; color: var(--muted); text-transform: uppercase; letter-spacing: 0.04em; margin-bottom: 4px; display: flex; align-items: center; gap: 6px; }
   .panel-title { font-size: 17px; font-weight: 600; line-height: 1.3; }
   .close-btn { font-size: 22px; cursor: pointer; color: var(--hint); background: none; border: none; line-height: 1; padding: 2px; }
@@ -92,7 +88,18 @@
   .panel-meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px; }
   .panel-section { margin-bottom: 22px; }
   .panel-section-title { font-size: 11px; font-weight: 600; color: var(--hint); text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 10px; }
-  .fit-large { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; margin-bottom: 10px; }
+  .fit-large { width: 56px; height: 56px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 700; flex-shrink: 0; }
+  .score-row { display: flex; align-items: center; gap: 12px; margin-bottom: 12px; }
+  .score-detail { flex: 1; }
+  .score-label { font-size: 13px; font-weight: 600; color: var(--text); }
+  .score-reason { font-size: 12px; color: var(--muted); margin-top: 2px; line-height: 1.4; }
+  .gap-box { padding: 10px 12px; background: var(--yellow-bg); border-radius: 8px; margin-bottom: 10px; }
+  .gap-box-label { font-size: 11px; font-weight: 600; color: var(--yellow); margin-bottom: 4px; }
+  .gap-box-text { font-size: 13px; color: var(--text); line-height: 1.4; }
+  .match-box { padding: 10px 12px; background: var(--green-bg); border-radius: 8px; margin-bottom: 10px; }
+  .match-box-text { font-size: 13px; color: var(--green); }
+  .score-meta { font-size: 11px; color: var(--hint); margin-top: 8px; }
+  .ats-row { display: flex; align-items: center; gap: 10px; padding: 10px 12px; background: var(--bg); border-radius: 8px; margin-bottom: 10px; }
   .pros-list, .cons-list { list-style: none; }
   .pros-list li, .cons-list li { padding: 5px 0; font-size: 13px; color: var(--muted); display: flex; gap: 8px; line-height: 1.4; }
   .pros-list li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; }
@@ -177,9 +184,7 @@
       <button onclick="selectAllCompanies(true)" style="flex:1;font-size:11px;padding:4px 6px;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--muted);cursor:pointer;">All</button>
       <button onclick="selectAllCompanies(false)" style="flex:1;font-size:11px;padding:4px 6px;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--muted);cursor:pointer;">None</button>
     </div>
-    <div class="company-filter" id="company-filter-list">
-      <!-- populated dynamically -->
-    </div>
+    <div class="company-filter" id="company-filter-list"></div>
   </nav>
   <div class="sidebar-footer">
     <div class="sync-time" id="sync-time">Loading...</div>
@@ -224,7 +229,7 @@
     <div class="pipeline" id="pipeline"></div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Company</th><th>Job Title</th><th>Location</th><th>Status</th><th>Fit</th><th>Found</th></tr></thead>
+        <thead><tr><th>Company</th><th>Job Title</th><th>Location</th><th>Status</th><th>Match</th><th>ATS</th><th>Found</th></tr></thead>
         <tbody id="app-table-body"></tbody>
       </table>
     </div>
@@ -245,8 +250,6 @@
     <div class="panel-section">
       <div class="panel-section-title">AI Fit Analysis</div>
       <div id="panel-fit-score"></div>
-      <ul class="pros-list" id="panel-pros"></ul>
-      <ul class="cons-list" id="panel-cons" style="margin-top:8px"></ul>
     </div>
     <div class="panel-section">
       <div class="panel-section-title">Track Application</div>
@@ -315,22 +318,20 @@ const BRAND_COLORS = {
   'Underdog.io':'#ff6b35', 'True Up':'#7c3aed', 'Tech Fetch':'#0ea5e9',
   'Product Manager HQ':'#f59e0b', 'Mind the Product':'#ec4899',
   'The Product Folks':'#10b981', 'ProductJobs.com':'#6366f1',
-  Google:'#34a853', Meta:'#0866ff'
+  Google:'#34a853', Meta:'#0866ff', HubSpot:'#ff7a59',
+  'Trade Desk':'#00a859', Magnite:'#ff4f00'
 };
 const COLORS = new Proxy(BRAND_COLORS, { get:(t,k)=>t[k]||'#6b7280' });
-const CLASSES = {};
 const NOW_S = Math.floor(Date.now()/1000);
 let allJobs = {}, currentJob = null;
 let tracker = JSON.parse(localStorage.getItem('jobify_tracker')||'{}');
 let apiKey = localStorage.getItem('jobify_api_key')||'';
 
 const SAMPLES = {
-  "msft_1":{ id:"msft_1", company:"Microsoft", title:"Senior Product Manager – Ads Platform", location:"United States, Georgia, Atlanta", url:"https://apply.careers.microsoft.com/careers", posted_ts:NOW_S-3600, found_date:new Date().toISOString(), fit_score:9, ai_summary:"Excellent match for your ads and data background. This role focuses on ML-driven ad targeting products, directly aligned with your 8 years of PM experience.", ai_pros:["Direct match to ads platform experience","Atlanta-based, no relocation needed","Senior IC level — right seniority"], ai_cons:["May require Azure ML knowledge"], description:"Lead product strategy for Microsoft's advertising platform, working with data scientists and engineers to build next-gen ad targeting systems." },
-  "goog_1":{ id:"goog_1", company:"Google", title:"Product Manager, Data Analytics", location:"Remote", url:"https://careers.google.com", posted_ts:NOW_S-7200, found_date:new Date().toISOString(), fit_score:8, ai_summary:"Strong fit for your data product background. Role involves building analytics tools used by millions of advertisers globally.", ai_pros:["Core data analytics focus","Remote-friendly","High impact product"], ai_cons:["Google PM process is highly structured"], description:"Drive product vision for Google's advertiser analytics suite. Work cross-functionally with engineering, UX, and sales." },
-  "amzn_1":{ id:"amzn_1", company:"Amazon", title:"Sr. PM – Advertising Data Products", location:"Remote", url:"https://amazon.jobs", posted_ts:NOW_S-86400, found_date:new Date().toISOString(), fit_score:9, ai_summary:"Near-perfect match. Amazon Ads is one of the fastest-growing ad businesses and this role sits at the intersection of ads and data.", ai_pros:["Ads + data intersection","Fully remote","High comp potential"], ai_cons:["Amazon culture can be intense"], description:"Own the roadmap for Amazon's advertising data products, enabling brands to measure and optimize their ad spend." },
-  "meta_1":{ id:"meta_1", company:"Meta", title:"Product Manager, Monetization Analytics", location:"Remote", url:"https://metacareers.com", posted_ts:NOW_S-172800, found_date:new Date().toISOString(), fit_score:7, ai_summary:"Good match on the analytics side. Meta's monetization team works on ad measurement and attribution at massive scale.", ai_pros:["Analytics focus aligns well","Remote role","Massive scale exposure"], ai_cons:["Less data infrastructure focus","Competitive interview process"], description:"Build products that help advertisers measure effectiveness of their Meta ad campaigns across Facebook, Instagram, and WhatsApp." },
-  "msft_2":{ id:"msft_2", company:"Microsoft", title:"Principal PM – Data Platform", location:"United States, Georgia, Atlanta", url:"https://apply.careers.microsoft.com/careers", posted_ts:NOW_S-259200, found_date:new Date().toISOString(), fit_score:8, ai_summary:"Strong match for your data background. This role leads product strategy for Microsoft's enterprise data platform.", ai_pros:["Data platform leadership","Atlanta location","Principal level"], ai_cons:["Requires Azure Synapse knowledge"], description:"Define and execute the product roadmap for Microsoft Fabric data platform serving enterprise customers globally." },
-  "goog_2":{ id:"goog_2", company:"Google", title:"Group PM, Search Ads", location:"Remote", url:"https://careers.google.com", posted_ts:NOW_S-345600, found_date:new Date().toISOString(), fit_score:6, ai_summary:"Moderate match. Strong ads focus but search-specific domain is a stretch from your background.", ai_pros:["Ads domain expertise valued","Remote flexibility","Leadership opportunity"], ai_cons:["Search ads is specialized","Requires search ranking knowledge"], description:"Lead a team of PMs building the next generation of Google Search advertising products." }
+  "msft_1":{ id:"msft_1", company:"Microsoft", title:"Senior Product Manager – Ads Platform", location:"United States, Georgia, Atlanta", url:"https://apply.careers.microsoft.com/careers", posted_ts:NOW_S-3600, found_date:new Date().toISOString(), match_score:88, ats_score:82, confidence:"high", resume_used:"ADS", reason:"Direct match to ads platform and data background.", skills_gap:"Strong match — no significant gaps", description_source:"fetched", description:"Lead product strategy for Microsoft's advertising platform." },
+  "goog_1":{ id:"goog_1", company:"Google", title:"Product Manager, Data Analytics", location:"Remote", url:"https://careers.google.com", posted_ts:NOW_S-7200, found_date:new Date().toISOString(), match_score:80, ats_score:75, confidence:"high", resume_used:"DATA", reason:"Strong fit for data product background.", skills_gap:"Missing BigQuery-specific experience", description_source:"fetched", description:"Drive product vision for Google's advertiser analytics suite." },
+  "amzn_1":{ id:"amzn_1", company:"Amazon", title:"Sr. PM – Advertising Data Products", location:"Remote", url:"https://amazon.jobs", posted_ts:NOW_S-86400, found_date:new Date().toISOString(), match_score:92, ats_score:88, confidence:"high", resume_used:"ADS", reason:"Near-perfect match at ads and data intersection.", skills_gap:"Strong match — no significant gaps", description_source:"stored", description:"Own the roadmap for Amazon's advertising data products." },
+  "reddit_1":{ id:"reddit_1", company:"Reddit", title:"Senior Director of Product, Ads Platform", location:"Remote - United States", url:"https://job-boards.greenhouse.io/reddit", posted_ts:NOW_S-172800, found_date:new Date().toISOString(), match_score:85, ats_score:79, confidence:"medium", resume_used:"ADS", reason:"Strong ads platform leadership alignment.", skills_gap:"Missing consumer social platform experience", description_source:"stored", description:"Lead Reddit's ads platform product org." }
 };
 
 function getStatus(id){ return (tracker[id]&&tracker[id].status)||'new'; }
@@ -346,7 +347,7 @@ function timeAgo(ts){
   return Math.floor(d/86400)+'d ago';
 }
 
-function fitClass(s){ return s>=8?'fit-high':s>=6?'fit-mid':'fit-low'; }
+function scoreClass(s){ return s>=80?'fit-high':s>=60?'fit-mid':'fit-low'; }
 
 function statusLabel(s){
   return {new:'New',saved:'Saved',applied:'Applied',phone_screen:'Phone Screen',interview:'Interview',offer:'Offer',rejected:'Rejected',irrelevant:'Not Relevant'}[s]||'New';
@@ -404,7 +405,8 @@ function getFiltered(){
 
   let jobs = Object.values(allJobs).filter(j=>{
     if(irrelevant.includes(j.id)) return false;
-    if(search&&!(j.title||'').toLowerCase().includes(search)) return false;
+    if(j.match_score===0 && j.description_source==='skipped') return false;
+    if(search&&!(j.title||'').toLowerCase().includes(search)&&!(j.company||'').toLowerCase().includes(search)) return false;
     if(companies.length && !companies.some(c=>j.company===c||j.company?.startsWith(c))) return false;
     const l=(j.location||'').toLowerCase();
     if(loc==='atlanta'&&!l.includes('atlanta')&&!l.includes('georgia')) return false;
@@ -414,13 +416,8 @@ function getFiltered(){
     return true;
   });
 
-  // Sort
   if(sort==='score') {
-    jobs.sort((a,b)=>{
-      const aScore = (a.ads_score||0)+(a.data_score||0)+(a.ats_score||0);
-      const bScore = (b.ads_score||0)+(b.data_score||0)+(b.ats_score||0);
-      return bScore - aScore;
-    });
+    jobs.sort((a,b)=>(b.match_score||0)-(a.match_score||0));
   } else if(sort==='ats') {
     jobs.sort((a,b)=>(b.ats_score||0)-(a.ats_score||0));
   } else {
@@ -435,12 +432,13 @@ function renderJobs(){
   const newToday=jobs.filter(j=>j.posted_ts&&(NOW_S-j.posted_ts)<86400).length;
   const remote=jobs.filter(j=>(j.location||'').toLowerCase().includes('remote')).length;
   const atlanta=jobs.filter(j=>(j.location||'').toLowerCase().includes('atlanta')).length;
+  const highMatch=jobs.filter(j=>(j.match_score||0)>=80).length;
 
   document.getElementById('stats-grid').innerHTML=`
     <div class="stat-card"><div class="stat-label">New Today</div><div class="stat-value" style="color:var(--yellow)">${newToday}</div><div class="stat-sub">posted in last 24h</div></div>
     <div class="stat-card"><div class="stat-label">Total Jobs</div><div class="stat-value" style="color:var(--accent)">${jobs.length}</div><div class="stat-sub">matching filters</div></div>
-    <div class="stat-card"><div class="stat-label">Remote</div><div class="stat-value" style="color:var(--green)">${remote}</div><div class="stat-sub">work from anywhere</div></div>
-    <div class="stat-card"><div class="stat-label">Atlanta</div><div class="stat-value" style="color:var(--msft)">${atlanta}</div><div class="stat-sub">local opportunities</div></div>`;
+    <div class="stat-card"><div class="stat-label">Strong Match</div><div class="stat-value" style="color:var(--green)">${highMatch}</div><div class="stat-sub">score 80+ — apply these</div></div>
+    <div class="stat-card"><div class="stat-label">Remote</div><div class="stat-value" style="color:var(--msft)">${remote}</div><div class="stat-sub">work from anywhere</div></div>`;
 
   if(!jobs.length){ document.getElementById('jobs-grid').innerHTML='<div class="empty" style="grid-column:1/-1"><div class="empty-title">No jobs found</div>Try adjusting your filters</div>'; return; }
 
@@ -450,20 +448,15 @@ function renderJobs(){
     const isNew=j.posted_ts&&(NOW_S-j.posted_ts)<86400;
     const status=getStatus(j.id);
     const color=COLORS[j.company]||'#888';
-    const cls=CLASSES[j.company]||'';
+    const matchScore=j.match_score??null;
+    const atsScore=j.ats_score??null;
+    const confidence=j.confidence||null;
+    const reason=j.reason||'';
+    const skillsGap=j.skills_gap||'';
+    const descSource=j.description_source||'';
 
-    // Use new scoring fields, fall back to old fit_score for sample data
-    const matchScore = j.match_score || (j.fit_score ? j.fit_score * 10 : null);
-    const atsScore = j.ats_score || null;
-    const confidence = j.confidence || null;
-    const reason = j.reason || j.ai_summary || '';
-    const skillsGap = j.skills_gap || '';
-    const descSource = j.description_source || '';
-
-    // Score color helpers (0-100 scale)
-    const scoreClass100 = s => s>=80?'fit-high':s>=60?'fit-mid':'fit-low';
-    const confidenceBadge = confidence && confidence !== 'N/A'
-      ? `<span class="badge" style="background:${confidence==='high'?'var(--green-bg)':confidence==='medium'?'var(--yellow-bg)':'var(--red-bg)'}; color:${confidence==='high'?'var(--green)':confidence==='medium'?'var(--yellow)':'var(--red)'}">⚡ ${confidence} conf</span>`
+    const confidenceBadge = confidence && confidence!=='N/A'
+      ? `<span class="badge" style="background:${confidence==='high'?'var(--green-bg)':confidence==='medium'?'var(--yellow-bg)':'var(--red-bg)'};color:${confidence==='high'?'var(--green)':confidence==='medium'?'var(--yellow)':'var(--red)'}">⚡ ${confidence}</span>`
       : '';
     const descBadge = descSource==='none'
       ? '<span class="badge" style="background:#f3f4f6;color:#9ca3af">📄 title only</span>'
@@ -471,7 +464,9 @@ function renderJobs(){
       ? '<span class="badge" style="background:#ede9fe;color:#7c3aed">🌐 fetched</span>'
       : '';
 
-    return `<div class="job-card ${cls}" onclick="openPanel('${j.id}')">
+    const hasGap = skillsGap && skillsGap!=='N/A' && !skillsGap.toLowerCase().includes('strong match') && !skillsGap.toLowerCase().includes('no significant');
+
+    return `<div class="job-card" style="border-left-color:${color}" onclick="openPanel('${j.id}')">
       <div class="card-top">
         <div class="card-company"><span class="dot" style="background:${color}"></span>${j.company}</div>
         <span class="card-time">${timeAgo(j.posted_ts)}</span>
@@ -486,15 +481,15 @@ function renderJobs(){
         ${descBadge}
       </div>
       ${reason?`<div class="card-summary">${reason}</div>`:''}
-      ${skillsGap && skillsGap!=='N/A'?`<div style="font-size:12px;color:var(--yellow);margin-bottom:10px;line-height:1.4">⚠️ Gap: ${skillsGap}</div>`:''}
+      ${hasGap?`<div class="card-gap">⚠️ Gap: ${skillsGap}</div>`:''}
       <div class="card-bottom">
-        <div style="display:flex;gap:6px;align-items:center">
-          ${matchScore!=null?`<div class="fit-score ${scoreClass100(matchScore)}" title="Match Score">${matchScore}</div>`:''}
-          ${atsScore!=null?`<div class="fit-score ${scoreClass100(atsScore)}" title="ATS Score" style="font-size:10px">ATS<br>${atsScore}</div>`:''}
+        <div style="display:flex;gap:8px;align-items:center">
+          ${matchScore!=null?`<div class="fit-score ${scoreClass(matchScore)}" title="Match Score">${matchScore}</div>`:''}
+          ${atsScore!=null?`<div class="fit-score ${scoreClass(atsScore)}" title="ATS Score" style="font-size:10px;text-align:center">ATS<br>${atsScore}</div>`:''}
         </div>
         <div style="display:flex;gap:6px">
           <button class="card-btn" onclick="event.stopPropagation();openPanel('${j.id}')">Details</button>
-          <button class="card-btn irrelevant" onclick="markIrrelevant('${j.id}', event)" title="Mark as not relevant">✕ Not Relevant</button>
+          <button class="card-btn irrelevant" onclick="markIrrelevant('${j.id}',event)">✕ Not Relevant</button>
         </div>
       </div>
     </div>`;
@@ -511,19 +506,22 @@ function renderApplications(){
     </div>`).join('');
 
   const tracked=jobs.filter(j=>getStatus(j.id)!=='new').sort((a,b)=>(b.posted_ts||0)-(a.posted_ts||0));
-  if(!tracked.length){ document.getElementById('app-table-body').innerHTML=`<tr><td colspan="6" style="text-align:center;color:var(--hint);padding:40px">No applications yet. Open a job and set its status.</td></tr>`; return; }
+  if(!tracked.length){ document.getElementById('app-table-body').innerHTML=`<tr><td colspan="7" style="text-align:center;color:var(--hint);padding:40px">No applications yet. Open a job and set its status.</td></tr>`; return; }
 
   document.getElementById('app-table-body').innerHTML=tracked.map(j=>{
     const color=COLORS[j.company]||'#888';
     const s=getStatus(j.id);
     const l=(j.location||'').toLowerCase();
     const locShort=l.includes('remote')?'Remote':l.includes('atlanta')?'Atlanta':(j.location||'').split(',').slice(-1)[0]?.trim()||'';
+    const matchScore=j.match_score??null;
+    const atsScore=j.ats_score??null;
     return `<tr>
       <td><div style="display:flex;align-items:center;gap:6px"><span class="dot" style="background:${color}"></span>${j.company}</div></td>
       <td><span class="table-title" onclick="openPanel('${j.id}')">${j.title||'Untitled'}</span></td>
       <td>${locShort}</td>
       <td><span class="status-pill ${statusPillClass(s)}">${statusLabel(s)}</span></td>
-      <td>${j.fit_score?`<span style="font-weight:600;color:${j.fit_score>=8?'var(--green)':j.fit_score>=6?'var(--yellow)':'var(--red)'}">${j.fit_score}/10</span>`:'—'}</td>
+      <td>${matchScore!=null?`<span style="font-weight:600;color:${matchScore>=80?'var(--green)':matchScore>=60?'var(--yellow)':'var(--red)'}">${matchScore}</span>`:'—'}</td>
+      <td>${atsScore!=null?`<span style="font-weight:600;color:${atsScore>=80?'var(--green)':atsScore>=60?'var(--yellow)':'var(--red)'}">${atsScore}</span>`:'—'}</td>
       <td>${j.found_date?new Date(j.found_date).toLocaleDateString():'—'}</td>
     </tr>`;
   }).join('');
@@ -533,18 +531,46 @@ function openPanel(id){
   currentJob=allJobs[id]; if(!currentJob) return;
   const j=currentJob, color=COLORS[j.company]||'#888';
   const l=(j.location||'').toLowerCase();
+
   document.getElementById('panel-company').innerHTML=`<span class="dot" style="background:${color}"></span>${j.company}`;
   document.getElementById('panel-title').textContent=j.title||'Untitled';
   document.getElementById('panel-meta').innerHTML=`
     ${l.includes('remote')?'<span class="badge badge-remote">Remote</span>':''}
     ${l.includes('atlanta')?'<span class="badge badge-atlanta">Atlanta</span>':''}
+    <span class="badge" style="background:var(--bg);color:var(--muted)">${j.location||''}</span>
     <span class="badge" style="background:var(--bg);color:var(--muted)">${timeAgo(j.posted_ts)}</span>`;
-  const score=j.fit_score;
-  document.getElementById('panel-fit-score').innerHTML=score
-    ?`<div class="fit-large ${fitClass(score)}">${score}</div><div style="font-size:13px;color:var(--muted);margin-bottom:10px">out of 10 match score</div>`
-    :'<div style="font-size:13px;color:var(--hint);margin-bottom:10px">No AI score yet — run scraper with API key</div>';
-  document.getElementById('panel-pros').innerHTML=(j.ai_pros||[]).map(p=>`<li>${p}</li>`).join('');
-  document.getElementById('panel-cons').innerHTML=(j.ai_cons||[]).map(c=>`<li>${c}</li>`).join('');
+
+  const matchScore=j.match_score??null;
+  const atsScore=j.ats_score??null;
+  const hasGap = j.skills_gap && j.skills_gap!=='N/A' && !j.skills_gap.toLowerCase().includes('strong match') && !j.skills_gap.toLowerCase().includes('no significant');
+
+  document.getElementById('panel-fit-score').innerHTML = matchScore!=null ? `
+    <div class="score-row">
+      <div class="fit-large ${scoreClass(matchScore)}">${matchScore}</div>
+      <div class="score-detail">
+        <div class="score-label">Match Score</div>
+        <div class="score-reason">${j.reason||''}</div>
+      </div>
+    </div>
+    ${atsScore!=null?`
+    <div class="ats-row">
+      <div class="fit-score ${scoreClass(atsScore)}" style="width:44px;height:44px;font-size:13px">${atsScore}</div>
+      <div class="score-detail">
+        <div class="score-label">ATS Score</div>
+        <div class="score-reason">Keyword match vs applicant tracking filters</div>
+      </div>
+    </div>`:''}
+    ${hasGap?`
+    <div class="gap-box">
+      <div class="gap-box-label">⚠️ SKILLS GAP</div>
+      <div class="gap-box-text">${j.skills_gap}</div>
+    </div>`:`
+    <div class="match-box">
+      <div class="match-box-text">✓ ${j.skills_gap||'Strong match — no significant gaps'}</div>
+    </div>`}
+    <div class="score-meta">Resume: ${j.resume_used||'—'} · Source: ${j.description_source||'—'} · Confidence: ${j.confidence||'—'}</div>
+  ` : '<div style="font-size:13px;color:var(--hint);padding:12px 0">No AI score yet — run Score Jobs workflow in GitHub Actions</div>';
+
   document.getElementById('panel-status-select').value=getStatus(j.id);
   document.getElementById('panel-notes').value=getNotes(j.id);
   document.getElementById('panel-link').href=j.url||'#';
@@ -559,18 +585,12 @@ function markIrrelevant(id, event) {
   if(!irrelevant.includes(id)) {
     irrelevant.push(id);
     localStorage.setItem('jobify_irrelevant', JSON.stringify(irrelevant));
-    // Also save to tracker for Claude learning
     if(!tracker[id]) tracker[id]={};
     tracker[id].status = 'irrelevant';
-    tracker[id].notes = 'Marked as not relevant by user';
     saveTracker();
   }
   renderJobs();
   renderApplications();
-}
-
-function getIrrelevantCount() {
-  return JSON.parse(localStorage.getItem('jobify_irrelevant')||'[]').length;
 }
 
 function saveStatus(){
@@ -585,7 +605,6 @@ function saveNotes(){
   if(!tracker[currentJob.id]) tracker[currentJob.id]={};
   tracker[currentJob.id].notes=document.getElementById('panel-notes').value;
   saveTracker();
-  document.getElementById('save-note-btn') && (document.getElementById('save-note-btn').textContent='Saved!');
 }
 
 function showPage(page){
@@ -595,6 +614,11 @@ function showPage(page){
   });
   document.getElementById('page-title').textContent=page==='feed'?'Job Feed':'My Applications';
   if(page==='applications') renderApplications();
+}
+
+function closePanel(){
+  document.getElementById('overlay').classList.remove('open');
+  document.getElementById('detail-panel').classList.remove('open');
 }
 
 async function callClaude(prompt){
@@ -617,10 +641,10 @@ async function generateCoverLetter(){
   document.getElementById('cl-modal').classList.add('open');
   document.getElementById('cl-content').innerHTML='<div class="loading-text">Generating with Claude AI...</div>';
   const j=currentJob;
-  const text=await callClaude(`Write a professional 3-paragraph cover letter for:\nJob: ${j.title} at ${j.company}\nDescription: ${j.description||''}\n\nMy background: 8 years in product management, strong background in ads, data products, and analytics, based in Atlanta GA, targeting senior IC or manager roles at big tech.\n\nBe specific, natural, and compelling.`);
+  const text=await callClaude(`Write a professional 3-paragraph cover letter for:\nJob: ${j.title} at ${j.company}\nLocation: ${j.location}\nDescription: ${j.description||''}\n\nCandidate background: 15+ years in product management, deep expertise in AdTech (RTB, DSP/SSP, measurement, attribution), petabyte-scale data platforms, ML feature platforms, and self-serve analytics. Based in Los Angeles CA. Targeting Director/Senior Director roles.\n\nBe specific, compelling, and reference the skills gap if any: ${j.skills_gap||'none'}`);
   document.getElementById('cl-content').innerHTML=text
     ?`<textarea class="modal-textarea" id="cl-textarea">${text}</textarea>`
-    :'<div class="loading-text">Error generating. Check your API key and credits.</div>';
+    :'<div class="loading-text">Error generating. Check your API key.</div>';
 }
 
 async function generateInterviewPrep(){
@@ -628,7 +652,7 @@ async function generateInterviewPrep(){
   document.getElementById('prep-modal').classList.add('open');
   document.getElementById('prep-content').innerHTML='<div class="loading-text">Generating questions with Claude AI...</div>';
   const j=currentJob;
-  const text=await callClaude(`Generate 5 interview questions for: ${j.title} at ${j.company}\nDescription: ${j.description||''}\n\nMix behavioral and technical PM questions. Return ONLY a JSON array of strings, no other text. Example: ["Q1","Q2"]`);
+  const text=await callClaude(`Generate 5 interview questions for: ${j.title} at ${j.company}\nDescription: ${j.description||''}\nSkills gap to address: ${j.skills_gap||'none'}\n\nMix behavioral and technical PM questions relevant to a Director-level candidate with AdTech and data platform background. Return ONLY a JSON array of strings, no other text. Example: ["Q1","Q2"]`);
   try{
     const questions=JSON.parse(text.replace(/```json|```/g,'').trim());
     document.getElementById('prep-content').innerHTML=questions.map((q,i)=>`
