@@ -30,8 +30,7 @@ jobs:
       - run: |
           git config --global user.name "ai-products-builder"
           git config --global user.email "ai-product-foundry@gmail.com"
-          git fetch origin main
-          git rebase origin/main
           git add jobs.json
           git diff --staged --quiet || git commit -m "Daily sync $(date +'%Y-%m-%d')"
+          git pull --rebase=false --strategy-option=theirs origin main
           git push
