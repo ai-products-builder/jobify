@@ -171,11 +171,8 @@
       <span>📋</span> My Applications
     </div>
     <div class="nav-section">Companies</div>
-    <div class="company-filter">
-      <label class="company-item"><input type="checkbox" checked onchange="renderJobs()" id="f-Microsoft"> <span class="dot" style="background:var(--msft)"></span> Microsoft</label>
-      <label class="company-item"><input type="checkbox" checked onchange="renderJobs()" id="f-Google"> <span class="dot" style="background:var(--goog)"></span> Google</label>
-      <label class="company-item"><input type="checkbox" checked onchange="renderJobs()" id="f-Amazon"> <span class="dot" style="background:var(--amzn)"></span> Amazon</label>
-      <label class="company-item"><input type="checkbox" checked onchange="renderJobs()" id="f-Meta"> <span class="dot" style="background:var(--meta)"></span> Meta</label>
+    <div class="company-filter" id="company-filter-list">
+      <!-- populated dynamically -->
     </div>
   </nav>
   <div class="sidebar-footer">
@@ -191,11 +188,12 @@
       <input type="text" class="search-input" placeholder="Search jobs..." oninput="renderJobs()" id="search">
       <select class="filter" onchange="renderJobs()" id="loc-filter">
         <option value="">All locations</option>
-        <option value="atlanta">Atlanta</option>
+        <option value="atlanta">Atlanta / Georgia</option>
         <option value="remote">Remote</option>
+        <option value="california">California</option>
       </select>
       <select class="filter" onchange="renderJobs()" id="time-filter">
-        <option value="0">All time</option>
+        <option value="0" selected>All time</option>
         <option value="1">Last 24h</option>
         <option value="3">Last 3 days</option>
         <option value="7">Last 7 days</option>
@@ -296,8 +294,19 @@
 </div>
 
 <script>
-const COLORS = { Microsoft:'#0078d4', Google:'#34a853', Amazon:'#ff9900', Meta:'#0866ff' };
-const CLASSES = { Microsoft:'msft', Google:'goog', Amazon:'amzn', Meta:'meta' };
+const BRAND_COLORS = {
+  Microsoft:'#0078d4', Amazon:'#ff9900', Netflix:'#e50914',
+  Reddit:'#ff4500', Roku:'#6c2bd9', Unity:'#000000',
+  Fox:'#003366', Tubi:'#fa541c', 'The Trade Desk':'#00a859',
+  'We Work Remotely':'#1a1a2e', Dice:'#e84545', 'Built In':'#5c5ce6',
+  Indeed:'#003a9b', Glassdoor:'#0caa41', Wellfound:'#fb4b4b',
+  'Underdog.io':'#ff6b35', 'True Up':'#7c3aed', 'Tech Fetch':'#0ea5e9',
+  'Product Manager HQ':'#f59e0b', 'Mind the Product':'#ec4899',
+  'The Product Folks':'#10b981', 'ProductJobs.com':'#6366f1',
+  Google:'#34a853', Meta:'#0866ff'
+};
+const COLORS = new Proxy(BRAND_COLORS, { get:(t,k)=>t[k]||'#6b7280' });
+const CLASSES = {};
 const NOW_S = Math.floor(Date.now()/1000);
 let allJobs = {}, currentJob = null;
 let tracker = JSON.parse(localStorage.getItem('jobify_tracker')||'{}');
@@ -347,21 +356,40 @@ async function loadJobs(){
     allJobs = SAMPLES;
     document.getElementById('sync-time').textContent='Showing sample data';
   }
+  buildCompanyFilters();
   renderJobs();
   renderApplications();
+}
+
+function buildCompanyFilters(){
+  const companies = [...new Set(Object.values(allJobs).map(j=>j.company))].sort();
+  const list = document.getElementById('company-filter-list');
+  list.innerHTML = companies.map(c => {
+    const color = COLORS[c];
+    const safeid = 'f-' + c.replace(/[^a-zA-Z0-9]/g,'_');
+    return `<label class="company-item"><input type="checkbox" checked onchange="renderJobs()" id="${safeid}"> <span class="dot" style="background:${color}"></span> ${c}</label>`;
+  }).join('');
+}
+
+function getCheckedCompanies(){
+  return [...document.querySelectorAll('#company-filter-list input[type=checkbox]')]
+    .filter(el=>el.checked)
+    .map(el=>el.id.replace('f-','').replace(/_/g,' '));
 }
 
 function getFiltered(){
   const search=document.getElementById('search').value.toLowerCase();
   const loc=document.getElementById('loc-filter').value;
   const days=parseInt(document.getElementById('time-filter').value);
-  const companies=['Microsoft','Google','Amazon','Meta'].filter(c=>document.getElementById('f-'+c)?.checked);
+  const companies=getCheckedCompanies();
+
   return Object.values(allJobs).filter(j=>{
     if(search&&!(j.title||'').toLowerCase().includes(search)) return false;
-    if(!companies.includes(j.company)) return false;
+    if(companies.length && !companies.some(c=>j.company===c||j.company?.startsWith(c))) return false;
     const l=(j.location||'').toLowerCase();
-    if(loc==='atlanta'&&!l.includes('atlanta')) return false;
+    if(loc==='atlanta'&&!l.includes('atlanta')&&!l.includes('georgia')) return false;
     if(loc==='remote'&&!l.includes('remote')) return false;
+    if(loc==='california'&&!l.includes('california')&&!l.includes('los angeles')&&!l.includes('irvine')&&!l.includes('santa monica')&&!l.includes('culver city')&&!l.includes('ventura')&&!l.includes(', ca')) return false;
     if(days>0&&j.posted_ts&&(NOW_S-j.posted_ts)>days*86400) return false;
     return true;
   }).sort((a,b)=>(b.posted_ts||0)-(a.posted_ts||0));
