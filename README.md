@@ -8,10 +8,11 @@ A personal job search dashboard that automatically scrapes PM, data, and ads rol
 
 ## What It Does
 
-- Scrapes job listings daily from Microsoft, Amazon, Netflix, Reddit, Roku, Unity, Fox, Tubi, The Trade Desk, Dice, Built In, We Work Remotely, and more
-- Filters for Product Manager, Data, Ads, and Analytics roles in Atlanta, Georgia, Remote, and Southern California
+- Scrapes job listings daily from companies like Microsoft, Amazon, Netflix, Reddit, Roku, Unity, Fox, Tubi, The Trade Desk, Dice, Built In, We Work Remotely etc. 
+- Filters for Product Manager, Director, Program Manager, AI, Data, Ads, and Analytics roles in Atlanta, Georgia, Remote, and Southern California
+- Tracks your application status (New → Saved → Applied → Phone Screen → Interview → Offer)
+- Scores each job for fit using Claude AI — including ATS score, resume gaps, and missing AI skills
 - Tracks your application status (New → Applied → Interview → Offer)
-- Generates cover letters and interview prep questions using Claude AI
 - Updates automatically every morning at 8am via GitHub Actions
 
 ## Files
