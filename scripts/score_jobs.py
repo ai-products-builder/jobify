@@ -15,7 +15,7 @@ SKIP_COMPANIES = {
     "wellfound", "underdog", "trueup", "techfetch", "pmhq",
     "mindtheproduct", "productfolks", "productjobs",
     "roundel", "adcolony", "target roundel",
-    "dice", "indeed", "glassdoor", "mind the product", "innovid" , "moloco", "product manager HQ", "product jobs", "tech fetch", "the product folks" , "builtin" 
+    "dice", "indeed", "glassdoor", "mind the product", "innovid" , "moloco", "product manager HQ", "product jobs", "tech fetch", "the product folks" , "builtin" , "we work", "remotely" , "true up"
 }
 
 
