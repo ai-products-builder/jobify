@@ -1,0 +1,38 @@
+name: Score Jobs with Claude
+
+on:
+  workflow_run:
+    workflows: ["Scrape Jobs"]
+    types:
+      - completed
+  workflow_dispatch:
+
+jobs:
+  score:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install anthropic
+
+      - name: Run scoring script
+        env:
+          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          RESUME_ADS: ${{ secrets.RESUME_ADS }}
+          RESUME_DATA: ${{ secrets.RESUME_DATA }}
+        run: python scripts/score_jobs.py
+
+      - name: Commit scored jobs
+        run: |
+          git config user.name "github-actions"
+          git config user.email "actions@github.com"
+          git add docs/jobs.json
+          git diff --cached --quiet || git commit -m "Auto-score jobs with Claude"
+          git push
