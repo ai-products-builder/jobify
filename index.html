@@ -77,6 +77,8 @@
   .fit-low { background: var(--red-bg); color: var(--red); }
   .card-btn { font-size: 12px; padding: 5px 12px; border-radius: 6px; border: 1px solid var(--border); background: var(--bg); color: var(--muted); cursor: pointer; font-family: 'DM Sans', sans-serif; font-weight: 500; }
   .card-btn:hover { background: var(--accent-bg); color: var(--accent); border-color: var(--accent); }
+  .card-btn.irrelevant { background: var(--red-bg); color: var(--red); border-color: var(--red); }
+  .job-card.hidden-irrelevant { display: none; }
 
   .overlay { position: fixed; inset: 0; background: rgba(0,0,0,0.3); z-index: 200; opacity: 0; pointer-events: none; transition: opacity 0.3s; }
   .overlay.open { opacity: 1; pointer-events: all; }
@@ -171,6 +173,10 @@
       <span>📋</span> My Applications
     </div>
     <div class="nav-section">Companies</div>
+    <div style="display:flex;gap:6px;padding:4px 12px 8px;">
+      <button onclick="selectAllCompanies(true)" style="flex:1;font-size:11px;padding:4px 6px;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--muted);cursor:pointer;">All</button>
+      <button onclick="selectAllCompanies(false)" style="flex:1;font-size:11px;padding:4px 6px;border:1px solid var(--border);border-radius:6px;background:var(--bg);color:var(--muted);cursor:pointer;">None</button>
+    </div>
     <div class="company-filter" id="company-filter-list">
       <!-- populated dynamically -->
     </div>
@@ -191,6 +197,11 @@
         <option value="atlanta">Atlanta / Georgia</option>
         <option value="remote">Remote</option>
         <option value="california">California</option>
+      </select>
+      <select class="filter" onchange="renderJobs()" id="sort-filter">
+        <option value="score">Sort: Best Match</option>
+        <option value="date">Sort: Newest First</option>
+        <option value="ats">Sort: ATS Score</option>
       </select>
       <select class="filter" onchange="renderJobs()" id="time-filter">
         <option value="0" selected>All time</option>
@@ -247,6 +258,7 @@
         <option value="interview">Interview</option>
         <option value="offer">Offer</option>
         <option value="rejected">Rejected</option>
+        <option value="irrelevant">Not Relevant</option>
       </select>
       <textarea class="notes-area" id="panel-notes" placeholder="Add notes..."></textarea>
       <button class="save-note-btn" onclick="saveNotes()">Save Notes</button>
@@ -337,10 +349,10 @@ function timeAgo(ts){
 function fitClass(s){ return s>=8?'fit-high':s>=6?'fit-mid':'fit-low'; }
 
 function statusLabel(s){
-  return {new:'New',saved:'Saved',applied:'Applied',phone_screen:'Phone Screen',interview:'Interview',offer:'Offer',rejected:'Rejected'}[s]||'New';
+  return {new:'New',saved:'Saved',applied:'Applied',phone_screen:'Phone Screen',interview:'Interview',offer:'Offer',rejected:'Rejected',irrelevant:'Not Relevant'}[s]||'New';
 }
 function statusPillClass(s){
-  return {new:'s-new',saved:'s-saved',applied:'s-applied',phone_screen:'s-phone_screen',interview:'s-interview',offer:'s-offer',rejected:'s-rejected'}[s]||'s-new';
+  return {new:'s-new',saved:'s-saved',applied:'s-applied',phone_screen:'s-phone_screen',interview:'s-interview',offer:'s-offer',rejected:'s-rejected',irrelevant:'s-rejected'}[s]||'s-new';
 }
 
 async function loadJobs(){
@@ -359,6 +371,11 @@ async function loadJobs(){
   buildCompanyFilters();
   renderJobs();
   renderApplications();
+}
+
+function selectAllCompanies(checked){
+  document.querySelectorAll('#company-filter-list input[type=checkbox]').forEach(el=>el.checked=checked);
+  renderJobs();
 }
 
 function buildCompanyFilters(){
@@ -381,9 +398,12 @@ function getFiltered(){
   const search=document.getElementById('search').value.toLowerCase();
   const loc=document.getElementById('loc-filter').value;
   const days=parseInt(document.getElementById('time-filter').value);
+  const sort=document.getElementById('sort-filter').value;
   const companies=getCheckedCompanies();
+  const irrelevant=JSON.parse(localStorage.getItem('jobify_irrelevant')||'[]');
 
-  return Object.values(allJobs).filter(j=>{
+  let jobs = Object.values(allJobs).filter(j=>{
+    if(irrelevant.includes(j.id)) return false;
     if(search&&!(j.title||'').toLowerCase().includes(search)) return false;
     if(companies.length && !companies.some(c=>j.company===c||j.company?.startsWith(c))) return false;
     const l=(j.location||'').toLowerCase();
@@ -392,7 +412,22 @@ function getFiltered(){
     if(loc==='california'&&!l.includes('california')&&!l.includes('los angeles')&&!l.includes('irvine')&&!l.includes('santa monica')&&!l.includes('culver city')&&!l.includes('ventura')&&!l.includes(', ca')) return false;
     if(days>0&&j.posted_ts&&(NOW_S-j.posted_ts)>days*86400) return false;
     return true;
-  }).sort((a,b)=>(b.posted_ts||0)-(a.posted_ts||0));
+  });
+
+  // Sort
+  if(sort==='score') {
+    jobs.sort((a,b)=>{
+      const aScore = (a.ads_score||0)+(a.data_score||0)+(a.ats_score||0);
+      const bScore = (b.ads_score||0)+(b.data_score||0)+(b.ats_score||0);
+      return bScore - aScore;
+    });
+  } else if(sort==='ats') {
+    jobs.sort((a,b)=>(b.ats_score||0)-(a.ats_score||0));
+  } else {
+    jobs.sort((a,b)=>(b.posted_ts||0)-(a.posted_ts||0));
+  }
+
+  return jobs;
 }
 
 function renderJobs(){
@@ -431,8 +466,14 @@ function renderJobs(){
       </div>
       ${j.ai_summary?`<div class="card-summary">${j.ai_summary}</div>`:''}
       <div class="card-bottom">
-        ${score?`<div class="fit-score ${fitClass(score)}">${score}</div>`:'<div></div>'}
-        <button class="card-btn" onclick="event.stopPropagation();openPanel('${j.id}')">View Details</button>
+        <div style="display:flex;gap:6px;align-items:center">
+          ${score?`<div class="fit-score ${fitClass(score)}" title="Claude Score">${score}</div>`:''}
+          ${j.ats_score?`<div class="fit-score ${fitClass(Math.round(j.ats_score/10))}" title="ATS Score">${j.ats_score}</div>`:''}
+        </div>
+        <div style="display:flex;gap:6px">
+          <button class="card-btn" onclick="event.stopPropagation();openPanel('${j.id}')">Details</button>
+          <button class="card-btn irrelevant" onclick="markIrrelevant('${j.id}', event)" title="Mark as not relevant">✕ Not Relevant</button>
+        </div>
       </div>
     </div>`;
   }).join('');
@@ -490,7 +531,25 @@ function openPanel(id){
   document.getElementById('detail-panel').classList.add('open');
 }
 
-function closePanel(){ document.getElementById('overlay').classList.remove('open'); document.getElementById('detail-panel').classList.remove('open'); currentJob=null; }
+function markIrrelevant(id, event) {
+  event.stopPropagation();
+  const irrelevant = JSON.parse(localStorage.getItem('jobify_irrelevant')||'[]');
+  if(!irrelevant.includes(id)) {
+    irrelevant.push(id);
+    localStorage.setItem('jobify_irrelevant', JSON.stringify(irrelevant));
+    // Also save to tracker for Claude learning
+    if(!tracker[id]) tracker[id]={};
+    tracker[id].status = 'irrelevant';
+    tracker[id].notes = 'Marked as not relevant by user';
+    saveTracker();
+  }
+  renderJobs();
+  renderApplications();
+}
+
+function getIrrelevantCount() {
+  return JSON.parse(localStorage.getItem('jobify_irrelevant')||'[]').length;
+}
 
 function saveStatus(){
   if(!currentJob) return;
