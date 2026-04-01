@@ -6030,5 +6030,49 @@
     "found_date": "2026-04-01T18:02:24.476766",
     "status": "new",
     "description": ""
+  },
+  "klaviyo_7616068003": {
+    "id": "klaviyo_7616068003",
+    "company": "Klaviyo",
+    "title": "Senior Product Manager, AI (Customer Agent)",
+    "location": "Boston, MA",
+    "url": "https://www.klaviyo.com/careers/jobs?gh_jid=7616068003",
+    "posted_ts": 0,
+    "found_date": "2026-04-01T18:39:26.680992",
+    "status": "new",
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;em&gt;At Klaviyo, we value the unique backgrounds, experiences and perspectives each Klaviyo (we call ourselves Klaviyos) brings to our workplace each and every day. We believe everyone deserves a fair shot at success and appreciate the experiences each person brings beyond the traditional job requirements. If you\u2019re a close but not exact match with the description, we hope you\u2019ll still consider applying. Want to learn more about life at Kl"
+  },
+  "wwr_7787504564286504406": {
+    "id": "wwr_7787504564286504406",
+    "company": "We Work Remotely",
+    "title": "Prepterminal.com: Chief Operating Officer (COO) / Growth GM",
+    "location": "Remote",
+    "url": "https://weworkremotely.com/remote-jobs/prepterminal-com-chief-operating-officer-coo-growth-gm",
+    "posted_ts": 0,
+    "found_date": "2026-04-01T18:39:37.919132",
+    "status": "new",
+    "description": ""
+  },
+  "dice_320da6ea98d53072eae33fa9e4e4a547": {
+    "id": "dice_320da6ea98d53072eae33fa9e4e4a547",
+    "company": "Dice",
+    "title": "Legal Systems Product Owner",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-04-01T18:39:40.080999",
+    "status": "new",
+    "description": ""
+  },
+  "dice_4018893c9f1d19e9c453b20798c00b6b": {
+    "id": "dice_4018893c9f1d19e9c453b20798c00b6b",
+    "company": "Dice",
+    "title": "Health Analytics - Data Science Analyst",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-04-01T18:39:40.952058",
+    "status": "new",
+    "description": ""
   }
 }
