@@ -18,7 +18,7 @@ EXCLUDE_TITLES = [
     "sales", "recruiter", "designer", "scientist",
     "attorney", "lawyer", "finance", "accounting",
     "hr ", "human resources", "coordinator", "assistant",
-    "technician", "operator", "specialist"
+    "technician", "operator", "specialist", "science"
 ]
 
 LOCATION_KEYWORDS = ["atlanta", "remote", "multiple locations", "united states"]
