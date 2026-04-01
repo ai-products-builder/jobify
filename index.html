@@ -19,11 +19,11 @@
   * { box-sizing: border-box; margin: 0; padding: 0; }
   body { font-family: 'DM Sans', sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; display: flex; }
 
-  .sidebar { width: var(--sidebar); min-height: 100vh; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; position: fixed; top: 0; left: 0; z-index: 100; padding: 20px 0; }
+  .sidebar { width: var(--sidebar); height: 100vh; background: var(--surface); border-right: 1px solid var(--border); display: flex; flex-direction: column; position: fixed; top: 0; left: 0; z-index: 100; padding: 20px 0; overflow: hidden; }
   .logo { padding: 0 20px 20px; border-bottom: 1px solid var(--border); }
   .logo-name { font-family: 'DM Serif Display', serif; font-size: 24px; color: var(--accent); }
   .logo-sub { font-size: 11px; color: var(--hint); margin-top: 2px; }
-  .nav { padding: 16px 12px; flex: 1; }
+  .nav { padding: 16px 12px; flex: 1; overflow-y: auto; min-height: 0; }
   .nav-item { display: flex; align-items: center; gap: 10px; padding: 9px 12px; border-radius: 8px; font-size: 14px; font-weight: 500; color: var(--muted); cursor: pointer; transition: all 0.15s; margin-bottom: 2px; }
   .nav-item:hover { background: var(--bg); color: var(--text); }
   .nav-item.active { background: var(--accent-bg); color: var(--accent); }
