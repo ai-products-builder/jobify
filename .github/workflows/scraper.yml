@@ -15,6 +15,7 @@ jobs:
       - uses: actions/checkout@v4
         with:
           token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
 
       - uses: actions/setup-python@v5
         with:
@@ -29,6 +30,8 @@ jobs:
       - run: |
           git config --global user.name "ai-products-builder"
           git config --global user.email "ai-product-foundry@gmail.com"
+          git fetch origin main
+          git rebase origin/main
           git add jobs.json
           git diff --staged --quiet || git commit -m "Daily sync $(date +'%Y-%m-%d')"
           git push
