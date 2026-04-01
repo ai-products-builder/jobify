@@ -2,7 +2,7 @@ name: Score Jobs with Claude
 
 on:
   workflow_run:
-    workflows: ["Scrape Jobs"]
+    workflows: ["Daily Job Scraper"]
     types:
       - completed
   workflow_dispatch:
