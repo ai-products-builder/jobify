@@ -1773,5 +1773,27 @@
     "found_date": "2026-04-01T15:54:53.104130",
     "status": "new",
     "description": ""
+  },
+  "wwr_-197009308929132241": {
+    "id": "wwr_-197009308929132241",
+    "company": "We Work Remotely",
+    "title": "Prepterminal.com: Chief Operating Officer (COO) / Growth GM",
+    "location": "Remote",
+    "url": "https://weworkremotely.com/remote-jobs/prepterminal-com-chief-operating-officer-coo-growth-gm",
+    "posted_ts": 0,
+    "found_date": "2026-04-01T09:07:20.048792",
+    "status": "new",
+    "description": ""
+  },
+  "dice_15841c364f74bc3dc02e4cbec569dbbe": {
+    "id": "dice_15841c364f74bc3dc02e4cbec569dbbe",
+    "company": "Dice",
+    "title": "Product Manager (Financial and Automobile domain needed)",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-04-01T09:07:21.361623",
+    "status": "new",
+    "description": ""
   }
 }
