@@ -17590,7 +17590,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:00:56.182621",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "ADS",
+    "reason": "Job description is incomplete/unreadable (only CSS variables provided), making accurate assessment impossible; however, Netflix Ads measurement PM role likely requires different skill emphasis than mobile app monetization focus in resume.",
+    "skills_gap": "Resume heavily emphasizes mobile SDK, RTB, and mobile app monetization; Netflix ads measurement likely requires streaming/video advertising, CTV measurement, and viewer-centric attribution expertise not prominently featured.",
+    "confidence": "low"
   },
   "netflix_790313631140": {
     "id": "netflix_790313631140",
@@ -17601,7 +17608,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:00:56.999418",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise in AdTech/data platforms and petabyte-scale systems doesn't align with Netflix's Enterprise Systems role, which typically focuses on internal infrastructure, operations, and cross-functional enablement rather than revenue-generating data products.",
+    "skills_gap": "Job description appears incomplete/corrupted in submission, but Enterprise Systems PMs typically need infrastructure operations, internal systems thinking, and employee productivity focus\u2014Preethi's background is exclusively external-facing data monetization and customer analytics platforms.",
+    "confidence": "low"
   },
   "netflix_790313590938": {
     "id": "netflix_790313590938",
@@ -17612,7 +17626,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:00:56.999444",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep AdTech/data platform expertise doesn't align with Netflix's content discovery product role, which requires consumer product intuition, content/entertainment domain knowledge, and user-facing product strategy rather than B2B data infrastructure.",
+    "skills_gap": "Missing: content product strategy, entertainment industry expertise, consumer recommendation systems, content catalog understanding, and user experience design for streaming platforms; core strength in data infrastructure is less relevant to content exploration product leadership.",
+    "confidence": "medium"
   },
   "netflix_790313513251": {
     "id": "netflix_790313513251",
@@ -17623,7 +17644,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:00:56.999458",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "ADS",
+    "reason": "Resume is deeply specialized in programmatic RTB, measurement, and data platforms, but the Netflix Ad Formats PM role likely requires consumer-facing ad creative, format innovation, and platform partnerships rather than backend auction systems and data infrastructure.",
+    "skills_gap": "Missing expertise in ad creative formats, publisher/advertiser-facing product design, ad creative optimization, and consumer ad experience; heavy data/infrastructure focus misaligned with format product management.",
+    "confidence": "low"
   },
   "netflix_790313321251": {
     "id": "netflix_790313321251",
@@ -17634,7 +17662,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:00:56.999471",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "ADS",
+    "reason": "Strong AdTech and data platform expertise, but Netflix TEE role appears focused on privacy/security infrastructure rather than ads optimization and monetization\u2014core strengths on resume.",
+    "skills_gap": "Resume lacks demonstrated experience with Trusted Execution Environments, cryptography, secure computation, or privacy-preserving technologies; heavy ads/RTB focus misaligns with infrastructure security requirements.",
+    "confidence": "low"
   },
   "netflix_790311798908": {
     "id": "netflix_790311798908",
@@ -17645,7 +17680,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:00:57.822897",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Deep data platform expertise doesn't align with media planning product role; resume lacks advertising creative strategy, media buying, campaign optimization, and audience targeting experience that Media Planning PM typically requires.",
+    "skills_gap": "Missing core competencies: media planning strategy, campaign management, audience insights/targeting, creative optimization, media buying workflows, advertiser relationship management, and traditional media planning tools/platforms.",
+    "confidence": "low"
   },
   "hubspotjobs_7410314": {
     "id": "hubspotjobs_7410314",
@@ -17656,7 +17698,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:01:00.410395",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;POS-19085&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=&quot;font-size: 18pt;&quot;&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p data-start=&quot;368&quot; data-end=&quot;440&quot;&gt;Our mission at HubSpot is to help millions of organizations grow better.&lt;/p&gt;\n&lt;p data-start=&quot;442&quot; data-end=&quot;812&quot;&gt;HubSpot Academy is a globally renowned education platform attracting hundreds of thousands of professionals who want"
+    "description": "&lt;p&gt;&lt;strong&gt;POS-19085&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=&quot;font-size: 18pt;&quot;&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p data-start=&quot;368&quot; data-end=&quot;440&quot;&gt;Our mission at HubSpot is to help millions of organizations grow better.&lt;/p&gt;\n&lt;p data-start=&quot;442&quot; data-end=&quot;812&quot;&gt;HubSpot Academy is a globally renowned education platform attracting hundreds of thousands of professionals who want",
+    "description_source": "stored",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise is deeply rooted in data platforms and AdTech products, while this HubSpot Academy role appears focused on educational content strategy and platform growth\u2014a significant domain pivot with limited visible overlap.",
+    "skills_gap": "Missing direct experience with educational platforms, learning management systems, content strategy, curriculum development, and the B2B SaaS product metrics relevant to an Academy platform; expertise in data/analytics products doesn't translate directly to education product leadership.",
+    "confidence": "low"
   },
   "hubspotjobs_7617006": {
     "id": "hubspotjobs_7617006",
@@ -17667,7 +17716,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:01:00.410435",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;POS-11383&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;h2&gt;&lt;strong&gt;Senior Product Manager I, Messaging Performance&lt;/strong&gt;&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;HUB Level:&lt;/strong&gt; 5&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Career Track:&lt;/strong&gt; Craft Track&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Our mission at HubSpot is to help millions of organizations grow better.&lt;/p&gt;\n&lt;p&gt;The Mes"
+    "description": "&lt;p&gt;&lt;strong&gt;POS-11383&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;h2&gt;&lt;strong&gt;Senior Product Manager I, Messaging Performance&lt;/strong&gt;&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;HUB Level:&lt;/strong&gt; 5&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Career Track:&lt;/strong&gt; Craft Track&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Our mission at HubSpot is to help millions of organizations grow better.&lt;/p&gt;\n&lt;p&gt;The Mes",
+    "description_source": "stored",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise is in large-scale data platforms and analytics infrastructure, while this HubSpot role focuses on messaging product performance\u2014a domain shift requiring different domain knowledge despite strong PM fundamentals.",
+    "skills_gap": "Missing: messaging/communication platform experience, email/SMS/push notification product expertise, customer engagement metrics; expertise is too data-infrastructure heavy for a messaging performance PM role that likely needs deeper product sense in CRM and marketing automation domains.",
+    "confidence": "low"
   },
   "hubspotjobs_7616922": {
     "id": "hubspotjobs_7616922",
@@ -17678,7 +17734,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:01:00.410450",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;POS-19142&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;h2&gt;&lt;strong&gt;Senior Product Manager I, Compliance Platform&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;&lt;strong&gt;HUB Level:&lt;/strong&gt; 5&lt;br&gt;&lt;strong&gt;Career Track:&lt;/strong&gt; Craft Track&lt;/p&gt;\n&lt;h2&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Our mission at HubSpot is to help millions of organizations grow better. As a Senior Product Manager I on the Compliance Platform team, yo"
+    "description": "&lt;p&gt;&lt;strong&gt;POS-19142&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;h2&gt;&lt;strong&gt;Senior Product Manager I, Compliance Platform&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;&lt;strong&gt;HUB Level:&lt;/strong&gt; 5&lt;br&gt;&lt;strong&gt;Career Track:&lt;/strong&gt; Craft Track&lt;/p&gt;\n&lt;h2&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Our mission at HubSpot is to help millions of organizations grow better. As a Senior Product Manager I on the Compliance Platform team, yo",
+    "description_source": "stored",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise in data platforms, observability, and governance is misaligned with a security/compliance product role that likely requires security domain knowledge, threat modeling, and compliance automation experience.",
+    "skills_gap": "Missing security operations, threat intelligence, security compliance frameworks (SOC 2, ISO 27001), vulnerability management, and security product domain expertise; resume is heavily data/analytics-focused rather than security/compliance-focused.",
+    "confidence": "medium"
   },
   "capitalone_Applied-Researcher-I--AI-Foundations--LLM-Customization--Finetuning--Reinforcement-Learning-_R239757-1": {
     "id": "capitalone_Applied-Researcher-I--AI-Foundations--LLM-Customization--Finetuning--Reinforcement-Learning-_R239757-1",
@@ -17689,7 +17752,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:01:41.538218",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Resume demonstrates exceptional product leadership and data platform expertise, but Applied Researcher role requires deep ML/AI research fundamentals and hands-on model development that aren't evident in her primarily product-focused career.",
+    "skills_gap": "Missing: Research publications, ML research methodology, deep reinforcement learning implementation, academic or research lab experience; has AI/ML mentions but as product features rather than core research contributions.",
+    "confidence": "low"
   },
   "wwr_1386497525782301218": {
     "id": "wwr_1386497525782301218",
@@ -17700,7 +17770,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:03:24.634682",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_5861fda60782a6ca6162a86841e68cee": {
     "id": "dice_5861fda60782a6ca6162a86841e68cee",
@@ -17711,7 +17788,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:03:25.445090",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e56482dfc41c513d6de7ef50d9f848d3": {
     "id": "dice_e56482dfc41c513d6de7ef50d9f848d3",
@@ -17722,7 +17806,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:03:27.627463",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_cad857fdf1ccec834b7a6c75cc970a71": {
     "id": "dice_cad857fdf1ccec834b7a6c75cc970a71",
@@ -17733,7 +17824,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:03:27.627470",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_71b91a02c326d62332e79bf0c165a067": {
     "id": "dice_71b91a02c326d62332e79bf0c165a067",
@@ -17744,7 +17842,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:03:27.627495",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_90609a685c08f73f6ad70fe60213b1ff": {
     "id": "dice_90609a685c08f73f6ad70fe60213b1ff",
@@ -17755,6 +17860,13 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T18:03:27.627504",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
