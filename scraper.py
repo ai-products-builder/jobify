@@ -154,9 +154,11 @@ def fetch_amazon():
 # doesn't filter reliably by location. Title filter handles relevance.
 def fetch_netflix():
     """
-    Netflix uses Eightfold AI ATS.
-    Correct API: POST to /api/apply/v2/jobs with ?domain=netflix.com&query=<kw>
-    Location field is a comma-separated string like "New York,New York,United States of America"
+    Netflix uses Eightfold AI ATS (explore.jobs.netflix.net).
+    API caps at 10 results per page — must paginate using start=0,10,20...
+    Stop when fewer than 10 results returned (last page).
+    Instead of searching by keyword (too narrow), fetch ALL US jobs directly
+    by filtering on region=ucan, then apply title filter locally.
     """
     print("Fetching Netflix...")
     results = []
@@ -165,24 +167,29 @@ def fetch_netflix():
         "united states", "los angeles", "atlanta", "california",
         "new york", "seattle", "los gatos", "beverly hills", "burbank"
     ]
-    for kw in SEARCH_QUERIES:
+    page_size = 10
+    start = 0
+    total_fetched = 0
+
+    while True:
         try:
             url = (
                 f"https://explore.jobs.netflix.net/api/apply/v2/jobs"
-                f"?domain=netflix.com&start=0&num=100"
-                f"&query={requests.utils.quote(kw)}"
+                f"?domain=netflix.com&start={start}&num={page_size}"
+                f"&Teams=Product%20Management&Region=ucan"
             )
             r = requests.get(url, headers={
                 "User-Agent": "Mozilla/5.0",
                 "Accept": "application/json",
                 "Referer": "https://explore.jobs.netflix.net/careers"
             }, timeout=15)
-            print(f"  Netflix status: {r.status_code} | {kw}")
             if r.status_code != 200 or not r.text.strip():
-                continue
+                break
             data = r.json()
             positions = data.get("positions", [])
-            print(f"  Netflix positions: {len(positions)} | {kw}")
+            total_fetched += len(positions)
+            print(f"  Netflix page start={start}: {len(positions)} positions")
+
             for j in positions:
                 if not isinstance(j, dict):
                     continue
@@ -191,16 +198,13 @@ def fetch_netflix():
                     continue
                 seen.add(jid)
                 title = j.get("name", j.get("posting_name", ""))
-                # Location is "City,State,Country" — normalize to readable form
                 raw_loc = j.get("location", "")
                 if isinstance(raw_loc, list):
                     raw_loc = raw_loc[0] if raw_loc else ""
-                # "New York,New York,United States of America" -> "New York, NY, US"
                 parts = [p.strip() for p in raw_loc.split(",")]
                 locs = ", ".join(parts) if parts else ""
                 if not is_relevant_title(title):
                     continue
-                # Accept US jobs only
                 if locs and not any(ind in locs.lower() for ind in us_indicators):
                     continue
                 results.append(make_job(
@@ -210,10 +214,17 @@ def fetch_netflix():
                     location=locs,
                     url=f"https://explore.jobs.netflix.net/careers?pid={jid}&domain=netflix.com"
                 ))
+
+            # Stop if last page
+            if len(positions) < page_size:
+                break
+            start += page_size
             sleep(0.5)
         except Exception as e:
-            print(f"  Netflix error ({kw}): {e}")
-    print(f"  Found {len(results)} Netflix jobs")
+            print(f"  Netflix error (start={start}): {e}")
+            break
+
+    print(f"  Netflix: fetched {total_fetched} total, {len(results)} relevant jobs")
     return results
 
 
