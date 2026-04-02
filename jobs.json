@@ -15384,5 +15384,60 @@
     "skills_gap": "N/A",
     "confidence": "N/A",
     "description_source": "skipped"
+  },
+  "salesforce_Data-Analytics-Analyst-Manager_JR330837": {
+    "id": "salesforce_Data-Analytics-Analyst-Manager_JR330837",
+    "company": "Salesforce",
+    "title": "Data Analytics Analyst/Manager",
+    "location": "5 Locations",
+    "url": "https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site/job/Texas---Austin/Data-Analytics-Analyst-Manager_JR330837",
+    "posted_ts": 0,
+    "found_date": "2026-04-02T15:48:01.262559",
+    "status": "new",
+    "description": ""
+  },
+  "wwr_6838984112142869776": {
+    "id": "wwr_6838984112142869776",
+    "company": "We Work Remotely",
+    "title": "Prepterminal.com: Chief Operating Officer (COO) / Growth GM",
+    "location": "Remote",
+    "url": "https://weworkremotely.com/remote-jobs/prepterminal-com-chief-operating-officer-coo-growth-gm",
+    "posted_ts": 0,
+    "found_date": "2026-04-02T15:48:11.837417",
+    "status": "new",
+    "description": ""
+  },
+  "dice_dd3d5600e4ba725e14dd269a41c320ce": {
+    "id": "dice_dd3d5600e4ba725e14dd269a41c320ce",
+    "company": "Dice",
+    "title": "AVP, Campaign Analytics & Insights",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-04-02T15:48:16.899540",
+    "status": "new",
+    "description": ""
+  },
+  "dice_9881f9b44e4902d35bee4a16da7d1bd6": {
+    "id": "dice_9881f9b44e4902d35bee4a16da7d1bd6",
+    "company": "Dice",
+    "title": "Analytics & AI Delivery Lead",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-04-02T15:48:18.914536",
+    "status": "new",
+    "description": ""
+  },
+  "dice_253db2dc7f9a69fb4aa428a660c844c9": {
+    "id": "dice_253db2dc7f9a69fb4aa428a660c844c9",
+    "company": "Dice",
+    "title": "Program Manager Position",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-04-02T15:48:28.179404",
+    "status": "new",
+    "description": ""
   }
 }
