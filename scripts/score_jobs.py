@@ -19,6 +19,19 @@ SKIP_COMPANIES = {
     "builtin", "we work", "remotely", "true up"
 }
 
+# These companies use JavaScript-rendered career sites — live URL fetching
+# will always return a JS shell with no job content. Description must be
+# stored at scrape time or scored on title/company only.
+NO_FETCH_DOMAINS = [
+    "explore.jobs.netflix.net",      # Eightfold AI — JS rendered
+    "apply.careers.microsoft.com",   # Microsoft — JS rendered, blocks scrapers
+    "careers.snap.com",              # Workday — JS rendered
+    "apply.deloitte.com",            # Avature — JS rendered
+    "myworkdayjobs.com",             # All Workday sites — JS rendered
+    "smartrecruiters.com",           # SmartRecruiters — JS rendered
+    "jobs.netflix.com",              # Netflix legacy URL — JS rendered
+]
+
 
 class HTMLTextExtractor(HTMLParser):
     def __init__(self):
@@ -43,7 +56,18 @@ class HTMLTextExtractor(HTMLParser):
         return " ".join(" ".join(self.result).split())
 
 
+def should_skip_fetch(url: str) -> bool:
+    """Return True if live URL fetching is known to be useless for this URL."""
+    for domain in NO_FETCH_DOMAINS:
+        if domain in url:
+            return True
+    return False
+
+
 def fetch_description(url: str) -> str:
+    if should_skip_fetch(url):
+        print(f"   ⏭️  Skipping live fetch (JS-rendered site): {url[:60]}")
+        return ""
     try:
         req = urllib.request.Request(
             url,
@@ -79,14 +103,13 @@ def should_skip(job: dict) -> tuple[bool, str]:
 
 def is_properly_scored(job: dict) -> bool:
     """
-    Bug fix: treat 0 scores as unscored — they indicate a failed run.
-    Only skip if score is a real non-zero value OR was intentionally skipped.
+    Only skip jobs that have a real non-zero score.
+    0,0 scores from previous failed runs must be re-scored.
     """
     if job.get("description_source") == "skipped":
-        return True  # aggregators — intentionally skipped
+        return True
     score = job.get("match_score")
     ats = job.get("ats_score")
-    # Must be a real number > 0 to count as properly scored
     return (
         score is not None and ats is not None and
         isinstance(score, (int, float)) and isinstance(ats, (int, float)) and
@@ -147,7 +170,7 @@ Scoring guide:
 
     raw = message.content[0].text.strip()
 
-    # Bug fix: strip markdown fences if Claude wraps response in ```json ... ```
+    # Strip markdown fences if Claude wraps response in ```json ... ```
     if raw.startswith("```"):
         raw = raw.split("```")[1]
         if raw.startswith("json"):
@@ -159,7 +182,6 @@ Scoring guide:
 
     result = json.loads(raw)
 
-    # Validate required fields came back
     for field in ["match_score", "ats_score", "reason", "skills_gap", "confidence"]:
         if field not in result:
             raise ValueError(f"Missing field in Claude response: {field}")
@@ -179,7 +201,6 @@ def main():
     no_desc = 0
 
     for job in jobs.values():
-        # ── Bug fix: use is_properly_scored() instead of checking != None ──
         if is_properly_scored(job):
             already_done += 1
             continue
