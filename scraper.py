@@ -153,66 +153,64 @@ def fetch_amazon():
 # No location filter — Netflix is mostly remote-friendly and their API
 # doesn't filter reliably by location. Title filter handles relevance.
 def fetch_netflix():
+    """
+    Netflix uses Eightfold AI ATS.
+    Correct API: POST to /api/apply/v2/jobs with ?domain=netflix.com&query=<kw>
+    Location field is a comma-separated string like "New York,New York,United States of America"
+    """
     print("Fetching Netflix...")
     results = []
     seen = set()
     us_indicators = [
-        "united states", "remote", "los angeles", "atlanta",
-        "california", "new york", "new york city", "seattle",
-        "los gatos", "beverly hills"
+        "united states", "los angeles", "atlanta", "california",
+        "new york", "seattle", "los gatos", "beverly hills", "burbank"
     ]
     for kw in SEARCH_QUERIES:
         try:
             url = (
                 f"https://explore.jobs.netflix.net/api/apply/v2/jobs"
-                f"?domain=netflix.com&start=0&num=50"
-                f"&keyword={requests.utils.quote(kw)}"
+                f"?domain=netflix.com&start=0&num=100"
+                f"&query={requests.utils.quote(kw)}"
             )
-            r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+            r = requests.get(url, headers={
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/json",
+                "Referer": "https://explore.jobs.netflix.net/careers"
+            }, timeout=15)
             print(f"  Netflix status: {r.status_code} | {kw}")
-            if r.status_code != 200:
+            if r.status_code != 200 or not r.text.strip():
                 continue
             data = r.json()
-            # Debug: print top-level keys and count so we can see actual structure
-            print(f"  Netflix response keys: {list(data.keys())}")
-            # Try all common job list keys
-            jobs_list = (
-                data.get("positions") or
-                data.get("jobs") or
-                data.get("results") or
-                data.get("postings") or
-                data.get("data") or
-                []
-            )
-            print(f"  Netflix jobs found in response: {len(jobs_list)}")
-            for j in jobs_list:
-                # Handle both dict and non-dict items
+            positions = data.get("positions", [])
+            print(f"  Netflix positions: {len(positions)} | {kw}")
+            for j in positions:
                 if not isinstance(j, dict):
                     continue
-                jid = str(j.get("id", j.get("externalId", j.get("jobId", ""))))
+                jid = str(j.get("id", ""))
                 if not jid or jid in seen:
                     continue
                 seen.add(jid)
-                title = j.get("name", j.get("title", j.get("text", "")))
-                # Handle various location formats
-                raw_locs = j.get("locations", j.get("location", j.get("tags", {}).get("location", [])))
-                if isinstance(raw_locs, list):
-                    locs = ", ".join(raw_locs)
-                elif isinstance(raw_locs, str):
-                    locs = raw_locs
-                else:
-                    locs = ""
+                title = j.get("name", j.get("posting_name", ""))
+                # Location is "City,State,Country" — normalize to readable form
+                raw_loc = j.get("location", "")
+                if isinstance(raw_loc, list):
+                    raw_loc = raw_loc[0] if raw_loc else ""
+                # "New York,New York,United States of America" -> "New York, NY, US"
+                parts = [p.strip() for p in raw_loc.split(",")]
+                locs = ", ".join(parts) if parts else ""
                 if not is_relevant_title(title):
                     continue
-                if locs and not any(loc in locs.lower() for loc in us_indicators):
+                # Accept US jobs only
+                if locs and not any(ind in locs.lower() for ind in us_indicators):
                     continue
                 results.append(make_job(
                     id=f"netflix_{jid}",
                     company="Netflix",
                     title=title,
                     location=locs,
-                    url="https://explore.jobs.netflix.net/careers?pid=" + jid + "&domain=netflix.com"
+                    url=f"https://explore.jobs.netflix.net/careers?pid={jid}&domain=netflix.com"
                 ))
+            sleep(0.5)
         except Exception as e:
             print(f"  Netflix error ({kw}): {e}")
     print(f"  Found {len(results)} Netflix jobs")
