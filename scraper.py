@@ -156,6 +156,11 @@ def fetch_netflix():
     print("Fetching Netflix...")
     results = []
     seen = set()
+    us_indicators = [
+        "united states", "remote", "los angeles", "atlanta",
+        "california", "new york", "new york city", "seattle",
+        "los gatos", "beverly hills"
+    ]
     for kw in SEARCH_QUERIES:
         try:
             url = (
@@ -168,24 +173,37 @@ def fetch_netflix():
             if r.status_code != 200:
                 continue
             data = r.json()
-            positions = data.get("positions", [])
-            for j in positions:
-                jid = str(j.get("id", ""))
-                if jid in seen:
+            # Debug: print top-level keys and count so we can see actual structure
+            print(f"  Netflix response keys: {list(data.keys())}")
+            # Try all common job list keys
+            jobs_list = (
+                data.get("positions") or
+                data.get("jobs") or
+                data.get("results") or
+                data.get("postings") or
+                data.get("data") or
+                []
+            )
+            print(f"  Netflix jobs found in response: {len(jobs_list)}")
+            for j in jobs_list:
+                # Handle both dict and non-dict items
+                if not isinstance(j, dict):
+                    continue
+                jid = str(j.get("id", j.get("externalId", j.get("jobId", ""))))
+                if not jid or jid in seen:
                     continue
                 seen.add(jid)
-                title = j.get("name", "")
-                locs = ", ".join(j.get("locations", []))
+                title = j.get("name", j.get("title", j.get("text", "")))
+                # Handle various location formats
+                raw_locs = j.get("locations", j.get("location", j.get("tags", {}).get("location", [])))
+                if isinstance(raw_locs, list):
+                    locs = ", ".join(raw_locs)
+                elif isinstance(raw_locs, str):
+                    locs = raw_locs
+                else:
+                    locs = ""
                 if not is_relevant_title(title):
                     continue
-                # Accept any US-based or remote Netflix job — dashboard handles
-                # location filtering. Netflix locations are often "Los Gatos, CA"
-                # or "United States" which don't match the narrow LOCATION_KEYWORDS.
-                us_indicators = [
-                    "united states", "remote", "los angeles", "atlanta",
-                    "california", "new york", "new york city", "seattle",
-                    "los gatos", "beverly hills"
-                ]
                 if locs and not any(loc in locs.lower() for loc in us_indicators):
                     continue
                 results.append(make_job(
@@ -229,20 +247,38 @@ def fetch_greenhouse(board, company):
 def fetch_trade_desk():
     print("Fetching The Trade Desk...")
     results = []
+    seen = set()
     for kw in SEARCH_QUERIES:
         try:
-            url = f"https://careers.thetradedesk.com/api/apply/v2/jobs?domain=thetradedesk.com&start=0&num=50&keyword={requests.utils.quote(kw)}"
-            r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
-            for j in r.json().get("positions", []):
+            url = (
+                f"https://careers.thetradedesk.com/api/apply/v2/jobs"
+                f"?domain=thetradedesk.com&start=0&num=50"
+                f"&keyword={requests.utils.quote(kw)}"
+            )
+            r = requests.get(url, headers={
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/json",
+                "Referer": "https://careers.thetradedesk.com/"
+            }, timeout=15)
+            print(f"  Trade Desk status: {r.status_code} | {kw}")
+            if r.status_code != 200 or not r.text.strip():
+                continue
+            data = r.json()
+            for j in data.get("positions", []):
+                jid = str(j.get("id", ""))
+                if not jid or jid in seen:
+                    continue
+                seen.add(jid)
                 title = j.get("name", "")
                 locs = ", ".join(j.get("locations", []))
                 if not passes(title, locs, "remote"):
                     continue
                 results.append(make_job(
-                    id=f"ttd_{j.get('id', '')}",
+                    id=f"ttd_{jid}",
                     company="The Trade Desk", title=title, location=locs,
-                    url="https://careers.thetradedesk.com/us/en/job/" + str(j.get("id", ""))
+                    url="https://careers.thetradedesk.com/us/en/job/" + jid
                 ))
+            sleep(1)
         except Exception as e:
             print(f"  Trade Desk error ({kw}): {e}")
     print(f"  Found {len(results)} Trade Desk jobs")
@@ -355,27 +391,206 @@ def fetch_servicenow():
     return results
 
 
+# ─── GENERIC WORKDAY FETCHER ─────────────────────────────────────────────────
+def fetch_workday(tenant, wd_num, site, company, prefix):
+    """Generic Workday fetcher — works for any company on Workday ATS."""
+    print(f"Fetching {company}...")
+    results = []
+    seen = set()
+    base = f"https://{tenant}.wd{wd_num}.myworkdayjobs.com"
+    api_url = f"{base}/wday/cxs/{tenant}/{site}/jobs"
+    for kw in SEARCH_QUERIES:
+        try:
+            payload = {"appliedFacets": {}, "limit": 20, "offset": 0, "searchText": kw}
+            r = requests.post(api_url, json=payload, headers={
+                "User-Agent": "Mozilla/5.0",
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "Referer": f"{base}/en-US/{site}"
+            }, timeout=15)
+            print(f"  {company} status: {r.status_code} | {kw}")
+            if r.status_code != 200 or not r.text.strip():
+                continue
+            data = r.json()
+            for j in data.get("jobPostings", []):
+                ext_path = j.get("externalPath", "")
+                jid = ext_path.strip("/").split("/")[-1]
+                if not jid or jid in seen:
+                    continue
+                seen.add(jid)
+                title = j.get("title", "")
+                location = j.get("locationsText", "")
+                if not passes(title, location, "remote"):
+                    continue
+                results.append(make_job(
+                    id=f"{prefix}_{jid}",
+                    company=company,
+                    title=title,
+                    location=location,
+                    url=f"{base}/en-US/{site}" + ext_path
+                ))
+            sleep(1)
+        except Exception as e:
+            print(f"  {company} error ({kw}): {e}")
+    print(f"  Found {len(results)} {company} jobs")
+    return results
+
+
+def fetch_snap():
+    return fetch_workday("snapchat", 1, "snap", "Snap", "snap")
+
+def fetch_capital_one():
+    return fetch_workday("capitalone", 12, "Capital_One", "Capital One", "capitalone")
+
+def fetch_mastercard():
+    return fetch_workday("mastercard", 1, "CorporateCareers", "Mastercard", "mastercard")
+
+def fetch_visa():
+    return fetch_workday("visa", 5, "Visa", "Visa", "visa")
+
+def fetch_walmart_connect():
+    return fetch_workday("walmart", 5, "WalmartExternal", "Walmart Connect", "walmart")
+
+
+
+def fetch_deloitte():
+    """Deloitte US uses Avature ATS at apply.deloitte.com"""
+    print("Fetching Deloitte...")
+    results = []
+    seen = set()
+    for kw in SEARCH_QUERIES:
+        try:
+            url = f"https://apply.deloitte.com/en_US/careers/SearchJobs/{requests.utils.quote(kw)}?projectOffset=0&projectSort=POSTING_DATE&projectSortDirection=DESC"
+            r = requests.get(url, headers={
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/json, text/javascript, */*",
+                "X-Requested-With": "XMLHttpRequest"
+            }, timeout=15)
+            print(f"  Deloitte status: {r.status_code} | {kw}")
+            if r.status_code != 200 or not r.text.strip():
+                continue
+            data = r.json()
+            for j in data.get("projectList", []):
+                jid = str(j.get("id", ""))
+                if not jid or jid in seen:
+                    continue
+                seen.add(jid)
+                title = j.get("projectTitle", "")
+                location = j.get("projectCustomField3", j.get("projectCustomField1", ""))
+                if not passes(title, location, "remote"):
+                    continue
+                results.append(make_job(
+                    id=f"deloitte_{jid}",
+                    company="Deloitte",
+                    title=title,
+                    location=location,
+                    url=f"https://apply.deloitte.com/en_US/careers/JobDetail/{jid}"
+                ))
+            sleep(1)
+        except Exception as e:
+            print(f"  Deloitte error ({kw}): {e}")
+    print(f"  Found {len(results)} Deloitte jobs")
+    return results
+
+
+def fetch_intuit():
+    """Intuit uses Phenom People ATS at jobs.intuit.com"""
+    print("Fetching Intuit...")
+    results = []
+    seen = set()
+    for kw in SEARCH_QUERIES:
+        try:
+            url = "https://jobs.intuit.com/api/jobs"
+            params = {
+                "query": kw,
+                "location": "",
+                "page": 1,
+                "pageSize": 20,
+                "facets": "",
+                "sort": "relevance"
+            }
+            r = requests.get(url, params=params, headers={
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/json",
+                "Referer": "https://jobs.intuit.com/search-jobs"
+            }, timeout=15)
+            print(f"  Intuit status: {r.status_code} | {kw}")
+            if r.status_code != 200 or not r.text.strip():
+                continue
+            data = r.json()
+            # Phenom People returns jobs under different keys depending on version
+            jobs_list = (
+                data.get("jobs") or
+                data.get("results") or
+                data.get("data", {}).get("jobs") or
+                []
+            )
+            for j in jobs_list:
+                if not isinstance(j, dict):
+                    continue
+                jid = str(j.get("id", j.get("jobId", "")))
+                if not jid or jid in seen:
+                    continue
+                seen.add(jid)
+                title = j.get("title", j.get("jobTitle", ""))
+                location = j.get("location", j.get("jobLocation", ""))
+                if isinstance(location, dict):
+                    location = location.get("city", "") + ", " + location.get("state", "")
+                if not passes(title, str(location), "remote"):
+                    continue
+                job_url = j.get("url", j.get("applyUrl", f"https://jobs.intuit.com/job/{jid}"))
+                results.append(make_job(
+                    id=f"intuit_{jid}",
+                    company="Intuit",
+                    title=title,
+                    location=str(location),
+                    url=job_url
+                ))
+            sleep(1)
+        except Exception as e:
+            print(f"  Intuit error ({kw}): {e}")
+    print(f"  Found {len(results)} Intuit jobs")
+    return results
+
+
 # ─── Y COMBINATOR ─────────────────────────────────────────────────────────────
 def fetch_ycombinator():
     print("Fetching Y Combinator...")
     results = []
+    seen = set()
     for kw in SEARCH_QUERIES:
         try:
-            url = f"https://www.workatastartup.com/jobs.json?query={requests.utils.quote(kw)}&remote=yes&role=pm&sortBy=default"
-            r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+            url = (
+                f"https://www.workatastartup.com/jobs.json"
+                f"?query={requests.utils.quote(kw)}&remote=yes&role=pm&sortBy=default"
+            )
+            r = requests.get(url, headers={
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/json",
+                "Referer": "https://www.workatastartup.com/"
+            }, timeout=15)
+            print(f"  YC status: {r.status_code} | {kw}")
+            if r.status_code != 200 or not r.text.strip():
+                continue
             jobs = r.json()
-            if isinstance(jobs, list):
-                for j in jobs:
-                    title = j.get("title", "")
-                    location = j.get("locations", ["Remote"])[0] if j.get("locations") else "Remote"
-                    company_name = j.get("company", {}).get("name", "YC Startup")
-                    if not is_relevant_title(title):
-                        continue
-                    results.append(make_job(
-                        id=f"yc_{j.get('id', '')}",
-                        company=f"YC: {company_name}", title=title, location=location,
-                        url=j.get("url", "https://www.workatastartup.com/jobs")
-                    ))
+            if not isinstance(jobs, list):
+                continue
+            for j in jobs:
+                jid = str(j.get("id", ""))
+                if not jid or jid in seen:
+                    continue
+                seen.add(jid)
+                title = j.get("title", "")
+                location = j.get("locations", ["Remote"])[0] if j.get("locations") else "Remote"
+                company_name = j.get("company", {}).get("name", "YC Startup")
+                if not is_relevant_title(title):
+                    continue
+                results.append(make_job(
+                    id=f"yc_{jid}",
+                    company=f"YC: {company_name}", title=title, location=location,
+                    url=j.get("url", "https://www.workatastartup.com/jobs")
+                ))
+            sleep(1)
         except Exception as e:
             print(f"  YC error ({kw}): {e}")
     print(f"  Found {len(results)} YC jobs")
@@ -436,21 +651,38 @@ def fetch_dice():
 def fetch_builtin():
     print("Fetching Built In...")
     results = []
+    seen = set()
     for kw in SEARCH_QUERIES:
         try:
-            url = f"https://api.builtin.com/api/jobs?title={requests.utils.quote(kw)}&remote=true&page=1&perPage=20"
-            r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
-            for j in r.json().get("jobs", []):
+            url = (
+                f"https://api.builtin.com/api/jobs"
+                f"?title={requests.utils.quote(kw)}&remote=true&page=1&perPage=20"
+            )
+            r = requests.get(url, headers={
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/json",
+                "Referer": "https://builtin.com/"
+            }, timeout=15)
+            print(f"  Built In status: {r.status_code} | {kw}")
+            if r.status_code != 200 or not r.text.strip():
+                continue
+            data = r.json()
+            for j in data.get("jobs", []):
+                jid = str(j.get("id", ""))
+                if not jid or jid in seen:
+                    continue
+                seen.add(jid)
                 title = j.get("title", "")
                 location = j.get("builtInJobLocation", {}).get("name", "Remote")
                 if not passes(title, location, "remote"):
                     continue
                 results.append(make_job(
-                    id=f"builtin_{j.get('id', '')}",
+                    id=f"builtin_{jid}",
                     company=j.get("company", {}).get("name", "Built In"),
                     title=title, location=location,
                     url="https://builtin.com/job/" + str(j.get("slug", ""))
                 ))
+            sleep(1)
         except Exception as e:
             print(f"  Built In error ({kw}): {e}")
     print(f"  Found {len(results)} Built In jobs")
@@ -515,35 +747,25 @@ def run():
         ("reddit", "Reddit"),
         ("roku", "Roku"),
         ("unity3d", "Unity"),
-        ("fox", "Fox"),
-        ("tubi", "Tubi"),
-        ("hubspot", "HubSpot"),
+        ("tubitv", "Tubi"),              # corrected from: tubi
+        ("hubspotjobs", "HubSpot"),      # corrected from: hubspot
         ("thetradedesk", "The Trade Desk"),
         ("doubleverify", "DoubleVerify"),
         ("integraladsscience", "IAS"),
-        ("nielsen", "Nielsen"),
         ("appsflyer", "AppsFlyer"),
         ("adjust", "Adjust"),
         ("branch", "Branch"),
-        ("kochava", "Kochava"),
         ("liveramp", "LiveRamp"),
-        ("lotame", "Lotame"),
-        ("neustar", "Neustar"),
         ("innovid", "Innovid"),
         ("outbrain", "Outbrain"),
         ("taboola", "Taboola"),
-        ("nativo", "Nativo"),
         ("applovin", "AppLovin"),
         ("criteo", "Criteo"),
-        ("mediamath", "MediaMath"),
         ("openx", "OpenX"),
         ("indexexchange", "Index Exchange"),
         ("sharethrough", "Sharethrough"),
         ("sovrn", "Sovrn"),
-        ("triton", "Triton Digital"),
-        ("samsung", "Samsung Ads"),
         ("pinterest", "Pinterest"),
-        ("snapchat", "Snap"),
         ("cognitiv", "Cognitiv"),
         ("quantcast", "Quantcast"),
         ("gumgum", "GumGum"),
@@ -553,24 +775,16 @@ def run():
         ("braze", "Braze"),
         ("iterable", "Iterable"),
         ("rockerbox", "Rockerbox"),
-        ("amobee", "Amobee"),
         ("inmobi", "InMobi"),
-        ("adcolony", "AdColony"),
-        ("conversant", "Conversant"),
-        ("walmart", "Walmart Connect"),
         ("instacart", "Instacart Ads"),
-        ("roundel", "Target Roundel"),
-        ("capitalone", "Capital One"),
-        ("mastercard", "Mastercard"),
-        ("deloitte", "Deloitte"),
-        ("visa", "Visa"),
-        ("adp", "ADP"),
-        # Removed: salesforce, servicenow — wrong ATS, dedicated fetchers below
-        ("cocacola", "Coca Cola"),
         ("zillow", "Zillow"),
-        ("warnerbros", "Warner Brothers"),
         ("intuit", "Intuit"),
-        ("cox", "Cox"),
+        # Removed — confirmed not on Greenhouse (use Workday/Taleo/own ATS):
+        #   fox, nielsen, kochava, lotame, neustar, nativo, mediamath, triton,
+        #   samsung, snapchat, amobee, adcolony, conversant, walmart, roundel,
+        #   capitalone, mastercard, deloitte, visa, adp, cocacola, warnerbros, cox
+        # Removed — dedicated fetchers handle these:
+        #   salesforce (Workday), servicenow (SmartRecruiters)
     ]
     for board, company in greenhouse_companies:
         all_fresh += safe_fetch(fetch_greenhouse, board, company)
@@ -579,6 +793,13 @@ def run():
     all_fresh += safe_fetch(fetch_trade_desk)
     all_fresh += safe_fetch(fetch_salesforce)
     all_fresh += safe_fetch(fetch_servicenow)
+    all_fresh += safe_fetch(fetch_snap)
+    all_fresh += safe_fetch(fetch_capital_one)
+    all_fresh += safe_fetch(fetch_mastercard)
+    all_fresh += safe_fetch(fetch_visa)
+    all_fresh += safe_fetch(fetch_walmart_connect)
+    all_fresh += safe_fetch(fetch_deloitte)
+    all_fresh += safe_fetch(fetch_intuit)
     all_fresh += safe_fetch(fetch_ycombinator)
     all_fresh += safe_fetch(fetch_weworkremotely)
     all_fresh += safe_fetch(fetch_dice)
