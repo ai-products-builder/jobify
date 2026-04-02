@@ -178,6 +178,16 @@ def fetch_netflix():
                 locs = ", ".join(j.get("locations", []))
                 if not is_relevant_title(title):
                     continue
+                # Accept any US-based or remote Netflix job — dashboard handles
+                # location filtering. Netflix locations are often "Los Gatos, CA"
+                # or "United States" which don't match the narrow LOCATION_KEYWORDS.
+                us_indicators = [
+                    "united states", "remote", "los angeles", "atlanta",
+                    "california", "new york", "new york city", "seattle",
+                    "los gatos", "beverly hills"
+                ]
+                if locs and not any(loc in locs.lower() for loc in us_indicators):
+                    continue
                 results.append(make_job(
                     id=f"netflix_{jid}",
                     company="Netflix",
