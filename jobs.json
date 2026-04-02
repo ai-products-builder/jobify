@@ -15520,7 +15520,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:04.745088",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;About the Role:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Tubi is adding a Senior Counsel-level attorney to our growing legal team. You will play a key role in structuring, drafting, reviewing, and negotiating a wide variety of marketing-related agreements. In addition, you will be clearing content for Tubi\u2019s marketing campaigns. Your duties will have you collaborating with your fellow legal team colleagues, many teams across the organization, and external parties. You are a mid-l"
+    "description": "&lt;p&gt;&lt;strong&gt;About the Role:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Tubi is adding a Senior Counsel-level attorney to our growing legal team. You will play a key role in structuring, drafting, reviewing, and negotiating a wide variety of marketing-related agreements. In addition, you will be clearing content for Tubi\u2019s marketing campaigns. Your duties will have you collaborating with your fellow legal team colleagues, many teams across the organization, and external parties. You are a mid-l",
+    "description_source": "stored",
+    "match_score": 15,
+    "ats_score": 8,
+    "resume_used": "ADS",
+    "reason": "This is a legal counsel position requiring law degree and licensing; the resume is for a product leader with zero legal background, training, or credentials.",
+    "skills_gap": "Missing: JD/law license, legal drafting, contract negotiation, regulatory compliance counsel, content clearance expertise\u2014this is a fundamental career mismatch, not a skills gap.",
+    "confidence": "high"
   },
   "tubitv_7487608": {
     "id": "tubitv_7487608",
@@ -15531,7 +15538,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:04.745111",
     "status": "new",
-    "description": "&lt;h3&gt;&lt;strong&gt;About the role&lt;/strong&gt;&lt;/h3&gt;\n&lt;p&gt;What sets Tubi apart is not just its vast on-demand content library, but also &lt;strong&gt;live TV and event programming that brings the world together in real time&lt;/strong&gt;. Tubi\u2019s free, ad-supported live channels deliver linear TV experiences alongside curated event coverage, reaching massive audiences. In 2025, Tubi made history streaming &lt;em&gt;Super Bowl LIX&lt;/em&gt;, becoming part of the most streamed Sup"
+    "description": "&lt;h3&gt;&lt;strong&gt;About the role&lt;/strong&gt;&lt;/h3&gt;\n&lt;p&gt;What sets Tubi apart is not just its vast on-demand content library, but also &lt;strong&gt;live TV and event programming that brings the world together in real time&lt;/strong&gt;. Tubi\u2019s free, ad-supported live channels deliver linear TV experiences alongside curated event coverage, reaching massive audiences. In 2025, Tubi made history streaming &lt;em&gt;Super Bowl LIX&lt;/em&gt;, becoming part of the most streamed Sup",
+    "description_source": "stored",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise in data platforms and AdTech monetization doesn't align with Live TV/Events product management, which requires linear TV operations, broadcast workflows, and real-time streaming infrastructure knowledge.",
+    "skills_gap": "Missing critical domain expertise: live linear TV operations, broadcast scheduling, real-time streaming infrastructure, content rights/licensing, live event production workflows, and DVR/catch-up TV features; her background is data platforms and ad tech monetization, not content delivery and viewer experience.",
+    "confidence": "medium"
   },
   "hubspotjobs_7525548": {
     "id": "hubspotjobs_7525548",
@@ -15542,7 +15556,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:05.210696",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;288678&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;h1&gt;Group Product Manager, Data Platform &amp;amp; Context&lt;/h1&gt;\n&lt;p&gt;The HubSpot Product team is passionate about building tools that help businesses market, sell, serve their customers, and ultimately grow better. We build for more than 250,000 customers in over 120 countries around the world. Our team has scaled rapidly over the past few years, and our need for adaptable and remarkable product leaders has grown i"
+    "description": "&lt;p&gt;&lt;strong&gt;288678&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;h1&gt;Group Product Manager, Data Platform &amp;amp; Context&lt;/h1&gt;\n&lt;p&gt;The HubSpot Product team is passionate about building tools that help businesses market, sell, serve their customers, and ultimately grow better. We build for more than 250,000 customers in over 120 countries around the world. Our team has scaled rapidly over the past few years, and our need for adaptable and remarkable product leaders has grown i",
+    "description_source": "stored",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and leadership experience with petabyte-scale systems, but limited visibility into HubSpot's specific CRM/context requirements and incomplete job description reduces confidence in full alignment.",
+    "skills_gap": "No direct CRM platform experience (HubSpot, Salesforce) or customer data platform (CDP) background; resume focuses on AdTech/RTB rather than B2B SaaS marketing automation context.",
+    "confidence": "medium"
   },
   "hubspotjobs_7304621": {
     "id": "hubspotjobs_7304621",
@@ -15553,7 +15574,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:05.210752",
     "status": "new",
-    "description": "&lt;h3&gt;&lt;strong&gt;About the Role&lt;/strong&gt;&lt;/h3&gt;\n&lt;p&gt;At HubSpot, pricing is how we create value for customers while building a sustainable, growing business. Our monetization philosophy is simple: solve for the customer first, scale price with the value customers get, and keep pricing intuitive and transparent.&lt;/p&gt;\n&lt;p&gt;We are looking for a Lead Program Manager to partner with HubSpot\u2019s Pricing Strategy team and Fintech product line to transform how HubSpot makes a"
+    "description": "&lt;h3&gt;&lt;strong&gt;About the Role&lt;/strong&gt;&lt;/h3&gt;\n&lt;p&gt;At HubSpot, pricing is how we create value for customers while building a sustainable, growing business. Our monetization philosophy is simple: solve for the customer first, scale price with the value customers get, and keep pricing intuitive and transparent.&lt;/p&gt;\n&lt;p&gt;We are looking for a Lead Program Manager to partner with HubSpot\u2019s Pricing Strategy team and Fintech product line to transform how HubSpot makes a",
+    "description_source": "stored",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Strong data/product leadership background but lacks direct pricing strategy, monetization, GTM pricing execution, and fintech experience that appears central to this HubSpot role.",
+    "skills_gap": "Missing: pricing strategy & execution, revenue optimization models, SaaS pricing expertise, fintech/payments domain knowledge, pricing psychology; resume is heavily data platform/infrastructure focused rather than pricing-as-a-business-lever focused.",
+    "confidence": "medium"
   },
   "hubspotjobs_7768825": {
     "id": "hubspotjobs_7768825",
@@ -15564,7 +15592,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:05.210860",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;300182&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;h1&gt;&lt;strong&gt;Product Manager, Partner Rewards&lt;/strong&gt;&lt;/h1&gt;\n&lt;p&gt;&lt;em&gt;Flywheel Product&amp;nbsp; |&amp;nbsp; UK/IE&amp;nbsp; |&amp;nbsp; Remote or Hybrid&lt;/em&gt;&lt;/p&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;p&gt;HubSpot\u2019s Flywheel Product team spearheads GTM transformations by building and integrating AI and net-new products and capabilities for our internal GTM teams"
+    "description": "&lt;p&gt;&lt;strong&gt;300182&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;h1&gt;&lt;strong&gt;Product Manager, Partner Rewards&lt;/strong&gt;&lt;/h1&gt;\n&lt;p&gt;&lt;em&gt;Flywheel Product&amp;nbsp; |&amp;nbsp; UK/IE&amp;nbsp; |&amp;nbsp; Remote or Hybrid&lt;/em&gt;&lt;/p&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;p&gt;HubSpot\u2019s Flywheel Product team spearheads GTM transformations by building and integrating AI and net-new products and capabilities for our internal GTM teams",
+    "description_source": "stored",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Resume shows exceptional data platform and enterprise product leadership expertise, but job description is incomplete, making it impossible to assess alignment with Partner Rewards product specifics, GTM transformation focus, or team structure.",
+    "skills_gap": "Cannot determine without full job description; however, resume lacks demonstrated experience in partner ecosystem management, incentive/rewards program design, or GTM partner channel strategy\u2014core areas likely critical for this role.",
+    "confidence": "low"
   },
   "hubspotjobs_6457519": {
     "id": "hubspotjobs_6457519",
@@ -15575,7 +15610,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:05.210873",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;POS-15799&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;h2&gt;&lt;strong&gt;Product Manager, Voice Intelligence&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;&lt;strong&gt;Omnichannel Product Group (Service Hub)&lt;/strong&gt;&lt;/p&gt;\n&lt;h2&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Our mission at HubSpot is to help millions of organizations grow better. Voice is one of the highest-intent and most human channels for sales and service teams\u2014and one of the most under"
+    "description": "&lt;p&gt;&lt;strong&gt;POS-15799&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;h2&gt;&lt;strong&gt;Product Manager, Voice Intelligence&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;&lt;strong&gt;Omnichannel Product Group (Service Hub)&lt;/strong&gt;&lt;/p&gt;\n&lt;h2&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Our mission at HubSpot is to help millions of organizations grow better. Voice is one of the highest-intent and most human channels for sales and service teams\u2014and one of the most under",
+    "description_source": "stored",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's extensive expertise in data platforms and AdTech is misaligned with a voice intelligence product role that requires understanding conversational AI, call analytics, and omnichannel service operations rather than petabyte-scale data infrastructure.",
+    "skills_gap": "Missing: conversational AI/NLP, voice/call center domain expertise, customer service product experience, speech recognition systems; strengths in data governance and analytics don't directly translate to building voice intelligence features.",
+    "confidence": "medium"
   },
   "hubspotjobs_7721213": {
     "id": "hubspotjobs_7721213",
@@ -15586,7 +15628,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:05.210964",
     "status": "new",
-    "description": "&lt;h6 data-section-id=&quot;v5swc0&quot; data-start=&quot;322&quot; data-end=&quot;365&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;&lt;span class=&quot;BZ_Pyq_fadeIn&quot;&gt;POS-15751&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/h6&gt;\n&lt;h2 data-section-id=&quot;1gchzb1&quot; data-start=&quot;367&quot; data-end=&quot;382&quot;&gt;&lt;span class=&quot;BZ_Pyq_fadeIn&quot;&gt;Role &lt;/span&gt;&lt;span class=&quot;BZ_Pyq_fadeIn&quot;&gt;Summary&lt;/span&gt;&lt;/h2&gt;\n"
+    "description": "&lt;h6 data-section-id=&quot;v5swc0&quot; data-start=&quot;322&quot; data-end=&quot;365&quot;&gt;&lt;strong&gt;&lt;span style=&quot;font-size: 12pt;&quot;&gt;&lt;span class=&quot;BZ_Pyq_fadeIn&quot;&gt;POS-15751&lt;/span&gt;&lt;/span&gt;&lt;/strong&gt;&lt;/h6&gt;\n&lt;h2 data-section-id=&quot;1gchzb1&quot; data-start=&quot;367&quot; data-end=&quot;382&quot;&gt;&lt;span class=&quot;BZ_Pyq_fadeIn&quot;&gt;Role &lt;/span&gt;&lt;span class=&quot;BZ_Pyq_fadeIn&quot;&gt;Summary&lt;/span&gt;&lt;/h2&gt;\n",
+    "description_source": "stored",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Job description incomplete (role summary header only, no actual description provided), making accurate assessment impossible; however, Preethi's Director-level experience significantly exceeds typical Senior PM scope, which may create overqualification concerns.",
+    "skills_gap": "Cannot assess without complete job description; however, resume shows no obvious technical gaps for typical data/insights PM roles (SQL, Python, BI tools, data platforms all present).",
+    "confidence": "low"
   },
   "hubspotjobs_7546212": {
     "id": "hubspotjobs_7546212",
@@ -15597,7 +15646,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:05.210972",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;POS-24664&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;h2&gt;&lt;strong&gt;Senior Product Manager, Downmarket Activation&amp;nbsp;&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;&lt;strong&gt;Remote - EST, CST&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;We\u2019re looking for a Senior Product Manager to lead our AI-based Activation strategy for Free and Starter customers. This role focuses on helping small businesses reach their first meaningful outcome in HubSpot quickly an"
+    "description": "&lt;p&gt;&lt;strong&gt;POS-24664&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;h2&gt;&lt;strong&gt;Senior Product Manager, Downmarket Activation&amp;nbsp;&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;&lt;strong&gt;Remote - EST, CST&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;We\u2019re looking for a Senior Product Manager to lead our AI-based Activation strategy for Free and Starter customers. This role focuses on helping small businesses reach their first meaningful outcome in HubSpot quickly an",
+    "description_source": "stored",
+    "match_score": 45,
+    "ats_score": 38,
+    "resume_used": "DATA",
+    "reason": "Deep expertise in enterprise data platforms and petabyte-scale systems misaligned with downmarket SMB activation focus; limited evidence of consumer product growth, onboarding optimization, or freemium-to-paid conversion strategies.",
+    "skills_gap": "Missing demonstrated experience in downmarket/SMB product strategy, freemium funnel optimization, activation metrics (time-to-first-value, DAU), and consumer-grade onboarding\u2014resume heavily weighted toward B2B data infrastructure and enterprise analytics rather than viral growth or low-touch conversion.",
+    "confidence": "medium"
   },
   "hubspotjobs_6034806": {
     "id": "hubspotjobs_6034806",
@@ -15608,7 +15664,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:05.210979",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;POS-19085&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=&quot;font-size: 18pt;&quot;&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p data-start=&quot;368&quot; data-end=&quot;440&quot;&gt;Our mission at HubSpot is to help millions of organizations grow better.&lt;/p&gt;\n&lt;p data-start=&quot;442&quot; data-end=&quot;812&quot;&gt;HubSpot Academy is a globally renowned education platform attracting hundreds of thousands of professionals who want"
+    "description": "&lt;p&gt;&lt;strong&gt;POS-19085&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=&quot;font-size: 18pt;&quot;&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p data-start=&quot;368&quot; data-end=&quot;440&quot;&gt;Our mission at HubSpot is to help millions of organizations grow better.&lt;/p&gt;\n&lt;p data-start=&quot;442&quot; data-end=&quot;812&quot;&gt;HubSpot Academy is a globally renowned education platform attracting hundreds of thousands of professionals who want",
+    "description_source": "stored",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Resume demonstrates exceptional expertise in data platforms and AdTech but the job description is incomplete, making accurate assessment difficult; however, the visible 'Academy (AI)' education platform role appears misaligned with Preethi's core B2B data infrastructure and revenue optimization background.",
+    "skills_gap": "Missing direct experience in educational technology platforms, curriculum design, learner engagement metrics, and content strategy; the role appears to focus on education product strategy whereas resume is heavily weighted toward data platforms, ML infrastructure, and monetization.",
+    "confidence": "low"
   },
   "hubspotjobs_7142343": {
     "id": "hubspotjobs_7142343",
@@ -15619,7 +15682,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:05.210992",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;POS-6443&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;p&gt;&lt;strong&gt;Senior Product Manager II, Automation Extension&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Remote US - Eastern Standard Time&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;p&gt;The Automation Product Group is looking for a PM to help us realize our vision to create the #1 AI-first agentic automation platform to help any SMB automate any job.&amp;nbsp;&lt;/p&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt"
+    "description": "&lt;p&gt;&lt;strong&gt;POS-6443&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;p&gt;&lt;strong&gt;Senior Product Manager II, Automation Extension&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;Remote US - Eastern Standard Time&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;p&gt;The Automation Product Group is looking for a PM to help us realize our vision to create the #1 AI-first agentic automation platform to help any SMB automate any job.&amp;nbsp;&lt;/p&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise in petabyte-scale data platforms and AdTech is misaligned with HubSpot's focus on AI-powered automation, CRM workflows, and customer engagement tools\u2014fundamentally different product domains.",
+    "skills_gap": "Missing core competencies in CRM product design, customer engagement automation workflows, sales/marketing/service process optimization, and HubSpot's ecosystem; expertise is in data infrastructure rather than end-user automation products.",
+    "confidence": "medium"
   },
   "hubspotjobs_7539753": {
     "id": "hubspotjobs_7539753",
@@ -15630,7 +15700,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:05.210999",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;POS-11251&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;p&gt;&lt;strong&gt;Senior Product Manager II, Billing&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;HubSpot&#39;s Commerce Hub is seeking a Senior Product Manager to drive the strategy, roadmap and execution for our Billing Group. This role is a cornerstone of our efforts to empower small and medium sized businesses with seamless and integrated financial operations. You&#39;ll be at the forefront of our mission to simplify the complex "
+    "description": "&lt;p&gt;&lt;strong&gt;POS-11251&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;p&gt;&lt;strong&gt;Senior Product Manager II, Billing&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;HubSpot&#39;s Commerce Hub is seeking a Senior Product Manager to drive the strategy, roadmap and execution for our Billing Group. This role is a cornerstone of our efforts to empower small and medium sized businesses with seamless and integrated financial operations. You&#39;ll be at the forefront of our mission to simplify the complex ",
+    "description_source": "stored",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise is deeply rooted in AdTech data platforms and analytics; the HubSpot Billing role requires B2B SaaS financial product experience which is largely absent from her background.",
+    "skills_gap": "Missing direct experience with billing systems, subscription management, payment processing, B2B SaaS monetization, and SMB financial workflows; her background is primarily enterprise data infrastructure and ad tech revenue systems rather than customer-facing billing products.",
+    "confidence": "medium"
   },
   "hubspotjobs_7562518": {
     "id": "hubspotjobs_7562518",
@@ -15641,7 +15718,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:05.211007",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;POS-15764&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=&quot;font-size: 18pt;&quot;&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;Our mission at HubSpot is to help millions of organizations grow better.&lt;/p&gt;\n&lt;p&gt;Commerce Hub powers the future of B2B billing and payments, helping SMBs quote, bill, and get paid \u2014 all within a connected CRM experience. Within Commerce Hub, the Merchant Services team builds the infrastructure that k"
+    "description": "&lt;p&gt;&lt;strong&gt;POS-15764&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span style=&quot;font-size: 18pt;&quot;&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;\n&lt;p&gt;Our mission at HubSpot is to help millions of organizations grow better.&lt;/p&gt;\n&lt;p&gt;Commerce Hub powers the future of B2B billing and payments, helping SMBs quote, bill, and get paid \u2014 all within a connected CRM experience. Within Commerce Hub, the Merchant Services team builds the infrastructure that k",
+    "description_source": "stored",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise in petabyte-scale data platforms and AdTech is misaligned with HubSpot's merchant services/payments infrastructure focus, which requires payments domain knowledge and B2B billing systems experience not demonstrated in her background.",
+    "skills_gap": "Missing: payments/fintech domain expertise, merchant acquiring systems, billing infrastructure, PCI compliance, and B2B SMB payments product experience; her strengths in data platforms and AdTech signals don't transfer directly to commerce/payments product management.",
+    "confidence": "low"
   },
   "hubspotjobs_7577820": {
     "id": "hubspotjobs_7577820",
@@ -15652,7 +15736,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:05.211014",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;POS-11383&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;h2&gt;&lt;strong&gt;Senior Product Manager I, Messaging Performance&lt;/strong&gt;&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;HUB Level:&lt;/strong&gt; 5&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Career Track:&lt;/strong&gt; Craft Track&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Our mission at HubSpot is to help millions of organizations grow better.&lt;/p&gt;\n&lt;p&gt;The Mes"
+    "description": "&lt;p&gt;&lt;strong&gt;POS-11383&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;h2&gt;&lt;strong&gt;Senior Product Manager I, Messaging Performance&lt;/strong&gt;&lt;/h2&gt;\n&lt;ul&gt;\n&lt;li&gt;&lt;strong&gt;HUB Level:&lt;/strong&gt; 5&lt;/li&gt;\n&lt;li&gt;&lt;strong&gt;Career Track:&lt;/strong&gt; Craft Track&lt;/li&gt;\n&lt;/ul&gt;\n&lt;h2&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Our mission at HubSpot is to help millions of organizations grow better.&lt;/p&gt;\n&lt;p&gt;The Mes",
+    "description_source": "stored",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise is in enterprise data platforms and AdTech infrastructure, while this HubSpot role appears focused on messaging product features and customer engagement\u2014a significant domain shift from her core strengths.",
+    "skills_gap": "Missing: messaging platform experience, customer engagement/communications product strategy, and SaaS product lifecycle management; her background is data infrastructure and AdTech monetization, not messaging or CRM features.",
+    "confidence": "low"
   },
   "hubspotjobs_6918808": {
     "id": "hubspotjobs_6918808",
@@ -15663,7 +15754,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:05.211028",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;POS-19142&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;h2&gt;&lt;strong&gt;Senior Product Manager I, Compliance Platform&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;&lt;strong&gt;HUB Level:&lt;/strong&gt; 5&lt;br&gt;&lt;strong&gt;Career Track:&lt;/strong&gt; Craft Track&lt;/p&gt;\n&lt;h2&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Our mission at HubSpot is to help millions of organizations grow better. As a Senior Product Manager I on the Compliance Platform team, yo"
+    "description": "&lt;p&gt;&lt;strong&gt;POS-19142&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;h2&gt;&lt;strong&gt;Senior Product Manager I, Compliance Platform&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;&lt;strong&gt;HUB Level:&lt;/strong&gt; 5&lt;br&gt;&lt;strong&gt;Career Track:&lt;/strong&gt; Craft Track&lt;/p&gt;\n&lt;h2&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Our mission at HubSpot is to help millions of organizations grow better. As a Senior Product Manager I on the Compliance Platform team, yo",
+    "description_source": "stored",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise in AdTech data platforms and petabyte-scale systems is misaligned with a compliance/security assurance role requiring regulatory, legal, and security domain knowledge.",
+    "skills_gap": "Critical gaps: no demonstrated compliance platform experience, security assurance expertise, regulatory framework management, or security product strategy\u2014resume focuses exclusively on data monetization and analytics rather than security controls and compliance infrastructure.",
+    "confidence": "medium"
   },
   "hubspotjobs_7593638": {
     "id": "hubspotjobs_7593638",
@@ -15674,7 +15772,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:05.211041",
     "status": "new",
-    "description": "&lt;p&gt;Product Remote - USA&lt;/p&gt;\n&lt;p&gt;POS - 7843&lt;/p&gt;\n&lt;p&gt;The Social teams, part of HubSpot&#39;s Build Awareness product line, own how businesses create, publish, and manage their presence across social channels on HubSpot. Social is one of the primary ways marketers distribute content, build relationships with their audience, and drive engagement at scale. In this role, you&#39;ll lead two of our three social teams - Social Creation and Social Management - while partnering"
+    "description": "&lt;p&gt;Product Remote - USA&lt;/p&gt;\n&lt;p&gt;POS - 7843&lt;/p&gt;\n&lt;p&gt;The Social teams, part of HubSpot&#39;s Build Awareness product line, own how businesses create, publish, and manage their presence across social channels on HubSpot. Social is one of the primary ways marketers distribute content, build relationships with their audience, and drive engagement at scale. In this role, you&#39;ll lead two of our three social teams - Social Creation and Social Management - while partnering",
+    "description_source": "stored",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise is deeply rooted in AdTech data platforms and analytics, while this HubSpot Social role focuses on product strategy for social content creation and management\u2014a fundamentally different domain requiring marketing/social expertise rather than data infrastructure mastery.",
+    "skills_gap": "Missing: social media marketing platform experience, content creation/management tools, audience engagement strategy, and social channel expertise (Facebook, Instagram, LinkedIn, TikTok); her data platform background doesn't translate directly to social product leadership.",
+    "confidence": "medium"
   },
   "salesforce_Senior-Product-Manager--Omnichannel---Commercial-Strategy---Service-Cloud_JR332976": {
     "id": "salesforce_Senior-Product-Manager--Omnichannel---Commercial-Strategy---Service-Cloud_JR332976",
@@ -15685,7 +15790,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:19.184209",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong enterprise product leadership and data platform expertise, but limited direct CRM/Service Cloud domain experience and unclear strategic commerce alignment without job description.",
+    "skills_gap": "Missing demonstrated experience with Service Cloud, CRM product strategy, omnichannel customer service workflows, and commercial/sales operations\u2014core to this Salesforce role.",
+    "confidence": "low"
   },
   "salesforce_Principal--Analytics-SE_JR332296": {
     "id": "salesforce_Principal--Analytics-SE_JR332296",
@@ -15696,7 +15808,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:19.912449",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and analytics leadership background aligns with SE role expectations, but lack of job description creates uncertainty around technical depth requirements and SE-specific responsibilities.",
+    "skills_gap": "Resume emphasizes product leadership and strategy over hands-on solutions engineering; unclear if role requires direct customer implementation/troubleshooting skills or technical presales expertise specific to Salesforce Analytics Cloud.",
+    "confidence": "low"
   },
   "snap_Staff-Product-Manager_R0045118": {
     "id": "snap_Staff-Product-Manager_R0045118",
@@ -15707,7 +15826,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:28.760633",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "ADS",
+    "reason": "Strong AdTech and ads platform expertise with relevant measurement/optimization background, but lack of specific dynamic ads, creative optimization, or real-time personalization experience creates moderate uncertainty without full job description.",
+    "skills_gap": "No demonstrated experience with dynamic creative optimization, personalization engines, or real-time ad creative selection\u2014core competencies likely required for a Dynamic Ads role at Snap.",
+    "confidence": "low"
   },
   "snap_Staff-Product-Manager--Ads-Product---App-Ads_R0045106": {
     "id": "snap_Staff-Product-Manager--Ads-Product---App-Ads_R0045106",
@@ -15718,7 +15844,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:28.760652",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 75,
+    "resume_used": "ADS",
+    "reason": "Strong AdTech and Ads SDK expertise directly applicable to app ads role at Snap, though lack of job description limits confidence in assessing specific priorities like creative optimization or Snap's auction mechanics.",
+    "skills_gap": "Resume lacks demonstrated experience with creative/format optimization, Snap's specific ad products (AR ads, Instant Experiences), or mobile app monetization strategy\u2014areas typically critical for Staff PM roles in app ads.",
+    "confidence": "low"
   },
   "snap_Senior-Manager--SMC-Advertiser-Growth_R0043428-2": {
     "id": "snap_Senior-Manager--SMC-Advertiser-Growth_R0043428-2",
@@ -15729,7 +15862,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:28.760667",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 48,
+    "resume_used": "DATA",
+    "reason": "Strong data/platform expertise and AdTech background, but resume demonstrates product leadership at director level while role appears to be growth/GTM focused; significant role-level mismatch without full job description limits confidence.",
+    "skills_gap": "Missing: advertiser growth strategy, demand-side platform (DSP) optimization, advertiser acquisition/retention, direct sales enablement, GTM execution at practitioner level (resume is executive/director-level strategy-focused).",
+    "confidence": "low"
   },
   "snap_Technical-Program-Manager--System-Hardware_R0045103-1": {
     "id": "snap_Technical-Program-Manager--System-Hardware_R0045103-1",
@@ -15740,7 +15880,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:28.760676",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 28,
+    "ats_score": 15,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise is deeply rooted in data products, analytics platforms, and software leadership, while this role targets hardware systems engineering\u2014a fundamentally different technical domain requiring mechanical/electrical engineering and infrastructure operations experience.",
+    "skills_gap": "Missing core hardware competencies: systems architecture for physical infrastructure, hardware procurement/lifecycle management, mechanical/electrical engineering fundamentals, data center operations, supply chain management, and hands-on technical program management for hardware deployments.",
+    "confidence": "low"
   },
   "snap_Technical-Operations-Program-Manager_R0042988": {
     "id": "snap_Technical-Operations-Program-Manager_R0042988",
@@ -15751,7 +15898,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:28.760686",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Senior product leader's deep expertise in data platforms and AdTech strategy misaligns with what appears to be an ops/program management execution role, and geographic relocation to Taiwan is not addressed.",
+    "skills_gap": "Resume lacks operational program management, project execution coordination, and Taiwan-based context; overqualified for likely execution-focused role given 15+ years strategic product leadership.",
+    "confidence": "low"
   },
   "snap_Technical-Program-Manager--Level-4_R0044930-1": {
     "id": "snap_Technical-Program-Manager--Level-4_R0044930-1",
@@ -15762,7 +15916,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:28.760701",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 55,
+    "resume_used": "DATA",
+    "reason": "Strong technical product leadership and data platform expertise align with Snap's engineering culture, but TPM role emphasizes execution/delivery over strategic product vision, and no job description limits confidence in fit assessment.",
+    "skills_gap": "Resume lacks explicit program/project management methodology depth (Agile/Scrum listed but not emphasized) and unclear if TPM role requires infrastructure/systems engineering background that isn't prominently featured.",
+    "confidence": "low"
   },
   "snap_AI-Community-Program-Manager_R0044661-1": {
     "id": "snap_AI-Community-Program-Manager_R0044661-1",
@@ -15773,7 +15934,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:28.760710",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Senior product leader's deep expertise in data platforms and AdTech strategy misaligns with a community program manager role, which typically emphasizes community engagement, program execution, and relationship management over technical product leadership.",
+    "skills_gap": "Missing core community management competencies: community engagement strategies, program operations, event management, developer/creator relations, and community-driven growth \u2014 resume shows no evidence of building or scaling communities.",
+    "confidence": "low"
   },
   "capitalone_Manager--Data-Analysis_R237128-2": {
     "id": "capitalone_Manager--Data-Analysis_R237128-2",
@@ -15784,7 +15952,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:42.973955",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 35,
+    "ats_score": 42,
+    "resume_used": "DATA",
+    "reason": "Senior product leader with 15+ years in AdTech/Data platforms is significantly overqualified for a Manager-level Data Analysis role; lacks banking/financial services domain experience and typical data analyst technical stack.",
+    "skills_gap": "Missing domain expertise in financial services, risk management, and regulatory compliance specific to banking; resume shows product leadership and architecture vs. hands-on analysis; likely lacks familiarity with banking-specific tools (SAS, COBOL, core banking systems).",
+    "confidence": "low"
   },
   "capitalone_Sr-Business-Manager-Enterprise-Tech-Analytics_R239743-1": {
     "id": "capitalone_Sr-Business-Manager-Enterprise-Tech-Analytics_R239743-1",
@@ -15795,7 +15970,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:42.973984",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong technical data platform expertise and enterprise leadership experience align with analytics role, but lack of financial services domain knowledge and unclear job scope create meaningful uncertainty.",
+    "skills_gap": "No fintech/banking analytics experience; unclear if role requires risk analytics, fraud detection, or regulatory reporting specific to financial services that aren't reflected in AdTech background.",
+    "confidence": "low"
   },
   "capitalone_Business-Manager---Workplace-Analytics_R239476-1": {
     "id": "capitalone_Business-Manager---Workplace-Analytics_R239476-1",
@@ -15806,7 +15988,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:42.974013",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Senior data product leader's petabyte-scale AdTech expertise doesn't align well with an internal HR/workplace analytics role, which typically requires different stakeholder management, metrics, and business acumen focused on employee experience rather than revenue platforms.",
+    "skills_gap": "Missing HR analytics domain knowledge, employee experience metrics, organizational psychology, and workplace-specific BI tools; resume is heavily skewed toward revenue-driving data platforms and advertiser/publisher ecosystems rather than internal business operations.",
+    "confidence": "low"
   },
   "capitalone_Principal-Associate--Data-Science_R239653-1": {
     "id": "capitalone_Principal-Associate--Data-Science_R239653-1",
@@ -15817,7 +16006,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:42.974025",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 48,
+    "resume_used": "DATA",
+    "reason": "Senior product leader with exceptional data platform expertise, but Principal Associate Data Science role likely seeks hands-on ML/statistical modeling rather than product strategy and leadership.",
+    "skills_gap": "Resume emphasizes product leadership, strategy, and business impact over core data science competencies like advanced statistics, experimental design, machine learning model development, and domain expertise in financial services/risk analytics.",
+    "confidence": "low"
   },
   "capitalone_Senior-Associate--Product-Manager--Global-Payment-Network_R239689-1": {
     "id": "capitalone_Senior-Associate--Product-Manager--Global-Payment-Network_R239689-1",
@@ -15828,7 +16024,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:42.974075",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Strong product leadership and data platform expertise, but Capital One's payment network role likely requires fintech/payments domain knowledge, banking systems experience, and regulatory compliance focus not evident in AdTech background.",
+    "skills_gap": "Missing: payments systems architecture, banking/fintech domain expertise, card network protocols, PCI-DSS compliance, and traditional financial services product experience; AdTech specialization is a vertical mismatch.",
+    "confidence": "low"
   },
   "capitalone_Associate--Process-Management---Card-Performance-Marketing---Analytics--Hybrid-_R239454-1": {
     "id": "capitalone_Associate--Process-Management---Card-Performance-Marketing---Analytics--Hybrid-_R239454-1",
@@ -15839,7 +16042,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:45.686208",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Senior product leader with petabyte-scale expertise significantly overqualified for associate-level process management role; domain shift from AdTech/data platforms to financial services card marketing represents substantial career downgrade.",
+    "skills_gap": "Missing: financial services domain knowledge, card performance marketing expertise, process management/operational frameworks; resume demonstrates strategic product leadership rather than associate-level execution focus.",
+    "confidence": "low"
   },
   "capitalone_Senior-Associate--Brand-Advertising_R238400-1": {
     "id": "capitalone_Senior-Associate--Brand-Advertising_R238400-1",
@@ -15850,7 +16060,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:45.686288",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "ADS",
+    "reason": "Senior product leader with deep AdTech expertise applying for likely entry-to-mid level brand advertising role at financial services company\u2014significant seniority mismatch and industry pivot with no job description available.",
+    "skills_gap": "Missing financial services, consumer banking, brand marketing, and likely retail/consumer advertising experience; AdTech platform expertise poorly transferable to Capital One's likely brand advertising focus.",
+    "confidence": "low"
   },
   "capitalone_Senior-Associate--Anti-Money-Laundering-Data-and-Analysis-Process-Lead_R239636-1": {
     "id": "capitalone_Senior-Associate--Anti-Money-Laundering-Data-and-Analysis-Process-Lead_R239636-1",
@@ -15861,7 +16078,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:47.034277",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise in AdTech/data platforms and large-scale data governance doesn't align with compliance-focused AML process leadership, which typically requires financial services regulatory experience and process design rather than product strategy.",
+    "skills_gap": "Missing core AML/financial crime domain expertise, compliance program management, regulatory audit experience, and financial services operational process design\u2014this role requires compliance and risk management background, not product leadership.",
+    "confidence": "low"
   },
   "capitalone_Manager--Product-Management---Retail-Bank-Data_R234213": {
     "id": "capitalone_Manager--Product-Management---Retail-Bank-Data_R234213",
@@ -15872,7 +16096,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:47.034295",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 45,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and product leadership experience, but AdTech/B2B focus creates significant domain mismatch with retail banking; no job description limits confidence in assessing actual requirements.",
+    "skills_gap": "Missing retail banking domain expertise, consumer financial products experience, and regulatory knowledge specific to banking (likely includes BSA/AML, Fair Lending, deposit products); lacks retail customer acquisition/retention product management.",
+    "confidence": "low"
   },
   "capitalone_Manager--Data-Product-Manager---Travel-Core-Service_R238871-1": {
     "id": "capitalone_Manager--Data-Product-Manager---Travel-Core-Service_R238871-1",
@@ -15883,7 +16114,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:48.450169",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 48,
+    "resume_used": "DATA",
+    "reason": "Strong data product leadership and platform expertise, but AdTech-specific experience and petabyte-scale focus may not align with financial services travel domain requirements.",
+    "skills_gap": "Missing financial services industry context, customer banking/travel domain knowledge, and compliance expertise specific to regulated financial institutions (beyond GDPR/COPPA).",
+    "confidence": "low"
   },
   "capitalone_Senior-Manager--Cyber-Product-Manager--Data-Protection-_R239385-1": {
     "id": "capitalone_Senior-Manager--Cyber-Product-Manager--Data-Protection-_R239385-1",
@@ -15894,7 +16132,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:48.450249",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and governance expertise, but significant domain mismatch\u2014resume is AdTech/revenue intelligence focused while role requires cybersecurity and data protection specialization.",
+    "skills_gap": "Missing core cybersecurity competencies (threat modeling, security architecture, incident response, compliance frameworks like NIST/ISO 27001), identity/access management, and financial services regulatory experience; role likely requires security certifications or background.",
+    "confidence": "low"
   },
   "capitalone_Director--Technology---Data-Risk-Management_R234842-2": {
     "id": "capitalone_Director--Technology---Data-Risk-Management_R234842-2",
@@ -15905,7 +16150,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:51.166997",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 48,
+    "resume_used": "DATA",
+    "reason": "Strong data and governance expertise but significant pivot required: AdTech/fintech product leadership doesn't directly translate to financial services risk management without visible compliance/risk background.",
+    "skills_gap": "Missing: Risk management frameworks (Basel, operational risk), financial services compliance depth (beyond GDPR/COPPA), audit/control experience, and explicit risk governance\u2014core to this Capital One role.",
+    "confidence": "low"
   },
   "capitalone_Director--Data-Analysis---Small-Business-Card_R237188-2": {
     "id": "capitalone_Director--Data-Analysis---Small-Business-Card_R237188-2",
@@ -15916,7 +16168,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:51.167023",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 45,
+    "resume_used": "DATA",
+    "reason": "Senior data product leader's petabyte-scale AdTech expertise doesn't align with small business card product analytics\u2014likely a more tactical, consumer-facing role requiring different domain knowledge and skill focus.",
+    "skills_gap": "Missing domain expertise in consumer banking, small business financial products, and card/payment systems; resume emphasizes enterprise data platforms and AdTech while role likely requires business analytics, customer segmentation, and product metrics for retail banking.",
+    "confidence": "low"
   },
   "capitalone_Director--Data-Analysis_R239413-1": {
     "id": "capitalone_Director--Data-Analysis_R239413-1",
@@ -15927,7 +16186,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:51.167032",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and analytics leadership experience, but AdTech/fintech domain shift and lack of visible Capital One-specific banking/financial services context creates uncertainty without job description.",
+    "skills_gap": "No explicit banking/financial services domain experience, regulatory compliance background limited to GDPR/COPPA rather than financial services regulations (SOX, BSA, etc.), and no mention of risk/fraud analytics or customer financial data handling.",
+    "confidence": "low"
   },
   "mastercard_Senior-Analyst--Program-Management_R-270531": {
     "id": "mastercard_Senior-Analyst--Program-Management_R-270531",
@@ -15938,7 +16204,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:56.776178",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Senior analyst role at Mastercard likely seeks financial/payments domain expertise and operational analytics skills, while this candidate excels in AdTech data product leadership with limited payments or strategic advisory background.",
+    "skills_gap": "Missing: payments/fintech domain knowledge, financial services compliance depth, capacity planning methodologies, and strategic advisory consulting experience typical of Mastercard roles.",
+    "confidence": "low"
   },
   "mastercard_Director-of-Data-Science--AdTech-_R-273040-1": {
     "id": "mastercard_Director-of-Data-Science--AdTech-_R-273040-1",
@@ -15949,7 +16222,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:20:58.718772",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 55,
+    "ats_score": 48,
+    "resume_used": "ADS",
+    "reason": "Strong AdTech and data platform expertise, but Director of Data Science role likely emphasizes statistical modeling, ML research, and predictive analytics rather than product leadership and platform architecture that dominate this resume.",
+    "skills_gap": "Resume lacks emphasis on statistical methods, causal inference, experimentation frameworks, and machine learning research\u2014core data science competencies; unclear if role requires hands-on ML modeling vs. product-driven data strategy.",
+    "confidence": "low"
   },
   "mastercard_Director--Analytics--Services-EEMEA---Turkey_R-267650": {
     "id": "mastercard_Director--Analytics--Services-EEMEA---Turkey_R-267650",
@@ -15960,7 +16240,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:00.920067",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 38,
+    "resume_used": "DATA",
+    "reason": "Strong analytics and data platform expertise, but significant domain mismatch \u2014 resume is AdTech/SaaS focused while Mastercard role likely requires payments, financial services, and regional EEMEA expertise; no job description limits assessment confidence.",
+    "skills_gap": "Missing: payments/fintech domain knowledge, regional EEMEA market experience, banking/financial services analytics, Mastercard-specific platforms; resume heavily weighted toward AdTech monetization vs. financial services risk/compliance analytics.",
+    "confidence": "low"
   },
   "mastercard_Consultant---Performance-Analytics--Advisors---Consulting-Services_R-274914": {
     "id": "mastercard_Consultant---Performance-Analytics--Advisors---Consulting-Services_R-274914",
@@ -15971,7 +16258,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:00.920106",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 38,
+    "resume_used": "DATA",
+    "reason": "Senior product leader's deep expertise in data platforms and AdTech strategy misaligns with a likely junior-to-mid-level consulting role; significant overqualification and potential role/location mismatch without job description.",
+    "skills_gap": "Resume lacks management consulting methodologies, client-facing advisory experience, and strategy frameworks typically required for consultant roles; financial services domain expertise not demonstrated.",
+    "confidence": "low"
   },
   "mastercard_Associate-Managing-Consultant--Performance-Analytics---Advisors---Consulting-Services_R-270040-1": {
     "id": "mastercard_Associate-Managing-Consultant--Performance-Analytics---Advisors---Consulting-Services_R-270040-1",
@@ -15982,7 +16276,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:00.920132",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 48,
+    "resume_used": "DATA",
+    "reason": "Strong analytics and data platform expertise, but significant uncertainty due to missing job description and potential mismatch between senior product leadership role and associate-level consulting position.",
+    "skills_gap": "Unknown consulting methodology fit, client engagement models, and specific performance analytics frameworks typical of Mastercard's advisory services; resume shows product leadership at scale rather than consulting delivery experience.",
+    "confidence": "low"
   },
   "mastercard_Vice-President--Digital-Product-Analytic-Insights--Enablement_R-274087-1": {
     "id": "mastercard_Vice-President--Digital-Product-Analytic-Insights--Enablement_R-274087-1",
@@ -15993,7 +16294,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:00.920149",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong data product and analytics platform leadership background aligns with VP-level insights role, but financial services/payments domain expertise and specific enablement experience are unclear without job description.",
+    "skills_gap": "Missing: financial services/payments industry experience, customer enablement/training program leadership, and domain knowledge of card networks/transaction analytics.",
+    "confidence": "low"
   },
   "mastercard_Associate-Managing-Consultant---Performance-Analytics_R-270950": {
     "id": "mastercard_Associate-Managing-Consultant---Performance-Analytics_R-270950",
@@ -16004,7 +16312,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:00.920173",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 52,
+    "resume_used": "DATA",
+    "reason": "Strong analytics and data platform expertise misaligned with likely payment systems focus; senior leader overshooting IC consultant role; no job description limits confidence.",
+    "skills_gap": "Missing: payments/fintech domain knowledge, regulatory compliance specific to financial services (PCI-DSS), and consulting delivery experience; role likely seeks mid-level IC rather than 15+ year executive.",
+    "confidence": "low"
   },
   "mastercard_Lead-Product-Manager---Technical-AgenticAI-product_R-267507": {
     "id": "mastercard_Lead-Product-Manager---Technical-AgenticAI-product_R-267507",
@@ -16015,7 +16330,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:05.008685",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 45,
+    "resume_used": "DATA",
+    "reason": "Deep expertise in data platforms and AI/ML analytics, but limited visibility into Mastercard's specific agentic AI product requirements without job description; career trajectory is AdTech/Data-focused rather than fintech or payments domain.",
+    "skills_gap": "Missing fintech/payments domain experience, limited evidence of agentic AI product leadership (vs. data-driven analytics platforms), and no demonstrated experience building customer-facing AI agent systems or payment/transaction workflows.",
+    "confidence": "low"
   },
   "visa_Product-Manager-Go-to-Market-Germany_REF078435W": {
     "id": "visa_Product-Manager-Go-to-Market-Germany_REF078435W",
@@ -16026,7 +16348,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:10.993730",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep AdTech/data platform expertise doesn't align with a GTM role requiring regional sales strategy, market development, and go-to-market execution in Germany\u2014a significant functional pivot from product leadership.",
+    "skills_gap": "Missing: regional GTM strategy, sales enablement, market expansion experience, German market knowledge, and direct customer acquisition/partnership development\u2014this role likely requires boots-on-ground commercial execution rather than data platform product leadership.",
+    "confidence": "low"
   },
   "visa_Product-Manager_REF077469W": {
     "id": "visa_Product-Manager_REF077469W",
@@ -16037,7 +16366,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:17.165568",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Senior data product leader's petabyte-scale AdTech expertise is overqualified and misaligned with typical PM roles at financial services; without job description, significant role uncertainty limits confidence.",
+    "skills_gap": "Missing: financial services domain knowledge, payments/fintech product experience, regulatory frameworks specific to payments (PCI-DSS), customer segments typical to Visa (issuers, acquirers, merchants); resume heavily weighted toward data/analytics rather than core payments product strategy.",
+    "confidence": "low"
   },
   "visa_Senior-Product-Manager--Sourcing-Category_REF077922W": {
     "id": "visa_Senior-Product-Manager--Sourcing-Category_REF077922W",
@@ -16048,7 +16384,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:17.165604",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Resume demonstrates exceptional data platform and analytics leadership, but lacks procurement, sourcing, supply chain, or payments industry experience that a Visa sourcing role would likely require.",
+    "skills_gap": "Missing core sourcing competencies: vendor management, procurement strategy, supply chain operations, contract negotiation, and payments/financial services domain expertise; AdTech background does not transfer directly to enterprise procurement.",
+    "confidence": "low"
   },
   "visa_Staff-Product-Manager_REF078741W": {
     "id": "visa_Staff-Product-Manager_REF078741W",
@@ -16059,7 +16402,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:17.165613",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Strong product leadership and data platform expertise, but Visa's A2A Risk Solutions likely requires payments/fintech domain knowledge, fraud/compliance risk expertise, and B2B enterprise solutions experience that aren't evident in this AdTech-focused background.",
+    "skills_gap": "Missing: payments industry domain expertise, fraud detection/risk management systems, A2A (Account-to-Account) transaction flows, financial crime prevention, and fintech regulatory frameworks (PSD2, Open Banking); resume is heavily AdTech/MarketingTech-oriented.",
+    "confidence": "low"
   },
   "walmart_Senior-Product-Manager_R-2358369": {
     "id": "walmart_Senior-Product-Manager_R-2358369",
@@ -16070,7 +16420,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:30.713560",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong technical product leadership and data platform expertise, but Walmart Connect likely prioritizes retail/e-commerce advertising strategy over petabyte-scale data infrastructure\u2014a significant domain shift from AdTech.",
+    "skills_gap": "Missing demonstrated experience in retail commerce, first-party data monetization, seller enablement, or e-commerce advertising platforms; AdTech background doesn't directly translate to Walmart's marketplace advertising ecosystem.",
+    "confidence": "low"
   },
   "walmart_Principal--Product-Manager_R-2349562": {
     "id": "walmart_Principal--Product-Manager_R-2349562",
@@ -16081,7 +16438,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:30.713579",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong product leadership and data platform expertise align with Walmart Connect's likely needs, but AdTech/MarTech background differs from retail commerce advertising, and lack of job description limits precision assessment.",
+    "skills_gap": "Missing demonstrated experience in retail commerce, first-party data strategies, or merchant/supplier product ecosystems\u2014core to Walmart Connect's business model.",
+    "confidence": "low"
   },
   "walmart_Product-Manager-III_R-2442619": {
     "id": "walmart_Product-Manager-III_R-2442619",
@@ -16092,7 +16456,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:30.713611",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong product leadership and data platform experience, but Walmart Connect likely prioritizes retail/commerce product expertise and advertising platform knowledge that differs from AdTech focus; lack of job description limits confidence in seniority alignment for PM III role.",
+    "skills_gap": "Missing direct retail commerce, marketplace monetization, or supplier-facing product experience; Walmart Connect typically emphasizes advertising solutions for retail partners rather than pure data infrastructure.",
+    "confidence": "low"
   },
   "walmart_Staff-Product-Manager_R-2451338-1": {
     "id": "walmart_Staff-Product-Manager_R-2451338-1",
@@ -16103,7 +16474,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:30.713619",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and product leadership experience directly applicable to retail/commerce tech, but lack of e-commerce, marketplace, or retail-specific domain experience creates uncertainty without full job description.",
+    "skills_gap": "Missing demonstrated experience in e-commerce platforms, marketplace dynamics, retail analytics, or consumer purchasing behavior\u2014critical for Walmart Connect's ad/commerce ecosystem.",
+    "confidence": "low"
   },
   "walmart_Principal-Product-Manager_R-2451360-1": {
     "id": "walmart_Principal-Product-Manager_R-2451360-1",
@@ -16114,7 +16492,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:30.713637",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong technical product leadership credentials and data platform expertise align well with Walmart Connect's likely needs, but without job description, score is conservative; retail/commerce advertising shift from pure AdTech is a minor gap.",
+    "skills_gap": "Limited retail commerce and marketplace advertising experience\u2014background is primarily AdTech/mobile/DSP focused rather than first-party retail media network operations.",
+    "confidence": "low"
   },
   "walmart_XMLNAME--USA--Senior-Product-Manager_R-2212384": {
     "id": "walmart_XMLNAME--USA--Senior-Product-Manager_R-2212384",
@@ -16125,7 +16510,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:30.713674",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and product leadership experience, but Walmart Connect likely prioritizes retail commerce, marketplace, and advertiser solutions over pure data infrastructure\u2014a meaningful domain shift from AdTech.",
+    "skills_gap": "No direct experience in retail commerce, first-party data monetization, advertiser acquisition/onboarding, or Walmart's marketplace ecosystem; domain expertise in AdTech signals does not directly translate to retail advertising nuances.",
+    "confidence": "low"
   },
   "walmart_Distinguished--Platform-Product-Manager_R-2327063": {
     "id": "walmart_Distinguished--Platform-Product-Manager_R-2327063",
@@ -16136,7 +16528,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:30.713681",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong product leadership and data platform expertise align well with Walmart Connect's likely need for platform strategy, but lack of retail/commerce and advertising network context creates uncertainty without a job description.",
+    "skills_gap": "No demonstrated experience with retail media networks, first-party data monetization, or Walmart's specific ecosystem; advertising platform background is AdTech-focused rather than retail commerce.",
+    "confidence": "low"
   },
   "walmart_XMLNAME--USA--Staff--Product-Manager_R-2333127": {
     "id": "walmart_XMLNAME--USA--Staff--Product-Manager_R-2333127",
@@ -16147,7 +16546,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:30.713689",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and product leadership expertise with proven track record at scale, but Staff PM role at Walmart Connect (retail/ecommerce ads) represents a domain shift from pure AdTech, and lack of job description limits precision scoring.",
+    "skills_gap": "Missing explicit retail commerce, marketplace dynamics, and first-party data monetization experience; Walmart Connect's focus on retail media networks differs from her core mobile/programmatic advertising background.",
+    "confidence": "low"
   },
   "walmart_XMLNAME--USA--Senior--Data-Modeler-2--Data-Governance_R-2446308-1": {
     "id": "walmart_XMLNAME--USA--Senior--Data-Modeler-2--Data-Governance_R-2446308-1",
@@ -16158,7 +16564,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:35.335099",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong data governance and modeling expertise with petabyte-scale platform experience, but senior product leader background may overqualify for individual contributor data modeler role; role seniority level unclear without job description.",
+    "skills_gap": "Resume emphasizes product strategy and leadership over hands-on data modeling; no explicit mention of data warehouse design patterns, dimensional modeling, or specific governance tools (Collibra, Alation, etc.) that senior data modeler roles typically require.",
+    "confidence": "low"
   },
   "walmart_Manager--Data-Stewardship_R-2414974-1": {
     "id": "walmart_Manager--Data-Stewardship_R-2414974-1",
@@ -16169,7 +16582,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:35.335150",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Senior product leader's extensive AdTech/data platform expertise significantly exceeds a manager-level data stewardship role, creating potential overqualification concerns despite strong foundational alignment with data governance and compliance themes.",
+    "skills_gap": "Resume lacks specific mention of data stewardship frameworks, data cataloging tools (Collibra, Alation), or hands-on data quality management\u2014the likely core focus of a stewardship manager role.",
+    "confidence": "low"
   },
   "walmart_Manager--Advertising-Account-Management--MAP_R-2355635": {
     "id": "walmart_Manager--Advertising-Account-Management--MAP_R-2355635",
@@ -16180,7 +16600,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:38.353718",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "ADS",
+    "reason": "Senior product leader's deep AdTech/data platform expertise misaligns with account management role focus; significant seniority mismatch and functional pivot required.",
+    "skills_gap": "Resume demonstrates zero account management, client relationship management, or sales enablement experience; lacks retail/CPG advertising domain knowledge typical for Walmart Connect roles.",
+    "confidence": "low"
   },
   "walmart_Director--Advertising-Account-Management--MAP---Sam-s-Club_R-2394858": {
     "id": "walmart_Director--Advertising-Account-Management--MAP---Sam-s-Club_R-2394858",
@@ -16191,7 +16618,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:38.353741",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 45,
+    "resume_used": "ADS",
+    "reason": "Strong product leadership and AdTech expertise, but role appears to be account management/sales-focused rather than product strategy, creating significant functional misalignment.",
+    "skills_gap": "Resume lacks account management, sales enablement, client relationship management, and direct P&L ownership for a specific account portfolio\u2014core competencies for an account management director role.",
+    "confidence": "low"
   },
   "walmart_Senior-Manager--Advertising-Account-Management--MAP---Sam-s-Club_R-2386909": {
     "id": "walmart_Senior-Manager--Advertising-Account-Management--MAP---Sam-s-Club_R-2386909",
@@ -16202,7 +16636,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:38.353756",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "ADS",
+    "reason": "Senior product leader with deep AdTech expertise applying for account management role\u2014significant misalignment in career trajectory (product\u2192sales/AM) and likely requires retail/CPG account experience that resume doesn't demonstrate.",
+    "skills_gap": "Account management, retail/CPG sales experience, customer relationship management, and negotiation skills are absent; resume is heavily product/technical focused rather than client-facing revenue operations.",
+    "confidence": "low"
   },
   "walmart_Senior-Partner--Ad-Partner-Management--Walmart-Connect--Agency-Partnerships---Creative-Strategy---Growth-_R-2417299": {
     "id": "walmart_Senior-Partner--Ad-Partner-Management--Walmart-Connect--Agency-Partnerships---Creative-Strategy---Growth-_R-2417299",
@@ -16213,7 +16654,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:38.353818",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Strong AdTech background and data platform expertise, but role appears focused on agency partnership management and creative strategy\u2014areas where resume shows minimal direct experience; leadership scale misaligned with partner management scope.",
+    "skills_gap": "Missing demonstrated experience in agency relationship management, creative strategy, account management, and partnership growth\u2014core competencies likely required for this Senior Partner role despite strong technical product leadership credentials.",
+    "confidence": "low"
   },
   "walmart_Director--Advanced-Analytics_R-2336561-1": {
     "id": "walmart_Director--Advanced-Analytics_R-2336561-1",
@@ -16224,7 +16672,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:42.383083",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong analytics and data platform leadership background with proven scale, but AdTech domain expertise and petabyte-scale focus may not directly translate to retail/e-commerce analytics priorities at Walmart Connect.",
+    "skills_gap": "Missing direct retail, e-commerce, or consumer packaged goods (CPG) analytics experience; Walmart Connect likely emphasizes advertiser insights and marketplace analytics rather than pure infrastructure modernization.",
+    "confidence": "low"
   },
   "walmart_Manager--Advanced-Analytics_R-2397239-1": {
     "id": "walmart_Manager--Advanced-Analytics_R-2397239-1",
@@ -16235,7 +16690,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:42.383102",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Senior data product leader with petabyte-scale expertise may be overqualified for a manager-level analytics role; without job description, significant uncertainty exists about actual responsibilities, team scope, and technical focus.",
+    "skills_gap": "Unclear if role requires hands-on analytics engineering (SQL, Python, BI tools) vs. people management; resume emphasizes product strategy and platform building over individual analytics project delivery.",
+    "confidence": "low"
   },
   "walmart_Senior-Manager--Advanced-Analytics---Payments-Strategy---Analytics---Marketplace_R-2393781": {
     "id": "walmart_Senior-Manager--Advanced-Analytics---Payments-Strategy---Analytics---Marketplace_R-2393781",
@@ -16246,7 +16708,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:42.383150",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and analytics leadership experience, but payments/marketplace domain expertise and specific Walmart Connect context are unknown, creating uncertainty in true fit despite relevant technical foundation.",
+    "skills_gap": "Missing direct payments industry experience, marketplace-specific analytics patterns, and no visible exposure to Walmart's retail/commerce ecosystem\u2014core contextual knowledge for success in this role.",
+    "confidence": "low"
   },
   "walmart_Senior-Manager--Data-Analytics---Advanced-Analytics---Multi-Touch-Attribution_R-2399800-1": {
     "id": "walmart_Senior-Manager--Data-Analytics---Advanced-Analytics---Multi-Touch-Attribution_R-2399800-1",
@@ -16257,7 +16726,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:42.383160",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "ADS",
+    "reason": "Strong attribution and measurement expertise directly applicable to multi-touch attribution role, but seniority level (15yr product director) may be overqualified for 'Senior Manager' title, and retail/ecommerce analytics depth is unclear.",
+    "skills_gap": "Missing explicit ecommerce/retail analytics, customer journey mapping, and conversion funnel optimization experience; Walmart Connect ecosystem knowledge not demonstrated.",
+    "confidence": "low"
   },
   "walmart_XMLNAME--USA--Manager--Data-Analytics_R-2330924": {
     "id": "walmart_XMLNAME--USA--Manager--Data-Analytics_R-2330924",
@@ -16268,7 +16744,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:42.383171",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Senior data product leader with petabyte-scale expertise is significantly overqualified for a manager-level analytics role; lacks retail/e-commerce domain experience and typical manager analytics responsibilities (dashboarding, reporting, team management at this level).",
+    "skills_gap": "No technical skills gaps, but missing retail analytics domain knowledge, merchandising/inventory analytics, and unclear fit with likely manager-level analytics team leadership versus director-level product strategy focus.",
+    "confidence": "low"
   },
   "walmart_XMLNAME--USA--Manager--Advanced-Analytics_R-2388199": {
     "id": "walmart_XMLNAME--USA--Manager--Advanced-Analytics_R-2388199",
@@ -16279,7 +16762,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:42.383180",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and analytics leadership experience, but seniority level (Director) likely exceeds Manager role and absence of job description creates uncertainty around specific business context and analytics focus areas.",
+    "skills_gap": "Unknown retail/e-commerce analytics domain experience and unclear if role requires hands-on analytics execution versus pure leadership; no mention of Walmart's specific tech stack or advertising/commerce platform requirements.",
+    "confidence": "low"
   },
   "walmart_XMLNAME--IND--Manager--Data-Analytics_R-2408457": {
     "id": "walmart_XMLNAME--IND--Manager--Data-Analytics_R-2408457",
@@ -16290,7 +16780,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:42.383188",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 52,
+    "resume_used": "DATA",
+    "reason": "Senior product leader with petabyte-scale data platform expertise significantly overqualified for a manager-level analytics role; title/company suggest individual contributor analytics focus rather than product leadership trajectory.",
+    "skills_gap": "Resume emphasizes product strategy, platform design, and cross-functional leadership; likely underutilizes deep data engineering/analytics technical skills unless role requires hands-on analytics modeling and experimentation design.",
+    "confidence": "low"
   },
   "walmart_Manager--Merchandising-Business-Analytics_R-2419319": {
     "id": "walmart_Manager--Merchandising-Business-Analytics_R-2419319",
@@ -16301,7 +16798,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:42.383197",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise is in data platforms and AI/ML analytics for AdTech; Walmart Connect merchandising analytics requires retail/e-commerce domain knowledge and likely different stakeholder dynamics, representing a significant career pivot.",
+    "skills_gap": "Missing retail merchandising analytics experience, e-commerce conversion funnel expertise, and inventory/assortment optimization background; her AdTech signals expertise doesn't directly transfer to product merchandising metrics.",
+    "confidence": "low"
   },
   "walmart_Senior-Manager--Advanced-Analytics_R-2431093": {
     "id": "walmart_Senior-Manager--Advanced-Analytics_R-2431093",
@@ -16312,7 +16816,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:42.383206",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and analytics leadership experience with petabyte-scale systems aligns well with Walmart Connect's likely advanced analytics needs, but lack of retail/e-commerce context and unknown job specifics limit confidence.",
+    "skills_gap": "No direct retail, marketplace, or e-commerce analytics experience; Walmart Connect role may require domain expertise in retail media network analytics, advertiser performance metrics, or publisher monetization models different from AdTech focus.",
+    "confidence": "low"
   },
   "walmart_Senior-Manager--Data-Analytics_R-2458150": {
     "id": "walmart_Senior-Manager--Data-Analytics_R-2458150",
@@ -16323,7 +16834,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:42.383229",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and analytics leadership background with petabyte-scale experience aligns well with Walmart Connect's likely infrastructure needs, but lack of retail/e-commerce specific domain and no job description limits confidence in role-specific fit.",
+    "skills_gap": "Missing retail commerce, marketplace analytics, and advertiser self-serve platform experience; unclear if role requires hands-on analytics vs. platform/infrastructure focus given ambiguous title scope.",
+    "confidence": "low"
   },
   "walmart_Manager--Business-Strategy---Analytics_R-2395396-1": {
     "id": "walmart_Manager--Business-Strategy---Analytics_R-2395396-1",
@@ -16334,7 +16852,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:42.383240",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 58,
+    "ats_score": 52,
+    "resume_used": "DATA",
+    "reason": "Strong analytical and data platform expertise, but significant role level mismatch\u2014Preethi is a Director/Principal-level executive while this appears to be a mid-level manager position, and retail analytics differs substantially from AdTech/data infrastructure focus.",
+    "skills_gap": "Retail commerce domain expertise, supply chain analytics, and inventory/merchandising analytics are absent; AdTech-specific signal architecture and petabyte-scale platform skills may not directly translate to retail business strategy context.",
+    "confidence": "low"
   },
   "walmart_Staff-Product-Analytics-Manager_R-2451489-1": {
     "id": "walmart_Staff-Product-Analytics-Manager_R-2451489-1",
@@ -16345,7 +16870,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:42.383248",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "While Preethi has exceptional data platform and analytics expertise, a Staff Product Analytics Manager role typically focuses on analytics strategy and insights rather than data infrastructure leadership, creating a potential overqualification/misalignment issue without seeing the full JD.",
+    "skills_gap": "Unknown analytics-specific focus areas (cohort analysis, experimentation, reporting frameworks, retail/commerce domain) cannot be assessed without job description; her strengths lean heavily toward data platform architecture over consumer-facing analytics insights.",
+    "confidence": "low"
   },
   "walmart_XMLNAME--USA--Distinguished--Platform-Product-Manager_R-2393936": {
     "id": "walmart_XMLNAME--USA--Distinguished--Platform-Product-Manager_R-2393936",
@@ -16356,7 +16888,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:48.300302",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 38,
+    "resume_used": "DATA",
+    "reason": "Strong product leadership and data platform expertise, but AI Security role requires specialized security/compliance domain knowledge not evident in AdTech background; without job description, fit is uncertain.",
+    "skills_gap": "No demonstrated experience in AI security, threat modeling, adversarial ML, security infrastructure, or compliance frameworks specific to AI/ML safety\u2014critical for a Distinguished-level security product role.",
+    "confidence": "low"
   },
   "walmart_XMLNAME--USA--Staff--Product-Manager--ML-AI---Walmart-Connect_R-2242213": {
     "id": "walmart_XMLNAME--USA--Staff--Product-Manager--ML-AI---Walmart-Connect_R-2242213",
@@ -16367,7 +16906,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:48.300322",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong product leadership and ML/AI platform experience in data-heavy environments, but without job description, alignment with Walmart Connect's specific commerce/retail focus and ML priorities is uncertain.",
+    "skills_gap": "Missing retail commerce domain expertise, e-commerce advertising platform experience, and no visible work with Walmart's specific ecosystem or retail media networks.",
+    "confidence": "low"
   },
   "walmart_XMLNAME--USA--Staff--Product-Manager_R-2431470": {
     "id": "walmart_XMLNAME--USA--Staff--Product-Manager_R-2431470",
@@ -16378,7 +16924,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:48.300339",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise is in data platforms and AdTech product strategy; a localization PM role at Walmart Connect requires different domain focus (retail, language/market expansion) with minimal overlap in core competencies.",
+    "skills_gap": "No demonstrated experience in localization, international market strategy, language/cultural adaptation, or retail commerce; resume is heavily weighted toward data infrastructure and AdTech monetization rather than product localization workflows.",
+    "confidence": "low"
   },
   "walmart_XMLNAME--USA--Principal--Product-Manager---Localization_R-2421401-1": {
     "id": "walmart_XMLNAME--USA--Principal--Product-Manager---Localization_R-2421401-1",
@@ -16389,7 +16942,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:48.300349",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Resume demonstrates exceptional data platform and AdTech expertise, but Principal PM role at Walmart Connect likely requires retail/commerce and localization domain experience that is absent from candidate's background.",
+    "skills_gap": "Missing: retail/e-commerce product experience, localization/international expansion expertise, consumer packaged goods (CPG) marketing knowledge, and Walmart's specific commerce ecosystem; candidate's entire career is AdTech/data platforms.",
+    "confidence": "low"
   },
   "walmart_Director--Product-Management---Seller-Growth_R-2241163-2": {
     "id": "walmart_Director--Product-Management---Seller-Growth_R-2241163-2",
@@ -16400,7 +16960,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:48.300357",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 45,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise in data platforms and AdTech is misaligned with Walmart Connect's likely focus on seller monetization, retail partnerships, and commerce growth rather than petabyte-scale data infrastructure.",
+    "skills_gap": "Missing direct experience in retail/commerce seller ecosystems, marketplace dynamics, merchant onboarding, and seller success metrics; expertise is heavily skewed toward AdTech data engineering rather than seller growth product strategy.",
+    "confidence": "low"
   },
   "walmart_Staff--Product-Manager---Data-Ventures_R-2409691": {
     "id": "walmart_Staff--Product-Manager---Data-Ventures_R-2409691",
@@ -16411,7 +16978,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:48.300364",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and product leadership background aligns well with Walmart Connect's likely data infrastructure needs, but without job description, cannot assess strategic fit or specific retail/commerce data requirements.",
+    "skills_gap": "Missing explicit retail commerce, marketplace dynamics, or supply chain data experience; unclear if Walmart's 'Data Ventures' role emphasizes external customer-facing platforms vs. internal infrastructure.",
+    "confidence": "low"
   },
   "walmart_Staff--Product-Manager--Item-Transactability_R-2402854": {
     "id": "walmart_Staff--Product-Manager--Item-Transactability_R-2402854",
@@ -16422,7 +16996,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:48.300372",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Deep data platform expertise doesn't align with e-commerce item transactability role; AdTech/B2B data focus diverges from retail product operations and seller/item logistics.",
+    "skills_gap": "Missing e-commerce domain knowledge, inventory/fulfillment systems, seller operations, and item catalog management\u2014core to Walmart Connect transactability; no retail or marketplace experience evident.",
+    "confidence": "low"
   },
   "walmart_Staff--Product-Manager--Digital-Merchandising_R-2405940": {
     "id": "walmart_Staff--Product-Manager--Digital-Merchandising_R-2405940",
@@ -16433,7 +17014,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:48.300379",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 45,
+    "resume_used": "DATA",
+    "reason": "Strong product leadership and data platform expertise, but Digital Merchandising at retail typically requires e-commerce, inventory, pricing, and customer experience focus\u2014areas not prominently demonstrated in this AdTech/data-centric background.",
+    "skills_gap": "Missing direct experience in merchandising strategy, inventory management, pricing optimization, customer shopping experience, or retail-specific product domains; heavy AdTech/data platform focus may not translate directly to retail commerce operations.",
+    "confidence": "low"
   },
   "walmart_Senior-Product-Manager--Supply-Chain-Optimization_R-2399413": {
     "id": "walmart_Senior-Product-Manager--Supply-Chain-Optimization_R-2399413",
@@ -16444,7 +17032,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:48.300399",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise in data platforms and AdTech doesn't align well with supply chain optimization; while she has enterprise product leadership and scale experience, the domain shift is significant and without a job description, fit cannot be properly assessed.",
+    "skills_gap": "Missing supply chain domain expertise, inventory management, logistics optimization, and procurement platform experience; AdTech/data platform background does not directly transfer to retail supply chain operations.",
+    "confidence": "low"
   },
   "walmart_XMLNAME--USA--Principal--Product-Manager--Item-Transactability_R-2410847": {
     "id": "walmart_XMLNAME--USA--Principal--Product-Manager--Item-Transactability_R-2410847",
@@ -16455,7 +17050,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:48.300407",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise is in petabyte-scale data platforms and AdTech monetization analytics, while this Walmart Connect role likely focuses on e-commerce product transactability and catalog management\u2014a fundamentally different domain.",
+    "skills_gap": "Missing direct e-commerce, inventory management, catalog/SKU transactability, and retail supply chain experience; AdTech product leadership does not translate well to marketplace transaction systems without explicit retail platform exposure.",
+    "confidence": "low"
   },
   "walmart_Staff--Product-Manager---Automated-Pickup-and-Delivery--APD-_R-2361350": {
     "id": "walmart_Staff--Product-Manager---Automated-Pickup-and-Delivery--APD-_R-2361350",
@@ -16466,7 +17068,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:48.300415",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's 15+ years are deeply specialized in AdTech/Data platforms with no demonstrated logistics, supply chain, or last-mile delivery experience that would be core to APD at Walmart.",
+    "skills_gap": "Missing logistics domain expertise, supply chain optimization, route planning, last-mile delivery operations, and retail fulfillment product strategy\u2014this is a fundamentally different vertical despite both being data-intensive.",
+    "confidence": "low"
   },
   "walmart_Principal--Product-Manager---Core-Recommendations_R-2409416": {
     "id": "walmart_Principal--Product-Manager---Core-Recommendations_R-2409416",
@@ -16477,7 +17086,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:48.300423",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong product leadership and data platform expertise align with Walmart Connect's infrastructure needs, but absence of retail/ecommerce recommendations experience and no job description creates uncertainty about core focus areas.",
+    "skills_gap": "Missing direct experience with recommendation engines, personalization systems, or retail/ecommerce product strategies\u2014critical for a recommendations-focused role at a commerce platform.",
+    "confidence": "low"
   },
   "walmart_Manager--Data-Analytics---AI-Enablement_R-2440437": {
     "id": "walmart_Manager--Data-Analytics---AI-Enablement_R-2440437",
@@ -16488,7 +17104,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:52.359727",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and analytics expertise with proven AI/ML integration experience, but role title suggests individual contributor focus rather than her senior leadership trajectory, and lacking specific job context creates uncertainty on strategic vs. tactical expectations.",
+    "skills_gap": "Resume lacks direct Walmart Connect platform experience, retail/commerce analytics domain depth, and unclear if role requires hands-on analytics work vs. strategic product leadership that Preethi has optimized for.",
+    "confidence": "low"
   },
   "walmart_XMLNAME--USA--Senior-Manager--Data-Science_R-2443567": {
     "id": "walmart_XMLNAME--USA--Senior-Manager--Data-Science_R-2443567",
@@ -16499,7 +17122,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:52.359775",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and leadership experience, but title suggests IC data science role rather than her executive product leadership background; without job description, significant uncertainty on technical depth requirements vs. management scope.",
+    "skills_gap": "Resume lacks explicit machine learning model development, statistical analysis, and hands-on data science methodology; unclear if role requires individual contributor technical execution or management of data science teams.",
+    "confidence": "low"
   },
   "walmart_Product-Manager-III---Data-Ventures_R-2348248": {
     "id": "walmart_Product-Manager-III---Data-Ventures_R-2348248",
@@ -16510,7 +17140,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:57.233242",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and product leadership experience aligns well with likely Walmart Connect data ventures role, but lack of retail/e-commerce context and absence of job description limits confidence in precise fit.",
+    "skills_gap": "No exposure to retail commerce data, first-party data strategies, or marketplace dynamics\u2014core to Walmart's data ventures positioning.",
+    "confidence": "low"
   },
   "walmart_Senior-Manager--Product-Marketing---Walmart-Data-Ventures_R-2318968": {
     "id": "walmart_Senior-Manager--Product-Marketing---Walmart-Data-Ventures_R-2318968",
@@ -16521,7 +17158,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:21:57.233262",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Resume demonstrates exceptional technical product leadership in data platforms, but Product Marketing role requires go-to-market expertise and customer-facing positioning skills not evidenced in this data-focused career trajectory.",
+    "skills_gap": "Missing core product marketing competencies: messaging strategy, positioning, competitive analysis, demand generation, customer research, and go-to-market execution; career has been exclusively data/platform product leadership, not marketing.",
+    "confidence": "low"
   },
   "walmart_Principal-Technical-Program-Manager_R-1725700": {
     "id": "walmart_Principal-Technical-Program-Manager_R-1725700",
@@ -16532,7 +17176,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:22:02.953334",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and cross-functional leadership background aligns with TPM expectations, but lack of job description limits confidence; Walmart Connect likely requires more supply-chain/commerce-specific experience than resume demonstrates.",
+    "skills_gap": "Missing: supply chain/commerce domain expertise, Walmart Connect platform knowledge, and hardware/IoT systems experience; resume is heavily AdTech/Data-focused rather than retail/marketplace operations.",
+    "confidence": "low"
   },
   "walmart_Staff-Technical-Program-Manager_R-1725683": {
     "id": "walmart_Staff-Technical-Program-Manager_R-1725683",
@@ -16543,7 +17194,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:22:02.953351",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 55,
+    "resume_used": "DATA",
+    "reason": "Strong technical and leadership background in data platforms and product strategy, but Staff TPM role typically emphasizes program/project execution and cross-functional coordination over product vision, creating moderate misalignment without seeing full JD.",
+    "skills_gap": "Resume emphasizes product strategy and data platform ownership; TPM roles typically require deeper program management, stakeholder coordination, and delivery execution expertise\u2014unclear if Walmart Connect seeks product-focused or execution-focused TPM.",
+    "confidence": "low"
   },
   "walmart_STAFF--TECHNICAL-PROGRAM-MANAGER_R-2389260": {
     "id": "walmart_STAFF--TECHNICAL-PROGRAM-MANAGER_R-2389260",
@@ -16554,7 +17212,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:22:02.953360",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 48,
+    "resume_used": "DATA",
+    "reason": "Strong data/product leadership background but Staff TPM role typically emphasizes program execution, process, and cross-org coordination over product strategy and revenue impact\u2014core strengths here.",
+    "skills_gap": "Limited evidence of formal program management, PMO discipline, stakeholder coordination frameworks, or vendor/contract management typical of TPM roles; resume emphasizes product vision and technical depth over program orchestration.",
+    "confidence": "low"
   },
   "walmart_PRINCIPAL--TECHNICAL-PROGRAM-MANAGER_R-2388294": {
     "id": "walmart_PRINCIPAL--TECHNICAL-PROGRAM-MANAGER_R-2388294",
@@ -16565,7 +17230,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:22:02.953391",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 55,
+    "resume_used": "DATA",
+    "reason": "Strong technical program management and cross-functional leadership experience, but unclear alignment without job description; TPM role typically requires less product strategy depth and more execution focus than resume emphasizes.",
+    "skills_gap": "Missing explicit program management/JIRA expertise emphasis and unclear if role requires hardware/supply chain TPM skills versus data platform TPM; resume heavily weighted toward product strategy over tactical program execution.",
+    "confidence": "low"
   },
   "wwr_4664206151386371099": {
     "id": "wwr_4664206151386371099",
@@ -16576,7 +17248,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:22:22.194765",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f67dac0f6c1b9cd4d5ca7ef117141670": {
     "id": "dice_f67dac0f6c1b9cd4d5ca7ef117141670",
@@ -16587,7 +17266,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:22:23.236495",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_224d9aad3c12ecfe40fa753044d989c9": {
     "id": "dice_224d9aad3c12ecfe40fa753044d989c9",
@@ -16598,6 +17284,13 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:22:26.249305",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
