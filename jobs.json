@@ -15474,5 +15474,27 @@
     "skills_gap": "N/A",
     "confidence": "N/A",
     "description_source": "skipped"
+  },
+  "wwr_6012042522151046603": {
+    "id": "wwr_6012042522151046603",
+    "company": "We Work Remotely",
+    "title": "Prepterminal.com: Chief Operating Officer (COO) / Growth GM",
+    "location": "Remote",
+    "url": "https://weworkremotely.com/remote-jobs/prepterminal-com-chief-operating-officer-coo-growth-gm",
+    "posted_ts": 0,
+    "found_date": "2026-04-02T16:16:28.460053",
+    "status": "new",
+    "description": ""
+  },
+  "dice_e5a6588e460ff8e5431e62ef445ea1c7": {
+    "id": "dice_e5a6588e460ff8e5431e62ef445ea1c7",
+    "company": "Dice",
+    "title": "Lead AI Product Manager",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-04-02T16:16:39.395735",
+    "status": "new",
+    "description": ""
   }
 }
