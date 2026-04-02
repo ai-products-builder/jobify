@@ -14764,7 +14764,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:45.081069",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong data product leadership and enterprise platform experience align with Salesforce Product Owner expectations, but lack of CRM/cloud ecosystem expertise and absence of job description create uncertainty.",
+    "skills_gap": "No visible Salesforce ecosystem, CRM, or cloud platform experience; product ownership title suggests potentially IC-level scope versus her director-level strategic leadership background.",
+    "confidence": "low"
   },
   "salesforce_Product-Manager_JR333478-1": {
     "id": "salesforce_Product-Manager_JR333478-1",
@@ -14775,7 +14782,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:45.081086",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 28,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Senior leader with 15+ years of expertise in data platforms and AdTech applying for an early-career PM role represents a significant level mismatch and overqualification that typically results in rejection.",
+    "skills_gap": "Experience level is inversely misaligned\u2014candidate has executive product strategy and petabyte-scale platform ownership that far exceeds early-career expectations; likely lacks interest in junior-level responsibilities and learning-focused role structure.",
+    "confidence": "low"
   },
   "salesforce_Data---Analytics--Renewals-Programs--Manager_JR333354": {
     "id": "salesforce_Data---Analytics--Renewals-Programs--Manager_JR333354",
@@ -14786,7 +14800,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:45.081123",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 52,
+    "resume_used": "DATA",
+    "reason": "Senior data product leader with petabyte-scale expertise is overqualified for a renewals programs manager role, which typically focuses on customer retention/operations rather than product strategy and architecture.",
+    "skills_gap": "Resume lacks direct experience in customer renewals, subscription management, retention strategy, and revenue operations\u2014core competencies for this specific manager-level role; extensive product leadership background may not translate to renewals-focused execution.",
+    "confidence": "low"
   },
   "salesforce_Senior-Director-of-Product-Management---Data-360-Segmentation---Activation_JR336511": {
     "id": "salesforce_Senior-Director-of-Product-Management---Data-360-Segmentation---Activation_JR336511",
@@ -14797,7 +14818,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:45.608747",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data product leadership and platform expertise align well with Salesforce's data infrastructure needs, but lack of direct CRM/marketing activation experience and no job description create moderate uncertainty.",
+    "skills_gap": "Missing direct experience with customer data platforms (CDPs), segmentation engines, marketing activation workflows, and Salesforce ecosystem products\u2014core to this role's likely mandate.",
+    "confidence": "low"
   },
   "salesforce_Marketing-Operations-Manager_JR328562": {
     "id": "salesforce_Marketing-Operations-Manager_JR328562",
@@ -14808,7 +14836,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:46.104922",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 52,
+    "resume_used": "DATA",
+    "reason": "Senior product leader with petabyte-scale data expertise is significantly overqualified for a Marketing Operations Manager role; massive seniority and scope mismatch despite strong data governance fundamentals.",
+    "skills_gap": "Resume demonstrates executive product leadership (15+ years, $500M+ revenue ownership) but lacks marketing operations execution experience, campaign management, marketing tech stack hands-on work, and tactical operations management expected at this level.",
+    "confidence": "low"
   },
   "salesforce_Director--Recruiting-Data-Analytics---Insights_JR323801": {
     "id": "salesforce_Director--Recruiting-Data-Analytics---Insights_JR323801",
@@ -14819,7 +14854,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:46.618685",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 55,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and analytics leadership background aligns with recruiting analytics director role, but lack of HR/recruiting domain expertise and absence of job description creates material uncertainty.",
+    "skills_gap": "No demonstrated experience in recruiting analytics, talent acquisition metrics, or HR systems (Workday, SAP SuccessFactors); recruiting-specific KPIs and funnel analysis not evident on resume.",
+    "confidence": "low"
   },
   "salesforce_Consumption-Lead_JR328129-1": {
     "id": "salesforce_Consumption-Lead_JR328129-1",
@@ -14830,7 +14872,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:47.659376",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong product leadership and data platform expertise align well with Salesforce's data-driven product focus, but lack of direct Salesforce/CRM ecosystem experience and unclear 'Consumption' mandate create uncertainty without full job description.",
+    "skills_gap": "Missing: Salesforce platform ecosystem knowledge, CRM/cloud product experience, and Agentforce-specific AI framework familiarity; no evidence of working within Salesforce's product architecture or customer base.",
+    "confidence": "low"
   },
   "salesforce_Enhance-Salesforce-Data-360-to-Connect--Govern-and-Unify-Data-for-Customer-360-and-Agentforce_JR328822": {
     "id": "salesforce_Enhance-Salesforce-Data-360-to-Connect--Govern-and-Unify-Data-for-Customer-360-and-Agentforce_JR328822",
@@ -14841,7 +14890,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:48.349710",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data platform leadership background and petabyte-scale expertise align well with Salesforce's data foundations strategy, but lack of visibility into specific role requirements limits confidence in exact fit.",
+    "skills_gap": "Unknown if role requires Salesforce-specific platform knowledge (Tableau CRM, Marketing Cloud, etc.) or specific cloud ecosystem (Hyperforce) experience; resume shows broad data platform expertise but limited Salesforce ecosystem depth.",
+    "confidence": "low"
   },
   "servicenow_744000117989968": {
     "id": "servicenow_744000117989968",
@@ -14852,7 +14908,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:49.432842",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Strong product leadership and data platform expertise, but resume is heavily AdTech/data-specific while role requires Martech domain knowledge and AI implementation focus with limited job description details.",
+    "skills_gap": "Missing Martech industry experience, ServiceNow platform expertise, and AI implementation/deployment background; AdTech domain knowledge is not transferable to marketing technology stack.",
+    "confidence": "low"
   },
   "servicenow_744000117989810": {
     "id": "servicenow_744000117989810",
@@ -14863,7 +14926,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:49.432865",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Resume demonstrates exceptional data platform and analytics expertise but lacks evidence of ServiceNow product ecosystem knowledge, enterprise workflow automation, or AI implementation experience critical for an AI Product Portfolio Director role.",
+    "skills_gap": "Missing: ServiceNow platform expertise, enterprise workflow/no-code automation, AI implementation in enterprise SaaS, industry-vertical knowledge (CHRO, CRM, FSM); heavy AdTech/data focus doesn't translate directly to work management and enterprise service software.",
+    "confidence": "low"
   },
   "servicenow_744000117308308": {
     "id": "servicenow_744000117308308",
@@ -14874,7 +14944,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:49.433042",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Resume is deeply specialized in data product leadership and AdTech; job description is incomplete and appears to be a generic ServiceNow career page rather than a specific role posting, making accurate assessment impossible.",
+    "skills_gap": "Critical misalignment: resume lacks web experience, conversion optimization, growth marketing, and customer-facing SaaS product experience; no evidence of B2B enterprise software UI/UX or customer journey optimization expertise.",
+    "confidence": "low"
   },
   "servicenow_744000114760407": {
     "id": "servicenow_744000114760407",
@@ -14885,7 +14962,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:49.918657",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep product leadership in data platforms and AdTech is misaligned with a business development/partnership role requiring sales acumen, relationship building, and deal closure focus rather than product strategy and technical execution.",
+    "skills_gap": "Missing core BD competencies: enterprise sales experience, partner channel management, deal negotiation, revenue quota attainment, and customer acquisition strategy\u2014resume is heavily technical product-focused without business development or partnership track record.",
+    "confidence": "medium"
   },
   "servicenow_744000108657852": {
     "id": "servicenow_744000108657852",
@@ -14896,7 +14980,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:50.858710",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise in data product strategy and petabyte-scale platforms is misaligned with ServiceNow's SPO Analytics & Insights role, which appears to focus on corporate business operations, financial planning, and enterprise insights rather than technical data platform leadership.",
+    "skills_gap": "Missing demonstrated experience in corporate finance operations, business planning/FP&A strategy, enterprise business intelligence for internal operations, and ServiceNow ecosystem knowledge; her background is external-facing AdTech/data product, not internal enterprise operations.",
+    "confidence": "low"
   },
   "servicenow_744000088238535": {
     "id": "servicenow_744000088238535",
@@ -14907,7 +14998,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:50.858777",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Resume demonstrates exceptional depth in data platform leadership and strategy, but the ServiceNow role appears to focus on implementation consulting and customer-facing delivery rather than product vision and platform architecture\u2014a significant strategic misalignment.",
+    "skills_gap": "Missing: implementation consulting methodology, customer deployment experience, ServiceNow platform expertise, field/presales support models, and hands-on implementation delivery; resume is heavily product/strategy-focused rather than solutions-oriented.",
+    "confidence": "low"
   },
   "wwr_838433835276399448": {
     "id": "wwr_838433835276399448",
@@ -14918,7 +15016,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:53.908457",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_640bda6a03a4e92eb32a6d87a80b4742": {
     "id": "dice_640bda6a03a4e92eb32a6d87a80b4742",
@@ -14929,6 +15034,13 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:34:58.114751",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
