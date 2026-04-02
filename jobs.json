@@ -15484,7 +15484,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T16:16:28.460053",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e5a6588e460ff8e5431e62ef445ea1c7": {
     "id": "dice_e5a6588e460ff8e5431e62ef445ea1c7",
@@ -15495,6 +15502,13 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T16:16:39.395735",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
