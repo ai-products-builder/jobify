@@ -15394,7 +15394,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T15:48:01.262559",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Senior product leader with 15+ years in data platforms and AdTech is significantly overqualified for an Analyst/Manager role; lacks direct Salesforce product experience and limited visibility into actual job requirements.",
+    "skills_gap": "Unknown job scope prevents accurate assessment, but likely mismatch in seniority level; resume shows executive product leadership while role title suggests individual contributor or junior management.",
+    "confidence": "low"
   },
   "wwr_6838984112142869776": {
     "id": "wwr_6838984112142869776",
@@ -15405,7 +15412,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T15:48:11.837417",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_dd3d5600e4ba725e14dd269a41c320ce": {
     "id": "dice_dd3d5600e4ba725e14dd269a41c320ce",
@@ -15416,7 +15430,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T15:48:16.899540",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9881f9b44e4902d35bee4a16da7d1bd6": {
     "id": "dice_9881f9b44e4902d35bee4a16da7d1bd6",
@@ -15427,7 +15448,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T15:48:18.914536",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_253db2dc7f9a69fb4aa428a660c844c9": {
     "id": "dice_253db2dc7f9a69fb4aa428a660c844c9",
@@ -15438,6 +15466,13 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T15:48:28.179404",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
