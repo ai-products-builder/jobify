@@ -19,13 +19,16 @@ INCLUDE_KEYWORDS = [
 ]
 
 EXCLUDE_TITLES = [
-    "engineer", "account manager", "account executive",
+    "software engineer", "data engineer", "engineer",
+    "account manager", "account executive",
     "software", "developer", "devops", "infrastructure",
     "sales", "recruiter", "designer", "scientist",
+    "data scientist", "applied scientist",
     "attorney", "lawyer", "finance", "accounting",
     "hr ", "human resources", "coordinator", "assistant",
     "technician", "operator", "specialist",
     "data center", "data science manager", "accountant",
+    "technician manager",
     "partner growth manager", "media manager",
     "associate general counsel", "commercial ctv",
     "gm business development", "intern", "internship",
@@ -34,10 +37,23 @@ EXCLUDE_TITLES = [
 
 LOCATION_KEYWORDS = [
     "atlanta", "georgia", "remote",
-    "los angeles", "irvine", "santa monica", "culver city", "ventura"
+    "los angeles", "irvine", "santa monica", "culver city", "ventura",
+    # Broader US cities — Netflix Ads PM and other target roles post here
+    "los gatos", "seattle", "new york", "san francisco", "bay area",
+    "chicago", "boston", "austin", "denver", "portland"
 ]
 
-SEARCH_QUERIES = ["product manager", "data", "advertising", "analytics", "AI product manager", "generative AI", "director of product", "program manager"]
+# Netflix-specific: allow any US location since Ads PM roles are nationwide
+NETFLIX_LOCATION_KEYWORDS = [
+    "united states", "remote", "los gatos", "los angeles", "seattle",
+    "new york", "san francisco", "atlanta", "georgia", "california",
+    "washington"
+]
+
+SEARCH_QUERIES = [
+    "product manager", "data", "advertising", "analytics",
+    "AI product manager", "generative AI", "director of product", "program manager"
+]
 SEARCH_LOCATIONS = LOCATION_KEYWORDS
 
 
@@ -55,6 +71,14 @@ def is_relevant_location(location):
 
 def passes(title, location, extra_loc=""):
     return is_relevant_title(title) and is_relevant_location(location + " " + extra_loc)
+
+
+def passes_netflix(title, location):
+    """Netflix-specific: broader location check since Ads PM roles are US-wide."""
+    if not is_relevant_title(title):
+        return False
+    loc_lower = location.lower()
+    return any(lk in loc_lower for lk in NETFLIX_LOCATION_KEYWORDS) or "united states" in loc_lower
 
 
 # ─── HELPERS ──────────────────────────────────────────────────────────────────
@@ -150,37 +174,45 @@ def fetch_amazon():
 def fetch_netflix():
     print("Fetching Netflix...")
     results = []
-    for kw in SEARCH_QUERIES:
-        for loc in ["remote", "los angeles", "atlanta"]:
-            try:
-                url = (
-                    f"https://explore.jobs.netflix.net/api/apply/v2/jobs"
-                    f"?domain=netflix.com&start=0&num=50"
-                    f"&keyword={requests.utils.quote(kw)}"
-                    f"&location={requests.utils.quote(loc)}"
-                )
-                r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
-                print(f"  Netflix status: {r.status_code} | {kw} / {loc}")
-                if r.status_code != 200:
+    seen = set()
+
+    # Include ads-specific queries so Ads Platform PM roles aren't missed
+    netflix_queries = SEARCH_QUERIES + [
+        "ads platform", "ad platform", "monetization", "signals", "media workflows"
+    ]
+
+    for kw in netflix_queries:
+        try:
+            url = (
+                f"https://explore.jobs.netflix.net/api/apply/v2/jobs"
+                f"?domain=netflix.com&start=0&num=100"
+                f"&keyword={requests.utils.quote(kw)}"
+            )
+            r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+            print(f"  Netflix status: {r.status_code} | {kw}")
+            if r.status_code != 200:
+                continue
+            data = r.json()
+            positions = data.get("positions", [])
+            for j in positions:
+                jid = str(j.get("id", ""))
+                if jid in seen:
                     continue
-                data = r.json()
-                positions = data.get("positions", [])
-                print(f"  Netflix positions: {len(positions)}")
-                for j in positions:
-                    title = j.get("name", "")
-                    locs = ", ".join(j.get("locations", []))
-                    if not passes(title, locs, loc):
-                        continue
-                    results.append(make_job(
-                        id=f"netflix_{j.get('id', '')}",
-                        company="Netflix",
-                        title=title,
-                        location=locs,
-                        url="https://explore.jobs.netflix.net/careers?pid="
-                            + str(j.get("id", "")) + "&domain=netflix.com"
-                    ))
-            except Exception as e:
-                print(f"  Netflix error ({kw}/{loc}): {e}")
+                seen.add(jid)
+                title = j.get("name", "")
+                locs = ", ".join(j.get("locations", []))
+                if not passes_netflix(title, locs):
+                    continue
+                results.append(make_job(
+                    id=f"netflix_{jid}",
+                    company="Netflix",
+                    title=title,
+                    location=locs,
+                    url="https://explore.jobs.netflix.net/careers?pid=" + jid + "&domain=netflix.com"
+                ))
+        except Exception as e:
+            print(f"  Netflix error ({kw}): {e}")
+
     print(f"  Found {len(results)} Netflix jobs")
     return results
 
@@ -230,6 +262,84 @@ def fetch_trade_desk():
         except Exception as e:
             print(f"  Trade Desk error ({kw}): {e}")
     print(f"  Found {len(results)} Trade Desk jobs")
+    return results
+
+
+# ─── SALESFORCE ───────────────────────────────────────────────────────────────
+def fetch_salesforce():
+    print("Fetching Salesforce...")
+    results = []
+    for kw in SEARCH_QUERIES:
+        try:
+            api_url = (
+                f"https://careers.salesforce.com/en/jobs/search/"
+                f"?keyword={requests.utils.quote(kw)}&pagesize=20&format=json"
+            )
+            r = requests.get(api_url, headers={
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/json"
+            }, timeout=10)
+            data = r.json()
+            jobs = data.get("jobs", data.get("results", []))
+            for j in jobs:
+                title = j.get("title", j.get("name", ""))
+                location = j.get("location", j.get("city", ""))
+                if isinstance(location, dict):
+                    location = location.get("name", "")
+                if not passes(title, str(location), "remote"):
+                    continue
+                job_url = j.get("canonicalPositionUrl", j.get("url", "https://careers.salesforce.com"))
+                if not job_url.startswith("http"):
+                    job_url = "https://careers.salesforce.com" + job_url
+                results.append(make_job(
+                    id=f"sfdc_{j.get('jobId', j.get('id', abs(hash(title + str(location)))))}",
+                    company="Salesforce",
+                    title=title,
+                    location=str(location),
+                    url=job_url
+                ))
+        except Exception as e:
+            print(f"  Salesforce error ({kw}): {e}")
+    print(f"  Found {len(results)} Salesforce jobs")
+    return results
+
+
+# ─── SERVICENOW ───────────────────────────────────────────────────────────────
+def fetch_servicenow():
+    print("Fetching ServiceNow...")
+    results = []
+    for kw in SEARCH_QUERIES:
+        try:
+            api_url = (
+                f"https://careers.servicenow.com/careers/jobs"
+                f"?keyword={requests.utils.quote(kw)}&pagesize=20&format=json"
+            )
+            r = requests.get(api_url, headers={
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/json"
+            }, timeout=10)
+            data = r.json()
+            jobs = data.get("jobs", data.get("results", data.get("positions", [])))
+            for j in jobs:
+                title = j.get("title", j.get("name", ""))
+                location = j.get("location", j.get("primary_location", ""))
+                if isinstance(location, dict):
+                    location = location.get("name", "")
+                if not passes(title, str(location), "remote"):
+                    continue
+                job_url = j.get("canonicalPositionUrl", j.get("url", "https://careers.servicenow.com"))
+                if not job_url.startswith("http"):
+                    job_url = "https://careers.servicenow.com" + job_url
+                results.append(make_job(
+                    id=f"snow_{j.get('jobId', j.get('id', abs(hash(title + str(location)))))}",
+                    company="ServiceNow",
+                    title=title,
+                    location=str(location),
+                    url=job_url
+                ))
+        except Exception as e:
+            print(f"  ServiceNow error ({kw}): {e}")
+    print(f"  Found {len(results)} ServiceNow jobs")
     return results
 
 
@@ -388,6 +498,8 @@ def run():
     all_fresh += safe_fetch(fetch_microsoft)
     all_fresh += safe_fetch(fetch_amazon)
     all_fresh += safe_fetch(fetch_netflix)
+    all_fresh += safe_fetch(fetch_salesforce)
+    all_fresh += safe_fetch(fetch_servicenow)
 
     greenhouse_companies = [
         ("reddit", "Reddit"),
@@ -443,8 +555,6 @@ def run():
         ("deloitte", "Deloitte"),
         ("visa", "Visa"),
         ("adp", "ADP"),
-        ("salesforce", "Salesforce"),
-        ("servicenow", "ServiceNow"),
         ("cocacola", "Coca Cola"),
         ("zillow", "Zillow"),
         ("warnerbros", "Warner Brothers"),
