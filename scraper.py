@@ -19,16 +19,13 @@ INCLUDE_KEYWORDS = [
 ]
 
 EXCLUDE_TITLES = [
-    "software engineer", "data engineer", "engineer",
-    "account manager", "account executive",
+    "engineer", "account manager", "account executive",
     "software", "developer", "devops", "infrastructure",
     "sales", "recruiter", "designer", "scientist",
-    "data scientist", "applied scientist",
     "attorney", "lawyer", "finance", "accounting",
     "hr ", "human resources", "coordinator", "assistant",
     "technician", "operator", "specialist",
     "data center", "data science manager", "accountant",
-    "technician manager",
     "partner growth manager", "media manager",
     "associate general counsel", "commercial ctv",
     "gm business development", "intern", "internship",
@@ -37,17 +34,7 @@ EXCLUDE_TITLES = [
 
 LOCATION_KEYWORDS = [
     "atlanta", "georgia", "remote",
-    "los angeles", "irvine", "santa monica", "culver city", "ventura",
-    # Broader US cities — Netflix Ads PM and other target roles post here
-    "los gatos", "seattle", "new york", "san francisco", "bay area",
-    "chicago", "boston", "austin", "denver", "portland"
-]
-
-# Netflix-specific: allow any US location since Ads PM roles are nationwide
-NETFLIX_LOCATION_KEYWORDS = [
-    "united states", "remote", "los gatos", "los angeles", "seattle",
-    "new york", "san francisco", "atlanta", "georgia", "california",
-    "washington"
+    "los angeles", "irvine", "santa monica", "culver city", "ventura"
 ]
 
 SEARCH_QUERIES = [
@@ -71,14 +58,6 @@ def is_relevant_location(location):
 
 def passes(title, location, extra_loc=""):
     return is_relevant_title(title) and is_relevant_location(location + " " + extra_loc)
-
-
-def passes_netflix(title, location):
-    """Netflix-specific: broader location check since Ads PM roles are US-wide."""
-    if not is_relevant_title(title):
-        return False
-    loc_lower = location.lower()
-    return any(lk in loc_lower for lk in NETFLIX_LOCATION_KEYWORDS) or "united states" in loc_lower
 
 
 # ─── HELPERS ──────────────────────────────────────────────────────────────────
@@ -171,21 +150,17 @@ def fetch_amazon():
 
 
 # ─── NETFLIX ──────────────────────────────────────────────────────────────────
+# No location filter — Netflix is mostly remote-friendly and their API
+# doesn't filter reliably by location. Title filter handles relevance.
 def fetch_netflix():
     print("Fetching Netflix...")
     results = []
     seen = set()
-
-    # Include ads-specific queries so Ads Platform PM roles aren't missed
-    netflix_queries = SEARCH_QUERIES + [
-        "ads platform", "ad platform", "monetization", "signals", "media workflows"
-    ]
-
-    for kw in netflix_queries:
+    for kw in SEARCH_QUERIES:
         try:
             url = (
                 f"https://explore.jobs.netflix.net/api/apply/v2/jobs"
-                f"?domain=netflix.com&start=0&num=100"
+                f"?domain=netflix.com&start=0&num=50"
                 f"&keyword={requests.utils.quote(kw)}"
             )
             r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
@@ -201,7 +176,7 @@ def fetch_netflix():
                 seen.add(jid)
                 title = j.get("name", "")
                 locs = ", ".join(j.get("locations", []))
-                if not passes_netflix(title, locs):
+                if not is_relevant_title(title):
                     continue
                 results.append(make_job(
                     id=f"netflix_{jid}",
@@ -212,7 +187,6 @@ def fetch_netflix():
                 ))
         except Exception as e:
             print(f"  Netflix error ({kw}): {e}")
-
     print(f"  Found {len(results)} Netflix jobs")
     return results
 
@@ -265,38 +239,55 @@ def fetch_trade_desk():
     return results
 
 
-# ─── SALESFORCE ───────────────────────────────────────────────────────────────
+# ─── SALESFORCE (Workday) ─────────────────────────────────────────────────────
+# Salesforce uses Workday, not Greenhouse — the old "salesforce" Greenhouse
+# board slug was silently returning 0 jobs every run.
 def fetch_salesforce():
     print("Fetching Salesforce...")
     results = []
+    seen = set()
     for kw in SEARCH_QUERIES:
         try:
-            api_url = (
-                f"https://careers.salesforce.com/en/jobs/search/"
-                f"?keyword={requests.utils.quote(kw)}&pagesize=20&format=json"
+            url = (
+                "https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce"
+                "/External_Career_Site/jobs"
             )
-            r = requests.get(api_url, headers={
-                "User-Agent": "Mozilla/5.0",
-                "Accept": "application/json"
-            }, timeout=10)
+            payload = {
+                "appliedFacets": {},
+                "limit": 20,
+                "offset": 0,
+                "searchText": kw
+            }
+            r = requests.post(
+                url,
+                json=payload,
+                headers={
+                    "User-Agent": "Mozilla/5.0",
+                    "Content-Type": "application/json",
+                    "Accept": "application/json"
+                },
+                timeout=15
+            )
+            print(f"  Salesforce status: {r.status_code} | {kw}")
+            if r.status_code != 200:
+                continue
             data = r.json()
-            jobs = data.get("jobs", data.get("results", []))
-            for j in jobs:
-                title = j.get("title", j.get("name", ""))
-                location = j.get("location", j.get("city", ""))
-                if isinstance(location, dict):
-                    location = location.get("name", "")
-                if not passes(title, str(location), "remote"):
+            for j in data.get("jobPostings", []):
+                ext_path = j.get("externalPath", "")
+                jid = ext_path.strip("/").split("/")[-1]
+                if jid in seen:
                     continue
-                job_url = j.get("canonicalPositionUrl", j.get("url", "https://careers.salesforce.com"))
-                if not job_url.startswith("http"):
-                    job_url = "https://careers.salesforce.com" + job_url
+                seen.add(jid)
+                title = j.get("title", "")
+                location = j.get("locationsText", "")
+                if not passes(title, location, "remote"):
+                    continue
                 results.append(make_job(
-                    id=f"sfdc_{j.get('jobId', j.get('id', abs(hash(title + str(location)))))}",
+                    id=f"salesforce_{jid}",
                     company="Salesforce",
                     title=title,
-                    location=str(location),
-                    url=job_url
+                    location=location,
+                    url="https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site" + ext_path
                 ))
         except Exception as e:
             print(f"  Salesforce error ({kw}): {e}")
@@ -304,38 +295,49 @@ def fetch_salesforce():
     return results
 
 
-# ─── SERVICENOW ───────────────────────────────────────────────────────────────
+# ─── SERVICENOW (SmartRecruiters) ────────────────────────────────────────────
+# ServiceNow uses SmartRecruiters, not Greenhouse — the old "servicenow"
+# Greenhouse board slug was silently returning 0 jobs every run.
 def fetch_servicenow():
     print("Fetching ServiceNow...")
     results = []
+    seen = set()
     for kw in SEARCH_QUERIES:
         try:
-            api_url = (
-                f"https://careers.servicenow.com/careers/jobs"
-                f"?keyword={requests.utils.quote(kw)}&pagesize=20&format=json"
+            url = (
+                f"https://api.smartrecruiters.com/v1/companies/ServiceNow/postings"
+                f"?q={requests.utils.quote(kw)}&limit=100"
             )
-            r = requests.get(api_url, headers={
-                "User-Agent": "Mozilla/5.0",
-                "Accept": "application/json"
-            }, timeout=10)
+            r = requests.get(
+                url,
+                headers={"User-Agent": "Mozilla/5.0"},
+                timeout=15
+            )
+            print(f"  ServiceNow status: {r.status_code} | {kw}")
+            if r.status_code != 200:
+                continue
             data = r.json()
-            jobs = data.get("jobs", data.get("results", data.get("positions", [])))
-            for j in jobs:
-                title = j.get("title", j.get("name", ""))
-                location = j.get("location", j.get("primary_location", ""))
-                if isinstance(location, dict):
-                    location = location.get("name", "")
-                if not passes(title, str(location), "remote"):
+            for j in data.get("content", []):
+                jid = str(j.get("id", ""))
+                if jid in seen:
                     continue
-                job_url = j.get("canonicalPositionUrl", j.get("url", "https://careers.servicenow.com"))
-                if not job_url.startswith("http"):
-                    job_url = "https://careers.servicenow.com" + job_url
+                seen.add(jid)
+                title = j.get("name", "")
+                loc_obj = j.get("location", {})
+                city = loc_obj.get("city", "")
+                region = loc_obj.get("region", "")
+                remote = loc_obj.get("remote", False)
+                location = f"{city}, {region}".strip(", ")
+                if remote:
+                    location = "Remote" if not location else f"{location} / Remote"
+                if not passes(title, location, "remote" if remote else ""):
+                    continue
                 results.append(make_job(
-                    id=f"snow_{j.get('jobId', j.get('id', abs(hash(title + str(location)))))}",
+                    id=f"servicenow_{jid}",
                     company="ServiceNow",
                     title=title,
-                    location=str(location),
-                    url=job_url
+                    location=location,
+                    url=f"https://careers.smartrecruiters.com/ServiceNow/{jid}"
                 ))
         except Exception as e:
             print(f"  ServiceNow error ({kw}): {e}")
@@ -498,8 +500,6 @@ def run():
     all_fresh += safe_fetch(fetch_microsoft)
     all_fresh += safe_fetch(fetch_amazon)
     all_fresh += safe_fetch(fetch_netflix)
-    all_fresh += safe_fetch(fetch_salesforce)
-    all_fresh += safe_fetch(fetch_servicenow)
 
     greenhouse_companies = [
         ("reddit", "Reddit"),
@@ -555,6 +555,7 @@ def run():
         ("deloitte", "Deloitte"),
         ("visa", "Visa"),
         ("adp", "ADP"),
+        # Removed: salesforce, servicenow — wrong ATS, dedicated fetchers below
         ("cocacola", "Coca Cola"),
         ("zillow", "Zillow"),
         ("warnerbros", "Warner Brothers"),
@@ -566,6 +567,8 @@ def run():
         sleep(0.2)
 
     all_fresh += safe_fetch(fetch_trade_desk)
+    all_fresh += safe_fetch(fetch_salesforce)
+    all_fresh += safe_fetch(fetch_servicenow)
     all_fresh += safe_fetch(fetch_ycombinator)
     all_fresh += safe_fetch(fetch_weworkremotely)
     all_fresh += safe_fetch(fetch_dice)
