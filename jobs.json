@@ -17302,7 +17302,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:42:40.383014",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise in data platforms, analytics, and AdTech infrastructure is fundamentally misaligned with Netflix's payments product journey role, which requires consumer payments, fintech, and transaction experience.",
+    "skills_gap": "Critical gaps: no payments/fintech/billing system design experience, no consumer subscription monetization background, no PCI-DSS or payment compliance expertise, and no evidence of building customer-facing transactional products\u2014her experience is backend data infrastructure rather than user-facing payments journeys.",
+    "confidence": "medium"
   },
   "netflix_790315029519": {
     "id": "netflix_790315029519",
@@ -17313,7 +17320,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:42:40.383036",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 32,
+    "ats_score": 25,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise is deep in data platforms and B2B AdTech infrastructure; Netflix's Podcasts PM role requires consumer entertainment product experience, content strategy, and discovery/exploration focus with no data platform requirements.",
+    "skills_gap": "Missing: consumer product strategy, content curation, entertainment ecosystem knowledge, podcast market expertise, and user discovery/recommendation product experience; expertise is highly specialized in enterprise data infrastructure rather than consumer-facing content products.",
+    "confidence": "medium"
   },
   "netflix_790314859134": {
     "id": "netflix_790314859134",
@@ -17324,7 +17338,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:42:40.383053",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Deep expertise in data platforms and AdTech does not translate well to payment platform product management, which requires fintech, payments infrastructure, and transaction processing domain knowledge.",
+    "skills_gap": "Missing critical payments domain expertise (payment processors, fraud detection, PCI compliance, settlement systems, financial regulations); no demonstrated experience with consumer payments, subscription billing optimization, or cross-border payment challenges.",
+    "confidence": "medium"
   },
   "netflix_790314312725": {
     "id": "netflix_790314312725",
@@ -17335,7 +17356,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:42:40.383062",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "ADS",
+    "reason": "Preethi's deep AdTech expertise is misaligned with Netflix's media workflows & planning focus, which likely emphasizes content scheduling, campaign planning, and creative workflows rather than programmatic ad exchanges and measurement platforms.",
+    "skills_gap": "Missing experience in media planning workflows, campaign orchestration, creative asset management, and broadcast/streaming-specific ad operations; expertise is heavily concentrated in RTB systems and data platforms rather than workflow automation and planning tools.",
+    "confidence": "low"
   },
   "netflix_790314049082": {
     "id": "netflix_790314049082",
@@ -17346,7 +17374,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:42:40.383101",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "ADS",
+    "reason": "Preethi's deep AdTech expertise doesn't align with Netflix's supply optimization role, which likely focuses on streaming ad inventory, publisher relationships, and monetization strategy rather than programmatic RTB systems.",
+    "skills_gap": "Missing direct experience with streaming video ads, content-based supply optimization, publisher yield management, and Netflix's specific ad tech stack; her background is in mobile/web RTB and exchange infrastructure rather than connected TV or streaming supply dynamics.",
+    "confidence": "low"
   },
   "netflix_790314387586": {
     "id": "netflix_790314387586",
@@ -17357,7 +17392,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:42:44.008837",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and product leadership expertise, but resume is heavily AdTech/monetization-focused with minimal content platform, publishing operations, or streaming entertainment domain experience that Netflix's Content Platform Operations role likely requires.",
+    "skills_gap": "Missing: content management systems, publishing workflows, editorial operations, streaming platform architecture, content delivery/CDN expertise, and entertainment industry domain knowledge; AI/ML skills present but not contextualized for content operations.",
+    "confidence": "low"
   },
   "netflix_790313767826": {
     "id": "netflix_790313767826",
@@ -17368,7 +17410,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:42:44.008857",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep AdTech and data platform expertise doesn't align with Netflix's content platform operations focus, and the job description was not fully provided, limiting assessment accuracy.",
+    "skills_gap": "Missing: content operations experience, streaming/media platform knowledge, publishing workflow expertise; strengths in financial data and ad tech are not directly transferable to Netflix's content platform needs.",
+    "confidence": "low"
   },
   "netflix_790313590764": {
     "id": "netflix_790313590764",
@@ -17379,7 +17428,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:42:44.008883",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep AdTech/data platform expertise is misaligned with Netflix's media platform role, which likely requires consumer product, content, or streaming-specific experience rather than B2B data infrastructure leadership.",
+    "skills_gap": "Missing: consumer/streaming product experience, content platform expertise, Netflix ecosystem knowledge; heavy data infrastructure focus may not translate to media platform PM responsibilities.",
+    "confidence": "low"
   },
   "netflix_790314332826": {
     "id": "netflix_790314332826",
@@ -17390,7 +17446,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:42:45.699917",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's AdTech/data platform expertise doesn't align with Netflix's content catalog and publishing operations focus; the job description appears corrupted/incomplete, making full evaluation impossible.",
+    "skills_gap": "Missing direct experience with content metadata, catalog systems, publishing workflows, media content understanding, and entertainment/streaming industry context\u2014core to this Netflix content platform role.",
+    "confidence": "low"
   },
   "netflix_790314758173": {
     "id": "netflix_790314758173",
@@ -17401,7 +17464,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:42:45.699948",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 25,
+    "resume_used": "ADS",
+    "reason": "Resume demonstrates exceptional product leadership in AdTech/data platforms, but the Netflix role appears to be product marketing (go-to-market, positioning, messaging) rather than product management, representing a significant career pivot away from core expertise.",
+    "skills_gap": "Missing critical product marketing competencies: brand positioning, messaging strategy, campaign marketing, customer communications, competitive intelligence, and demand generation\u2014this role requires marketing acumen rather than technical product leadership.",
+    "confidence": "low"
   },
   "netflix_790312832644": {
     "id": "netflix_790312832644",
@@ -17412,7 +17482,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:42:45.699971",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "ADS",
+    "reason": "Job description is corrupted/incomplete (only CSS variables visible), making proper evaluation impossible; however, Netflix's Supply ads role typically requires publisher-side SSP expertise, while resume is heavily mobile app SDK and demand-side focused.",
+    "skills_gap": "Resume lacks demonstrated SSP platform ownership, publisher yield optimization, and supply-path optimization (SPO) experience\u2014core competencies for Netflix's supply-focused ads role; strength is demand-side measurement and DSP integrations.",
+    "confidence": "low"
   },
   "netflix_790315058499": {
     "id": "netflix_790315058499",
@@ -17423,7 +17500,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:42:46.512611",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 25,
+    "resume_used": "DATA",
+    "reason": "Senior product leader's deep expertise in data platforms and AdTech strategy misaligns significantly with an operations program manager role that typically requires execution focus, process management, and operational infrastructure skills rather than product vision and strategy.",
+    "skills_gap": "Missing core operations PM competencies: process optimization, supply chain/logistics, operational metrics, vendor management, and cross-functional operations execution; resume emphasizes product strategy, data architecture, and revenue impact rather than operational efficiency and cost control.",
+    "confidence": "low"
   },
   "netflix_790314818702": {
     "id": "netflix_790314818702",
@@ -17434,7 +17518,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:42:46.512627",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Resume shows exceptional data product and platform leadership expertise, but the Netflix TPM5 role description is incomplete/corrupted, making accurate assessment difficult; however, the visible context suggests a technical program management focus that differs from her product leadership background.",
+    "skills_gap": "Missing: traditional technical program management, project scheduling/delivery tools emphasis, cross-functional coordination at scale typical of TPM roles; unclear if role requires hands-on technical implementation vs. strategic product vision that Preethi excels at.",
+    "confidence": "low"
   },
   "netflix_790314515600": {
     "id": "netflix_790314515600",
@@ -17445,7 +17536,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:42:46.512645",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 25,
+    "resume_used": "DATA",
+    "reason": "Resume shows exceptional data platform and product leadership expertise, but the Netflix TPM-Messaging role appears to require infrastructure/systems program management skills that aren't demonstrated in an AdTech/data platform-focused background.",
+    "skills_gap": "Missing: infrastructure program management, messaging systems architecture, deployment/release engineering, systems-level technical depth; resume is heavily data product and business metrics-oriented rather than technical infrastructure-focused.",
+    "confidence": "low"
   },
   "mastercard_Director--Data-Acquisition_R-273182-1": {
     "id": "mastercard_Director--Data-Acquisition_R-273182-1",
@@ -17456,7 +17554,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:43:47.115558",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 55,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and leadership experience translates to payments/fintech data acquisition, but unclear if role requires direct acquisition strategy, vendor management, or data sourcing expertise versus internal data product leadership.",
+    "skills_gap": "Resume lacks explicit experience in data acquisition strategy, third-party data sourcing, vendor partnerships, or payments/fintech domain knowledge \u2014 core competencies likely required for this Mastercard role.",
+    "confidence": "low"
   },
   "wwr_4760327590033787133": {
     "id": "wwr_4760327590033787133",
@@ -17467,6 +17572,13 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T17:45:09.327819",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
