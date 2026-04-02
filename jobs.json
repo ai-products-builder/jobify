@@ -10228,7 +10228,14 @@
     "posted_ts": 1774564622,
     "found_date": "2026-04-02T00:18:27.339802",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise in data platforms and AdTech is misaligned with AI Security focus; the role requires security/threat modeling/defense fundamentals absent from her background.",
+    "skills_gap": "Missing core security competencies (threat modeling, vulnerability assessment, security architecture, incident response, compliance frameworks like SOC 2/ISO 27001); no demonstrated experience in AI safety, adversarial ML, or security product management.",
+    "confidence": "medium"
   },
   "msft_1970393556629307": {
     "id": "msft_1970393556629307",
@@ -10239,7 +10246,14 @@
     "posted_ts": 1765588426,
     "found_date": "2026-04-02T00:18:31.229558",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Preethi's extensive AdTech/data platform leadership experience does not align with a Principal Researcher role in generative AI, which typically requires deep research credentials, publications, and AI/ML research expertise rather than product management and infrastructure optimization.",
+    "skills_gap": "Missing: research publications, academic credentials, theoretical AI/ML expertise, deep generative AI model development experience, and research-focused (vs. product-focused) problem-solving approach; resume shows applied AI usage rather than foundational AI research contribution.",
+    "confidence": "low"
   },
   "msft_1970393556642659": {
     "id": "msft_1970393556642659",
@@ -10250,7 +10264,14 @@
     "posted_ts": 1765858193,
     "found_date": "2026-04-02T00:18:31.229580",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 25,
+    "ats_score": 15,
+    "resume_used": "DATA",
+    "reason": "Preethi's extensive AdTech product leadership and data platform experience is fundamentally misaligned with a Microsoft Research role focused on foundational AI research\u2014this is an academic/research position requiring PhD-level theoretical contributions, not product management.",
+    "skills_gap": "Missing: PhD in Computer Science or related field, peer-reviewed publications, theoretical ML/AI research background, academic research methodology; resume demonstrates product execution excellence but lacks the foundational research credentials and publication record required for MSR senior researcher roles.",
+    "confidence": "high"
   },
   "msft_1970393556827358": {
     "id": "msft_1970393556827358",
@@ -10261,7 +10282,14 @@
     "posted_ts": 1773077314,
     "found_date": "2026-04-02T00:18:32.819187",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Resume demonstrates exceptional data platform and product leadership expertise, but the role requires a Technical Program Manager focused on Responsible AI governance\u2014a significant pivot from AdTech/data infrastructure that demands regulatory, ethics, and AI safety domain knowledge not evidenced in the background.",
+    "skills_gap": "Missing: AI ethics/responsible AI frameworks, AI governance policy experience, regulatory compliance for AI systems (beyond GDPR/COPPA), AI safety methodologies, and cross-functional program management in AI/ML governance contexts; strengths in data governance and ML infrastructure are partially transferable but insufficient for specialized Responsible AI mandate.",
+    "confidence": "low"
   },
   "netflix_790314329039": {
     "id": "netflix_790314329039",
@@ -10272,7 +10300,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:09.829628",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Resume showcases exceptional product leadership in data platforms and AdTech, but the Netflix TPM5 role appears focused on client/partner technology program management, requiring different expertise in cross-company partnerships, vendor management, and technical program execution rather than product strategy and data platform ownership.",
+    "skills_gap": "Missing critical TPM competencies: vendor/partner relationship management, cross-company program coordination, technical project delivery at scale, partner enablement, and SLA/contract management; experience is deeply rooted in internal product ownership rather than external-facing partnership programs.",
+    "confidence": "low"
   },
   "netflix_790315116667": {
     "id": "netflix_790315116667",
@@ -10283,7 +10318,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:09.829660",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "fetched",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "ADS",
+    "reason": "Preethi's deep AdTech product expertise does not align with this FP&A (Financial Planning & Analysis) associate role, which requires finance/accounting skills and strategic financial modeling\u2014a significant career pivot from her product leadership background.",
+    "skills_gap": "Missing core FP&A competencies: financial modeling, budgeting/forecasting, GAAP accounting, variance analysis, and financial reporting; resume focuses on product metrics, technical platforms, and revenue optimization rather than financial planning and analysis.",
+    "confidence": "medium"
   },
   "wwr_2426091572753775375": {
     "id": "wwr_2426091572753775375",
@@ -10294,7 +10336,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:49.114498",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_531d91b086a7d03afe8ac74de5e49706": {
     "id": "dice_531d91b086a7d03afe8ac74de5e49706",
@@ -10305,7 +10354,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:49.962252",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_d55ce804638966c3ca2cb9b121634d38": {
     "id": "dice_d55ce804638966c3ca2cb9b121634d38",
@@ -10316,7 +10372,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:51.773660",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_24e54f1aa98d3b8c2e524880095f3d52": {
     "id": "dice_24e54f1aa98d3b8c2e524880095f3d52",
@@ -10327,7 +10390,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:51.773668",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_31c31ab0f076742f70d6f2a2ad38ee62": {
     "id": "dice_31c31ab0f076742f70d6f2a2ad38ee62",
@@ -10338,7 +10408,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:51.773693",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_a520e33919f165701efe6a0d73f44e76": {
     "id": "dice_a520e33919f165701efe6a0d73f44e76",
@@ -10349,7 +10426,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:51.773699",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2369b552a8070e1eabb96060b380232e": {
     "id": "dice_2369b552a8070e1eabb96060b380232e",
@@ -10360,7 +10444,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:51.773726",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_db42daec800ef1d90fae959d8ff85cc4": {
     "id": "dice_db42daec800ef1d90fae959d8ff85cc4",
@@ -10371,7 +10462,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:51.773732",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e53975c3d3a64d248baa66976ad29e98": {
     "id": "dice_e53975c3d3a64d248baa66976ad29e98",
@@ -10382,7 +10480,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:51.773759",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_04a695de963be278cacf842369790f54": {
     "id": "dice_04a695de963be278cacf842369790f54",
@@ -10393,7 +10498,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.037911",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9ffcc7d5a95ae191d1181525633d6f54": {
     "id": "dice_9ffcc7d5a95ae191d1181525633d6f54",
@@ -10404,7 +10516,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.037919",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_21d50c285d04cbfd0d136fe87f4baa73": {
     "id": "dice_21d50c285d04cbfd0d136fe87f4baa73",
@@ -10415,7 +10534,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.037937",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0ea187cb4dca2ea685189e95f1844b91": {
     "id": "dice_0ea187cb4dca2ea685189e95f1844b91",
@@ -10426,7 +10552,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.037948",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_751a7854c4c55775ddabe81171d9d0d7": {
     "id": "dice_751a7854c4c55775ddabe81171d9d0d7",
@@ -10437,7 +10570,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.037959",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_49115e9548cc9ce09ddca49b80b8b639": {
     "id": "dice_49115e9548cc9ce09ddca49b80b8b639",
@@ -10448,7 +10588,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.037966",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_fa97b1b1f5656e9c5002334afadfe908": {
     "id": "dice_fa97b1b1f5656e9c5002334afadfe908",
@@ -10459,7 +10606,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.037973",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_170880e8272e67ded11d64ece00f554c": {
     "id": "dice_170880e8272e67ded11d64ece00f554c",
@@ -10470,7 +10624,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.426327",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_18d149b03821865866ed980c545cc333": {
     "id": "dice_18d149b03821865866ed980c545cc333",
@@ -10481,7 +10642,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.426340",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_74ac3b58eb1ea77e75aaf73489b9ac15": {
     "id": "dice_74ac3b58eb1ea77e75aaf73489b9ac15",
@@ -10492,7 +10660,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.426392",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_d9f852e8501e42d92622254e90d6897e": {
     "id": "dice_d9f852e8501e42d92622254e90d6897e",
@@ -10503,7 +10678,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.426417",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_68a77593dd59a069019c71eeec5e9e40": {
     "id": "dice_68a77593dd59a069019c71eeec5e9e40",
@@ -10514,7 +10696,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.426429",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9b8d87e57c09ee234d42f91f0c93f5d9": {
     "id": "dice_9b8d87e57c09ee234d42f91f0c93f5d9",
@@ -10525,7 +10714,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.426448",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9c748e78054de3f2a2e865e9d9e85594": {
     "id": "dice_9c748e78054de3f2a2e865e9d9e85594",
@@ -10536,7 +10732,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.426466",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_094d300b279ab69984e3ae644cc531c6": {
     "id": "dice_094d300b279ab69984e3ae644cc531c6",
@@ -10547,7 +10750,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.426473",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_3c2ca2369aa2681e50267b0446f44a48": {
     "id": "dice_3c2ca2369aa2681e50267b0446f44a48",
@@ -10558,7 +10768,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.426480",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0fce98027988ae2fa7669a54883b9078": {
     "id": "dice_0fce98027988ae2fa7669a54883b9078",
@@ -10569,7 +10786,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.426487",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_68fed95166b808968f0fc13126a662d7": {
     "id": "dice_68fed95166b808968f0fc13126a662d7",
@@ -10580,7 +10804,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.426493",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_14f869566c73ddffca29a04ab5bcf129": {
     "id": "dice_14f869566c73ddffca29a04ab5bcf129",
@@ -10591,7 +10822,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.706169",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_7615e97a4c3178c0ffccb6a34055ab76": {
     "id": "dice_7615e97a4c3178c0ffccb6a34055ab76",
@@ -10602,7 +10840,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.706177",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_29add1f7fbb7984ae9b0fbabb0ff499f": {
     "id": "dice_29add1f7fbb7984ae9b0fbabb0ff499f",
@@ -10613,7 +10858,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.706209",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_90fbe506728b3f3cb2963d88e6b7803b": {
     "id": "dice_90fbe506728b3f3cb2963d88e6b7803b",
@@ -10624,7 +10876,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.706217",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f446af70c5ef18eacfd43ac1cac0d681": {
     "id": "dice_f446af70c5ef18eacfd43ac1cac0d681",
@@ -10635,7 +10894,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.706223",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_37000e6f32f97104c38b0de8ac1f48a9": {
     "id": "dice_37000e6f32f97104c38b0de8ac1f48a9",
@@ -10646,7 +10912,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.706230",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0f1127ef5779d6027f3375efa8b9778f": {
     "id": "dice_0f1127ef5779d6027f3375efa8b9778f",
@@ -10657,7 +10930,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.706249",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0f4d00b59b531b2d3df2556de2ee163c": {
     "id": "dice_0f4d00b59b531b2d3df2556de2ee163c",
@@ -10668,7 +10948,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.706255",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_01455d4f86cae67fce34175155984fd4": {
     "id": "dice_01455d4f86cae67fce34175155984fd4",
@@ -10679,7 +10966,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.706262",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_1f79f03dbb4bf16d17e3bc8f820e3fc8": {
     "id": "dice_1f79f03dbb4bf16d17e3bc8f820e3fc8",
@@ -10690,7 +10984,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.706270",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_5528a882f2082cffbf458ef5d7ed58bf": {
     "id": "dice_5528a882f2082cffbf458ef5d7ed58bf",
@@ -10701,7 +11002,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:52.706277",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_1b4442ea09415905f9f99ecca53b6347": {
     "id": "dice_1b4442ea09415905f9f99ecca53b6347",
@@ -10712,7 +11020,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.220900",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ab4adfa1acbf79c1f990b6c8d7582c6d": {
     "id": "dice_ab4adfa1acbf79c1f990b6c8d7582c6d",
@@ -10723,7 +11038,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.220909",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_8451178baf6b37df4340020368d7b35e": {
     "id": "dice_8451178baf6b37df4340020368d7b35e",
@@ -10734,7 +11056,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.220918",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ea5e92c6f72560e10f2af8c360165e0f": {
     "id": "dice_ea5e92c6f72560e10f2af8c360165e0f",
@@ -10745,7 +11074,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.220925",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e36714bbab1039ba3567ef20857c8659": {
     "id": "dice_e36714bbab1039ba3567ef20857c8659",
@@ -10756,7 +11092,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.220948",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_b33d19fb78be92774d7d8673d0a57f71": {
     "id": "dice_b33d19fb78be92774d7d8673d0a57f71",
@@ -10767,7 +11110,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.220955",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_13f897c8e2be8ab314bf462a45e51eda": {
     "id": "dice_13f897c8e2be8ab314bf462a45e51eda",
@@ -10778,7 +11128,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.220986",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c3985ffbb31ff2f650bc3b2a29bacbae": {
     "id": "dice_c3985ffbb31ff2f650bc3b2a29bacbae",
@@ -10789,7 +11146,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.221009",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_809627f0f7fb55196e9513fd49932075": {
     "id": "dice_809627f0f7fb55196e9513fd49932075",
@@ -10800,7 +11164,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.221017",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_59accd41dc6e51d001c9f627b820facf": {
     "id": "dice_59accd41dc6e51d001c9f627b820facf",
@@ -10811,7 +11182,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.570729",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_be95de7ba9b4f30dca01a83e4623a0d2": {
     "id": "dice_be95de7ba9b4f30dca01a83e4623a0d2",
@@ -10822,7 +11200,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.570755",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_564b70faf810741fa6c322922e654dd8": {
     "id": "dice_564b70faf810741fa6c322922e654dd8",
@@ -10833,7 +11218,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.570776",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_7357ee8745e0a0da30a3e3ed73834e67": {
     "id": "dice_7357ee8745e0a0da30a3e3ed73834e67",
@@ -10844,7 +11236,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.570797",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_5f669d545b83b16f941b956fbbd18966": {
     "id": "dice_5f669d545b83b16f941b956fbbd18966",
@@ -10855,7 +11254,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.570807",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_5c42998995c260df051956168623f197": {
     "id": "dice_5c42998995c260df051956168623f197",
@@ -10866,7 +11272,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.817695",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_42f60aed3744d201adbe8f9b13287479": {
     "id": "dice_42f60aed3744d201adbe8f9b13287479",
@@ -10877,7 +11290,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.817702",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_afdd017987d065031c9bfc436d7410e2": {
     "id": "dice_afdd017987d065031c9bfc436d7410e2",
@@ -10888,7 +11308,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.817709",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_8b1c0331375d0d85769390d6dc0c3d6b": {
     "id": "dice_8b1c0331375d0d85769390d6dc0c3d6b",
@@ -10899,7 +11326,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.817717",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_517c1dd132916a377946934cafa9d61c": {
     "id": "dice_517c1dd132916a377946934cafa9d61c",
@@ -10910,7 +11344,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.817725",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0b5d46366ac46179f1a63cf05314da84": {
     "id": "dice_0b5d46366ac46179f1a63cf05314da84",
@@ -10921,7 +11362,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.817737",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_46f31da8d95517aad86d51b5b293d005": {
     "id": "dice_46f31da8d95517aad86d51b5b293d005",
@@ -10932,7 +11380,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:53.817751",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_cb387b62dfb1b2752cc851ab50f6c6c4": {
     "id": "dice_cb387b62dfb1b2752cc851ab50f6c6c4",
@@ -10943,7 +11398,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:54.034614",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_defc70fde1014f090a2279820d52d4a9": {
     "id": "dice_defc70fde1014f090a2279820d52d4a9",
@@ -10954,7 +11416,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:54.034654",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_8d6a3a93ff3bc5f96e8ec072bdbfee04": {
     "id": "dice_8d6a3a93ff3bc5f96e8ec072bdbfee04",
@@ -10965,7 +11434,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:54.034672",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_7de9c9803d00119634afbe2a66ec762d": {
     "id": "dice_7de9c9803d00119634afbe2a66ec762d",
@@ -10976,7 +11452,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:54.034679",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_7100c725cc9785cf0a4ef444678ca8cf": {
     "id": "dice_7100c725cc9785cf0a4ef444678ca8cf",
@@ -10987,7 +11470,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:54.034686",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_198014e335d8d5d64fd5cc52fead22db": {
     "id": "dice_198014e335d8d5d64fd5cc52fead22db",
@@ -10998,7 +11488,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:54.034699",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_cb0ee7bed2a5ab17275d1ed5a1f7a039": {
     "id": "dice_cb0ee7bed2a5ab17275d1ed5a1f7a039",
@@ -11009,7 +11506,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:54.034706",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2cec7999b89ec20b1aa486f35203b712": {
     "id": "dice_2cec7999b89ec20b1aa486f35203b712",
@@ -11020,7 +11524,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:54.034714",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_b1b5b5dc03e3aecd0241a9359e0eef6c": {
     "id": "dice_b1b5b5dc03e3aecd0241a9359e0eef6c",
@@ -11031,7 +11542,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:54.034721",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_b7dd6c79cd946f9b3e6f3d796f0e729a": {
     "id": "dice_b7dd6c79cd946f9b3e6f3d796f0e729a",
@@ -11042,7 +11560,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:54.034728",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9ae372acdd8e6be9f18b200b670db493": {
     "id": "dice_9ae372acdd8e6be9f18b200b670db493",
@@ -11053,7 +11578,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:56.571292",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2a5773eeef8afb81c002a9ff416d893e": {
     "id": "dice_2a5773eeef8afb81c002a9ff416d893e",
@@ -11064,7 +11596,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:56.571330",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_19ca0c7bf9ba2019227bb4c1e72dfadd": {
     "id": "dice_19ca0c7bf9ba2019227bb4c1e72dfadd",
@@ -11075,7 +11614,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:56.571339",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_8506dd8a7a73df09e6392e566015a141": {
     "id": "dice_8506dd8a7a73df09e6392e566015a141",
@@ -11086,7 +11632,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:56.571348",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_556396df5285cce44c8ff74814fb43b0": {
     "id": "dice_556396df5285cce44c8ff74814fb43b0",
@@ -11097,7 +11650,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:56.571360",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_bf881310cab00684110f916ecc56172b": {
     "id": "dice_bf881310cab00684110f916ecc56172b",
@@ -11108,7 +11668,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:56.571396",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c0209950f0c4aae93fe07abc608dd8d4": {
     "id": "dice_c0209950f0c4aae93fe07abc608dd8d4",
@@ -11119,7 +11686,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:56.751780",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0b78a5d614571b3a05636ac5225b07be": {
     "id": "dice_0b78a5d614571b3a05636ac5225b07be",
@@ -11130,7 +11704,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:56.751803",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0b00e2e09d8b34351fab675f3f9e7579": {
     "id": "dice_0b00e2e09d8b34351fab675f3f9e7579",
@@ -11141,7 +11722,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:56.751822",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_77881a1379ecad1614ffa45b165493e0": {
     "id": "dice_77881a1379ecad1614ffa45b165493e0",
@@ -11152,7 +11740,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:56.927311",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_55ddb36f851ae0bf03ce6f45da350bd3": {
     "id": "dice_55ddb36f851ae0bf03ce6f45da350bd3",
@@ -11163,7 +11758,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:56.927328",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_bd6aa819d1ba2a3c41461c98976e3574": {
     "id": "dice_bd6aa819d1ba2a3c41461c98976e3574",
@@ -11174,7 +11776,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:56.927339",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_cfab2feea62d76e9e85d36df297c998e": {
     "id": "dice_cfab2feea62d76e9e85d36df297c998e",
@@ -11185,7 +11794,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:56.927347",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_087fafffef806efc90429f7eba9358b3": {
     "id": "dice_087fafffef806efc90429f7eba9358b3",
@@ -11196,7 +11812,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:56.927358",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_db0ea6a08daa83a24bc90c620a072579": {
     "id": "dice_db0ea6a08daa83a24bc90c620a072579",
@@ -11207,7 +11830,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:56.927396",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_87c48739fa494116a0f90d2d23511acf": {
     "id": "dice_87c48739fa494116a0f90d2d23511acf",
@@ -11218,7 +11848,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:57.193845",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_cd11cb234d569bac66a4fd4ca2bacb60": {
     "id": "dice_cd11cb234d569bac66a4fd4ca2bacb60",
@@ -11229,7 +11866,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:57.193857",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c973763982d71cf36c43a2516cc7a0a8": {
     "id": "dice_c973763982d71cf36c43a2516cc7a0a8",
@@ -11240,7 +11884,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:57.706663",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_33675b2443db598e0378b52e3fd72527": {
     "id": "dice_33675b2443db598e0378b52e3fd72527",
@@ -11251,7 +11902,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:57.706699",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_724054baaea797417f27b2093a484776": {
     "id": "dice_724054baaea797417f27b2093a484776",
@@ -11262,7 +11920,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:57.706715",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_aaf8ec5d14c9b7d68f3cab26149e54b1": {
     "id": "dice_aaf8ec5d14c9b7d68f3cab26149e54b1",
@@ -11273,7 +11938,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:57.706724",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_b94a8fbdf7830e2963b556ae927d4755": {
     "id": "dice_b94a8fbdf7830e2963b556ae927d4755",
@@ -11284,7 +11956,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:57.706732",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9652a89bec19119742861bf3791a0e3b": {
     "id": "dice_9652a89bec19119742861bf3791a0e3b",
@@ -11295,7 +11974,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:57.877167",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_3b99b9de5194f7b93dd6737c4ebd86f8": {
     "id": "dice_3b99b9de5194f7b93dd6737c4ebd86f8",
@@ -11306,7 +11992,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:57.877183",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f5a829d5849f296052c29d65e0a1a5b0": {
     "id": "dice_f5a829d5849f296052c29d65e0a1a5b0",
@@ -11317,7 +12010,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:57.877197",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c8f051d9413d15c0cfb2c8591e4ce2b8": {
     "id": "dice_c8f051d9413d15c0cfb2c8591e4ce2b8",
@@ -11328,7 +12028,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:57.877211",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_da32d9d0e663494eee5b0e524914d305": {
     "id": "dice_da32d9d0e663494eee5b0e524914d305",
@@ -11339,7 +12046,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:57.877228",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_53047b65f9d6f948f3310db8da92fba0": {
     "id": "dice_53047b65f9d6f948f3310db8da92fba0",
@@ -11350,7 +12064,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:58.058001",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2be7655e4bd34013114ea5eb2b033a94": {
     "id": "dice_2be7655e4bd34013114ea5eb2b033a94",
@@ -11361,7 +12082,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:58.058015",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_78432dc04989d6a2b9a7f2c80f1066d7": {
     "id": "dice_78432dc04989d6a2b9a7f2c80f1066d7",
@@ -11372,7 +12100,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:58.058023",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e78d247c1036eb168aefa365ad1c27ae": {
     "id": "dice_e78d247c1036eb168aefa365ad1c27ae",
@@ -11383,7 +12118,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:58.058031",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e58eaf95051ba8e85d314f6340585d99": {
     "id": "dice_e58eaf95051ba8e85d314f6340585d99",
@@ -11394,7 +12136,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:58.236497",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_6c8a0004300e5e10010f3a1e5a002a35": {
     "id": "dice_6c8a0004300e5e10010f3a1e5a002a35",
@@ -11405,7 +12154,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:58.236531",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_7934d7c28c66799cb95b79c71d6ff1ce": {
     "id": "dice_7934d7c28c66799cb95b79c71d6ff1ce",
@@ -11416,7 +12172,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:58.236541",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_57fb141fdc03369b8f0f356a722cb17f": {
     "id": "dice_57fb141fdc03369b8f0f356a722cb17f",
@@ -11427,7 +12190,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:58.236548",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_00b0d3ff12c1d37034eb4e626dace2bc": {
     "id": "dice_00b0d3ff12c1d37034eb4e626dace2bc",
@@ -11438,7 +12208,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:58.236567",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_97fa7f27ffeccc88f097ad6633470adf": {
     "id": "dice_97fa7f27ffeccc88f097ad6633470adf",
@@ -11449,7 +12226,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:58.236573",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_b5cfe7edf0025fbc3615498c3bb18588": {
     "id": "dice_b5cfe7edf0025fbc3615498c3bb18588",
@@ -11460,7 +12244,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:58.236579",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_7dbad11ef2cd320a91d75cd6727b7c1f": {
     "id": "dice_7dbad11ef2cd320a91d75cd6727b7c1f",
@@ -11471,7 +12262,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:58.502237",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_23dda84174bb6bab186041391208090c": {
     "id": "dice_23dda84174bb6bab186041391208090c",
@@ -11482,7 +12280,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:58.502250",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_930c7958605eb9148da3b52378992a6a": {
     "id": "dice_930c7958605eb9148da3b52378992a6a",
@@ -11493,7 +12298,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:58.502260",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_abefc3d3781a0150ea5d9d7dd3184757": {
     "id": "dice_abefc3d3781a0150ea5d9d7dd3184757",
@@ -11504,7 +12316,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:20:58.502268",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_8d4849655c3214291ce278dc6009b7eb": {
     "id": "dice_8d4849655c3214291ce278dc6009b7eb",
@@ -11515,7 +12334,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:00.162339",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c8e4909411ee93c171b612bc6b406e2e": {
     "id": "dice_c8e4909411ee93c171b612bc6b406e2e",
@@ -11526,7 +12352,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:00.162353",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c902226df913a6f05db19b91335842fb": {
     "id": "dice_c902226df913a6f05db19b91335842fb",
@@ -11537,7 +12370,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:00.758934",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2844d1f58f90292278ad9c3c6e8f6f78": {
     "id": "dice_2844d1f58f90292278ad9c3c6e8f6f78",
@@ -11548,7 +12388,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:01.801898",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_8130852e9b04a8f3099facb27e5467cd": {
     "id": "dice_8130852e9b04a8f3099facb27e5467cd",
@@ -11559,7 +12406,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:03.864583",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_b772fcca3b1afdbb8da2d17cd2773c31": {
     "id": "dice_b772fcca3b1afdbb8da2d17cd2773c31",
@@ -11570,7 +12424,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:03.864596",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_12aa805531d8c429c1290ad1cc35a04b": {
     "id": "dice_12aa805531d8c429c1290ad1cc35a04b",
@@ -11581,7 +12442,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:03.864605",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_6da018f794d460d0d661fc820f772770": {
     "id": "dice_6da018f794d460d0d661fc820f772770",
@@ -11592,7 +12460,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:03.864616",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_7edac2a5cf08c807c6c7982cef39834d": {
     "id": "dice_7edac2a5cf08c807c6c7982cef39834d",
@@ -11603,7 +12478,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:03.864637",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0d78835a237b200271688e6edf178519": {
     "id": "dice_0d78835a237b200271688e6edf178519",
@@ -11614,7 +12496,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:03.864667",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f006e79e2ce75995369c82d866e55fce": {
     "id": "dice_f006e79e2ce75995369c82d866e55fce",
@@ -11625,7 +12514,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:03.864681",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0f7c025a9367610b018e469373734a2f": {
     "id": "dice_0f7c025a9367610b018e469373734a2f",
@@ -11636,7 +12532,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:03.864695",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f4c4049b3923b26f52f66d417419b9fb": {
     "id": "dice_f4c4049b3923b26f52f66d417419b9fb",
@@ -11647,7 +12550,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.044962",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_686fb7a7234ca21f5d6b0e7645ceb476": {
     "id": "dice_686fb7a7234ca21f5d6b0e7645ceb476",
@@ -11658,7 +12568,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.044972",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_813f845c55106a17335cef033027422c": {
     "id": "dice_813f845c55106a17335cef033027422c",
@@ -11669,7 +12586,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.044992",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ff14c205d4dd7ae511a4ef3e9cb0f862": {
     "id": "dice_ff14c205d4dd7ae511a4ef3e9cb0f862",
@@ -11680,7 +12604,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.222172",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2c96edda772da8565672dc51f67ac526": {
     "id": "dice_2c96edda772da8565672dc51f67ac526",
@@ -11691,7 +12622,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.222184",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f186f801d821d3c4b8a1f44462a89602": {
     "id": "dice_f186f801d821d3c4b8a1f44462a89602",
@@ -11702,7 +12640,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.222193",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_a01f312cb52a4e77b0e82fc33579a60f": {
     "id": "dice_a01f312cb52a4e77b0e82fc33579a60f",
@@ -11713,7 +12658,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.222234",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ece6b4fce4d489f5f49b3704189b6ce0": {
     "id": "dice_ece6b4fce4d489f5f49b3704189b6ce0",
@@ -11724,7 +12676,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.222243",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_91721604835762c8f1a6c2c3df7d4726": {
     "id": "dice_91721604835762c8f1a6c2c3df7d4726",
@@ -11735,7 +12694,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.222255",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0b5a3554d01c9e9e6b711cc853bb583c": {
     "id": "dice_0b5a3554d01c9e9e6b711cc853bb583c",
@@ -11746,7 +12712,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.222262",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_6192befbcd1ddad37c118a3232d04f27": {
     "id": "dice_6192befbcd1ddad37c118a3232d04f27",
@@ -11757,7 +12730,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.222270",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e84df2768cec1206661a61b3ea03dc74": {
     "id": "dice_e84df2768cec1206661a61b3ea03dc74",
@@ -11768,7 +12748,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.424246",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_4682ea23d052d1284fab0495361bb60c": {
     "id": "dice_4682ea23d052d1284fab0495361bb60c",
@@ -11779,7 +12766,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.424257",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e3f06ad65ea12b72b24d3c97d08b6795": {
     "id": "dice_e3f06ad65ea12b72b24d3c97d08b6795",
@@ -11790,7 +12784,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.424312",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_a72dbb3886f19e2ee63230c81ba710c4": {
     "id": "dice_a72dbb3886f19e2ee63230c81ba710c4",
@@ -11801,7 +12802,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.787562",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f2c81d15c133dcdb43db968876175d8b": {
     "id": "dice_f2c81d15c133dcdb43db968876175d8b",
@@ -11812,7 +12820,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.787583",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_94d3742bb915fc59ed147c72a3350ae9": {
     "id": "dice_94d3742bb915fc59ed147c72a3350ae9",
@@ -11823,7 +12838,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.787636",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_418cf12b76794524e04e835604f12e04": {
     "id": "dice_418cf12b76794524e04e835604f12e04",
@@ -11834,7 +12856,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:04.787643",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_dafa1d94bc97af02082addaa933fba0e": {
     "id": "dice_dafa1d94bc97af02082addaa933fba0e",
@@ -11845,7 +12874,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:05.144993",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_cee47af3867ccdd0e94bf6b344310e1b": {
     "id": "dice_cee47af3867ccdd0e94bf6b344310e1b",
@@ -11856,7 +12892,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:05.145001",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_5a6bdf50b04e82295132c07a6f95bde0": {
     "id": "dice_5a6bdf50b04e82295132c07a6f95bde0",
@@ -11867,7 +12910,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:05.145009",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_71dfdd634c5e2f632240767f6fe97b75": {
     "id": "dice_71dfdd634c5e2f632240767f6fe97b75",
@@ -11878,7 +12928,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:05.330659",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9a7c387d9738607c5283539af427d7ff": {
     "id": "dice_9a7c387d9738607c5283539af427d7ff",
@@ -11889,7 +12946,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:05.532658",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f31209169181da1280a8aac4f36425ec": {
     "id": "dice_f31209169181da1280a8aac4f36425ec",
@@ -11900,7 +12964,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:05.532671",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c9d5c07e22f910ead19730686ae87d4c": {
     "id": "dice_c9d5c07e22f910ead19730686ae87d4c",
@@ -11911,7 +12982,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:05.532696",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2911aa1cdd44c929812b8bae04638ce6": {
     "id": "dice_2911aa1cdd44c929812b8bae04638ce6",
@@ -11922,7 +13000,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:05.791080",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_288bcb1e7f755fa32341d69f0052443c": {
     "id": "dice_288bcb1e7f755fa32341d69f0052443c",
@@ -11933,7 +13018,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:05.791111",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e280920f4b59e2c59e56e576f51515ef": {
     "id": "dice_e280920f4b59e2c59e56e576f51515ef",
@@ -11944,7 +13036,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:08.320439",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2e954e49f7ad45738243402592af90d9": {
     "id": "dice_2e954e49f7ad45738243402592af90d9",
@@ -11955,7 +13054,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:08.320447",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_3217d33180624e7daa79e1181c4aa491": {
     "id": "dice_3217d33180624e7daa79e1181c4aa491",
@@ -11966,7 +13072,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:08.320464",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e95578e324ab89980ba238fc8145837a": {
     "id": "dice_e95578e324ab89980ba238fc8145837a",
@@ -11977,7 +13090,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:08.320484",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_b785e82ff6dcde7d1492e8c6b471b3d2": {
     "id": "dice_b785e82ff6dcde7d1492e8c6b471b3d2",
@@ -11988,7 +13108,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:08.878936",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_32d7749afe2f9df7a5abc245d47d850b": {
     "id": "dice_32d7749afe2f9df7a5abc245d47d850b",
@@ -11999,7 +13126,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:08.878943",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0d6ff6e80d3dadd6a7e93e4619a3a26b": {
     "id": "dice_0d6ff6e80d3dadd6a7e93e4619a3a26b",
@@ -12010,7 +13144,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:08.878950",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_86b61fbf592256241f7dfda7fff6513d": {
     "id": "dice_86b61fbf592256241f7dfda7fff6513d",
@@ -12021,7 +13162,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:08.878973",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9e92998bb1cac2c0d3360fc146aded23": {
     "id": "dice_9e92998bb1cac2c0d3360fc146aded23",
@@ -12032,7 +13180,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:08.878983",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_77e3265e74626567ec6d1618d1faf0c4": {
     "id": "dice_77e3265e74626567ec6d1618d1faf0c4",
@@ -12043,7 +13198,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:08.878990",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c2a54a204023d5ea9b3716af7d41e033": {
     "id": "dice_c2a54a204023d5ea9b3716af7d41e033",
@@ -12054,7 +13216,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:08.879006",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_a721702b0ea924cef77bda18046fd086": {
     "id": "dice_a721702b0ea924cef77bda18046fd086",
@@ -12065,7 +13234,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:08.879024",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_bbe382f5f521cbbf56fe66db5795910a": {
     "id": "dice_bbe382f5f521cbbf56fe66db5795910a",
@@ -12076,7 +13252,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:08.879039",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_42f178c3c8d56e33ced607393ceb6062": {
     "id": "dice_42f178c3c8d56e33ced607393ceb6062",
@@ -12087,7 +13270,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:09.152086",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_5f5a3a90f762096f3b443f8275c73fd4": {
     "id": "dice_5f5a3a90f762096f3b443f8275c73fd4",
@@ -12098,7 +13288,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:09.152114",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ebcd1bb1dbdb3905c4c89fd623fa35fa": {
     "id": "dice_ebcd1bb1dbdb3905c4c89fd623fa35fa",
@@ -12109,7 +13306,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:09.152121",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_5b4f8c2d6ffc87f1b640543b0dbcb32e": {
     "id": "dice_5b4f8c2d6ffc87f1b640543b0dbcb32e",
@@ -12120,7 +13324,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:09.729586",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_af9320b8d88e58bb2a7c0a6edfc48e2a": {
     "id": "dice_af9320b8d88e58bb2a7c0a6edfc48e2a",
@@ -12131,7 +13342,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:09.729595",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_eafa40efd6739267213fdd6ac8ebcbc1": {
     "id": "dice_eafa40efd6739267213fdd6ac8ebcbc1",
@@ -12142,7 +13360,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:09.729607",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_a0624e406c9e58de11eaa902bcb298e1": {
     "id": "dice_a0624e406c9e58de11eaa902bcb298e1",
@@ -12153,7 +13378,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:09.729633",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f31e413249bc7b6e9594cfb45847ba5e": {
     "id": "dice_f31e413249bc7b6e9594cfb45847ba5e",
@@ -12164,7 +13396,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:10.130176",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_4334a2bff99dd4cb3c9314ee689a55f7": {
     "id": "dice_4334a2bff99dd4cb3c9314ee689a55f7",
@@ -12175,7 +13414,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:10.482202",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_d7ff4ed1fccb5171633325997f134d63": {
     "id": "dice_d7ff4ed1fccb5171633325997f134d63",
@@ -12186,7 +13432,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:11.008793",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_62fa1d7120b975d4e84fbc407916ceef": {
     "id": "dice_62fa1d7120b975d4e84fbc407916ceef",
@@ -12197,7 +13450,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:12.867249",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_cab1dcbc2936e767aa2b477662415ff5": {
     "id": "dice_cab1dcbc2936e767aa2b477662415ff5",
@@ -12208,7 +13468,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:12.867264",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ba342720a2cf709af7742bd7ea0b5caa": {
     "id": "dice_ba342720a2cf709af7742bd7ea0b5caa",
@@ -12219,7 +13486,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:13.289995",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_33719bf857be1ef73efe0048a237659b": {
     "id": "dice_33719bf857be1ef73efe0048a237659b",
@@ -12230,7 +13504,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:13.290007",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f94d73b53b3c8370d3c31a0d0f79fb8e": {
     "id": "dice_f94d73b53b3c8370d3c31a0d0f79fb8e",
@@ -12241,7 +13522,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:13.505323",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_43b5ec5c2d2fd72f27e9af2edb36c222": {
     "id": "dice_43b5ec5c2d2fd72f27e9af2edb36c222",
@@ -12252,7 +13540,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:13.505337",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_1d25e1d08baeeedae5d806ce30845bb7": {
     "id": "dice_1d25e1d08baeeedae5d806ce30845bb7",
@@ -12263,7 +13558,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:13.505356",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_6259585476250d30afa116382f6ac9ef": {
     "id": "dice_6259585476250d30afa116382f6ac9ef",
@@ -12274,7 +13576,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:14.463998",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_98348ba3ee20f1f38fa7e178e53626e5": {
     "id": "dice_98348ba3ee20f1f38fa7e178e53626e5",
@@ -12285,7 +13594,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:16.980897",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_a10ee9ba459a95d19aa2e613cf4117a8": {
     "id": "dice_a10ee9ba459a95d19aa2e613cf4117a8",
@@ -12296,7 +13612,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:16.980934",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_156eb811ccb3cc2067041d5976a644ed": {
     "id": "dice_156eb811ccb3cc2067041d5976a644ed",
@@ -12307,7 +13630,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:16.980970",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_a9aeaf5d846b7ecdac5b9b893f75b459": {
     "id": "dice_a9aeaf5d846b7ecdac5b9b893f75b459",
@@ -12318,7 +13648,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:16.980977",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_203b915bf1b6097d7bec58fe0da30e05": {
     "id": "dice_203b915bf1b6097d7bec58fe0da30e05",
@@ -12329,7 +13666,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:16.980990",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_72a698d58f9f3261e548df075d829cbe": {
     "id": "dice_72a698d58f9f3261e548df075d829cbe",
@@ -12340,7 +13684,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:17.169599",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_3e85149f85813f278d32dcb4237cc556": {
     "id": "dice_3e85149f85813f278d32dcb4237cc556",
@@ -12351,7 +13702,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:17.617093",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_fb00115c800854b8c4321d56e47e6f7e": {
     "id": "dice_fb00115c800854b8c4321d56e47e6f7e",
@@ -12362,7 +13720,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:18.961898",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_b5f508dbb7eae837f899138e0b7b9f01": {
     "id": "dice_b5f508dbb7eae837f899138e0b7b9f01",
@@ -12373,7 +13738,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:18.961941",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f9180da86251146da3bab97ff6d2b21b": {
     "id": "dice_f9180da86251146da3bab97ff6d2b21b",
@@ -12384,7 +13756,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.101605",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_93589b1a5117c1b973a1bdfe77e7cd71": {
     "id": "dice_93589b1a5117c1b973a1bdfe77e7cd71",
@@ -12395,7 +13774,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.101621",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0d89b8131bbb509c1cbb48ae21784702": {
     "id": "dice_0d89b8131bbb509c1cbb48ae21784702",
@@ -12406,7 +13792,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.101635",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_7b1479c5c7c05e274c58a53b401777da": {
     "id": "dice_7b1479c5c7c05e274c58a53b401777da",
@@ -12417,7 +13810,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.101642",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_1523089633ad27d2612e2a8dd34ce845": {
     "id": "dice_1523089633ad27d2612e2a8dd34ce845",
@@ -12428,7 +13828,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.101649",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_6cefec8863f29973bbf630ef5b025739": {
     "id": "dice_6cefec8863f29973bbf630ef5b025739",
@@ -12439,7 +13846,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.101661",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0ca21b4c98a0a7e07b52ac1006201e52": {
     "id": "dice_0ca21b4c98a0a7e07b52ac1006201e52",
@@ -12450,7 +13864,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.101673",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_eb1fbdada890508b53a908412f54a58d": {
     "id": "dice_eb1fbdada890508b53a908412f54a58d",
@@ -12461,7 +13882,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.101690",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_19e981634777087d8334e18bc4aba6f3": {
     "id": "dice_19e981634777087d8334e18bc4aba6f3",
@@ -12472,7 +13900,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.289923",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ade556bee5a63a29517303fe21205924": {
     "id": "dice_ade556bee5a63a29517303fe21205924",
@@ -12483,7 +13918,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.289943",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_73775273d2f0b362edcc5ea29e3781fd": {
     "id": "dice_73775273d2f0b362edcc5ea29e3781fd",
@@ -12494,7 +13936,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.289950",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_87d592edea471917698d9da95f9c7cac": {
     "id": "dice_87d592edea471917698d9da95f9c7cac",
@@ -12505,7 +13954,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.289963",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_7616d7a9c6cb7e4d7b6bef9161eba42c": {
     "id": "dice_7616d7a9c6cb7e4d7b6bef9161eba42c",
@@ -12516,7 +13972,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.289969",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_bff7f90725f9d04f491b94c0a0b5df72": {
     "id": "dice_bff7f90725f9d04f491b94c0a0b5df72",
@@ -12527,7 +13990,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.289984",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0146ff9e9bed347436e4679cfe796862": {
     "id": "dice_0146ff9e9bed347436e4679cfe796862",
@@ -12538,7 +14008,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.289996",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c37e2192241b75453df7273f45c5ae0f": {
     "id": "dice_c37e2192241b75453df7273f45c5ae0f",
@@ -12549,7 +14026,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.290003",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0ebbe3a8dab2f879ec0d67e17350a958": {
     "id": "dice_0ebbe3a8dab2f879ec0d67e17350a958",
@@ -12560,7 +14044,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.290015",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_98cb38be42b8daaf01c63ed992f88888": {
     "id": "dice_98cb38be42b8daaf01c63ed992f88888",
@@ -12571,7 +14062,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.290028",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9ad62cc9827bac725d282caaf93900d5": {
     "id": "dice_9ad62cc9827bac725d282caaf93900d5",
@@ -12582,7 +14080,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.290046",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ecdf0b4dd5d7c5ab0659a3c8e9cda541": {
     "id": "dice_ecdf0b4dd5d7c5ab0659a3c8e9cda541",
@@ -12593,7 +14098,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.498912",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_639982ddd0ee66cc863303ba2088f002": {
     "id": "dice_639982ddd0ee66cc863303ba2088f002",
@@ -12604,7 +14116,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.498920",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_4242192c46cf3cfee0fef3ac6896acf5": {
     "id": "dice_4242192c46cf3cfee0fef3ac6896acf5",
@@ -12615,7 +14134,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.498954",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_37d3cfa2c8864cfcdb150e0802ee751b": {
     "id": "dice_37d3cfa2c8864cfcdb150e0802ee751b",
@@ -12626,7 +14152,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.498977",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2cdde4386a856baae825e058759251c6": {
     "id": "dice_2cdde4386a856baae825e058759251c6",
@@ -12637,7 +14170,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.498997",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_d9619d2bf135a3de7f0038861f87ebc0": {
     "id": "dice_d9619d2bf135a3de7f0038861f87ebc0",
@@ -12648,7 +14188,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.499004",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_5de0eee9fa201541de603ce5643e5940": {
     "id": "dice_5de0eee9fa201541de603ce5643e5940",
@@ -12659,7 +14206,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.499017",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_612bc702993bafa3673641bc295c6415": {
     "id": "dice_612bc702993bafa3673641bc295c6415",
@@ -12670,7 +14224,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.499024",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_fbcea220c770052df50c5b15078ac10c": {
     "id": "dice_fbcea220c770052df50c5b15078ac10c",
@@ -12681,7 +14242,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.499032",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_27bc7e9375179a8164c8e234e0297cf9": {
     "id": "dice_27bc7e9375179a8164c8e234e0297cf9",
@@ -12692,7 +14260,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.700813",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_fdc77d5fcd9ab93cd497acecf7a2f833": {
     "id": "dice_fdc77d5fcd9ab93cd497acecf7a2f833",
@@ -12703,7 +14278,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.700822",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_43498b751aadd9d0399d3bd46ce4a355": {
     "id": "dice_43498b751aadd9d0399d3bd46ce4a355",
@@ -12714,7 +14296,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.700829",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_80090af110d445f97527eb46d834d45b": {
     "id": "dice_80090af110d445f97527eb46d834d45b",
@@ -12725,7 +14314,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.700838",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_3f42850cb6e3457545f5cf806296137f": {
     "id": "dice_3f42850cb6e3457545f5cf806296137f",
@@ -12736,7 +14332,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.700844",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_1d6bcf13360249d8ef4c402d28cd9256": {
     "id": "dice_1d6bcf13360249d8ef4c402d28cd9256",
@@ -12747,7 +14350,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.700855",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_71952f28bf0f03c1a533bd765898a2f2": {
     "id": "dice_71952f28bf0f03c1a533bd765898a2f2",
@@ -12758,7 +14368,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.700869",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_5736b1a17b76698a37d5b3991c2e34a2": {
     "id": "dice_5736b1a17b76698a37d5b3991c2e34a2",
@@ -12769,7 +14386,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.700885",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_36e8e0ae38f64de888254bb5f59db297": {
     "id": "dice_36e8e0ae38f64de888254bb5f59db297",
@@ -12780,7 +14404,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.700892",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_13df49316106e5902e59305b1d9d5c50": {
     "id": "dice_13df49316106e5902e59305b1d9d5c50",
@@ -12791,7 +14422,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.700906",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_17349594069ac191d753c2ba5c06bfea": {
     "id": "dice_17349594069ac191d753c2ba5c06bfea",
@@ -12802,7 +14440,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.700921",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ace71637353f3bf6d6dd4a1b33907e4b": {
     "id": "dice_ace71637353f3bf6d6dd4a1b33907e4b",
@@ -12813,7 +14458,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:20.700935",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_6e04a78a4c171e3fa05753988fada979": {
     "id": "dice_6e04a78a4c171e3fa05753988fada979",
@@ -12824,7 +14476,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:21.217209",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_a5369d5b1a4c7888491fa0dd4ea8e8a6": {
     "id": "dice_a5369d5b1a4c7888491fa0dd4ea8e8a6",
@@ -12835,7 +14494,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:21.217234",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9f17396f95a885967e254ae98dd3512e": {
     "id": "dice_9f17396f95a885967e254ae98dd3512e",
@@ -12846,7 +14512,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:21.217242",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9c6d440a284b3271b8dabcc231421363": {
     "id": "dice_9c6d440a284b3271b8dabcc231421363",
@@ -12857,7 +14530,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:21.217258",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e17e298052497b19a08b812b4aad4e2b": {
     "id": "dice_e17e298052497b19a08b812b4aad4e2b",
@@ -12868,7 +14548,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:21.217266",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_b6e302a21a18fe6540a59b2bbab359f1": {
     "id": "dice_b6e302a21a18fe6540a59b2bbab359f1",
@@ -12879,7 +14566,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:21.217285",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_da4368924acb6e240f3a50d6cd93827d": {
     "id": "dice_da4368924acb6e240f3a50d6cd93827d",
@@ -12890,7 +14584,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:21.217293",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_a9cefed453c0fc86a42509c856569a32": {
     "id": "dice_a9cefed453c0fc86a42509c856569a32",
@@ -12901,7 +14602,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:21.452525",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_d4835ca2b4ba6a6623d2ca11976f1742": {
     "id": "dice_d4835ca2b4ba6a6623d2ca11976f1742",
@@ -12912,7 +14620,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:21.452544",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_6ed28ea7c42f91969959d130af264260": {
     "id": "dice_6ed28ea7c42f91969959d130af264260",
@@ -12923,7 +14638,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:21.703227",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_22aaeb4f2383fc11384a19cb4d83c0b1": {
     "id": "dice_22aaeb4f2383fc11384a19cb4d83c0b1",
@@ -12934,7 +14656,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:21.703258",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c822ecaaa7141a0fa8dece1d7836a40a": {
     "id": "dice_c822ecaaa7141a0fa8dece1d7836a40a",
@@ -12945,7 +14674,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:21.703283",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_3df6723700b67ba93e0942369e1888ec": {
     "id": "dice_3df6723700b67ba93e0942369e1888ec",
@@ -12956,7 +14692,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:21.703294",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e55520204ab287dc4032894c9b32093c": {
     "id": "dice_e55520204ab287dc4032894c9b32093c",
@@ -12967,7 +14710,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:21.978677",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_215bb0f68a3dc73a870e8b36c8c92d93": {
     "id": "dice_215bb0f68a3dc73a870e8b36c8c92d93",
@@ -12978,7 +14728,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:22.310742",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2acb54fd38e3a0a26e330e8a1db9b7eb": {
     "id": "dice_2acb54fd38e3a0a26e330e8a1db9b7eb",
@@ -12989,6 +14746,13 @@
     "posted_ts": 0,
     "found_date": "2026-04-02T00:21:22.310756",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
