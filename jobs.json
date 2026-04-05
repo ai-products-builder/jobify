@@ -9070,7 +9070,7 @@
   "dice_4b5cf616a68d525cc6737910601ba9f7": {
     "id": "dice_4b5cf616a68d525cc6737910601ba9f7",
     "company": "Dice",
-    "title": "Senior IT Program Manager, SAP S4",
+    "title": "IT Program Manager, SAP S4",
     "location": "",
     "url": "https://dice.com",
     "posted_ts": 0,
@@ -19092,5 +19092,104 @@
     "skills_gap": "N/A",
     "confidence": "N/A",
     "description_source": "skipped"
+  },
+  "msft_1970393556852887": {
+    "id": "msft_1970393556852887",
+    "company": "Microsoft",
+    "title": "Supply Chain Employee Hardware Program Manager",
+    "location": "United States, Washington, Redmond, United States, Georgia, Atlanta",
+    "url": "https://apply.careers.microsoft.com/careers/job/1970393556852887",
+    "posted_ts": 1775138979,
+    "found_date": "2026-04-05T14:57:14.728460",
+    "status": "new",
+    "description": ""
+  },
+  "capitalone_Senior-Manager--Product-Manager-Small-Business-Bank-Associate-Servicing_R239835-1": {
+    "id": "capitalone_Senior-Manager--Product-Manager-Small-Business-Bank-Associate-Servicing_R239835-1",
+    "company": "Capital One",
+    "title": "Senior Manager, Product Manager-Small Business Bank Associate Servicing",
+    "location": "2 Locations",
+    "url": "https://capitalone.wd12.myworkdayjobs.com/en-US/Capital_One/job/Richmond-VA/Senior-Manager--Product-Manager-Small-Business-Bank-Associate-Servicing_R239835-1",
+    "posted_ts": 0,
+    "found_date": "2026-04-05T14:58:42.948201",
+    "status": "new",
+    "description": ""
+  },
+  "wwr_398478193720149606": {
+    "id": "wwr_398478193720149606",
+    "company": "We Work Remotely",
+    "title": "Prepterminal.com: Chief Operating Officer (COO) / Growth GM",
+    "location": "Remote",
+    "url": "https://weworkremotely.com/remote-jobs/prepterminal-com-chief-operating-officer-coo-growth-gm",
+    "posted_ts": 0,
+    "found_date": "2026-04-05T15:00:11.921159",
+    "status": "new",
+    "description": ""
+  },
+  "dice_63f4c4762138e933a5604aa789806c79": {
+    "id": "dice_63f4c4762138e933a5604aa789806c79",
+    "company": "Dice",
+    "title": "Lead Product Manager, Payments",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-04-05T15:00:12.229506",
+    "status": "new",
+    "description": ""
+  },
+  "dice_44c3a1500435c9b9195267de1f9b298b": {
+    "id": "dice_44c3a1500435c9b9195267de1f9b298b",
+    "company": "Dice",
+    "title": "Product Manager - Unified Payments",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-04-05T15:00:12.747530",
+    "status": "new",
+    "description": ""
+  },
+  "dice_c1ec61b4ef3abc397e136595cd825cbe": {
+    "id": "dice_c1ec61b4ef3abc397e136595cd825cbe",
+    "company": "Dice",
+    "title": "Technical Program Product Manager II",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-04-05T15:00:12.747631",
+    "status": "new",
+    "description": ""
+  },
+  "dice_3abb2edffd47fadf312b4be976f8d2da": {
+    "id": "dice_3abb2edffd47fadf312b4be976f8d2da",
+    "company": "Dice",
+    "title": "Senior Product Manager - Tech, Ring & Blink Accessories",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-04-05T15:00:13.037715",
+    "status": "new",
+    "description": ""
+  },
+  "dice_a1ed0ffea6b0bc76af549ba037a6530d": {
+    "id": "dice_a1ed0ffea6b0bc76af549ba037a6530d",
+    "company": "Dice",
+    "title": "Data Governance Lead Consultant - Provisioning Point & Data Source Program",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-04-05T15:00:14.403161",
+    "status": "new",
+    "description": ""
+  },
+  "dice_7847eaf2d6b694488f0048455887ab64": {
+    "id": "dice_7847eaf2d6b694488f0048455887ab64",
+    "company": "Dice",
+    "title": "Director of Customer Data Platforms",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-04-05T15:00:15.618299",
+    "status": "new",
+    "description": ""
   }
 }
