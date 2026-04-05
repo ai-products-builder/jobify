@@ -19102,7 +19102,14 @@
     "posted_ts": 1775138979,
     "found_date": "2026-04-05T14:57:14.728460",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 22,
+    "ats_score": 18,
+    "resume_used": "DATA",
+    "reason": "Senior data product leader with AdTech expertise lacks supply chain, hardware procurement, and employee program management experience relevant to this operational role.",
+    "skills_gap": "Missing critical skills: supply chain management, hardware procurement, vendor management, employee benefits/programs administration, and logistics\u2014core competencies for this position.",
+    "confidence": "low"
   },
   "capitalone_Senior-Manager--Product-Manager-Small-Business-Bank-Associate-Servicing_R239835-1": {
     "id": "capitalone_Senior-Manager--Product-Manager-Small-Business-Bank-Associate-Servicing_R239835-1",
@@ -19113,7 +19120,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-05T14:58:42.948201",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise is in enterprise data platforms and AdTech product strategy, while this role appears to be in consumer banking operations/servicing\u2014a fundamentally different domain with misaligned technical and business contexts.",
+    "skills_gap": "Missing: consumer banking domain expertise, retail customer service operations, associate/employee management at scale, compliance frameworks specific to banking (BSA/AML), and small business lending/deposit products; resume demonstrates no banking or financial services operating experience.",
+    "confidence": "low"
   },
   "wwr_398478193720149606": {
     "id": "wwr_398478193720149606",
@@ -19124,7 +19138,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-05T15:00:11.921159",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_63f4c4762138e933a5604aa789806c79": {
     "id": "dice_63f4c4762138e933a5604aa789806c79",
@@ -19135,7 +19156,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-05T15:00:12.229506",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_44c3a1500435c9b9195267de1f9b298b": {
     "id": "dice_44c3a1500435c9b9195267de1f9b298b",
@@ -19146,7 +19174,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-05T15:00:12.747530",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c1ec61b4ef3abc397e136595cd825cbe": {
     "id": "dice_c1ec61b4ef3abc397e136595cd825cbe",
@@ -19157,7 +19192,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-05T15:00:12.747631",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_3abb2edffd47fadf312b4be976f8d2da": {
     "id": "dice_3abb2edffd47fadf312b4be976f8d2da",
@@ -19168,7 +19210,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-05T15:00:13.037715",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_a1ed0ffea6b0bc76af549ba037a6530d": {
     "id": "dice_a1ed0ffea6b0bc76af549ba037a6530d",
@@ -19179,7 +19228,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-05T15:00:14.403161",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_7847eaf2d6b694488f0048455887ab64": {
     "id": "dice_7847eaf2d6b694488f0048455887ab64",
@@ -19190,6 +19246,13 @@
     "posted_ts": 0,
     "found_date": "2026-04-05T15:00:15.618299",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
