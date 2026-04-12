@@ -24178,7 +24178,14 @@
     "posted_ts": 1775481719,
     "found_date": "2026-04-12T15:03:49.995827",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 48,
+    "resume_used": "DATA",
+    "reason": "Strong technical leadership credentials in data platforms, but Principal TPM typically requires program/project management focus and systems thinking across org boundaries rather than product vision ownership; without job description, significant uncertainty on role scope and technical vs. organizational emphasis.",
+    "skills_gap": "Resume emphasizes product strategy and data platform vision; likely missing explicit program management, cross-org project coordination, technical program execution, and stakeholder orchestration at scale that a Principal TPM role demands.",
+    "confidence": "low"
   },
   "roku_7809165": {
     "id": "roku_7809165",
@@ -24189,7 +24196,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-12T15:04:45.497035",
     "status": "new",
-    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;h2 style=&quot;font-family: GothamBold,Helvetica,Arial,sans-serif; color: #662d91;&quot;&gt;Teamwork makes the stream work.&lt;/h2&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;h3 style=&quot;font-family: GothamBold,Helvetica,Arial,sans-serif;&quot;&gt;&lt;strong&gt;Roku is changing how the world watches TV&lt;/strong&gt;&lt;/h3&gt;\n&lt;p&gt;Roku is the #1 TV streaming platform in the U.S., Canada, and Mexico, and we&#39;ve set our sights on powering every "
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;h2 style=&quot;font-family: GothamBold,Helvetica,Arial,sans-serif; color: #662d91;&quot;&gt;Teamwork makes the stream work.&lt;/h2&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;h3 style=&quot;font-family: GothamBold,Helvetica,Arial,sans-serif;&quot;&gt;&lt;strong&gt;Roku is changing how the world watches TV&lt;/strong&gt;&lt;/h3&gt;\n&lt;p&gt;Roku is the #1 TV streaming platform in the U.S., Canada, and Mexico, and we&#39;ve set our sights on powering every ",
+    "description_source": "stored",
+    "match_score": 25,
+    "ats_score": 30,
+    "resume_used": "DATA",
+    "reason": "Significant overqualification and role mismatch: Preethi is a 15+ year senior product leader/director-level executive applying for an Associate Product Manager entry-to-mid level position, with deep expertise in data platforms rather than ad creative/user experiences.",
+    "skills_gap": "Resume focuses on data infrastructure, analytics platforms, and backend systems; Associate PM role likely requires front-end ad creative design, user experience optimization, and direct advertiser/consumer experience knowledge\u2014core competencies largely absent from resume.",
+    "confidence": "medium"
   },
   "doubleverify_8479330002": {
     "id": "doubleverify_8479330002",
@@ -24200,7 +24214,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-12T15:04:47.581746",
     "status": "new",
-    "description": "&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;h4&gt;&lt;strong&gt;Who we are&lt;/strong&gt;&lt;/h4&gt;\n&lt;p&gt;DV is the leader in digital performance solutions, helping our advertiser and agency partners verify the quality of their digital campaigns, Optimise to improve performance and Prove that they\u2019re achieving their business outcomes, through unbiased 3rd party data and analytics. DV\u2019s mission is to be the definitive source of transparency and data-driven insights into the quality and effectiveness of"
+    "description": "&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;h4&gt;&lt;strong&gt;Who we are&lt;/strong&gt;&lt;/h4&gt;\n&lt;p&gt;DV is the leader in digital performance solutions, helping our advertiser and agency partners verify the quality of their digital campaigns, Optimise to improve performance and Prove that they\u2019re achieving their business outcomes, through unbiased 3rd party data and analytics. DV\u2019s mission is to be the definitive source of transparency and data-driven insights into the quality and effectiveness of",
+    "description_source": "stored",
+    "match_score": 45,
+    "ats_score": 38,
+    "resume_used": "DATA",
+    "reason": "Resume showcases exceptional product leadership and data platform expertise, but the role appears to be an individual contributor data science position requiring hands-on research and ML work, not strategic product direction.",
+    "skills_gap": "Missing: hands-on data science research experience, statistical modeling methodologies, academic publication record, and focus on ad verification/fraud detection domain expertise specific to DoubleVerify's core mission.",
+    "confidence": "medium"
   },
   "wwr_3190872222204264738": {
     "id": "wwr_3190872222204264738",
@@ -24211,7 +24232,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-12T15:06:58.368677",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_5038176140972051183": {
     "id": "wwr_5038176140972051183",
@@ -24222,7 +24250,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-12T15:06:58.368695",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_4916510690894956122": {
     "id": "wwr_4916510690894956122",
@@ -24233,7 +24268,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-12T15:06:58.368710",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_5786893008384388281": {
     "id": "wwr_5786893008384388281",
@@ -24244,7 +24286,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-12T15:06:58.368717",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_6779020691122459932": {
     "id": "wwr_6779020691122459932",
@@ -24255,7 +24304,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-12T15:06:58.368737",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_6218480660067503421": {
     "id": "wwr_6218480660067503421",
@@ -24266,7 +24322,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-12T15:06:58.368748",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_1472148123639976722": {
     "id": "wwr_1472148123639976722",
@@ -24277,7 +24340,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-12T15:06:58.368792",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_a1c53e12cb8c8253017942f413a2eca4": {
     "id": "dice_a1c53e12cb8c8253017942f413a2eca4",
@@ -24288,7 +24358,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-12T15:07:01.057575",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_57cb56b90303ac43819bff0bb53b9128": {
     "id": "dice_57cb56b90303ac43819bff0bb53b9128",
@@ -24299,7 +24376,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-12T15:07:02.281607",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_72bbe2cab5b444b773a35cf9347b320b": {
     "id": "dice_72bbe2cab5b444b773a35cf9347b320b",
@@ -24310,7 +24394,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-12T15:07:02.523232",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_cc22107e3973240e4d7c38548a638a23": {
     "id": "dice_cc22107e3973240e4d7c38548a638a23",
@@ -24321,6 +24412,13 @@
     "posted_ts": 0,
     "found_date": "2026-04-12T15:07:05.961909",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
