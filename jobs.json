@@ -28876,7 +28876,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:08:00.610907",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;The opportunity&lt;/strong&gt;&lt;br&gt;We are seeking a Senior Technical Product Manager with extensive prior experience in a hands-on game development role to join our Engine Product team. You will play a pivotal role in defining product requirements with technical input on customer need, value, measurability, as well as the ability to use and demonstrate product in a hands-on fashion.&lt;/p&gt;&lt;p&gt;In this high-impact role, you will define and execute the roadmap of"
+    "description": "&lt;p&gt;&lt;strong&gt;The opportunity&lt;/strong&gt;&lt;br&gt;We are seeking a Senior Technical Product Manager with extensive prior experience in a hands-on game development role to join our Engine Product team. You will play a pivotal role in defining product requirements with technical input on customer need, value, measurability, as well as the ability to use and demonstrate product in a hands-on fashion.&lt;/p&gt;&lt;p&gt;In this high-impact role, you will define and execute the roadmap of",
+    "description_source": "stored",
+    "match_score": 28,
+    "ats_score": 22,
+    "resume_used": "DATA",
+    "reason": "Resume demonstrates exceptional expertise in data platforms and AdTech but lacks hands-on game development experience, game engine knowledge, and game developer community understanding\u2014core requirements for this Unity Engine Authoring role.",
+    "skills_gap": "Critical gaps: no game development background, no game engine experience (Unity/Unreal/etc.), no game developer API design, no graphics/rendering/physics knowledge, and no evidence of hands-on product demonstration in game dev contexts\u2014this role requires deep gaming domain expertise that the resume does not address.",
+    "confidence": "high"
   },
   "unity3d_7605750": {
     "id": "unity3d_7605750",
@@ -28887,7 +28894,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:08:00.610931",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;The opportunity&lt;/strong&gt;&lt;br&gt;We are seeking a Senior Technical Product Manager with prior experience in a hands-on game development role to join our Engine Product team. You will play a pivotal role in defining product requirements with technical input on customer need, value, measurability, as well as the ability to use and demonstrate product in a hands-on fashion.&lt;/p&gt;\n&lt;p&gt;This role will be focused on the user experience of the Unity engine\u2019s author"
+    "description": "&lt;p&gt;&lt;strong&gt;The opportunity&lt;/strong&gt;&lt;br&gt;We are seeking a Senior Technical Product Manager with prior experience in a hands-on game development role to join our Engine Product team. You will play a pivotal role in defining product requirements with technical input on customer need, value, measurability, as well as the ability to use and demonstrate product in a hands-on fashion.&lt;/p&gt;\n&lt;p&gt;This role will be focused on the user experience of the Unity engine\u2019s author",
+    "description_source": "stored",
+    "match_score": 25,
+    "ats_score": 15,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise is deeply specialized in data platforms and AdTech product strategy, while this role requires hands-on game development experience and engine authoring UX focus\u2014fundamentally different domains with minimal overlap.",
+    "skills_gap": "Missing critical requirement: hands-on game development background and direct experience with game engine authoring tools, workflows, and developer UX; entire career is data/platform-focused rather than creative/game development tools.",
+    "confidence": "high"
   },
   "pinterest_7527881": {
     "id": "pinterest_7527881",
@@ -28898,7 +28912,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:08:06.875200",
     "status": "new",
-    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;About Pinterest:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Millions of people around the world come to our platform to find creative ideas, dream about new possibilities and plan for memories that will last a lifetime. At Pinterest, we\u2019re on a mission to bring everyone the inspiration to create a life they love, and that starts with the people behind the product.&lt;/p&gt;\n&lt;p&gt;Discover a career where you ignite innovation for million"
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;About Pinterest:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Millions of people around the world come to our platform to find creative ideas, dream about new possibilities and plan for memories that will last a lifetime. At Pinterest, we\u2019re on a mission to bring everyone the inspiration to create a life they love, and that starts with the people behind the product.&lt;/p&gt;\n&lt;p&gt;Discover a career where you ignite innovation for million",
+    "description_source": "stored",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise is deeply specialized in data platforms and revenue analytics; Pinterest's Enforcement Systems role requires content moderation, safety, and trust & safety product experience\u2014a fundamentally different domain.",
+    "skills_gap": "Missing core enforcement/safety/trust & safety product experience; no background in content moderation systems, abuse prevention, policy enforcement, or community safety platforms\u2014the core of this role.",
+    "confidence": "medium"
   },
   "instacart_7819582": {
     "id": "instacart_7819582",
@@ -28909,7 +28930,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:08:10.621563",
     "status": "new",
-    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;We&#39;re transforming the grocery industry&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span class=&quot;im&quot;&gt;At Instacart, we invite the world to share love through food because we believe everyone should have access to the food they love and more time to enjoy it together. Where others see a simple need for grocery delivery, we see exciting complexity and endless opportunity to serve the varied needs of our community. We work t"
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;We&#39;re transforming the grocery industry&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span class=&quot;im&quot;&gt;At Instacart, we invite the world to share love through food because we believe everyone should have access to the food they love and more time to enjoy it together. Where others see a simple need for grocery delivery, we see exciting complexity and endless opportunity to serve the varied needs of our community. We work t",
+    "description_source": "stored",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Resume demonstrates exceptional expertise in data platforms and product strategy, but the incomplete job description and shift from technical data leadership to commercial program management creates significant uncertainty about role requirements and alignment.",
+    "skills_gap": "Missing visibility into commercial/GTM operations, advertising sales strategy, and merchant/retailer partnership experience that appear central to a 'Commercial' role at an ads platform; unclear if technical depth is valued or if business operations background is required.",
+    "confidence": "low"
   },
   "instacart_7826880": {
     "id": "instacart_7826880",
@@ -28920,7 +28948,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:08:10.621638",
     "status": "new",
-    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;We&#39;re transforming the grocery industry&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span class=&quot;im&quot;&gt;At Instacart, we invite the world to share love through food because we believe everyone should have access to the food they love and more time to enjoy it together. Where others see a simple need for grocery delivery, we see exciting complexity and endless opportunity to serve the varied needs of our community. We work t"
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;We&#39;re transforming the grocery industry&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span class=&quot;im&quot;&gt;At Instacart, we invite the world to share love through food because we believe everyone should have access to the food they love and more time to enjoy it together. Where others see a simple need for grocery delivery, we see exciting complexity and endless opportunity to serve the varied needs of our community. We work t",
+    "description_source": "stored",
+    "match_score": 45,
+    "ats_score": 38,
+    "resume_used": "DATA",
+    "reason": "Preethi is a product leader with deep data platform expertise, but the Staff TPM role typically requires program/project management focus, technical infrastructure ownership, and execution-oriented skills rather than product strategy and data ecosystem vision that are her core strengths.",
+    "skills_gap": "Missing explicit program management, technical project delivery, infrastructure engineering leadership, and cross-functional execution/operations experience; resume emphasizes product strategy and data architecture over TPM's typical scope of timelines, dependencies, and technical program governance.",
+    "confidence": "low"
   },
   "salesforce_Senior-Manager--Revenue_JR338135": {
     "id": "salesforce_Senior-Manager--Revenue_JR338135",
@@ -28931,7 +28966,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:08:13.685401",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and revenue intelligence expertise, but Senior Manager Revenue role typically emphasizes sales operations, forecasting, and GTM revenue leadership rather than data product strategy\u2014significant strategic pivot required.",
+    "skills_gap": "Resume emphasizes data product leadership and technical platform strategy; role likely requires direct revenue operations, sales forecasting, quota management, and revenue cycle ownership\u2014limited demonstrated experience in these areas.",
+    "confidence": "low"
   },
   "salesforce_Manager--Revenue-Recognition_JR335152": {
     "id": "salesforce_Manager--Revenue-Recognition_JR335152",
@@ -28942,7 +28984,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:08:13.685426",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong financial data platform and revenue reporting expertise, but role likely requires accounting/finance domain depth and ASC 606 compliance knowledge not evident in resume.",
+    "skills_gap": "No demonstrated experience with revenue recognition accounting standards (ASC 606, IFRS 15), audit compliance, or financial close processes\u2014core to this accounting-focused role versus her product/analytics-focused background.",
+    "confidence": "low"
   },
   "salesforce_Data-Analytics-Analyst_JR338334": {
     "id": "salesforce_Data-Analytics-Analyst_JR338334",
@@ -28953,7 +29002,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:08:14.285646",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 28,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Senior Product Director with 15+ years leading petabyte-scale data platforms is significantly overqualified for an individual contributor Data Analytics Analyst role; severe seniority/scope mismatch despite strong data expertise.",
+    "skills_gap": "Resume demonstrates executive product leadership, but individual contributor analyst roles typically require hands-on analytics execution, reporting, and ad-hoc analysis rather than platform strategy and team leadership.",
+    "confidence": "low"
   },
   "capitalone_Senior-Business-Manager--Product-Analytics_R240829-1": {
     "id": "capitalone_Senior-Business-Manager--Product-Analytics_R240829-1",
@@ -28964,7 +29020,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:08:36.430671",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 48,
+    "resume_used": "DATA",
+    "reason": "Strong data product and analytics expertise, but senior business manager role typically emphasizes financial acumen, stakeholder management, and business operations over technical platform leadership\u2014Preethi's background skews heavily technical/product rather than business/operations.",
+    "skills_gap": "Resume lacks explicit business management, P&L ownership, financial analysis, and operational business acumen typically expected for senior business manager roles; missing banking/fintech domain experience and regulatory compliance beyond data privacy.",
+    "confidence": "low"
   },
   "capitalone_Applied-Researcher-II--AI-Foundations--LLM-Core-and-Agentic-AI-_R236842-1": {
     "id": "capitalone_Applied-Researcher-II--AI-Foundations--LLM-Core-and-Agentic-AI-_R236842-1",
@@ -28975,7 +29038,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:08:36.430704",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Senior product leader's expertise in data platforms and AI analytics doesn't align with applied researcher role requiring deep ML research, model development, and LLM core contributions rather than product leadership.",
+    "skills_gap": "Missing core research competencies: published ML research, deep learning frameworks (PyTorch/TensorFlow), LLM fine-tuning/pre-training, agentic AI systems design, academic rigor in model evaluation\u2014resume shows applied AI/ML product use rather than foundational research.",
+    "confidence": "low"
   },
   "capitalone_Principal-Associate--Data-Science---AI-Foundations_R240794-1": {
     "id": "capitalone_Principal-Associate--Data-Science---AI-Foundations_R240794-1",
@@ -28986,7 +29056,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:08:36.430752",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 48,
+    "resume_used": "DATA",
+    "reason": "Strong data and AI/ML expertise, but resume is heavily product-leadership focused rather than hands-on data science/ML engineering, and Capital One's role likely emphasizes individual contributor technical depth over platform strategy.",
+    "skills_gap": "Resume lacks evidence of direct ML model development, statistical inference, experimentation design, and quantitative research\u2014core competencies for a data science role; strengths lie in data product management and observability rather than foundational AI/ML work.",
+    "confidence": "low"
   },
   "mastercard_Lead-Agentic-AI-Product-Manager_R-275771": {
     "id": "mastercard_Lead-Agentic-AI-Product-Manager_R-275771",
@@ -28997,7 +29074,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:08:47.427952",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong AI/ML and data platform expertise with proven product leadership, but limited direct agentic AI product experience and unclear fit without full job description reduces confidence.",
+    "skills_gap": "No demonstrated experience shipping agentic AI products or financial services domain expertise; resume focuses on data infrastructure and observability rather than autonomous AI agent design and deployment.",
+    "confidence": "low"
   },
   "wwr_697315936977702755": {
     "id": "wwr_697315936977702755",
@@ -29008,7 +29092,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:01.204268",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_4865355368885105245": {
     "id": "wwr_4865355368885105245",
@@ -29019,7 +29110,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:01.204280",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_2305370493508882362": {
     "id": "wwr_2305370493508882362",
@@ -29030,7 +29128,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:01.204288",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_5130156990678982872": {
     "id": "wwr_5130156990678982872",
@@ -29041,7 +29146,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:01.204300",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_6794434989850876628": {
     "id": "wwr_6794434989850876628",
@@ -29052,7 +29164,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:01.204307",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_144718754558792240": {
     "id": "wwr_144718754558792240",
@@ -29063,7 +29182,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:01.204326",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_5205440960570415623": {
     "id": "wwr_5205440960570415623",
@@ -29074,7 +29200,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:01.204335",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_8772518030323650119": {
     "id": "wwr_8772518030323650119",
@@ -29085,7 +29218,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:01.204376",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_38dee75fe4a23179c2390b71aa606c1e": {
     "id": "dice_38dee75fe4a23179c2390b71aa606c1e",
@@ -29096,7 +29236,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:01.664614",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_47e70819c4a5d4a890be896e917acfca": {
     "id": "dice_47e70819c4a5d4a890be896e917acfca",
@@ -29107,7 +29254,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:02.396619",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_41acb94f20320930f55750da82750eda": {
     "id": "dice_41acb94f20320930f55750da82750eda",
@@ -29118,7 +29272,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:02.828973",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_8b4c5a8dcaec7a705a508f9a76ece641": {
     "id": "dice_8b4c5a8dcaec7a705a508f9a76ece641",
@@ -29129,7 +29290,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:05.494209",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_3e54cd86871e16dcc3fce39adecd2b28": {
     "id": "dice_3e54cd86871e16dcc3fce39adecd2b28",
@@ -29140,7 +29308,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:05.494247",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_af1eafc4e62ad3c17fbf3ef3c0043692": {
     "id": "dice_af1eafc4e62ad3c17fbf3ef3c0043692",
@@ -29151,7 +29326,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:06.000023",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_7e6a13fba9507a5bcf5178b034535086": {
     "id": "dice_7e6a13fba9507a5bcf5178b034535086",
@@ -29162,7 +29344,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:07.002887",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_05a4f96052ce0dff0684c75f75fc7e39": {
     "id": "dice_05a4f96052ce0dff0684c75f75fc7e39",
@@ -29173,7 +29362,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:08.041105",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9b482d327c6d88679e2045c038472ec7": {
     "id": "dice_9b482d327c6d88679e2045c038472ec7",
@@ -29184,7 +29380,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:10.028066",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_afbc9c6e9df107b554eb95afe8ec7e30": {
     "id": "dice_afbc9c6e9df107b554eb95afe8ec7e30",
@@ -29195,7 +29398,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:10.573929",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_08b0feab265ab69e43926e1342cd6803": {
     "id": "dice_08b0feab265ab69e43926e1342cd6803",
@@ -29206,7 +29416,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:12.573609",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_33e47edf3bc6c1b201a57de009f8fd2a": {
     "id": "dice_33e47edf3bc6c1b201a57de009f8fd2a",
@@ -29217,7 +29434,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:19.601560",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_66d1ccd51303a93a0c5c128059074efb": {
     "id": "dice_66d1ccd51303a93a0c5c128059074efb",
@@ -29228,6 +29452,13 @@
     "posted_ts": 0,
     "found_date": "2026-04-18T15:10:19.601580",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
