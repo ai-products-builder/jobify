@@ -29470,7 +29470,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:08:23.907167",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;The opportunity&lt;/strong&gt;&lt;br&gt;We are seeking a Senior Technical Product Manager with extensive prior experience in a hands-on game development role to join our Engine Product team. You will play a pivotal role in defining product requirements with technical input on customer need, value, measurability, as well as the ability to use and demonstrate product in a hands-on fashion. In this high-impact technical role, you will define and execute the roadmap of Unity E"
+    "description": "&lt;p&gt;&lt;strong&gt;The opportunity&lt;/strong&gt;&lt;br&gt;We are seeking a Senior Technical Product Manager with extensive prior experience in a hands-on game development role to join our Engine Product team. You will play a pivotal role in defining product requirements with technical input on customer need, value, measurability, as well as the ability to use and demonstrate product in a hands-on fashion. In this high-impact technical role, you will define and execute the roadmap of Unity E",
+    "description_source": "stored",
+    "match_score": 22,
+    "ats_score": 15,
+    "resume_used": "DATA",
+    "reason": "Preethi's extensive AdTech/data platform expertise has minimal overlap with a hands-on game engine development role requiring direct game development experience and technical depth in graphics, physics, and game systems.",
+    "skills_gap": "Missing critical game development experience (shipping games, game engines, graphics/physics systems, real-time rendering); resume shows data infrastructure and B2B SaaS product leadership but no evidence of hands-on game dev work or ability to evaluate engine technical requirements from a developer perspective.",
+    "confidence": "high"
   },
   "salesforce_Senior-Manager---Data-360_JR339050": {
     "id": "salesforce_Senior-Manager---Data-360_JR339050",
@@ -29481,7 +29488,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:08:37.047786",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and leadership background aligns well with Senior Manager - Data 360 likely scope, but lack of job description limits confidence in specific role requirements and Salesforce ecosystem experience.",
+    "skills_gap": "No direct Salesforce product experience (Salesforce Data Cloud, Einstein, or core CRM data architecture); limited visibility into whether role requires deeper Salesforce platform-specific expertise.",
+    "confidence": "low"
   },
   "wwr_9091184931557532902": {
     "id": "wwr_9091184931557532902",
@@ -29492,7 +29506,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:10:26.453713",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_8835249307728749744": {
     "id": "wwr_8835249307728749744",
@@ -29503,7 +29524,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:10:26.453733",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_4010346581040015283": {
     "id": "wwr_4010346581040015283",
@@ -29514,7 +29542,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:10:26.453742",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_3175668491258910816": {
     "id": "wwr_3175668491258910816",
@@ -29525,7 +29560,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:10:26.453755",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_5744276680981229585": {
     "id": "wwr_5744276680981229585",
@@ -29536,7 +29578,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:10:26.453763",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_5962444315652108120": {
     "id": "wwr_5962444315652108120",
@@ -29547,7 +29596,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:10:26.453780",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_6977082872968024945": {
     "id": "wwr_6977082872968024945",
@@ -29558,7 +29614,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:10:26.453791",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_1801436461110023196": {
     "id": "wwr_1801436461110023196",
@@ -29569,7 +29632,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:10:26.453834",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_6e7c9189bdaeac7ad482c48fafa32de0": {
     "id": "dice_6e7c9189bdaeac7ad482c48fafa32de0",
@@ -29580,7 +29650,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:10:27.602021",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e2f0f9e2e6630546df41ce5af6737fc7": {
     "id": "dice_e2f0f9e2e6630546df41ce5af6737fc7",
@@ -29591,7 +29668,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:10:33.147654",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_22c3e477a4e35bec24f2c27cb9429936": {
     "id": "dice_22c3e477a4e35bec24f2c27cb9429936",
@@ -29602,7 +29686,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:10:40.017366",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_cdd0923356b9a68be98b060a8ad21bd8": {
     "id": "dice_cdd0923356b9a68be98b060a8ad21bd8",
@@ -29613,7 +29704,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:10:40.428544",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_01fd8036533f62d38a5cc03f06e0ad32": {
     "id": "dice_01fd8036533f62d38a5cc03f06e0ad32",
@@ -29624,7 +29722,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:10:40.428557",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_d9f95c9310e0653c47108e3db745a437": {
     "id": "dice_d9f95c9310e0653c47108e3db745a437",
@@ -29635,6 +29740,13 @@
     "posted_ts": 0,
     "found_date": "2026-04-19T15:10:40.628903",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
