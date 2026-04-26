@@ -35392,7 +35392,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-26T14:08:45.150649",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_6393975145204201486": {
     "id": "wwr_6393975145204201486",
@@ -35403,7 +35410,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-26T14:08:45.150666",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_1698536145677113858": {
     "id": "wwr_1698536145677113858",
@@ -35414,7 +35428,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-26T14:08:45.150674",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_7909424529068594233": {
     "id": "wwr_7909424529068594233",
@@ -35425,7 +35446,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-26T14:08:45.150687",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_1629918756059893238": {
     "id": "wwr_1629918756059893238",
@@ -35436,7 +35464,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-26T14:08:45.150703",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_1113746581225043112": {
     "id": "wwr_1113746581225043112",
@@ -35447,7 +35482,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-26T14:08:45.150714",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_7571502955785836077": {
     "id": "wwr_7571502955785836077",
@@ -35458,7 +35500,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-26T14:08:45.150755",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_3dcfe9f8aae65e35e7e86990a9f2e39e": {
     "id": "dice_3dcfe9f8aae65e35e7e86990a9f2e39e",
@@ -35469,7 +35518,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-26T14:08:45.500387",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_8ea6ba65205199f6c1eb9ef5976451d5": {
     "id": "dice_8ea6ba65205199f6c1eb9ef5976451d5",
@@ -35480,7 +35536,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-26T14:08:46.802240",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9e8fc962aea7bb365e7f9e89e6e5ed12": {
     "id": "dice_9e8fc962aea7bb365e7f9e89e6e5ed12",
@@ -35491,7 +35554,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-26T14:08:56.639607",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_5c88826f27dd96d1f9ebee1a225fcb44": {
     "id": "dice_5c88826f27dd96d1f9ebee1a225fcb44",
@@ -35502,7 +35572,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-26T14:08:56.639624",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_3ebdb12f3844cc5a82c2db2ee9268210": {
     "id": "dice_3ebdb12f3844cc5a82c2db2ee9268210",
@@ -35513,7 +35590,14 @@
     "posted_ts": 0,
     "found_date": "2026-04-26T14:08:59.042738",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f9592a600584a43a25f1ab6580e732b5": {
     "id": "dice_f9592a600584a43a25f1ab6580e732b5",
@@ -35524,6 +35608,13 @@
     "posted_ts": 0,
     "found_date": "2026-04-26T14:09:04.906153",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
