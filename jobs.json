@@ -40090,7 +40090,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-03T14:15:07.791553",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_5877159934505345827": {
     "id": "wwr_5877159934505345827",
@@ -40101,7 +40108,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-03T14:15:07.791578",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_3282856246696785049": {
     "id": "wwr_3282856246696785049",
@@ -40112,7 +40126,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-03T14:15:07.791586",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_2226705929979372930": {
     "id": "wwr_2226705929979372930",
@@ -40123,7 +40144,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-03T14:15:07.791601",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_7136560795167226598": {
     "id": "wwr_7136560795167226598",
@@ -40134,7 +40162,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-03T14:15:07.791614",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_8184737297244619645": {
     "id": "wwr_8184737297244619645",
@@ -40145,7 +40180,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-03T14:15:07.791624",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_956381a848c493306616055f42663081": {
     "id": "dice_956381a848c493306616055f42663081",
@@ -40156,7 +40198,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-03T14:15:08.104428",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_5f4ada9ce264fa94d707bc8bfb9e8906": {
     "id": "dice_5f4ada9ce264fa94d707bc8bfb9e8906",
@@ -40167,7 +40216,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-03T14:15:11.299599",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0f4b451abb1958534b231ad74580c9a8": {
     "id": "dice_0f4b451abb1958534b231ad74580c9a8",
@@ -40178,7 +40234,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-03T14:15:21.284693",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_72eb399886d4a7a4164bd056bdd52cd6": {
     "id": "dice_72eb399886d4a7a4164bd056bdd52cd6",
@@ -40189,6 +40252,13 @@
     "posted_ts": 0,
     "found_date": "2026-05-03T14:15:21.601250",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
