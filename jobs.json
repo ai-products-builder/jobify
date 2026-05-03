@@ -40080,5 +40080,115 @@
     "skills_gap": "N/A",
     "confidence": "N/A",
     "description_source": "skipped"
+  },
+  "wwr_1839715119366763687": {
+    "id": "wwr_1839715119366763687",
+    "company": "We Work Remotely",
+    "title": "Affirm: Staff Product Manager, Capital",
+    "location": "Remote",
+    "url": "https://weworkremotely.com/remote-jobs/affirm-staff-product-manager-capital",
+    "posted_ts": 0,
+    "found_date": "2026-05-03T14:15:07.791553",
+    "status": "new",
+    "description": ""
+  },
+  "wwr_5877159934505345827": {
+    "id": "wwr_5877159934505345827",
+    "company": "We Work Remotely",
+    "title": "Affirm: Senior Product Manager, Fraud",
+    "location": "Remote",
+    "url": "https://weworkremotely.com/remote-jobs/affirm-senior-product-manager-fraud",
+    "posted_ts": 0,
+    "found_date": "2026-05-03T14:15:07.791578",
+    "status": "new",
+    "description": ""
+  },
+  "wwr_3282856246696785049": {
+    "id": "wwr_3282856246696785049",
+    "company": "We Work Remotely",
+    "title": "Deblock: Senior FinCrime Product Owner",
+    "location": "Remote",
+    "url": "https://weworkremotely.com/remote-jobs/deblock-senior-fincrime-product-owner",
+    "posted_ts": 0,
+    "found_date": "2026-05-03T14:15:07.791586",
+    "status": "new",
+    "description": ""
+  },
+  "wwr_2226705929979372930": {
+    "id": "wwr_2226705929979372930",
+    "company": "We Work Remotely",
+    "title": "Red Ventures: Director of Product Management | Bankrate",
+    "location": "Remote",
+    "url": "https://weworkremotely.com/remote-jobs/red-ventures-director-of-product-management-bankrate",
+    "posted_ts": 0,
+    "found_date": "2026-05-03T14:15:07.791601",
+    "status": "new",
+    "description": ""
+  },
+  "wwr_7136560795167226598": {
+    "id": "wwr_7136560795167226598",
+    "company": "We Work Remotely",
+    "title": "Affirm: Senior Product Manager, Financial Reporting",
+    "location": "Remote",
+    "url": "https://weworkremotely.com/remote-jobs/affirm-senior-product-manager-financial-reporting",
+    "posted_ts": 0,
+    "found_date": "2026-05-03T14:15:07.791614",
+    "status": "new",
+    "description": ""
+  },
+  "wwr_8184737297244619645": {
+    "id": "wwr_8184737297244619645",
+    "company": "We Work Remotely",
+    "title": "Castille Resources: Junior Product Owner",
+    "location": "Remote",
+    "url": "https://weworkremotely.com/remote-jobs/castille-resources-junior-product-owner",
+    "posted_ts": 0,
+    "found_date": "2026-05-03T14:15:07.791624",
+    "status": "new",
+    "description": ""
+  },
+  "dice_956381a848c493306616055f42663081": {
+    "id": "dice_956381a848c493306616055f42663081",
+    "company": "Dice",
+    "title": "ConvergeProsperity - Head of Product, Insurance Growth Suite (Senior Manager) - Innovation_Delivery_Transformation",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-05-03T14:15:08.104428",
+    "status": "new",
+    "description": ""
+  },
+  "dice_5f4ada9ce264fa94d707bc8bfb9e8906": {
+    "id": "dice_5f4ada9ce264fa94d707bc8bfb9e8906",
+    "company": "Dice",
+    "title": "Manager Data Analytics",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-05-03T14:15:11.299599",
+    "status": "new",
+    "description": ""
+  },
+  "dice_0f4b451abb1958534b231ad74580c9a8": {
+    "id": "dice_0f4b451abb1958534b231ad74580c9a8",
+    "company": "Dice",
+    "title": "Program Manager - Power Distribution",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-05-03T14:15:21.284693",
+    "status": "new",
+    "description": ""
+  },
+  "dice_72eb399886d4a7a4164bd056bdd52cd6": {
+    "id": "dice_72eb399886d4a7a4164bd056bdd52cd6",
+    "company": "Dice",
+    "title": "Sr Technical Program Manager",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-05-03T14:15:21.601250",
+    "status": "new",
+    "description": ""
   }
 }
