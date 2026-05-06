@@ -40972,7 +40972,14 @@
     "posted_ts": 1777906348,
     "found_date": "2026-05-06T15:28:09.415106",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong technical and leadership foundation, but Principal TPM role typically emphasizes program/project management and cross-org coordination over product strategy and data platform ownership that dominate this resume.",
+    "skills_gap": "Resume lacks explicit program management, timeline/budget ownership, and stakeholder coordination artifacts typical of TPM roles; heavy product/strategy focus may misalign with execution-focused program management expectations.",
+    "confidence": "low"
   },
   "netflix_790315807051": {
     "id": "netflix_790315807051",
@@ -40983,7 +40990,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:00.848018",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 68,
+    "ats_score": 72,
+    "resume_used": "ADS",
+    "reason": "Strong AdTech and APIs background with proven campaign/monetization platform experience, but Netflix's ads business model (AVOD/subscription ads) differs from mobile/programmatic focus; lack of job description limits precision.",
+    "skills_gap": "No demonstrated experience with video streaming ad serving, AVOD platform architecture, or entertainment/content-specific ad products; campaign management APIs appear less central to prior roles than measurement and data platforms.",
+    "confidence": "low"
   },
   "unity3d_7555455": {
     "id": "unity3d_7555455",
@@ -40994,7 +41008,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:04.230313",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;The opportunity&lt;/strong&gt;&lt;br&gt;We are looking for an experienced Product Manager to work in our Unity Ads Product team within the Grow division. In this role, you will be responsible for the core components that drive our network\u2019s ads business. This role will be tasked with providing expertise on existing and planned initiatives that will grow the ads business. These include owning the strategic vision for our ad quality product \u2014 making it more robust, scalable,"
+    "description": "&lt;p&gt;&lt;strong&gt;The opportunity&lt;/strong&gt;&lt;br&gt;We are looking for an experienced Product Manager to work in our Unity Ads Product team within the Grow division. In this role, you will be responsible for the core components that drive our network\u2019s ads business. This role will be tasked with providing expertise on existing and planned initiatives that will grow the ads business. These include owning the strategic vision for our ad quality product \u2014 making it more robust, scalable,",
+    "description_source": "stored",
+    "match_score": 72,
+    "ats_score": 78,
+    "resume_used": "ADS",
+    "reason": "Strong AdTech and ads platform expertise with proven track record at scale, but job description is incomplete making full alignment assessment difficult.",
+    "skills_gap": "Job posting truncated; cannot fully assess ad quality, robustness, and scalability requirements vs. resume focus on measurement, observability, and data governance\u2014core competencies partially overlap but specific ad quality domain expertise unclear.",
+    "confidence": "medium"
   },
   "thetradedesk_5128622007": {
     "id": "thetradedesk_5128622007",
@@ -41005,7 +41026,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:05.561272",
     "status": "new",
-    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;The Trade Desk is a global technology company and the world\u2019s leading independent platform for digital advertising, with nearly 4,000 employees across more than 30 offices. Our technology helps advertisers reach the right audiences across the open internet \u2014 from streaming TV and podcasts to mobile apps, news, and more.&amp;nbsp; &lt;br&gt;&lt;br&gt;Advertising powers the content people love. By making it more transparent, effective, and respon"
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;The Trade Desk is a global technology company and the world\u2019s leading independent platform for digital advertising, with nearly 4,000 employees across more than 30 offices. Our technology helps advertisers reach the right audiences across the open internet \u2014 from streaming TV and podcasts to mobile apps, news, and more.&amp;nbsp; &lt;br&gt;&lt;br&gt;Advertising powers the content people love. By making it more transparent, effective, and respon",
+    "description_source": "stored",
+    "match_score": 72,
+    "ats_score": 75,
+    "resume_used": "DATA",
+    "reason": "Strong AdTech expertise and data platform leadership align well with Trade Desk's core business, but incomplete job description limits assessment of specific Staff PM generalist requirements and seniority expectations.",
+    "skills_gap": "Resume heavily emphasizes data/backend product strategy; unclear if role requires more front-end advertiser product experience, demand-side platform (DSP) optimization, or creative/campaign management expertise that isn't prominently featured.",
+    "confidence": "medium"
   },
   "doubleverify_8531574002": {
     "id": "doubleverify_8531574002",
@@ -41016,7 +41044,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:06.001039",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;Who we are&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;DoubleVerify is a leading software platform for digital media measurement, data and analytics. DV\u2019s mission is to be the definitive source of transparency and data-driven insights into the quality and effectiveness of digital advertising for the world\u2019s largest brands, publishers and digital ad platforms. DV\u2019s technology platform provides advertisers with consistent and unbiased data and analytics that can be used to optimize th"
+    "description": "&lt;p&gt;&lt;strong&gt;Who we are&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;DoubleVerify is a leading software platform for digital media measurement, data and analytics. DV\u2019s mission is to be the definitive source of transparency and data-driven insights into the quality and effectiveness of digital advertising for the world\u2019s largest brands, publishers and digital ad platforms. DV\u2019s technology platform provides advertisers with consistent and unbiased data and analytics that can be used to optimize th",
+    "description_source": "stored",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and product leadership experience with proven track record at scale, but incomplete job description limits assessment of specific Experience Platform requirements and role scope.",
+    "skills_gap": "Job description incomplete\u2014cannot fully evaluate fit for 'Experience Platform' specific features; resume lacks explicit customer/user experience design or front-end product expertise beyond backend data platforms.",
+    "confidence": "medium"
   },
   "klaviyo_7724065003": {
     "id": "klaviyo_7724065003",
@@ -41027,7 +41062,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:13.513904",
     "status": "new",
-    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;em&gt;At Klaviyo, we value the unique backgrounds, experiences and perspectives each Klaviyo (we call ourselves Klaviyos) brings to our workplace each and every day. We believe everyone deserves a fair shot at success and appreciate the experiences each person brings beyond the traditional job requirements. If you\u2019re a close but not exact match with the description, we hope you\u2019ll still consider applying. Want to learn more about life at Kl"
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;em&gt;At Klaviyo, we value the unique backgrounds, experiences and perspectives each Klaviyo (we call ourselves Klaviyos) brings to our workplace each and every day. We believe everyone deserves a fair shot at success and appreciate the experiences each person brings beyond the traditional job requirements. If you\u2019re a close but not exact match with the description, we hope you\u2019ll still consider applying. Want to learn more about life at Kl",
+    "description_source": "stored",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Resume shows exceptional expertise in data product leadership and platform strategy, but the role appears to be an individual contributor analytics/operations position focused on GTM execution, representing a significant step down in seniority and scope.",
+    "skills_gap": "Job description truncated preventing full assessment, but resume lacks typical GTM operations specifics (pipeline analytics, sales ops tools, CRM management) and suggests overqualification for what appears to be an analyst-level role rather than leadership position.",
+    "confidence": "low"
   },
   "iterable_7895376": {
     "id": "iterable_7895376",
@@ -41038,7 +41080,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:14.276901",
     "status": "new",
-    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;Iterable is the leading AI-powered customer engagement platform that helps leading brands like Redfin, SeatGeek, Priceline, Calm, and Box create dynamic, individualized experiences at scale. Our platform empowers organizations to activate customer data, design seamless cross-channel interactions, and optimize engagement\u2014all with enterprise-grade security and compliance. Today, nearly 1,200 brands across 50+ countries rely on Iterable to drive g"
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;Iterable is the leading AI-powered customer engagement platform that helps leading brands like Redfin, SeatGeek, Priceline, Calm, and Box create dynamic, individualized experiences at scale. Our platform empowers organizations to activate customer data, design seamless cross-channel interactions, and optimize engagement\u2014all with enterprise-grade security and compliance. Today, nearly 1,200 brands across 50+ countries rely on Iterable to drive g",
+    "description_source": "stored",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "ADS",
+    "reason": "Preethi's deep AdTech expertise and petabyte-scale platform experience don't align with Iterable's customer engagement/marketing automation focus; the job description is incomplete, limiting assessment accuracy.",
+    "skills_gap": "Missing core competencies in customer engagement platforms, marketing automation, email/SMS/push channels, customer lifecycle management, and retention optimization that are central to Iterable's product offering.",
+    "confidence": "low"
   },
   "inmobi_7337428": {
     "id": "inmobi_7337428",
@@ -41049,7 +41098,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:15.041479",
     "status": "new",
-    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;InMobi Advertising&lt;/strong&gt;&amp;nbsp;is a global technology leader helping marketers win the moments that matter. Our advertising platform reaches over 2 billion people across 150+ countries and turns real-time context into business outcomes, delivering results grounded in privacy-first principles. Trusted by 30,000+ brands and leading publishers, InMobi is where intelligence, creativity, and accountabili"
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;/p&gt;\n&lt;p&gt;&lt;strong&gt;InMobi Advertising&lt;/strong&gt;&amp;nbsp;is a global technology leader helping marketers win the moments that matter. Our advertising platform reaches over 2 billion people across 150+ countries and turns real-time context into business outcomes, delivering results grounded in privacy-first principles. Trusted by 30,000+ brands and leading publishers, InMobi is where intelligence, creativity, and accountabili",
+    "description_source": "stored",
+    "match_score": 78,
+    "ats_score": 82,
+    "resume_used": "DATA",
+    "reason": "Exceptional alignment on data platform leadership, petabyte-scale systems, and AI/ML analytics; 15+ years in adjacent AdTech domain with proven ability to modernize data infrastructure and drive self-serve intelligence at scale.",
+    "skills_gap": "Limited visibility into InMobi's specific technical stack preferences and AI application priorities; resume shows strong foundational AI/ML expertise but limited detail on recent hands-on AI product feature development or LLM integration in data platforms.",
+    "confidence": "medium"
   },
   "instacart_7896278": {
     "id": "instacart_7896278",
@@ -41060,7 +41116,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:15.435017",
     "status": "new",
-    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;We&#39;re transforming the grocery industry&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span class=&quot;im&quot;&gt;At Instacart, we invite the world to share love through food because we believe everyone should have access to the food they love and more time to enjoy it together. Where others see a simple need for grocery delivery, we see exciting complexity and endless opportunity to serve the varied needs of our community. We work t"
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;We&#39;re transforming the grocery industry&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;&lt;span class=&quot;im&quot;&gt;At Instacart, we invite the world to share love through food because we believe everyone should have access to the food they love and more time to enjoy it together. Where others see a simple need for grocery delivery, we see exciting complexity and endless opportunity to serve the varied needs of our community. We work t",
+    "description_source": "stored",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Senior product leader with deep data/AdTech expertise applying for a financial analyst role represents a significant level/function mismatch, despite strong analytical and strategic capabilities.",
+    "skills_gap": "Missing core financial analyst competencies: financial modeling, FP&A workflows, GAAP accounting, variance analysis, and budgeting/forecasting\u2014this is an individual contributor analyst role, not a product leadership position.",
+    "confidence": "low"
   },
   "salesforce_Senior-Product-Manager---Insurance_JR329470": {
     "id": "salesforce_Senior-Product-Manager---Insurance_JR329470",
@@ -41071,7 +41134,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:20.128370",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 45,
+    "resume_used": "DATA",
+    "reason": "Strong data product and platform leadership experience, but insurance domain expertise and Salesforce ecosystem knowledge are absent; significant pivot required from AdTech/monetization to insurance operations and compliance.",
+    "skills_gap": "No insurance industry experience, regulatory/compliance background (claims, underwriting, policy management), or demonstrated Salesforce platform expertise; AdTech-specific monetization and publisher knowledge not transferable.",
+    "confidence": "low"
   },
   "salesforce_Solution-Consultant-Marketing---Data-Cloud_JR340607": {
     "id": "salesforce_Solution-Consultant-Marketing---Data-Cloud_JR340607",
@@ -41082,7 +41152,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:22.094116",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data product leadership and Salesforce ecosystem experience (Yellow Pages Salesforce integration, Revenue Reporting Platform with KPMG), but Solution Consultant role typically emphasizes client-facing advisory over platform product ownership.",
+    "skills_gap": "Limited evidence of customer-facing solution design, implementation support, or consulting methodologies; resume emphasizes internal product strategy over external client advisory and hands-on solution deployment.",
+    "confidence": "low"
   },
   "salesforce_Director--Informatica---Data-Fondation-Acceleration-Lead_JR340783": {
     "id": "salesforce_Director--Informatica---Data-Fondation-Acceleration-Lead_JR340783",
@@ -41093,7 +41170,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:24.007402",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data platform leadership and enterprise data modernization experience aligns well with Informatica foundation acceleration role, though lack of job description limits confidence in specific technical requirements.",
+    "skills_gap": "No visible Informatica MDM/governance platform experience, cloud data warehouse vendor partnerships (Salesforce integrations), or enterprise data governance framework depth beyond self-serve analytics.",
+    "confidence": "medium"
   },
   "salesforce_RVP--Sales_JR341086-1": {
     "id": "salesforce_RVP--Sales_JR341086-1",
@@ -41104,7 +41188,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:24.007426",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 42,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise is in data product strategy and platform engineering, while this role appears to be a regional sales/business leadership position requiring GTM execution and territory management\u2014fundamentally different skill sets.",
+    "skills_gap": "Missing: Regional sales leadership, quota management, team building for sales/account teams, GTM execution, and European market/enterprise sales experience; VP-level business acumen required differs from product-focused background.",
+    "confidence": "low"
   },
   "salesforce_Director-of-Product-Management---Content-Management-Platform_JR334984": {
     "id": "salesforce_Director-of-Product-Management---Content-Management-Platform_JR334984",
@@ -41115,7 +41206,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:24.007443",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 45,
+    "resume_used": "DATA",
+    "reason": "Strong product leadership and platform expertise, but significant domain shift from AdTech/data platforms to content management; without job description, cannot assess alignment with CMS-specific requirements, governance models, or content workflows.",
+    "skills_gap": "No demonstrated experience with content management systems, content governance, editorial workflows, DAM platforms, or CMS architecture; domain expertise is entirely AdTech/data-focused rather than content/publishing operations.",
+    "confidence": "low"
   },
   "capitalone_Senior-Manager--Data-Science---Model-and-Script-Enhancement--MASE--Compliance_R242032-1": {
     "id": "capitalone_Senior-Manager--Data-Science---Model-and-Script-Enhancement--MASE--Compliance_R242032-1",
@@ -41126,7 +41224,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:45.851450",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 38,
+    "resume_used": "DATA",
+    "reason": "Resume demonstrates exceptional data platform and product leadership expertise, but the MASE Compliance role appears to be a specialized data science/compliance position requiring different technical focus than AdTech product strategy.",
+    "skills_gap": "Missing: regulatory compliance modeling expertise, model risk management frameworks, stress testing methodologies, and financial services compliance domain knowledge specific to banking regulations.",
+    "confidence": "low"
   },
   "capitalone_Manager--Ontology---Data-Modeling_R237673-1": {
     "id": "capitalone_Manager--Ontology---Data-Modeling_R237673-1",
@@ -41137,7 +41242,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:45.851467",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 48,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and governance expertise, but resume emphasizes product leadership and revenue impact over technical data modeling and ontology design\u2014a likely core requirement for this individual contributor role.",
+    "skills_gap": "Resume lacks explicit mention of semantic modeling frameworks, knowledge graphs, ontology design patterns, data lineage tools, or hands-on data modeling expertise that Capital One likely expects for an ontology-focused role.",
+    "confidence": "low"
   },
   "capitalone_Director--Product-Manager---Core-Data-Enablement_R241976": {
     "id": "capitalone_Director--Product-Manager---Core-Data-Enablement_R241976",
@@ -41148,7 +41260,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:45.851485",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and product leadership experience aligns well with Core Data Enablement role, but lack of financial services domain expertise and unknown specific job requirements create moderate fit uncertainty.",
+    "skills_gap": "Missing financial services/banking domain experience, regulatory frameworks specific to banking (vs. AdTech compliance), and no demonstrated work with legacy financial systems modernization.",
+    "confidence": "low"
   },
   "capitalone_Senior-Manager--Product-Manager----Bank-Operations_R241950-1": {
     "id": "capitalone_Senior-Manager--Product-Manager----Bank-Operations_R241950-1",
@@ -41159,7 +41278,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:50.024486",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise in data products, petabyte-scale platforms, and AdTech strategy misaligns with bank operations focus; without a job description, conservative scoring reflects significant domain shift from marketing/ad tech to financial services operations.",
+    "skills_gap": "Missing: banking/financial services domain experience, core banking operations knowledge, regulatory frameworks specific to financial institutions (beyond GDPR/COPPA), and operational process redesign in regulated environments.",
+    "confidence": "low"
   },
   "capitalone_Director--Data-Analysis---Global-Payment-Network---Risk-Management_R238284-1": {
     "id": "capitalone_Director--Data-Analysis---Global-Payment-Network---Risk-Management_R238284-1",
@@ -41170,7 +41296,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:50.024499",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and governance expertise translates to risk management analytics, but AdTech-specific domain knowledge and lack of financial services/payments experience create meaningful gaps without knowing the full role scope.",
+    "skills_gap": "Missing direct experience in payment networks, financial risk modeling, fraud detection, regulatory compliance in banking/fintech (beyond GDPR/COPPA), and Capital One's specific tech stack\u2014though data governance and large-scale analytics foundation is solid.",
+    "confidence": "low"
   },
   "capitalone_Manager--Data-Analysis---Retail-Bank_R241969-1": {
     "id": "capitalone_Manager--Data-Analysis---Retail-Bank_R241969-1",
@@ -41181,7 +41314,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:50.024507",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 52,
+    "resume_used": "DATA",
+    "reason": "Senior AdTech data leader's petabyte-scale platform expertise and executive background significantly overqualify for a manager-level retail banking analyst role, creating misalignment in seniority, domain, and likely compensation expectations.",
+    "skills_gap": "Missing domain expertise in retail banking, consumer financial services, and regulatory frameworks specific to banking (BSA/AML, CRA); resume heavily skewed toward AdTech monetization, publisher ecosystems, and bidding systems rather than credit risk, customer deposits, or consumer lending analytics.",
+    "confidence": "low"
   },
   "capitalone_Manager--Product-Manager---Hotels--Capital-One-Travel_R241828-1": {
     "id": "capitalone_Manager--Product-Manager---Hotels--Capital-One-Travel_R241828-1",
@@ -41192,7 +41332,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:50.024547",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise is petabyte-scale AdTech and data platforms; Capital One Hotels travel product requires consumer financial services and hospitality domain knowledge with no apparent data platform leadership component.",
+    "skills_gap": "Missing: hospitality/travel industry experience, consumer banking product management, Capital One's specific tech stack; domain pivot from B2B AdTech to B2C financial services travel products is substantial.",
+    "confidence": "low"
   },
   "capitalone_Sr-Risk-Manager--Data-Protection_R237658-1": {
     "id": "capitalone_Sr-Risk-Manager--Data-Protection_R237658-1",
@@ -41203,7 +41350,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:54.062414",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 38,
+    "resume_used": "DATA",
+    "reason": "Sr. Risk Manager, Data Protection role requires regulatory compliance and risk governance expertise, but candidate's background is primarily in product leadership and data platform strategy rather than risk management or data protection.",
+    "skills_gap": "Missing direct experience in risk management, data protection frameworks (beyond GDPR/COPPA compliance), threat assessment, security governance, and financial services regulatory requirements typical of Capital One's risk function.",
+    "confidence": "low"
   },
   "mastercard_Product-Operations-Manager---Analytics-and-Promotions_R-276419": {
     "id": "mastercard_Product-Operations-Manager---Analytics-and-Promotions_R-276419",
@@ -41214,7 +41368,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:57.482751",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 42,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Senior data product leader's petabyte-scale AdTech expertise is overqualified for likely operational analytics role; significant seniority mismatch and geographic relocation required without clear strategic alignment.",
+    "skills_gap": "Missing: Financial services domain expertise, payments/fintech analytics, operational process management; overly technical/platform-focused for what appears to be an ops-oriented analytics role.",
+    "confidence": "low"
   },
   "mastercard_Managing-Consultant--Performance-Analytics--Advisors---Consulting-Services_R-266580": {
     "id": "mastercard_Managing-Consultant--Performance-Analytics--Advisors---Consulting-Services_R-266580",
@@ -41225,7 +41386,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:29:57.482853",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise in AdTech data platforms and product strategy has minimal overlap with a credit risk consulting role at a fintech company; the domain shift is substantial despite strong technical and leadership credentials.",
+    "skills_gap": "Missing: credit risk modeling, financial services regulatory expertise (Basel III, credit underwriting), risk assessment frameworks, and consulting delivery experience in banking/payments; domain knowledge in credit risk is critical and largely absent.",
+    "confidence": "low"
   },
   "mastercard_Senior-Program-Manager--SVQ-_R-276825-1": {
     "id": "mastercard_Senior-Program-Manager--SVQ-_R-276825-1",
@@ -41236,7 +41404,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:04.180460",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Preethi's deep expertise in data platforms and AdTech product leadership misaligns with a program management role at a financial services company; without a job description, significant uncertainty exists about SVQ domain requirements.",
+    "skills_gap": "Missing financial services/payments industry experience, program/project management certifications (PMP/PRINCE2), and no evident background in Mastercard's core SVQ (likely Secure Verification or similar payments infrastructure) domain.",
+    "confidence": "low"
   },
   "mastercard_Managing-Consultant--Advisors---Consulting-Services--Performance-Analytics_R-256853": {
     "id": "mastercard_Managing-Consultant--Advisors---Consulting-Services--Performance-Analytics_R-256853",
@@ -41247,7 +41422,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:04.180477",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong analytics and data platform expertise translates to performance analytics, but consulting/advisory role represents significant career pivot from product leadership, and lack of job description limits confidence.",
+    "skills_gap": "Missing: management consulting experience, advisory/client-facing consulting delivery model, and Mastercard/payments domain knowledge; unclear if role requires technical IC work vs. pure advisory.",
+    "confidence": "low"
   },
   "mastercard_Director--Product-Management--Advanced-Analytics---AI_R-274671": {
     "id": "mastercard_Director--Product-Management--Advanced-Analytics---AI_R-274671",
@@ -41258,7 +41440,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:06.563415",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong data product and AI/ML expertise with proven scale, but AdTech background and petabyte-scale focus may not directly align with Mastercard's fintech analytics domain without seeing full job details.",
+    "skills_gap": "Financial services domain expertise, payment systems analytics, and fraud/risk intelligence frameworks not evident; Advanced Analytics role may require deeper statistical modeling or data science leadership background.",
+    "confidence": "low"
   },
   "mastercard_Director--Global-Product-Management---Platform-Growth---Optimization_R-275768": {
     "id": "mastercard_Director--Global-Product-Management---Platform-Growth---Optimization_R-275768",
@@ -41269,7 +41458,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:10.723075",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 58,
+    "ats_score": 52,
+    "resume_used": "DATA",
+    "reason": "Strong product leadership and platform scaling credentials, but AdTech/Data expertise may not translate directly to financial services platform optimization without visible fintech or payments experience.",
+    "skills_gap": "Missing demonstrated experience in payments ecosystems, financial services regulations (PCI-DSS, AML), merchant/issuer platforms, or B2B2C payment networks\u2014core to Mastercard's business model.",
+    "confidence": "low"
   },
   "mastercard_Senior-Technical-Program-Manager_R-276618-1": {
     "id": "mastercard_Senior-Technical-Program-Manager_R-276618-1",
@@ -41280,7 +41476,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:12.941205",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 35,
+    "resume_used": "DATA",
+    "reason": "Preethi's expertise is in data product leadership and platform strategy, while a Technical Program Manager role at Mastercard likely emphasizes program execution, vendor management, and cross-functional coordination rather than hands-on product vision and data architecture.",
+    "skills_gap": "Missing traditional TPM competencies: program governance frameworks, risk/dependency management, stakeholder reporting cadence, vendor/contract management, and payment/fintech domain experience; role appears to require operational program management rather than strategic product leadership.",
+    "confidence": "low"
   },
   "mastercard_Manager_R-268392": {
     "id": "mastercard_Manager_R-268392",
@@ -41291,7 +41494,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:12.941243",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 42,
+    "ats_score": 38,
+    "resume_used": "DATA",
+    "reason": "Senior product leader with petabyte-scale data platform expertise is significantly overqualified and misaligned with a marketing analytics manager role; lacks marketing domain focus and functional analytics depth despite strong data infrastructure background.",
+    "skills_gap": "Missing: marketing analytics, customer analytics, marketing funnel analysis, marketing attribution, campaign performance analytics; resume emphasizes data infrastructure and product strategy rather than marketing execution and insights.",
+    "confidence": "low"
   },
   "visa_Product-Operations-Lead_REF078305W": {
     "id": "visa_Product-Operations-Lead_REF078305W",
@@ -41302,7 +41512,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:14.945013",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Resume demonstrates world-class expertise in data platforms and AdTech, but Cards product management at Visa requires consumer payments, fintech, and payment systems domain knowledge with no indication of overlap.",
+    "skills_gap": "Missing: payments industry expertise, card product knowledge, fintech/banking systems, consumer financial services, PCI compliance, payment networks; resume is heavily specialized in data/analytics which is typically a support function in card products.",
+    "confidence": "low"
   },
   "visa_Manager--Argentina-Consumer-Product-Lead_REF078574W": {
     "id": "visa_Manager--Argentina-Consumer-Product-Lead_REF078574W",
@@ -41313,7 +41530,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:14.945044",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 35,
+    "ats_score": 28,
+    "resume_used": "DATA",
+    "reason": "Senior data/AdTech leader's expertise in B2B data platforms and enterprise analytics misaligns with a consumer-focused affluent segment product role at a payments company; domain shift and lack of consumer payments or luxury segment experience creates significant friction.",
+    "skills_gap": "Missing direct experience in consumer payments, financial services product management, affluent/wealth segment strategy, and Visa's core payment network/card products; background is heavily B2B/enterprise data vs. B2C financial services.",
+    "confidence": "low"
   },
   "visa_Director--Visa-Consulting-and-Analytics--VCA---Core-Consulting_REF081895W": {
     "id": "visa_Director--Visa-Consulting-and-Analytics--VCA---Core-Consulting_REF081895W",
@@ -41324,7 +41548,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:14.945090",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 45,
+    "resume_used": "DATA",
+    "reason": "Without a job description, scoring is conservative; Preethi's deep data platform and AdTech expertise is strong, but VCA consulting role likely emphasizes client-facing advisory and payments domain knowledge where her background is minimal.",
+    "skills_gap": "Missing: payments industry expertise, Visa ecosystem knowledge, management consulting experience, and client engagement/advisory skills that typically define VCA consulting roles.",
+    "confidence": "low"
   },
   "visa_Tape-Media-Operations-Program-Manager_REF078994W-1": {
     "id": "visa_Tape-Media-Operations-Program-Manager_REF078994W-1",
@@ -41335,7 +41566,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:17.015699",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 25,
+    "ats_score": 15,
+    "resume_used": "DATA",
+    "reason": "Tape Media Operations is a specialized infrastructure/operations role fundamentally misaligned with this candidate's 15+ year background in digital product strategy, data platforms, and revenue-focused product leadership.",
+    "skills_gap": "Missing: tape media operations, physical infrastructure management, IT operations, disaster recovery/backup systems; Resume heavily emphasizes product vision, analytics platforms, and revenue impact\u2014not operational systems management.",
+    "confidence": "low"
   },
   "visa_Senior-Product-Manager_REF078600W": {
     "id": "visa_Senior-Product-Manager_REF078600W",
@@ -41346,7 +41584,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:22.781332",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 62,
+    "ats_score": 58,
+    "resume_used": "DATA",
+    "reason": "Strong product leadership and data platform expertise align with senior PM role, but AdTech/FinTech background differs from Visa's payments/financial services focus; without job description, assessment is conservative.",
+    "skills_gap": "Missing direct payments industry experience, financial services domain knowledge, and fraud/risk management expertise likely critical for Visa; no mention of card networks, settlement systems, or payment infrastructure.",
+    "confidence": "low"
   },
   "visa_Analyst--Visa-Consulting-and-Analytics--VCA---Intelligence---Data-Solutions--AI-_REF073925W": {
     "id": "visa_Analyst--Visa-Consulting-and-Analytics--VCA---Intelligence---Data-Solutions--AI-_REF073925W",
@@ -41357,7 +41602,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:24.774522",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 45,
+    "ats_score": 52,
+    "resume_used": "DATA",
+    "reason": "Senior product leader with exceptional data platform expertise applying for analyst-level role at Visa; significant over-qualification in technical depth but unclear if VCA's intelligence solutions align with AdTech/petabyte-scale background, and title downgrade suggests potential fit mismatch.",
+    "skills_gap": "Missing: Visa's specific payment/fintech domain expertise, consulting delivery methodology, and likely lower technical depth required for analyst role; unclear if financial services data governance (PCI-DSS) experience exists.",
+    "confidence": "low"
   },
   "visa_Manager_REF081044W": {
     "id": "visa_Manager_REF081044W",
@@ -41368,7 +41620,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:26.732147",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 45,
+    "resume_used": "DATA",
+    "reason": "Strong data product and analytics leadership background, but Visa consulting role likely requires different expertise in financial services, payment systems, and consulting delivery models that aren't evident in AdTech/platform background.",
+    "skills_gap": "Missing: Financial services/payments domain expertise, consulting delivery methodology, Visa's product ecosystem knowledge; strong in: Data platforms, analytics, leadership\u2014but consulting role typically requires different client engagement and solution architecture patterns.",
+    "confidence": "low"
   },
   "walmart_Principal--Data-Analyst--Quality--Data-Ventures-_R-2477610": {
     "id": "walmart_Principal--Data-Analyst--Quality--Data-Ventures-_R-2477610",
@@ -41379,7 +41638,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:37.243938",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 48,
+    "resume_used": "DATA",
+    "reason": "Senior product leader's petabyte-scale platform expertise exceeds typical data analyst scope; lacks hands-on analytics, SQL-heavy investigation, and quality assurance focus that Principal Analyst roles typically require.",
+    "skills_gap": "Resume emphasizes product strategy and platform leadership over individual-contributor data analysis, quality testing methodologies, and root-cause investigation work typical of analyst-track roles.",
+    "confidence": "low"
   },
   "walmart_Group-Director--Data-Analytics---Business-Analytics-and-Tools_R-2496589": {
     "id": "walmart_Group-Director--Data-Analytics---Business-Analytics-and-Tools_R-2496589",
@@ -41390,7 +41656,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:43.807537",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and analytics leadership experience aligns well with Group Director role, but lack of retail/commerce domain expertise and no job description limits confidence in strategic fit.",
+    "skills_gap": "Missing retail analytics, e-commerce monetization strategy, and Walmart's specific business model context; no evidence of ads platform experience at scale comparable to Walmart Connect's potential scope.",
+    "confidence": "low"
   },
   "walmart_Senior-Manager--Data-Analytics_R-2476733": {
     "id": "walmart_Senior-Manager--Data-Analytics_R-2476733",
@@ -41401,7 +41674,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:30:43.807610",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 72,
+    "ats_score": 68,
+    "resume_used": "DATA",
+    "reason": "Strong data platform and analytics leadership background aligns well with Walmart Connect's likely need for analytics infrastructure at scale, though title suggests IC/management hybrid role rather than pure product leadership.",
+    "skills_gap": "Resume emphasizes product strategy and business impact over pure analytics engineering/infrastructure; may need to demonstrate hands-on analytics architecture and reporting platform depth typical of this specific role.",
+    "confidence": "low"
   },
   "walmart_XMLNAME--USA--Staff--Technical-Program-Manager_R-2472309": {
     "id": "walmart_XMLNAME--USA--Staff--Technical-Program-Manager_R-2472309",
@@ -41412,7 +41692,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:02.034777",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none",
+    "match_score": 52,
+    "ats_score": 45,
+    "resume_used": "DATA",
+    "reason": "Strong technical and leadership credentials, but Staff TPM role typically emphasizes program/project management and cross-functional coordination over product strategy and data platform expertise that dominate this resume.",
+    "skills_gap": "Resume lacks explicit program management, project portfolio management, and infrastructure/supply chain coordination experience typical of Walmart Connect's technical PMO needs; heavy product/data focus rather than program execution focus.",
+    "confidence": "low"
   },
   "wwr_5637905978008983032": {
     "id": "wwr_5637905978008983032",
@@ -41423,7 +41710,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:22.635800",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_961622595122999384": {
     "id": "wwr_961622595122999384",
@@ -41434,7 +41728,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:22.635825",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_37477967755623650": {
     "id": "wwr_37477967755623650",
@@ -41445,7 +41746,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:22.635836",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_3399868374371506465": {
     "id": "wwr_3399868374371506465",
@@ -41456,7 +41764,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:22.635848",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_4847438516784529542": {
     "id": "wwr_4847438516784529542",
@@ -41467,7 +41782,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:22.635861",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "wwr_7952194760368051204": {
     "id": "wwr_7952194760368051204",
@@ -41478,7 +41800,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:22.635870",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_d7a895abdad26eb27b5bc06d5d431bb0": {
     "id": "dice_d7a895abdad26eb27b5bc06d5d431bb0",
@@ -41489,7 +41818,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:23.089844",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0826ce9d1e0b7ff096a8d33c2a62d5d5": {
     "id": "dice_0826ce9d1e0b7ff096a8d33c2a62d5d5",
@@ -41500,7 +41836,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:23.690450",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_5582289dcab3bb0950c7b5e3e20bd0d1": {
     "id": "dice_5582289dcab3bb0950c7b5e3e20bd0d1",
@@ -41511,7 +41854,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:23.690456",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_b50a8b047c2a36acff1e95e3a3f407da": {
     "id": "dice_b50a8b047c2a36acff1e95e3a3f407da",
@@ -41522,7 +41872,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:23.690477",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c577f2207fb3b53009ceed624aa6d27c": {
     "id": "dice_c577f2207fb3b53009ceed624aa6d27c",
@@ -41533,7 +41890,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:23.690497",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_8eca5fc5cd478d49231b84a560380eb5": {
     "id": "dice_8eca5fc5cd478d49231b84a560380eb5",
@@ -41544,7 +41908,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:24.048033",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_47a3893322dbddac8bdc2b84b6571cbd": {
     "id": "dice_47a3893322dbddac8bdc2b84b6571cbd",
@@ -41555,7 +41926,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:24.048039",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_eda9c20dc7ed78334b74debbc217f4ac": {
     "id": "dice_eda9c20dc7ed78334b74debbc217f4ac",
@@ -41566,7 +41944,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:25.777221",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ec866432125bc7776016196992d68905": {
     "id": "dice_ec866432125bc7776016196992d68905",
@@ -41577,7 +41962,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:26.401020",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f023542554d11154d293eff53583c788": {
     "id": "dice_f023542554d11154d293eff53583c788",
@@ -41588,7 +41980,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:26.401037",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_a0ded5cb9a82c1f13b1ff8cd04d36652": {
     "id": "dice_a0ded5cb9a82c1f13b1ff8cd04d36652",
@@ -41599,7 +41998,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:26.401044",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f75640d42e8231e5d9cb35ee4159cdca": {
     "id": "dice_f75640d42e8231e5d9cb35ee4159cdca",
@@ -41610,7 +42016,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:26.401052",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_15087e3787bfd3b2422f4b6665f20650": {
     "id": "dice_15087e3787bfd3b2422f4b6665f20650",
@@ -41621,7 +42034,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:26.401058",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_fdf87fb013c2a529cba5ebb55b614170": {
     "id": "dice_fdf87fb013c2a529cba5ebb55b614170",
@@ -41632,7 +42052,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:26.401065",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f4ac6730b49cd5c43ac131414a2215cb": {
     "id": "dice_f4ac6730b49cd5c43ac131414a2215cb",
@@ -41643,7 +42070,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:26.401073",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_6124aa264f0d7f92b30fa9420fc3c6c5": {
     "id": "dice_6124aa264f0d7f92b30fa9420fc3c6c5",
@@ -41654,7 +42088,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:26.401086",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0cf2bd0ec14c22889f0e4aca3cafd3f0": {
     "id": "dice_0cf2bd0ec14c22889f0e4aca3cafd3f0",
@@ -41665,7 +42106,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:26.401102",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_d80b4ef9dceda19d74b89be91c94a761": {
     "id": "dice_d80b4ef9dceda19d74b89be91c94a761",
@@ -41676,7 +42124,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:26.667116",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0e9aa5e0bf2388b20d9f824cefba0867": {
     "id": "dice_0e9aa5e0bf2388b20d9f824cefba0867",
@@ -41687,7 +42142,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:26.667137",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_8dec286f4c6a1f3416de38b022708547": {
     "id": "dice_8dec286f4c6a1f3416de38b022708547",
@@ -41698,7 +42160,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:26.667152",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_35417129fb7aed7069f95c07f04dcd51": {
     "id": "dice_35417129fb7aed7069f95c07f04dcd51",
@@ -41709,7 +42178,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:27.028650",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_32a061f175a2ec2b633843c7f897738d": {
     "id": "dice_32a061f175a2ec2b633843c7f897738d",
@@ -41720,7 +42196,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:30.229516",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_4561584f16dc260045e140fdd0d5d155": {
     "id": "dice_4561584f16dc260045e140fdd0d5d155",
@@ -41731,7 +42214,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:30.229531",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0ccb8b93c34d0d06d138a8a3255e410f": {
     "id": "dice_0ccb8b93c34d0d06d138a8a3255e410f",
@@ -41742,7 +42232,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:30.229580",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_3bee4695e3f59de7995e3550d1aee92e": {
     "id": "dice_3bee4695e3f59de7995e3550d1aee92e",
@@ -41753,7 +42250,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:30.726701",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_79f4507cd8ad90506d254589e6e49f0c": {
     "id": "dice_79f4507cd8ad90506d254589e6e49f0c",
@@ -41764,7 +42268,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:30.726718",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9df94c5b4648b6b95909eda1136e1438": {
     "id": "dice_9df94c5b4648b6b95909eda1136e1438",
@@ -41775,7 +42286,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:30.726739",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_6c306538fefbb7e8c1f2e8dd7cebe948": {
     "id": "dice_6c306538fefbb7e8c1f2e8dd7cebe948",
@@ -41786,7 +42304,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:31.298501",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c858965ff41bcec6fc8f0f6ff68ec234": {
     "id": "dice_c858965ff41bcec6fc8f0f6ff68ec234",
@@ -41797,7 +42322,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:35.858422",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_a3e58904da68f6249526ed81085391cb": {
     "id": "dice_a3e58904da68f6249526ed81085391cb",
@@ -41808,7 +42340,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:40.456098",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_b844c4d35661918ad82aaca4f5aab192": {
     "id": "dice_b844c4d35661918ad82aaca4f5aab192",
@@ -41819,7 +42358,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:41.049668",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_5a28ae429af7cd8fcdf40c13f036d3a3": {
     "id": "dice_5a28ae429af7cd8fcdf40c13f036d3a3",
@@ -41830,7 +42376,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:41.049721",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ddc9d39015cd7160ea168544662ade47": {
     "id": "dice_ddc9d39015cd7160ea168544662ade47",
@@ -41841,7 +42394,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:41.049751",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_36fe0df83aad1d6e22df69421887c678": {
     "id": "dice_36fe0df83aad1d6e22df69421887c678",
@@ -41852,7 +42412,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:41.049762",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_14fb80f983afa83c52fff5c23d5a74ec": {
     "id": "dice_14fb80f983afa83c52fff5c23d5a74ec",
@@ -41863,7 +42430,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:41.049768",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_670d30a9ff024f633130a822efb8e64d": {
     "id": "dice_670d30a9ff024f633130a822efb8e64d",
@@ -41874,6 +42448,13 @@
     "posted_ts": 0,
     "found_date": "2026-05-06T15:31:41.291948",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
