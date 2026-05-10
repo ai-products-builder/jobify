@@ -44490,5 +44490,104 @@
     "skills_gap": "N/A",
     "confidence": "N/A",
     "description_source": "skipped"
+  },
+  "wwr_876874423122196847": {
+    "id": "wwr_876874423122196847",
+    "company": "We Work Remotely",
+    "title": "Affirm: Senior Product Manager, Fraud",
+    "location": "Remote",
+    "url": "https://weworkremotely.com/remote-jobs/affirm-senior-product-manager-fraud",
+    "posted_ts": 0,
+    "found_date": "2026-05-10T14:23:45.616057",
+    "status": "new",
+    "description": ""
+  },
+  "wwr_7886455308746263703": {
+    "id": "wwr_7886455308746263703",
+    "company": "We Work Remotely",
+    "title": "Deblock: Senior FinCrime Product Owner",
+    "location": "Remote",
+    "url": "https://weworkremotely.com/remote-jobs/deblock-senior-fincrime-product-owner",
+    "posted_ts": 0,
+    "found_date": "2026-05-10T14:23:45.616072",
+    "status": "new",
+    "description": ""
+  },
+  "dice_b218a65bbd72c3f0d22567590f58e3ac": {
+    "id": "dice_b218a65bbd72c3f0d22567590f58e3ac",
+    "company": "Dice",
+    "title": "Lead, AI Solutions & Enablement, Uber Advertising",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-05-10T14:23:50.970256",
+    "status": "new",
+    "description": ""
+  },
+  "dice_acd4d606ecc36d17baf29aa7a38bd17a": {
+    "id": "dice_acd4d606ecc36d17baf29aa7a38bd17a",
+    "company": "Dice",
+    "title": "Manager I Business Intelligence (Consumer Loan Operational Analytics)",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-05-10T14:23:52.996027",
+    "status": "new",
+    "description": ""
+  },
+  "dice_64ec0fa39122abff84815c002ecd1634": {
+    "id": "dice_64ec0fa39122abff84815c002ecd1634",
+    "company": "Dice",
+    "title": "AI Solution Product Manager",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-05-10T14:23:54.925706",
+    "status": "new",
+    "description": ""
+  },
+  "dice_524e140358e587624c26dc11fc3953fd": {
+    "id": "dice_524e140358e587624c26dc11fc3953fd",
+    "company": "Dice",
+    "title": "Product Manager, Agentic AI",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-05-10T14:23:54.925752",
+    "status": "new",
+    "description": ""
+  },
+  "dice_cc263364b926121a630148139d0e146b": {
+    "id": "dice_cc263364b926121a630148139d0e146b",
+    "company": "Dice",
+    "title": "Sr. IT Project/Program Manager",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-05-10T14:24:01.838458",
+    "status": "new",
+    "description": ""
+  },
+  "dice_a4a2a35d76fbcdb8e6801a40829a84c9": {
+    "id": "dice_a4a2a35d76fbcdb8e6801a40829a84c9",
+    "company": "Dice",
+    "title": "Program Manager, IT Supply Chain PMO",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-05-10T14:24:02.341143",
+    "status": "new",
+    "description": ""
+  },
+  "dice_8d4fa90c912aedca32c7061d96ae15da": {
+    "id": "dice_8d4fa90c912aedca32c7061d96ae15da",
+    "company": "Dice",
+    "title": "S/4 HANA Technical Program Manager",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-05-10T14:24:02.341150",
+    "status": "new",
+    "description": ""
   }
 }
