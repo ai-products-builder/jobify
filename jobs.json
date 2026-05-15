@@ -47158,7 +47158,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:20:35.798849",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "netflix_790315927621": {
     "id": "netflix_790315927621",
@@ -47169,7 +47170,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:20:35.798866",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "innovid_8551720002": {
     "id": "innovid_8551720002",
@@ -47180,7 +47182,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:20:42.212456",
     "status": "new",
-    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;h5&gt;&lt;strong&gt;Innovid is the leading independent omnichannel ad tech platform, empowering marketers to create, deliver, measure, and optimize ad-supported experiences that people love. In 2025, Innovid and Flashtalking merged to create a transparent, scalable alternative to big-tech, walled-gardens, and point solutions across CTV, digital, linear, and social channels. As part of Mediaocean, Innovid is tied into the industry\u2019s core ad infrastru"
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;h5&gt;&lt;strong&gt;Innovid is the leading independent omnichannel ad tech platform, empowering marketers to create, deliver, measure, and optimize ad-supported experiences that people love. In 2025, Innovid and Flashtalking merged to create a transparent, scalable alternative to big-tech, walled-gardens, and point solutions across CTV, digital, linear, and social channels. As part of Mediaocean, Innovid is tied into the industry\u2019s core ad infrastru",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: innovid",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "pinterest_7525112": {
     "id": "pinterest_7525112",
@@ -47191,7 +47200,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:20:44.696033",
     "status": "new",
-    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;About Pinterest:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Millions of people around the world come to our platform to find creative ideas, dream about new possibilities and plan for memories that will last a lifetime. At Pinterest, we\u2019re on a mission to bring everyone the inspiration to create a life they love, and that starts with the people behind the product.&lt;/p&gt;\n&lt;p&gt;Discover a career where you ignite innovation for million"
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;About Pinterest:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Millions of people around the world come to our platform to find creative ideas, dream about new possibilities and plan for memories that will last a lifetime. At Pinterest, we\u2019re on a mission to bring everyone the inspiration to create a life they love, and that starts with the people behind the product.&lt;/p&gt;\n&lt;p&gt;Discover a career where you ignite innovation for million",
+    "description_source": "stored"
   },
   "pinterest_7890195": {
     "id": "pinterest_7890195",
@@ -47202,7 +47212,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:20:44.696040",
     "status": "new",
-    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;About Pinterest:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Millions of people around the world come to our platform to find creative ideas, dream about new possibilities and plan for memories that will last a lifetime. At Pinterest, we\u2019re on a mission to bring everyone the inspiration to create a life they love, and that starts with the people behind the product.&lt;/p&gt;\n&lt;p&gt;Discover a career where you ignite innovation for million"
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;About Pinterest:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Millions of people around the world come to our platform to find creative ideas, dream about new possibilities and plan for memories that will last a lifetime. At Pinterest, we\u2019re on a mission to bring everyone the inspiration to create a life they love, and that starts with the people behind the product.&lt;/p&gt;\n&lt;p&gt;Discover a career where you ignite innovation for million",
+    "description_source": "stored"
   },
   "pinterest_7481476": {
     "id": "pinterest_7481476",
@@ -47213,7 +47224,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:20:44.696231",
     "status": "new",
-    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;About Pinterest:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Millions of people around the world come to our platform to find creative ideas, dream about new possibilities and plan for memories that will last a lifetime. At Pinterest, we\u2019re on a mission to bring everyone the inspiration to create a life they love, and that starts with the people behind the product.&lt;/p&gt;\n&lt;p&gt;Discover a career where you ignite innovation for million"
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;&lt;strong&gt;About Pinterest:&lt;/strong&gt;&lt;/p&gt;\n&lt;p&gt;Millions of people around the world come to our platform to find creative ideas, dream about new possibilities and plan for memories that will last a lifetime. At Pinterest, we\u2019re on a mission to bring everyone the inspiration to create a life they love, and that starts with the people behind the product.&lt;/p&gt;\n&lt;p&gt;Discover a career where you ignite innovation for million",
+    "description_source": "stored"
   },
   "salesforce_Associate-Product-Manager_JR342739-1": {
     "id": "salesforce_Associate-Product-Manager_JR342739-1",
@@ -47224,7 +47236,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:20:52.096308",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "salesforce_Operations-Manager--Data-Solutions_JR340193": {
     "id": "salesforce_Operations-Manager--Data-Solutions_JR340193",
@@ -47235,7 +47248,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:20:52.096335",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "salesforce_Renewals-Strategy---Analytics--Senior-Analyst_JR338290": {
     "id": "salesforce_Renewals-Strategy---Analytics--Senior-Analyst_JR338290",
@@ -47246,7 +47260,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:20:53.826489",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "salesforce_Strategy---Operations-Senior-Manager--Data-Solutions_JR340194-1": {
     "id": "salesforce_Strategy---Operations-Senior-Manager--Data-Solutions_JR340194-1",
@@ -47257,7 +47272,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:20:56.152035",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "capitalone_Manager--Data-Science---PULSE-Network--Business-Intelligence_R242684-1": {
     "id": "capitalone_Manager--Data-Science---PULSE-Network--Business-Intelligence_R242684-1",
@@ -47268,7 +47284,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:18.252338",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "capitalone_Director--Product-Management---Security---Data-Intelligence-Solutions_R242678-2": {
     "id": "capitalone_Director--Product-Management---Security---Data-Intelligence-Solutions_R242678-2",
@@ -47279,7 +47296,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:18.252354",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "capitalone_Principal-Data-Analyst--Card-Tech-Workforce-Strategy_R242591-1": {
     "id": "capitalone_Principal-Data-Analyst--Card-Tech-Workforce-Strategy_R242591-1",
@@ -47290,7 +47308,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:18.252361",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "capitalone_Manager-Data-Analyst---Data-Strategy-and-Risk-Innovation--PULSE_R242670": {
     "id": "capitalone_Manager-Data-Analyst---Data-Strategy-and-Risk-Innovation--PULSE_R242670",
@@ -47301,7 +47320,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:18.252369",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "capitalone_Product-Manager---Card-Team_R242660-1": {
     "id": "capitalone_Product-Manager---Card-Team_R242660-1",
@@ -47312,7 +47332,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:18.252376",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "mastercard_Senior-Product-Manager-Technical--Cloud-_R-277926": {
     "id": "mastercard_Senior-Product-Manager-Technical--Cloud-_R-277926",
@@ -47323,7 +47344,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:25.496564",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "mastercard_Senior-Data-Analyst_R-277101": {
     "id": "mastercard_Senior-Data-Analyst_R-277101",
@@ -47334,7 +47356,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:25.496579",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "mastercard_Managing-Consultant--Advisors---Consulting-Services---Performance-Analytics_R-267686": {
     "id": "mastercard_Managing-Consultant--Advisors---Consulting-Services---Performance-Analytics_R-267686",
@@ -47345,7 +47368,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:25.496598",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "mastercard_Director---Optimization---Analytics--Mastercard-Move--NAM-_R-277887": {
     "id": "mastercard_Director---Optimization---Analytics--Mastercard-Move--NAM-_R-277887",
@@ -47356,7 +47380,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:25.496636",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "mastercard_Senior-Platform-Engineer_R-277518": {
     "id": "mastercard_Senior-Platform-Engineer_R-277518",
@@ -47367,7 +47392,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:27.458306",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "visa_Senior-Product-Manager---Value-Added-Services_REF081244W-1": {
     "id": "visa_Senior-Product-Manager---Value-Added-Services_REF081244W-1",
@@ -47378,7 +47404,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:41.283917",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "visa_Sr-Product-Manager---Payment-Rails-LAC_REF081990W": {
     "id": "visa_Sr-Product-Manager---Payment-Rails-LAC_REF081990W",
@@ -47389,7 +47416,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:41.283936",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "visa_Senior-Product-Manager---Card-Authorization_REF073890W": {
     "id": "visa_Senior-Product-Manager---Card-Authorization_REF073890W",
@@ -47400,7 +47428,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:41.284000",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "visa_Manager--Credit-Solutions_REF078944W": {
     "id": "visa_Manager--Credit-Solutions_REF078944W",
@@ -47411,7 +47440,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:41.284020",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "visa_Data-and-Analytics-Director_REF082248W": {
     "id": "visa_Data-and-Analytics-Director_REF082248W",
@@ -47422,7 +47452,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:46.956249",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "visa_Senior-Manager--Visa-Consulting-and-Analytics--VCA---Core-Consulting-Practice_REF082255W": {
     "id": "visa_Senior-Manager--Visa-Consulting-and-Analytics--VCA---Core-Consulting-Practice_REF082255W",
@@ -47433,7 +47464,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:46.956263",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "visa_Sr-Product-Manager_REF082257W": {
     "id": "visa_Sr-Product-Manager_REF082257W",
@@ -47444,7 +47476,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:21:48.902903",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "walmart_Data-Analyst-II_R-2406056": {
     "id": "walmart_Data-Analyst-II_R-2406056",
@@ -47455,7 +47488,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:22:09.556706",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "walmart_Principal--Product-Manager---Marketplace-Trust_R-2493364-2": {
     "id": "walmart_Principal--Product-Manager---Marketplace-Trust_R-2493364-2",
@@ -47466,7 +47500,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:22:22.977461",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "walmart_STAFF--TECHNICAL-PROGRAM-MANAGER_R-2414007": {
     "id": "walmart_STAFF--TECHNICAL-PROGRAM-MANAGER_R-2414007",
@@ -47477,7 +47512,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:22:37.799559",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "dice_e2f761dfcf0bd41307b08128fb8a9362": {
     "id": "dice_e2f761dfcf0bd41307b08128fb8a9362",
@@ -47488,7 +47524,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:22:52.837322",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_3d18cf09c03402dc48b8cd1fafbb9dd2": {
     "id": "dice_3d18cf09c03402dc48b8cd1fafbb9dd2",
@@ -47499,7 +47542,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:22:52.837328",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9a88a81f3857d8faabd8961e6fd76e38": {
     "id": "dice_9a88a81f3857d8faabd8961e6fd76e38",
@@ -47510,7 +47560,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:22:52.837334",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_984095ad0ffb36af5531bab1c4dae0e6": {
     "id": "dice_984095ad0ffb36af5531bab1c4dae0e6",
@@ -47521,7 +47578,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:22:52.837340",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_9bc9ed07867b684da34da12a97bba7ed": {
     "id": "dice_9bc9ed07867b684da34da12a97bba7ed",
@@ -47532,7 +47596,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:22:52.837354",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_25b0a833a306ad68dc0d362b7fae1773": {
     "id": "dice_25b0a833a306ad68dc0d362b7fae1773",
@@ -47543,7 +47614,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:22:52.837365",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e9334f3a047a0662787f2ed90cddc9a8": {
     "id": "dice_e9334f3a047a0662787f2ed90cddc9a8",
@@ -47554,7 +47632,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:22:52.837376",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_de986584be11b7001c55897c5bc50d75": {
     "id": "dice_de986584be11b7001c55897c5bc50d75",
@@ -47565,7 +47650,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:22:54.667168",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e4d577efb89942ba4555657de83647c6": {
     "id": "dice_e4d577efb89942ba4555657de83647c6",
@@ -47576,7 +47668,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:22:54.837654",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e5d68a787f8d917b77d4b3dd1630dde1": {
     "id": "dice_e5d68a787f8d917b77d4b3dd1630dde1",
@@ -47587,7 +47686,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:22:59.532110",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_167c59281dd46caa24cf2610833a7c23": {
     "id": "dice_167c59281dd46caa24cf2610833a7c23",
@@ -47598,7 +47704,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:22:59.532208",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_0cf9549a1c114465c6c5fd7ce98f2ef6": {
     "id": "dice_0cf9549a1c114465c6c5fd7ce98f2ef6",
@@ -47609,7 +47722,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:23:03.071313",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2f550161fe10f57b2db854d247f0e2c1": {
     "id": "dice_2f550161fe10f57b2db854d247f0e2c1",
@@ -47620,7 +47740,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:23:03.071320",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e9f32b74a1d66bd0f1fe7cbd0a849b39": {
     "id": "dice_e9f32b74a1d66bd0f1fe7cbd0a849b39",
@@ -47631,7 +47758,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:23:04.103412",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ed66a0bb7b03e69684527598756cc5ea": {
     "id": "dice_ed66a0bb7b03e69684527598756cc5ea",
@@ -47642,7 +47776,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:23:04.103482",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_8b46b448e419069a73e9bf46c4772111": {
     "id": "dice_8b46b448e419069a73e9bf46c4772111",
@@ -47653,7 +47794,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:23:04.428803",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_94807a038d85ec3fbbe21fd39ee9ac51": {
     "id": "dice_94807a038d85ec3fbbe21fd39ee9ac51",
@@ -47664,7 +47812,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:23:04.428815",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_37d2e93ab2a4c423df854e0f805e9a6c": {
     "id": "dice_37d2e93ab2a4c423df854e0f805e9a6c",
@@ -47675,7 +47830,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:23:04.428878",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ec3db1970f2c0f09a4143d75f286d8d1": {
     "id": "dice_ec3db1970f2c0f09a4143d75f286d8d1",
@@ -47686,7 +47848,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:23:04.428898",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_48dd821ebd75ce1b74bf7878413ccc5f": {
     "id": "dice_48dd821ebd75ce1b74bf7878413ccc5f",
@@ -47697,6 +47866,13 @@
     "posted_ts": 0,
     "found_date": "2026-05-15T15:23:04.596624",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
