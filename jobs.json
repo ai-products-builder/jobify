@@ -47884,7 +47884,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:24:09.651712",
     "status": "new",
-    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;h2 style=&quot;font-family: GothamBold,Helvetica,Arial,sans-serif; color: #662d91;&quot;&gt;Teamwork makes the stream work.&lt;/h2&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;h3 style=&quot;font-family: GothamBold,Helvetica,Arial,sans-serif;&quot;&gt;&lt;strong&gt;Roku is changing how the world watches TV&lt;/strong&gt;&lt;/h3&gt;\n&lt;p&gt;Roku is the #1 TV streaming platform in the U.S., Canada, and Mexico, and we&#39;ve set our sights on powering every "
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;h2 style=&quot;font-family: GothamBold,Helvetica,Arial,sans-serif; color: #662d91;&quot;&gt;Teamwork makes the stream work.&lt;/h2&gt;\n&lt;p&gt;&amp;nbsp;&lt;/p&gt;\n&lt;h3 style=&quot;font-family: GothamBold,Helvetica,Arial,sans-serif;&quot;&gt;&lt;strong&gt;Roku is changing how the world watches TV&lt;/strong&gt;&lt;/h3&gt;\n&lt;p&gt;Roku is the #1 TV streaming platform in the U.S., Canada, and Mexico, and we&#39;ve set our sights on powering every ",
+    "description_source": "stored"
   },
   "hubspotjobs_7749590": {
     "id": "hubspotjobs_7749590",
@@ -47895,7 +47896,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:24:10.666707",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;POS-32394&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;h2&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Our mission at HubSpot is to help millions of organizations grow better.&lt;/p&gt;\n&lt;p&gt;As a Senior AEO Growth Marketer, you\u2019ll own the post-launch go-to-market strategy and growth motion for HubSpot AEO. You\u2019ll be the dedicated marketing owner responsible for driving growth from AI visibility to demand generation for HubSpot AEO. This role combines ans"
+    "description": "&lt;p&gt;&lt;strong&gt;POS-32394&lt;/strong&gt;&lt;/p&gt;\n&lt;hr&gt;\n&lt;h2&gt;&lt;strong&gt;Role Summary&lt;/strong&gt;&lt;/h2&gt;\n&lt;p&gt;Our mission at HubSpot is to help millions of organizations grow better.&lt;/p&gt;\n&lt;p&gt;As a Senior AEO Growth Marketer, you\u2019ll own the post-launch go-to-market strategy and growth motion for HubSpot AEO. You\u2019ll be the dedicated marketing owner responsible for driving growth from AI visibility to demand generation for HubSpot AEO. This role combines ans",
+    "description_source": "stored"
   },
   "thetradedesk_5137436007": {
     "id": "thetradedesk_5137436007",
@@ -47906,7 +47908,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:24:11.044718",
     "status": "new",
-    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;The Trade Desk is a global technology company and the world\u2019s leading independent platform for digital advertising, with nearly 4,000 employees across more than 30 offices. Our technology helps advertisers reach the right audiences across the open internet \u2014 from streaming TV and podcasts to mobile apps, news, and more.&amp;nbsp; &lt;br&gt;&lt;br&gt;Advertising powers the content people love. By making it more transparent, effective, and respon"
+    "description": "&lt;div class=&quot;content-intro&quot;&gt;&lt;p&gt;The Trade Desk is a global technology company and the world\u2019s leading independent platform for digital advertising, with nearly 4,000 employees across more than 30 offices. Our technology helps advertisers reach the right audiences across the open internet \u2014 from streaming TV and podcasts to mobile apps, news, and more.&amp;nbsp; &lt;br&gt;&lt;br&gt;Advertising powers the content people love. By making it more transparent, effective, and respon",
+    "description_source": "stored"
   },
   "capitalone_Senior-Director--Data-Analysis_R242754": {
     "id": "capitalone_Senior-Director--Data-Analysis_R242754",
@@ -47917,7 +47920,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:24:46.039866",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "mastercard_Manager--Data-Integrations--Incentive-Compensation-Management_R-277856": {
     "id": "mastercard_Manager--Data-Integrations--Incentive-Compensation-Management_R-277856",
@@ -47928,7 +47932,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:24:55.701781",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "walmart_XMLNAME--USA--Product-Manager-III_R-2496948": {
     "id": "walmart_XMLNAME--USA--Product-Manager-III_R-2496948",
@@ -47939,7 +47944,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:25:28.059920",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "dice_98aff3968907665db09530f96f376d33": {
     "id": "dice_98aff3968907665db09530f96f376d33",
@@ -47950,7 +47956,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:26:13.466044",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_7f3bf91e5c09f3b25eae452fea4b2f8c": {
     "id": "dice_7f3bf91e5c09f3b25eae452fea4b2f8c",
@@ -47961,7 +47974,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:26:14.007766",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2bd1e09c691d44ea5638f6c3f08ef83c": {
     "id": "dice_2bd1e09c691d44ea5638f6c3f08ef83c",
@@ -47972,7 +47992,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:26:14.007796",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c6289f24efacbbab5e29961bd4c49187": {
     "id": "dice_c6289f24efacbbab5e29961bd4c49187",
@@ -47983,7 +48010,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:26:16.580111",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f20a835a238b47dd6ed2c7b5b1c5f1a9": {
     "id": "dice_f20a835a238b47dd6ed2c7b5b1c5f1a9",
@@ -47994,7 +48028,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:26:16.580153",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_07e8e513e6027ae77c85647058c0b37e": {
     "id": "dice_07e8e513e6027ae77c85647058c0b37e",
@@ -48005,7 +48046,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:26:16.767110",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_76709ebe5657929e59aad647522bbf4d": {
     "id": "dice_76709ebe5657929e59aad647522bbf4d",
@@ -48016,7 +48064,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:26:18.890197",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e6f76deb50cfa05d3fe776052ed4d756": {
     "id": "dice_e6f76deb50cfa05d3fe776052ed4d756",
@@ -48027,7 +48082,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:26:20.051267",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c24f3397cb3bd0ddfe963c966af3e30d": {
     "id": "dice_c24f3397cb3bd0ddfe963c966af3e30d",
@@ -48038,7 +48100,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:26:22.147839",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_7d0dde9e7ddf7f402fc7c24b0ba58348": {
     "id": "dice_7d0dde9e7ddf7f402fc7c24b0ba58348",
@@ -48049,7 +48118,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:26:23.815458",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_741e0ba58c16ab2799aaed1b575403d4": {
     "id": "dice_741e0ba58c16ab2799aaed1b575403d4",
@@ -48060,7 +48136,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:26:27.995001",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_93ddae8dab19bcd0342e24681b7ab664": {
     "id": "dice_93ddae8dab19bcd0342e24681b7ab664",
@@ -48071,7 +48154,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:26:27.995027",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_dcb15bd3633b80b32ab6e6df52225158": {
     "id": "dice_dcb15bd3633b80b32ab6e6df52225158",
@@ -48082,6 +48172,13 @@
     "posted_ts": 0,
     "found_date": "2026-05-16T14:26:27.995045",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
