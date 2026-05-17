@@ -48180,5 +48180,60 @@
     "skills_gap": "N/A",
     "confidence": "N/A",
     "description_source": "skipped"
+  },
+  "wwr_5984703315087912345": {
+    "id": "wwr_5984703315087912345",
+    "company": "We Work Remotely",
+    "title": "Affirm: Senior Product Manager, Card Experience",
+    "location": "Remote",
+    "url": "https://weworkremotely.com/remote-jobs/affirm-senior-product-manager-card-experience",
+    "posted_ts": 0,
+    "found_date": "2026-05-17T14:29:26.126070",
+    "status": "new",
+    "description": ""
+  },
+  "dice_2877f9ee98effc00a8cf772f627b841b": {
+    "id": "dice_2877f9ee98effc00a8cf772f627b841b",
+    "company": "Dice",
+    "title": "Sr Product Manager",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-05-17T14:29:26.395872",
+    "status": "new",
+    "description": ""
+  },
+  "dice_6a4d1f3981da365908571043c1df468f": {
+    "id": "dice_6a4d1f3981da365908571043c1df468f",
+    "company": "Dice",
+    "title": "Sr. Product Manager, MarTech (Engagement, CDP & Activation Platforms)",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-05-17T14:29:27.282152",
+    "status": "new",
+    "description": ""
+  },
+  "dice_ba72ae7b0f563974ead20adcd20bae1d": {
+    "id": "dice_ba72ae7b0f563974ead20adcd20bae1d",
+    "company": "Dice",
+    "title": "Manager, Actuarial Analytics",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-05-17T14:29:33.029596",
+    "status": "new",
+    "description": ""
+  },
+  "dice_53546086e115a0c7f1a83187d4505c9b": {
+    "id": "dice_53546086e115a0c7f1a83187d4505c9b",
+    "company": "Dice",
+    "title": "Director, AI Product Definition & Execution",
+    "location": "",
+    "url": "https://dice.com",
+    "posted_ts": 0,
+    "found_date": "2026-05-17T14:29:39.718223",
+    "status": "new",
+    "description": ""
   }
 }
