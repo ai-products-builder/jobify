@@ -48190,7 +48190,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-17T14:29:26.126070",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: we work remotely",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2877f9ee98effc00a8cf772f627b841b": {
     "id": "dice_2877f9ee98effc00a8cf772f627b841b",
@@ -48201,7 +48208,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-17T14:29:26.395872",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_6a4d1f3981da365908571043c1df468f": {
     "id": "dice_6a4d1f3981da365908571043c1df468f",
@@ -48212,7 +48226,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-17T14:29:27.282152",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ba72ae7b0f563974ead20adcd20bae1d": {
     "id": "dice_ba72ae7b0f563974ead20adcd20bae1d",
@@ -48223,7 +48244,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-17T14:29:33.029596",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_53546086e115a0c7f1a83187d4505c9b": {
     "id": "dice_53546086e115a0c7f1a83187d4505c9b",
@@ -48234,6 +48262,13 @@
     "posted_ts": 0,
     "found_date": "2026-05-17T14:29:39.718223",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   }
 }
