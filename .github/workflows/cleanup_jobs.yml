@@ -1,0 +1,52 @@
+name: Cleanup Duplicate Jobs
+
+on:
+  workflow_dispatch:
+    inputs:
+      apply:
+        description: "Actually write changes? (false = dry-run, true = apply + commit)"
+        required: true
+        default: "false"
+        type: choice
+        options:
+          - "false"
+          - "true"
+
+permissions:
+  contents: write
+
+jobs:
+  cleanup:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Dry-run (always)
+        run: python3 scripts/cleanup_jobs.py
+
+      - name: Apply changes
+        if: ${{ inputs.apply == 'true' }}
+        run: python3 scripts/cleanup_jobs.py --apply --backup
+
+      - name: Commit deduped jobs.json
+        if: ${{ inputs.apply == 'true' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git add jobs.json jobs.json.bak.* 2>/dev/null || true
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+          else
+            git commit -m "chore: dedup existing jobs.json [skip ci]"
+            git push
+          fi
