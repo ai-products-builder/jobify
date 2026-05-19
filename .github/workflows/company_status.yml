@@ -1,0 +1,91 @@
+name: Company Status Check
+
+on:
+  workflow_dispatch:
+    inputs:
+      commit_status:
+        description: "Commit scripts/company_status.json back to the repo?"
+        required: true
+        default: "true"
+        type: choice
+        options:
+          - "true"
+          - "false"
+  schedule:
+    # Weekly check, Mondays at 7am UTC (midnight PT) — catches newly broken slugs
+    - cron: "0 7 * * 1"
+
+permissions:
+  contents: write
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install requests
+
+      - name: Run company status check
+        run: python3 scripts/company_status.py
+
+      - name: Show summary in run output
+        if: always()
+        run: |
+          echo "## Company Status Summary" >> $GITHUB_STEP_SUMMARY
+          echo '```json' >> $GITHUB_STEP_SUMMARY
+          python3 -c "
+          import json
+          d = json.load(open('scripts/company_status.json'))
+          print(json.dumps(d['summary'], indent=2))
+          " >> $GITHUB_STEP_SUMMARY
+          echo '```' >> $GITHUB_STEP_SUMMARY
+
+          echo "## Broken scrapers (HTTP_ERROR / EXCEPTION / TIMEOUT)" >> $GITHUB_STEP_SUMMARY
+          python3 -c "
+          import json
+          d = json.load(open('scripts/company_status.json'))
+          bad = [c for c in d['companies'] if c['status'] in ('HTTP_ERROR', 'EXCEPTION', 'TIMEOUT')]
+          if not bad:
+              print('None — all active scrapers responded.')
+          else:
+              print('| Company | ATS | Slug | Status | HTTP |')
+              print('|---|---|---|---|---|')
+              for c in bad:
+                  print(f\"| {c['company']} | {c['ats']} | {c.get('slug','')} | {c['status']} | {c.get('http_code',0)} |\")
+          " >> $GITHUB_STEP_SUMMARY
+
+          echo "## Empty scrapers (returned 0 jobs — slug may be wrong)" >> $GITHUB_STEP_SUMMARY
+          python3 -c "
+          import json
+          d = json.load(open('scripts/company_status.json'))
+          empty = [c for c in d['companies'] if c['status'] == 'EMPTY']
+          if not empty:
+              print('None.')
+          else:
+              print('| Company | ATS | Slug |')
+              print('|---|---|---|')
+              for c in empty:
+                  print(f\"| {c['company']} | {c['ats']} | {c.get('slug','')} |\")
+          " >> $GITHUB_STEP_SUMMARY
+
+      - name: Commit company_status.json
+        if: ${{ inputs.commit_status == 'true' || github.event_name == 'schedule' }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git remote set-url origin "https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }}.git"
+          git add scripts/company_status.json
+          if git diff --cached --quiet; then
+            echo "No changes to company_status.json"
+          else
+            git commit -m "chore: update company_status.json [skip ci]"
+            git push
+          fi
