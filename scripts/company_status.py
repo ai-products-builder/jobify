@@ -33,22 +33,22 @@ import sys
 from datetime import datetime
 from time import sleep
 
-# Import the registries from scraper.py so this stays in sync automatically
-sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-try:
-    from scraper import (
-        GREENHOUSE_COMPANIES,
-        LEVER_COMPANIES,
-        WORKDAY_COMPANIES,
-    )
-except ImportError:
-    # Allow running from repo root too
-    sys.path.insert(0, "scripts")
-    from scraper import (
-        GREENHOUSE_COMPANIES,
-        LEVER_COMPANIES,
-        WORKDAY_COMPANIES,
-    )
+# Import the registries from scraper.py so this stays in sync automatically.
+# Handles three layouts:
+#   1. Both files in scripts/         (this file's dir)
+#   2. Both files at repo root        (cwd)
+#   3. company_status.py in scripts/, scraper.py at repo root   ← your layout
+_this_dir = os.path.dirname(os.path.abspath(__file__))
+_repo_root = os.path.dirname(_this_dir)  # parent of scripts/
+for _p in (_this_dir, _repo_root, os.getcwd(), "scripts"):
+    if _p and _p not in sys.path:
+        sys.path.insert(0, _p)
+
+from scraper import (
+    GREENHOUSE_COMPANIES,
+    LEVER_COMPANIES,
+    WORKDAY_COMPANIES,
+)
 
 STATUS_FILE = os.path.join(os.path.dirname(__file__), "company_status.json")
 TIMEOUT = 10
