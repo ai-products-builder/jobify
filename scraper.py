@@ -1008,13 +1008,12 @@ def run():
     # Dedup — aggressive: collapses scraper-overlap dupes, normalizes seniority
     # noise in titles, and merges entries with overlapping locations. See
     # job_dedup.py for the full ruleset.
-    try:
-        from job_dedup import dedup_job_list
-    except ImportError:
-        # When running from repo root vs scripts/, both layouts should work
-        import sys, os
-        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
-        from job_dedup import dedup_job_list
+    import sys as _sys, os as _os
+    _here = _os.path.dirname(_os.path.abspath(__file__))
+    for _p in (_here, _os.path.dirname(_here), _os.getcwd(), "scripts"):
+        if _p and _p not in _sys.path:
+            _sys.path.insert(0, _p)
+    from job_dedup import dedup_job_list
 
     deduped, dupes_collapsed = dedup_job_list(all_fresh)
     print(f"\nDedup: {len(all_fresh)} scraped → {len(deduped)} unique ({dupes_collapsed} dupes collapsed)")
