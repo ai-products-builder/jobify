@@ -48,6 +48,10 @@ from scraper import (
     GREENHOUSE_COMPANIES,
     LEVER_COMPANIES,
     WORKDAY_COMPANIES,
+    ASHBY_COMPANIES,
+    PHENOM_COMPANIES,
+    AVATURE_COMPANIES,
+    HIBOB_COMPANIES,
 )
 
 STATUS_FILE = os.path.join(os.path.dirname(__file__), "company_status.json")
@@ -120,7 +124,14 @@ def probe_workday(tenant, wd_num, site):
     base = f"https://{tenant}.wd{wd_num}.myworkdayjobs.com"
     url = f"{base}/wday/cxs/{tenant}/{site}/jobs"
     try:
-        payload = {"appliedFacets": {}, "limit": 1, "offset": 0, "searchText": ""}
+        # CRITICAL: Workday's CXS API rejects empty searchText with 422.
+        # Send a real keyword to validate the endpoint actually works.
+        payload = {
+            "appliedFacets": {},
+            "limit": 5,
+            "offset": 0,
+            "searchText": "product manager",
+        }
         r = requests.post(url, json=payload, headers={
             "User-Agent": "Mozilla/5.0",
             "Content-Type": "application/json",
@@ -130,7 +141,6 @@ def probe_workday(tenant, wd_num, site):
         if r.status_code != 200:
             return {"status": "HTTP_ERROR", "http_code": r.status_code, "jobs_total": 0, "url": url}
         data = r.json()
-        # Workday returns "total" in some responses; otherwise count jobPostings
         total = data.get("total", len(data.get("jobPostings", [])))
         return {
             "status": "OK" if total > 0 else "EMPTY",
@@ -140,6 +150,74 @@ def probe_workday(tenant, wd_num, site):
         }
     except requests.Timeout:
         return {"status": "TIMEOUT", "http_code": 0, "jobs_total": 0, "url": url}
+    except Exception as e:
+        return {"status": "EXCEPTION", "http_code": 0, "jobs_total": 0, "url": url, "error": str(e)[:200]}
+
+
+def probe_ashby(slug):
+    url = f"https://api.ashbyhq.com/posting-api/job-board/{slug}"
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
+        if r.status_code != 200:
+            return {"status": "HTTP_ERROR", "http_code": r.status_code, "jobs_total": 0, "url": url}
+        data = r.json()
+        total = len(data.get("jobs", []))
+        return {
+            "status": "OK" if total > 0 else "EMPTY",
+            "http_code": 200,
+            "jobs_total": total,
+            "url": url,
+        }
+    except Exception as e:
+        return {"status": "EXCEPTION", "http_code": 0, "jobs_total": 0, "url": url, "error": str(e)[:200]}
+
+
+def probe_phenom(host):
+    """Probe Phenom by hitting /api/jobs with a real query."""
+    url = f"https://{host}/api/jobs"
+    try:
+        r = requests.get(url, params={"query": "product manager", "page": 1, "pageSize": 5},
+                         headers={**HEADERS, "Referer": f"https://{host}/search-jobs"},
+                         timeout=TIMEOUT)
+        if r.status_code != 200:
+            return {"status": "HTTP_ERROR", "http_code": r.status_code, "jobs_total": 0, "url": url}
+        data = r.json()
+        jobs_list = data.get("jobs") or data.get("results") or data.get("data", {}).get("jobs") or []
+        return {"status": "OK" if jobs_list else "EMPTY", "http_code": 200,
+                "jobs_total": len(jobs_list), "url": url}
+    except Exception as e:
+        return {"status": "EXCEPTION", "http_code": 0, "jobs_total": 0, "url": url, "error": str(e)[:200]}
+
+
+def probe_avature(host):
+    """Probe Avature using the same pattern as Deloitte."""
+    url = f"https://{host}/en_US/careers/SearchJobs/product?projectOffset=0&projectSort=POSTING_DATE"
+    try:
+        r = requests.get(url, headers={**HEADERS, "X-Requested-With": "XMLHttpRequest"},
+                         timeout=TIMEOUT)
+        if r.status_code != 200:
+            return {"status": "HTTP_ERROR", "http_code": r.status_code, "jobs_total": 0, "url": url}
+        data = r.json()
+        total = len(data.get("projectList", []))
+        return {"status": "OK" if total > 0 else "EMPTY", "http_code": 200,
+                "jobs_total": total, "url": url}
+    except Exception as e:
+        return {"status": "EXCEPTION", "http_code": 0, "jobs_total": 0, "url": url, "error": str(e)[:200]}
+
+
+def probe_hibob(slug):
+    url = f"https://{slug}.careers.hibob.com/api/positions"
+    try:
+        r = requests.get(url, headers=HEADERS, timeout=TIMEOUT)
+        if r.status_code != 200:
+            return {"status": "HTTP_ERROR", "http_code": r.status_code, "jobs_total": 0, "url": url}
+        data = r.json()
+        if isinstance(data, list):
+            total = len(data)
+        else:
+            total = len(data.get("positions", []))
+        return {"status": "OK" if total > 0 else "EMPTY", "http_code": 200,
+                "jobs_total": total, "url": url}
     except Exception as e:
         return {"status": "EXCEPTION", "http_code": 0, "jobs_total": 0, "url": url, "error": str(e)[:200]}
 
@@ -182,7 +260,8 @@ def probe_netflix():
 
 
 def probe_trade_desk():
-    url = "https://careers.thetradedesk.com/api/apply/v2/jobs?domain=thetradedesk.com&start=0&num=10&keyword=product"
+    # Trade Desk Eightfold needs a real keyword — empty queries return 404
+    url = "https://careers.thetradedesk.com/api/apply/v2/jobs?domain=thetradedesk.com&start=0&num=10&keyword=product%20manager"
     try:
         r = requests.get(url, headers={**HEADERS, "Referer": "https://careers.thetradedesk.com/"}, timeout=TIMEOUT)
         if r.status_code != 200:
@@ -289,6 +368,14 @@ def check_all():
         results.append(res)
         sleep(0.15)
 
+    # Ashby
+    print(f"Checking {len(ASHBY_COMPANIES)} Ashby companies...")
+    for slug, company in ASHBY_COMPANIES:
+        res = probe_ashby(slug)
+        res.update({"company": company, "ats": "ashby", "slug": slug})
+        results.append(res)
+        sleep(0.15)
+
     # Workday
     print(f"Checking {len(WORKDAY_COMPANIES)} Workday companies...")
     for tenant, wd_num, site, company, prefix in WORKDAY_COMPANIES:
@@ -296,6 +383,30 @@ def check_all():
         res.update({"company": company, "ats": "workday", "slug": f"{tenant}:{site}"})
         results.append(res)
         sleep(0.2)
+
+    # Phenom
+    print(f"Checking {len(PHENOM_COMPANIES)} Phenom companies...")
+    for host, company, prefix in PHENOM_COMPANIES:
+        res = probe_phenom(host)
+        res.update({"company": company, "ats": "phenom", "slug": host})
+        results.append(res)
+        sleep(0.2)
+
+    # Avature
+    print(f"Checking {len(AVATURE_COMPANIES)} Avature companies...")
+    for host, company, prefix in AVATURE_COMPANIES:
+        res = probe_avature(host)
+        res.update({"company": company, "ats": "avature", "slug": host})
+        results.append(res)
+        sleep(0.2)
+
+    # HiBob
+    print(f"Checking {len(HIBOB_COMPANIES)} HiBob companies...")
+    for slug, company in HIBOB_COMPANIES:
+        res = probe_hibob(slug)
+        res.update({"company": company, "ats": "hibob", "slug": slug})
+        results.append(res)
+        sleep(0.15)
 
     # Dedicated fetchers
     print("Checking dedicated fetchers...")
