@@ -73,8 +73,12 @@ def save_jobs(jobs):
         json.dump(jobs, f, indent=2)
 
 
-def make_job(id, company, title, location, url, posted_ts=0, description=""):
-    return {
+def make_job(id, company, title, location, url, posted_ts=0, description="",
+             base_salary_min=None, base_salary_max=None,
+             base_salary_source=None):
+    """Build a job dict. If base salary is provided (from ATS), automatically
+    compute TC estimate using salary_tiers.compute_tc()."""
+    job = {
         "id": id,
         "company": company,
         "title": title,
@@ -83,8 +87,144 @@ def make_job(id, company, title, location, url, posted_ts=0, description=""):
         "posted_ts": posted_ts,
         "found_date": datetime.now().isoformat(),
         "status": "new",
-        "description": description
+        "description": description,
+        "base_salary_min": base_salary_min,
+        "base_salary_max": base_salary_max,
+        "base_salary_source": base_salary_source,  # "ats" or None
+        "bonus_pct": None,
+        "equity_pct": None,
+        "tc_estimate_min": None,
+        "tc_estimate_max": None,
+        "salary_tier": None,
+        "salary_level": None,
+        "salary_confidence": None,
     }
+    # Compute TC if we have base data
+    try:
+        from salary_tiers import compute_tc
+        tc = compute_tc(base_salary_min, base_salary_max, company, title)
+        job["bonus_pct"] = tc["bonus_pct"]
+        job["equity_pct"] = tc["equity_pct"]
+        job["tc_estimate_min"] = tc["tc_estimate_min"]
+        job["tc_estimate_max"] = tc["tc_estimate_max"]
+        job["salary_tier"] = tc["tier"]
+        job["salary_level"] = tc["level"]
+        job["salary_confidence"] = tc["confidence"]
+    except Exception:
+        pass  # don't crash scrape if salary module fails
+    return job
+
+
+# ─── Salary extraction helpers (per-ATS-format) ──────────────────────────────
+def _parse_salary_string(s):
+    """Parse a salary range string like '$180,000 - $220,000' or '$180k-$220k'.
+    Returns (min, max) in dollars, or (None, None) if can't parse."""
+    if not s or not isinstance(s, str):
+        return None, None
+    import re
+    # Match $X,XXX-$Y,YYY  or  $XXk-$YYk  patterns
+    nums = re.findall(r"\$?([\d,]+\.?\d*)\s*([Kk])?", s)
+    if len(nums) < 2:
+        return None, None
+    def to_num(pair):
+        raw, suffix = pair
+        n = float(raw.replace(",", ""))
+        if suffix and suffix.lower() == "k":
+            n *= 1000
+        return int(n) if n > 1000 else None  # discard tiny numbers (years etc)
+    a, b = to_num(nums[0]), to_num(nums[1])
+    if a and b and a > b:
+        a, b = b, a
+    return a, b
+
+
+def extract_salary_greenhouse(job_dict):
+    """Greenhouse: salary often in 'pay_ranges' or 'metadata' fields."""
+    # Modern Greenhouse exposes pay_ranges directly
+    pay_ranges = job_dict.get("pay_ranges", [])
+    if pay_ranges and isinstance(pay_ranges, list):
+        ranges = []
+        for pr in pay_ranges:
+            lo, hi = pr.get("min_cents"), pr.get("max_cents")
+            if lo and hi:
+                ranges.append((lo // 100, hi // 100))
+        if ranges:
+            return min(r[0] for r in ranges), max(r[1] for r in ranges)
+    # Fallback: scan metadata
+    for m in job_dict.get("metadata", []) or []:
+        if m.get("name", "").lower() in ("salary", "salary range", "compensation"):
+            val = m.get("value", "")
+            if isinstance(val, list) and val:
+                val = val[0]
+            return _parse_salary_string(str(val))
+    return None, None
+
+
+def extract_salary_workday(job_dict):
+    """Workday: salary in 'compensation' or 'bulletFields' sometimes."""
+    comp = job_dict.get("compensation", {})
+    if isinstance(comp, dict):
+        lo = comp.get("minimumSalary") or comp.get("min")
+        hi = comp.get("maximumSalary") or comp.get("max")
+        if lo and hi:
+            return int(lo), int(hi)
+    # Some Workday responses have salary in bulletFields
+    for f in job_dict.get("bulletFields", []) or []:
+        if "$" in str(f):
+            return _parse_salary_string(str(f))
+    return None, None
+
+
+def extract_salary_ashby(job_dict):
+    """Ashby: salary in 'compensation' with currency, type, value."""
+    comp = job_dict.get("compensation", {})
+    if not isinstance(comp, dict):
+        return None, None
+    # Try compensationTierSummary first
+    tier = comp.get("compensationTierSummary", "")
+    if tier:
+        lo, hi = _parse_salary_string(tier)
+        if lo:
+            return lo, hi
+    # Else scan summaries
+    for s in comp.get("summaryComponents", []) or []:
+        amt = s.get("amount", {})
+        if isinstance(amt, dict):
+            lo = amt.get("min") or amt.get("amount")
+            hi = amt.get("max") or amt.get("amount")
+            if lo and hi:
+                return int(lo), int(hi)
+    return None, None
+
+
+def extract_salary_lever(job_dict):
+    """Lever: salary in 'salaryRange' with min/max/currency."""
+    sr = job_dict.get("salaryRange", {})
+    if isinstance(sr, dict):
+        lo, hi = sr.get("min"), sr.get("max")
+        if lo and hi:
+            return int(lo), int(hi)
+    return None, None
+
+
+def extract_salary_phenom(job_dict):
+    """Phenom: salary in 'compensation' or specific 'salaryMin/Max' fields."""
+    for lo_key, hi_key in [
+        ("salaryMin", "salaryMax"),
+        ("minSalary", "maxSalary"),
+        ("payRangeMin", "payRangeMax"),
+    ]:
+        lo, hi = job_dict.get(lo_key), job_dict.get(hi_key)
+        if lo and hi:
+            try:
+                return int(lo), int(hi)
+            except (TypeError, ValueError):
+                pass
+    # Sometimes string
+    s = job_dict.get("salary") or job_dict.get("salaryRange", "")
+    if s:
+        return _parse_salary_string(str(s))
+    return None, None
 
 
 def safe_fetch(fn, *args, **kwargs):
@@ -231,11 +371,14 @@ def fetch_greenhouse(board, company):
             location = j.get("location", {}).get("name", "")
             if not passes(title, location, "remote"):
                 continue
+            base_min, base_max = extract_salary_greenhouse(j)
             results.append(make_job(
                 id=f"{board}_{j.get('id', '')}",
                 company=company, title=title, location=location,
                 url=j.get("absolute_url", ""),
-                description=j.get("content", "")[:500]
+                description=j.get("content", "")[:500],
+                base_salary_min=base_min, base_salary_max=base_max,
+                base_salary_source="ats" if base_min else None,
             ))
     except Exception as e:
         print(f"  {company} error: {e}")
@@ -263,11 +406,14 @@ def fetch_lever(slug, company):
             location = categories.get("location", "") or ""
             if not passes(title, location, "remote"):
                 continue
+            base_min, base_max = extract_salary_lever(j)
             results.append(make_job(
                 id=f"lever_{slug}_{j.get('id', '')}",
                 company=company, title=title, location=location,
                 url=j.get("hostedUrl", ""),
-                description=j.get("descriptionPlain", "")[:500]
+                description=j.get("descriptionPlain", "")[:500],
+                base_salary_min=base_min, base_salary_max=base_max,
+                base_salary_source="ats" if base_min else None,
             ))
     except Exception as e:
         print(f"  {company} error: {e}")
@@ -327,13 +473,153 @@ def fetch_ashby(slug, company):
             location = j.get("location", "")
             if not passes(title, location, "remote"):
                 continue
+            base_min, base_max = extract_salary_ashby(j)
             results.append(make_job(
                 id=f"ashby_{slug}_{j.get('id', '')}",
                 company=company, title=title, location=location,
-                url=j.get("jobUrl", "")
+                url=j.get("jobUrl", ""),
+                base_salary_min=base_min, base_salary_max=base_max,
+                base_salary_source="ats" if base_min else None,
             ))
     except Exception as e:
         print(f"  {company} error: {e}")
+    print(f"  Found {len(results)} {company} jobs")
+    return results
+
+
+# ─── PHENOM PEOPLE FETCHER ────────────────────────────────────────────────────
+def fetch_phenom(host, company, prefix):
+    """
+    Generic Phenom People fetcher. host is e.g. "jobs.nvidia.com".
+    Works for NVIDIA, Qualcomm, Zoom, eBay, Home Depot, Equifax,
+    Procore, ADP, DIRECTV, Cox, Intuit.
+    """
+    print(f"Fetching {company} (Phenom)...")
+    results = []
+    seen = set()
+    for kw in SEARCH_QUERIES:
+        try:
+            url = f"https://{host}/api/jobs"
+            params = {"query": kw, "page": 1, "pageSize": 20, "sortBy": "relevance"}
+            r = requests.get(url, params=params, headers={
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/json",
+                "Referer": f"https://{host}/search-jobs",
+            }, timeout=15)
+            if r.status_code != 200 or not r.text.strip():
+                if kw == SEARCH_QUERIES[0]:
+                    print(f"  {company} Phenom: HTTP {r.status_code} (host may be wrong)")
+                continue
+            data = r.json()
+            jobs_list = (data.get("jobs") or data.get("results") or
+                         data.get("data", {}).get("jobs") or [])
+            for j in jobs_list:
+                if not isinstance(j, dict):
+                    continue
+                jid = str(j.get("id", j.get("jobId", "")))
+                if not jid or jid in seen:
+                    continue
+                seen.add(jid)
+                title = j.get("title", j.get("jobTitle", ""))
+                location = j.get("location", j.get("jobLocation", ""))
+                if isinstance(location, dict):
+                    location = location.get("city", "") + ", " + location.get("state", "")
+                if not passes(title, str(location), "remote"):
+                    continue
+                job_url = j.get("url") or j.get("applyUrl") or f"https://{host}/job/{jid}"
+                base_min, base_max = extract_salary_phenom(j)
+                results.append(make_job(
+                    id=f"{prefix}_{jid}",
+                    company=company, title=title, location=str(location),
+                    url=job_url,
+                    base_salary_min=base_min, base_salary_max=base_max,
+                    base_salary_source="ats" if base_min else None,
+                ))
+            sleep(0.5)
+        except Exception as e:
+            print(f"  {company} Phenom error ({kw}): {e}")
+    print(f"  Found {len(results)} {company} jobs")
+    return results
+
+
+# ─── AVATURE FETCHER ──────────────────────────────────────────────────────────
+def fetch_avature(host, company, prefix):
+    """
+    Generic Avature fetcher. host is e.g. "delta.avature.net" or
+    "careers.lululemon.com". Built from the Deloitte pattern.
+    """
+    print(f"Fetching {company} (Avature)...")
+    results = []
+    seen = set()
+    for kw in SEARCH_QUERIES:
+        try:
+            url = (f"https://{host}/en_US/careers/SearchJobs/"
+                   f"{requests.utils.quote(kw)}?projectOffset=0"
+                   f"&projectSort=POSTING_DATE&projectSortDirection=DESC")
+            r = requests.get(url, headers={
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/json, text/javascript, */*",
+                "X-Requested-With": "XMLHttpRequest",
+            }, timeout=15)
+            if r.status_code != 200 or not r.text.strip():
+                if kw == SEARCH_QUERIES[0]:
+                    print(f"  {company} Avature: HTTP {r.status_code}")
+                continue
+            data = r.json()
+            for j in data.get("projectList", []):
+                jid = str(j.get("id", ""))
+                if not jid or jid in seen:
+                    continue
+                seen.add(jid)
+                title = j.get("projectTitle", "")
+                location = j.get("projectCustomField3", j.get("projectCustomField1", ""))
+                if not passes(title, location, "remote"):
+                    continue
+                # Avature doesn't typically expose salary in this endpoint
+                results.append(make_job(
+                    id=f"{prefix}_{jid}",
+                    company=company, title=title, location=location,
+                    url=f"https://{host}/en_US/careers/JobDetail/{jid}",
+                ))
+            sleep(0.5)
+        except Exception as e:
+            print(f"  {company} Avature error ({kw}): {e}")
+    print(f"  Found {len(results)} {company} jobs")
+    return results
+
+
+# ─── HIBOB CAREERS FETCHER ────────────────────────────────────────────────────
+def fetch_hibob(slug, company):
+    """HiBob HRIS exposes a public careers JSON at careers.hibob.com/<slug>"""
+    print(f"Fetching {company} (HiBob)...")
+    results = []
+    try:
+        # HiBob endpoint pattern
+        url = f"https://{slug}.careers.hibob.com/api/positions"
+        r = requests.get(url, headers={
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "application/json",
+        }, timeout=10)
+        if r.status_code != 200:
+            print(f"  {company} HiBob: HTTP {r.status_code}")
+            return results
+        for j in r.json().get("positions", r.json() if isinstance(r.json(), list) else []):
+            if not isinstance(j, dict):
+                continue
+            title = j.get("title", j.get("name", ""))
+            loc_obj = j.get("location", "")
+            if isinstance(loc_obj, dict):
+                loc_obj = loc_obj.get("city", "") + ", " + loc_obj.get("country", "")
+            if not passes(title, str(loc_obj), "remote"):
+                continue
+            jid = str(j.get("id", j.get("jobId", "")))
+            results.append(make_job(
+                id=f"hibob_{slug}_{jid}",
+                company=company, title=title, location=str(loc_obj),
+                url=j.get("url", f"https://{slug}.careers.hibob.com/jobs/{jid}"),
+            ))
+    except Exception as e:
+        print(f"  {company} HiBob error: {e}")
     print(f"  Found {len(results)} {company} jobs")
     return results
 
@@ -496,10 +782,13 @@ def fetch_workday(tenant, wd_num, site, company, prefix):
                 location = j.get("locationsText", "")
                 if not passes(title, location, "remote"):
                     continue
+                base_min, base_max = extract_salary_workday(j)
                 results.append(make_job(
                     id=f"{prefix}_{jid}",
                     company=company, title=title, location=location,
-                    url=f"{base}/en-US/{site}" + ext_path
+                    url=f"{base}/en-US/{site}" + ext_path,
+                    base_salary_min=base_min, base_salary_max=base_max,
+                    base_salary_source="ats" if base_min else None,
                 ))
             sleep(1)
         except Exception as e:
@@ -800,43 +1089,20 @@ GREENHOUSE_COMPANIES = [
     ("hubspotjobs", "HubSpot"),
     ("thetradedesk", "The Trade Desk"),
     ("doubleverify", "DoubleVerify"),
-    ("integraladsscience", "IAS"),
     ("appsflyer", "AppsFlyer"),
-    ("adjust", "Adjust"),
     ("branch", "Branch"),
-    ("liveramp", "LiveRamp"),
-    ("innovid", "Innovid"),
-    ("outbrain", "Outbrain"),
-    ("taboola", "Taboola"),
-    ("applovin", "AppLovin"),
-    ("criteo", "Criteo"),
-    ("openx", "OpenX"),
-    ("indexexchange", "Index Exchange"),
-    ("sharethrough", "Sharethrough"),
-    ("sovrn", "Sovrn"),
     ("pinterest", "Pinterest"),
     ("cognitiv", "Cognitiv"),
-    ("quantcast", "Quantcast"),
-    ("gumgum", "GumGum"),
-    ("zetaglobal", "Zeta Global"),
-    ("mediaocean", "Mediaocean"),
     ("klaviyo", "Klaviyo"),
     ("braze", "Braze"),
     ("iterable", "Iterable"),
-    ("rockerbox", "Rockerbox"),
     ("inmobi", "InMobi"),
     ("instacart", "Instacart Ads"),
-    ("zillow", "Zillow"),
+    ("zetaglobal", "Zeta Global"),
 
     # ── New: AdTech / Media ──
-    ("magnite", "Magnite"),
-    ("madhive", "Madhive"),
     ("twitch", "Twitch"),
-    ("siriusxm", "SiriusXM"),
     ("mediaalpha", "MediaAlpha"),
-    ("raptive", "Raptive"),
-    ("chartbeat", "Chartbeat"),
-    ("liveperson", "LivePerson"),
     ("creatoriq", "CreatorIQ"),
     ("fandom", "Fandom"),
     ("crunchyroll", "Crunchyroll"),
@@ -845,114 +1111,119 @@ GREENHOUSE_COMPANIES = [
     # ── New: Big Tech / Enterprise SaaS ──
     ("dropbox", "Dropbox"),
     ("elastic", "Elastic"),
-    ("cloudera", "Cloudera"),
     ("okta", "Okta"),
     ("twilio", "Twilio"),
-    ("duckduckgo", "DuckDuckGo"),
     ("duolingo", "Duolingo"),
     ("honeycomb", "Honeycomb"),
     ("onetrust", "OneTrust"),
-    ("drata", "Drata"),
-    ("fossa", "FOSSA"),
     ("cricut", "Cricut"),
     ("riotgames", "Riot Games"),
     ("epicgames", "Epic Games"),
     ("scopely", "Scopely"),
-    ("xperi", "Xperi"),
     ("attentive", "Attentive"),
-    ("clickup", "ClickUp"),
-    ("movableink", "Movable Ink"),
-    ("pindrop", "Pindrop"),
-    ("fullstory", "FullStory"),
-    ("servicetitan", "ServiceTitan"),
     ("aura", "Aura"),
     ("crexi", "Crexi"),
     ("justanswer", "JustAnswer"),
-    ("flock", "Flock"),
     ("onxmaps", "onXmaps"),
 
     # ── New: Atlanta / Fintech ──
     ("calendly", "Calendly"),
     ("fanduel", "FanDuel"),
     ("carvana", "Carvana"),
-    ("greenlight", "Greenlight"),
     ("robinhood", "Robinhood"),
     ("affirm", "Affirm"),
     ("mercury", "Mercury"),
     ("gemini", "Gemini"),
-    ("square", "Square"),
-    ("moneylion", "MoneyLion"),
-    ("acorns", "Acorns"),
-    ("legalzoom", "LegalZoom"),
+    ("acorns", "Acorns"),  # NOTE: also has Ashby, registry below catches both
     ("billcom", "Bill.com"),
-    ("altruistllc", "Altruist"),
     ("relaypayments", "Relay Payments"),
-    ("wrgrouponline", "Zepz"),
 
     # ── New: Health / Consumer ──
-    ("himsandhers", "Hims & Hers"),
-    ("goodrx", "GoodRx"),
-    ("cedar", "Cedar"),
-    ("talkiatry", "Talkiatry"),
     ("tebra", "Tebra"),
-    ("equip", "Equip Health"),
-    ("simplepractice", "SimplePractice"),
     ("calm", "Calm"),
-    ("olaplex", "Olaplex"),
     ("reformation", "Reformation"),
-    ("houzz", "Houzz"),
-    ("procoretechnologies", "Procore Technologies"),
-    ("edmunds", "Edmunds"),
     ("faireinc", "Faire"),
     ("taskrabbit", "Taskrabbit"),
-    ("tinder", "Tinder"),
-    ("grindr", "Grindr"),
-    ("bitly", "Bitly"),
-    ("weedmaps", "Weedmaps"),
-    ("ro", "Ro"),
 
-    # ── Patch-in: companies missed in initial pass (10 missed entries) ──
-    ("movableink", "Movable Ink"),    # was duplicated/mis-keyed earlier
-    ("clover", "Clover"),             # Fiserv sub — Greenhouse most likely
-    ("splash", "Splash Business Intelligence"),
+    # ── VERIFIED corrections from career-URL session ──
+    ("altruist", "Altruist"),                # was 'altruistllc' — 404'd
+    ("chartbeatinc", "Chartbeat"),           # was 'chartbeat'  — 404'd
+    ("weedmaps77", "Weedmaps"),              # was 'weedmaps'   — 404'd
+    ("axon", "Axon"),                        # confirmed Greenhouse via URL param
 ]
+
 
 LEVER_COMPANIES = [
     ("spotify", "Spotify"),
-    ("atlassian", "Atlassian"),
+    ("houzz", "Houzz"),                      # verified via jobs.lever.co/houzz/...
+    # NOTE: Atlassian removed — they moved off Lever
 ]
+
+
+# ── ASHBY COMPANIES ──
+# Confirmed from URLs like jobs.ashbyhq.com/<slug>/... or ?ashby_jid=...
+ASHBY_COMPANIES = [
+    ("madhive", "Madhive"),
+    ("Acorns", "Acorns"),                    # case-sensitive! jobs.ashbyhq.com/Acorns
+    ("clickup", "ClickUp"),
+    ("creatoriq", "CreatorIQ"),
+    ("raptive", "Raptive"),
+    ("drata", "Drata"),
+    ("hims-and-hers", "Hims & Hers"),
+    ("Flock Safety", "Flock Safety"),        # URL-encoded space
+    ("fullstory", "FullStory"),
+]
+
+
+# ── PHENOM COMPANIES ──
+# Format: (host, display name, prefix)
+# Confirmed from URLs with /search-jobs/, /api/jobs, ?pid=, etc.
+PHENOM_COMPANIES = [
+    ("jobs.nvidia.com",       "NVIDIA",       "nvidia"),
+    ("careers.qualcomm.com",  "Qualcomm",     "qualcomm"),
+    ("careers.zoom.us",       "Zoom",         "zoom"),
+    ("jobs.ebayinc.com",      "eBay",         "ebay"),
+    ("careers.homedepot.com", "The Home Depot", "homedepot"),
+    ("careers.equifax.com",   "Equifax",      "equifax"),
+    ("careers.procore.com",   "Procore",      "procore"),
+    ("jobs.adp.com",          "ADP",          "adp"),
+    ("jobs.directv.com",      "DIRECTV",      "directv"),
+    ("jobs.coxenterprises.com","Cox Enterprises","cox"),
+]
+
+
+# ── AVATURE COMPANIES ──
+# Format: (host, display name, prefix)
+AVATURE_COMPANIES = [
+    ("delta.avature.net",     "Delta Air Lines", "delta"),
+    ("careers.lululemon.com", "lululemon",       "lulu"),
+]
+
+
+# ── HIBOB COMPANIES ──
+HIBOB_COMPANIES = [
+    ("zepz", "Zepz"),
+]
+
 
 # Format: (tenant, wd_num, site, display name, prefix)
 WORKDAY_COMPANIES = [
-    ("yahoo", 1, "Yahoo", "Yahoo", "yahoo"),
-    ("directv", 1, "DIRECTVCareers", "DIRECTV", "directv"),
-    ("nvidia", 1, "NVIDIAExternalCareerSite", "NVIDIA", "nvidia"),
-    ("adobe", 5, "external_experienced", "Adobe", "adobe"),
-    ("hp", 5, "ExternalCareerSite", "HP", "hp"),
-    ("hpe", 5, "jobs", "Hewlett Packard Enterprise", "hpe"),
-    ("qualcomm", 1, "External", "Qualcomm", "qualcomm"),
-    ("broadcom", 1, "External_Career_Site", "Broadcom", "broadcom"),
-    ("westerndigital", 1, "External", "Western Digital", "wd"),
-    ("marvell", 1, "MarvellCareers2", "Marvell Technology", "marvell"),
-    ("skyworks", 1, "External", "Skyworks Solutions", "skyworks"),
-    ("autodesk", 1, "Ext", "Autodesk", "autodesk"),
-    ("zoom", 1, "Zoom", "Zoom", "zoom"),
-    ("logitech", 1, "External", "Logitech", "logitech"),
-    ("ebay", 1, "eBay", "eBay", "ebay"),
-    ("lululemon", 5, "lululemon", "lululemon", "lulu"),
-    ("americanexpress", 1, "External", "American Express", "amex"),
-    ("cox", 5, "CoxAutoCareerSite", "Cox Automotive", "coxauto"),
-    ("cox", 5, "CoxEnterprises", "Cox Communications", "coxcomm"),
-    ("delta", 5, "DeltaCareers", "Delta Air Lines", "delta"),
-    ("homedepot", 5, "THDExternal", "The Home Depot", "homedepot"),
-    ("equifax", 1, "ext", "Equifax", "equifax"),
-    ("honeywell", 5, "1", "Honeywell", "honeywell"),
+    # ── VERIFIED via career URLs ──
+    ("integralads",   1, "IAScareers",       "IAS",          "ias"),
+    ("liveramp",      5, "LiveRampCareers",  "LiveRamp",     "liveramp"),
+    ("goodrx",        1, "careers",          "GoodRx",       "goodrx"),
+    ("logitech",      5, "Logitech",         "Logitech",     "logitech"),
+    ("ouryahoo",      5, "careers",          "Yahoo",        "yahoo"),
+    ("zillow",        5, "Zillow_Group_External", "Zillow",  "zillow"),
+    ("servicetitan",  1, "ServiceTitan",     "ServiceTitan", "servicetitan"),
+    ("broadcom",      1, "External_Career",  "Broadcom",     "broadcom"),
+    ("cloudera",      5, "External_Career",  "Cloudera",     "cloudera"),
 
-    # ── Patch-in: missed companies, Workday-likely (verify with company_status.py) ──
-    ("adp", 5, "ADP", "ADP", "adp"),
-    ("axon", 1, "Axon", "Axon", "axon"),
-    ("costar", 5, "CoStarCareers", "CoStar Group", "costar"),
-    ("neustar", 1, "External", "Neustar", "neustar"),
+    # ── Big tech (existing, kept) ──
+    ("autodesk", 1, "Ext", "Autodesk", "autodesk"),
+
+    # ── Existing: Atlanta / fintech ──
+    ("americanexpress", 1, "External", "American Express", "amex"),  # NOTE: may be Oracle HCM — flag for verification
 ]
 
 
@@ -983,10 +1254,30 @@ def run():
         all_fresh += safe_fetch(fetch_lever, slug, company)
         sleep(0.2)
 
+    # Ashby (bulk)
+    for slug, company in ASHBY_COMPANIES:
+        all_fresh += safe_fetch(fetch_ashby, slug, company)
+        sleep(0.2)
+
     # Workday (bulk via generic fetcher)
     for tenant, wd_num, site, company, prefix in WORKDAY_COMPANIES:
         all_fresh += safe_fetch(fetch_workday, tenant, wd_num, site, company, prefix)
         sleep(0.3)
+
+    # Phenom People (bulk via generic fetcher) — NVIDIA, Qualcomm, Zoom, eBay etc.
+    for host, company, prefix in PHENOM_COMPANIES:
+        all_fresh += safe_fetch(fetch_phenom, host, company, prefix)
+        sleep(0.3)
+
+    # Avature (bulk) — Delta, lululemon
+    for host, company, prefix in AVATURE_COMPANIES:
+        all_fresh += safe_fetch(fetch_avature, host, company, prefix)
+        sleep(0.3)
+
+    # HiBob — Zepz
+    for slug, company in HIBOB_COMPANIES:
+        all_fresh += safe_fetch(fetch_hibob, slug, company)
+        sleep(0.2)
 
     # Other dedicated fetchers
     all_fresh += safe_fetch(fetch_trade_desk)
