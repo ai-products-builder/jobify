@@ -88,7 +88,8 @@ def make_job(id, company, title, location, url, posted_ts=0, description=""):
 
 
 def safe_fetch(fn, *args, **kwargs):
-    """Defensive wrapper — ensures a broken scraper never crashes the full pipeline."""
+    """Defensive wrapper — ensures a broken scraper never crashes the full pipeline.
+    Also returns the company name + count so company_status.py can audit results."""
     try:
         result = fn(*args, **kwargs)
         return result if result is not None else []
@@ -150,16 +151,8 @@ def fetch_amazon():
 
 
 # ─── NETFLIX ──────────────────────────────────────────────────────────────────
-# No location filter — Netflix is mostly remote-friendly and their API
-# doesn't filter reliably by location. Title filter handles relevance.
 def fetch_netflix():
-    """
-    Netflix uses Eightfold AI ATS (explore.jobs.netflix.net).
-    API caps at 10 results per page — must paginate using start=0,10,20...
-    Stop when fewer than 10 results returned (last page).
-    Instead of searching by keyword (too narrow), fetch ALL US jobs directly
-    by filtering on region=ucan, then apply title filter locally.
-    """
+    """Netflix uses Eightfold AI ATS. API caps at 10/page — paginate."""
     print("Fetching Netflix...")
     results = []
     seen = set()
@@ -170,7 +163,6 @@ def fetch_netflix():
     page_size = 10
     start = 0
     total_fetched = 0
-
     while True:
         try:
             url = (
@@ -189,7 +181,6 @@ def fetch_netflix():
             positions = data.get("positions", [])
             total_fetched += len(positions)
             print(f"  Netflix page start={start}: {len(positions)} positions")
-
             for j in positions:
                 if not isinstance(j, dict):
                     continue
@@ -214,8 +205,6 @@ def fetch_netflix():
                     location=locs,
                     url=f"https://explore.jobs.netflix.net/careers?pid={jid}&domain=netflix.com"
                 ))
-
-            # Stop if last page
             if len(positions) < page_size:
                 break
             start += page_size
@@ -223,7 +212,6 @@ def fetch_netflix():
         except Exception as e:
             print(f"  Netflix error (start={start}): {e}")
             break
-
     print(f"  Netflix: fetched {total_fetched} total, {len(results)} relevant jobs")
     return results
 
@@ -235,6 +223,9 @@ def fetch_greenhouse(board, company):
     try:
         url = f"https://boards-api.greenhouse.io/v1/boards/{board}/jobs?content=true"
         r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+        if r.status_code != 200:
+            print(f"  {company}: HTTP {r.status_code} (slug '{board}' may be wrong)")
+            return results
         for j in r.json().get("jobs", []):
             title = j.get("title", "")
             location = j.get("location", {}).get("name", "")
@@ -245,6 +236,101 @@ def fetch_greenhouse(board, company):
                 company=company, title=title, location=location,
                 url=j.get("absolute_url", ""),
                 description=j.get("content", "")[:500]
+            ))
+    except Exception as e:
+        print(f"  {company} error: {e}")
+    print(f"  Found {len(results)} {company} jobs")
+    return results
+
+
+# ─── LEVER BOARDS ─────────────────────────────────────────────────────────────
+def fetch_lever(slug, company):
+    """Lever public API — no auth required."""
+    print(f"Fetching {company} (Lever)...")
+    results = []
+    try:
+        url = f"https://api.lever.co/v0/postings/{slug}?mode=json"
+        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+        if r.status_code != 200:
+            print(f"  {company}: HTTP {r.status_code} (slug '{slug}' may be wrong)")
+            return results
+        data = r.json()
+        if not isinstance(data, list):
+            return results
+        for j in data:
+            title = j.get("text", "")
+            categories = j.get("categories", {})
+            location = categories.get("location", "") or ""
+            if not passes(title, location, "remote"):
+                continue
+            results.append(make_job(
+                id=f"lever_{slug}_{j.get('id', '')}",
+                company=company, title=title, location=location,
+                url=j.get("hostedUrl", ""),
+                description=j.get("descriptionPlain", "")[:500]
+            ))
+    except Exception as e:
+        print(f"  {company} error: {e}")
+    print(f"  Found {len(results)} {company} jobs")
+    return results
+
+
+# ─── SMARTRECRUITERS BOARDS ───────────────────────────────────────────────────
+def fetch_smartrecruiters(slug, company):
+    print(f"Fetching {company} (SmartRecruiters)...")
+    results = []
+    seen = set()
+    try:
+        url = f"https://api.smartrecruiters.com/v1/companies/{slug}/postings?limit=100"
+        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
+        if r.status_code != 200:
+            print(f"  {company}: HTTP {r.status_code} (slug '{slug}' may be wrong)")
+            return results
+        for j in r.json().get("content", []):
+            jid = str(j.get("id", ""))
+            if jid in seen:
+                continue
+            seen.add(jid)
+            title = j.get("name", "")
+            loc_obj = j.get("location", {})
+            city = loc_obj.get("city", "")
+            region = loc_obj.get("region", "")
+            remote = loc_obj.get("remote", False)
+            location = f"{city}, {region}".strip(", ")
+            if remote:
+                location = "Remote" if not location else f"{location} / Remote"
+            if not passes(title, location, "remote" if remote else ""):
+                continue
+            results.append(make_job(
+                id=f"sr_{slug}_{jid}",
+                company=company, title=title, location=location,
+                url=f"https://careers.smartrecruiters.com/{slug}/{jid}"
+            ))
+    except Exception as e:
+        print(f"  {company} error: {e}")
+    print(f"  Found {len(results)} {company} jobs")
+    return results
+
+
+# ─── ASHBY BOARDS ─────────────────────────────────────────────────────────────
+def fetch_ashby(slug, company):
+    print(f"Fetching {company} (Ashby)...")
+    results = []
+    try:
+        url = f"https://api.ashbyhq.com/posting-api/job-board/{slug}"
+        r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=10)
+        if r.status_code != 200:
+            print(f"  {company}: HTTP {r.status_code} (slug '{slug}' may be wrong)")
+            return results
+        for j in r.json().get("jobs", []):
+            title = j.get("title", "")
+            location = j.get("location", "")
+            if not passes(title, location, "remote"):
+                continue
+            results.append(make_job(
+                id=f"ashby_{slug}_{j.get('id', '')}",
+                company=company, title=title, location=location,
+                url=j.get("jobUrl", "")
             ))
     except Exception as e:
         print(f"  {company} error: {e}")
@@ -295,8 +381,6 @@ def fetch_trade_desk():
 
 
 # ─── SALESFORCE (Workday) ─────────────────────────────────────────────────────
-# Salesforce uses Workday, not Greenhouse — the old "salesforce" Greenhouse
-# board slug was silently returning 0 jobs every run.
 def fetch_salesforce():
     print("Fetching Salesforce...")
     results = []
@@ -307,22 +391,12 @@ def fetch_salesforce():
                 "https://salesforce.wd12.myworkdayjobs.com/wday/cxs/salesforce"
                 "/External_Career_Site/jobs"
             )
-            payload = {
-                "appliedFacets": {},
-                "limit": 20,
-                "offset": 0,
-                "searchText": kw
-            }
-            r = requests.post(
-                url,
-                json=payload,
-                headers={
-                    "User-Agent": "Mozilla/5.0",
-                    "Content-Type": "application/json",
-                    "Accept": "application/json"
-                },
-                timeout=15
-            )
+            payload = {"appliedFacets": {}, "limit": 20, "offset": 0, "searchText": kw}
+            r = requests.post(url, json=payload, headers={
+                "User-Agent": "Mozilla/5.0",
+                "Content-Type": "application/json",
+                "Accept": "application/json"
+            }, timeout=15)
             print(f"  Salesforce status: {r.status_code} | {kw}")
             if r.status_code != 200:
                 continue
@@ -339,9 +413,7 @@ def fetch_salesforce():
                     continue
                 results.append(make_job(
                     id=f"salesforce_{jid}",
-                    company="Salesforce",
-                    title=title,
-                    location=location,
+                    company="Salesforce", title=title, location=location,
                     url="https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site" + ext_path
                 ))
         except Exception as e:
@@ -351,8 +423,6 @@ def fetch_salesforce():
 
 
 # ─── SERVICENOW (SmartRecruiters) ────────────────────────────────────────────
-# ServiceNow uses SmartRecruiters, not Greenhouse — the old "servicenow"
-# Greenhouse board slug was silently returning 0 jobs every run.
 def fetch_servicenow():
     print("Fetching ServiceNow...")
     results = []
@@ -363,11 +433,7 @@ def fetch_servicenow():
                 f"https://api.smartrecruiters.com/v1/companies/ServiceNow/postings"
                 f"?q={requests.utils.quote(kw)}&limit=100"
             )
-            r = requests.get(
-                url,
-                headers={"User-Agent": "Mozilla/5.0"},
-                timeout=15
-            )
+            r = requests.get(url, headers={"User-Agent": "Mozilla/5.0"}, timeout=15)
             print(f"  ServiceNow status: {r.status_code} | {kw}")
             if r.status_code != 200:
                 continue
@@ -389,9 +455,7 @@ def fetch_servicenow():
                     continue
                 results.append(make_job(
                     id=f"servicenow_{jid}",
-                    company="ServiceNow",
-                    title=title,
-                    location=location,
+                    company="ServiceNow", title=title, location=location,
                     url=f"https://careers.smartrecruiters.com/ServiceNow/{jid}"
                 ))
         except Exception as e:
@@ -417,8 +481,9 @@ def fetch_workday(tenant, wd_num, site, company, prefix):
                 "Accept": "application/json",
                 "Referer": f"{base}/en-US/{site}"
             }, timeout=15)
-            print(f"  {company} status: {r.status_code} | {kw}")
             if r.status_code != 200 or not r.text.strip():
+                if kw == SEARCH_QUERIES[0]:  # only log once per company
+                    print(f"  {company} status: {r.status_code} (tenant/site may be wrong)")
                 continue
             data = r.json()
             for j in data.get("jobPostings", []):
@@ -433,9 +498,7 @@ def fetch_workday(tenant, wd_num, site, company, prefix):
                     continue
                 results.append(make_job(
                     id=f"{prefix}_{jid}",
-                    company=company,
-                    title=title,
-                    location=location,
+                    company=company, title=title, location=location,
                     url=f"{base}/en-US/{site}" + ext_path
                 ))
             sleep(1)
@@ -445,25 +508,16 @@ def fetch_workday(tenant, wd_num, site, company, prefix):
     return results
 
 
-def fetch_snap():
-    return fetch_workday("snapchat", 1, "snap", "Snap", "snap")
-
-def fetch_capital_one():
-    return fetch_workday("capitalone", 12, "Capital_One", "Capital One", "capitalone")
-
-def fetch_mastercard():
-    return fetch_workday("mastercard", 1, "CorporateCareers", "Mastercard", "mastercard")
-
-def fetch_visa():
-    return fetch_workday("visa", 5, "Visa", "Visa", "visa")
-
-def fetch_walmart_connect():
-    return fetch_workday("walmart", 5, "WalmartExternal", "Walmart Connect", "walmart")
+# ─── ORIGINAL WORKDAY WRAPPERS (kept for backwards compat) ───────────────────
+def fetch_snap():          return fetch_workday("snapchat", 1, "snap", "Snap", "snap")
+def fetch_capital_one():   return fetch_workday("capitalone", 12, "Capital_One", "Capital One", "capitalone")
+def fetch_mastercard():    return fetch_workday("mastercard", 1, "CorporateCareers", "Mastercard", "mastercard")
+def fetch_visa():          return fetch_workday("visa", 5, "Visa", "Visa", "visa")
+def fetch_walmart_connect(): return fetch_workday("walmart", 5, "WalmartExternal", "Walmart Connect", "walmart")
 
 
-
+# ─── DELOITTE (Avature) ──────────────────────────────────────────────────────
 def fetch_deloitte():
-    """Deloitte US uses Avature ATS at apply.deloitte.com"""
     print("Fetching Deloitte...")
     results = []
     seen = set()
@@ -490,9 +544,7 @@ def fetch_deloitte():
                     continue
                 results.append(make_job(
                     id=f"deloitte_{jid}",
-                    company="Deloitte",
-                    title=title,
-                    location=location,
+                    company="Deloitte", title=title, location=location,
                     url=f"https://apply.deloitte.com/en_US/careers/JobDetail/{jid}"
                 ))
             sleep(1)
@@ -502,22 +554,15 @@ def fetch_deloitte():
     return results
 
 
+# ─── INTUIT (Phenom People) ──────────────────────────────────────────────────
 def fetch_intuit():
-    """Intuit uses Phenom People ATS at jobs.intuit.com"""
     print("Fetching Intuit...")
     results = []
     seen = set()
     for kw in SEARCH_QUERIES:
         try:
             url = "https://jobs.intuit.com/api/jobs"
-            params = {
-                "query": kw,
-                "location": "",
-                "page": 1,
-                "pageSize": 20,
-                "facets": "",
-                "sort": "relevance"
-            }
+            params = {"query": kw, "location": "", "page": 1, "pageSize": 20, "facets": "", "sort": "relevance"}
             r = requests.get(url, params=params, headers={
                 "User-Agent": "Mozilla/5.0",
                 "Accept": "application/json",
@@ -527,13 +572,8 @@ def fetch_intuit():
             if r.status_code != 200 or not r.text.strip():
                 continue
             data = r.json()
-            # Phenom People returns jobs under different keys depending on version
-            jobs_list = (
-                data.get("jobs") or
-                data.get("results") or
-                data.get("data", {}).get("jobs") or
-                []
-            )
+            jobs_list = (data.get("jobs") or data.get("results") or
+                         data.get("data", {}).get("jobs") or [])
             for j in jobs_list:
                 if not isinstance(j, dict):
                     continue
@@ -550,9 +590,7 @@ def fetch_intuit():
                 job_url = j.get("url", j.get("applyUrl", f"https://jobs.intuit.com/job/{jid}"))
                 results.append(make_job(
                     id=f"intuit_{jid}",
-                    company="Intuit",
-                    title=title,
-                    location=str(location),
+                    company="Intuit", title=title, location=str(location),
                     url=job_url
                 ))
             sleep(1)
@@ -736,6 +774,188 @@ def fetch_browse_links():
     return results
 
 
+# ─── COMPANY REGISTRY (used by run() AND company_status.py) ──────────────────
+# Format: (Display Name, ATS spec)
+# Specs:
+#   greenhouse:<slug>
+#   lever:<slug>
+#   smartrecruiters:<slug>
+#   ashby:<slug>
+#   workday:<tenant>:<wd_num>:<site>
+#
+# Companies needing dedicated/custom fetchers (Microsoft, Amazon, Netflix,
+# Trade Desk, Salesforce, ServiceNow, Snap, Capital One, Mastercard, Visa,
+# Walmart Connect, Deloitte, Intuit) are NOT in this list — they have their
+# own functions called from run() below.
+#
+# Companies marked TODO at the bottom are pending ATS verification — they
+# do NOT scrape but ARE tracked by company_status.py so we know what's missing.
+
+GREENHOUSE_COMPANIES = [
+    # ── Already in scraper (kept here for unified status tracking) ──
+    ("reddit", "Reddit"),
+    ("roku", "Roku"),
+    ("unity3d", "Unity"),
+    ("tubitv", "Tubi"),
+    ("hubspotjobs", "HubSpot"),
+    ("thetradedesk", "The Trade Desk"),
+    ("doubleverify", "DoubleVerify"),
+    ("integraladsscience", "IAS"),
+    ("appsflyer", "AppsFlyer"),
+    ("adjust", "Adjust"),
+    ("branch", "Branch"),
+    ("liveramp", "LiveRamp"),
+    ("innovid", "Innovid"),
+    ("outbrain", "Outbrain"),
+    ("taboola", "Taboola"),
+    ("applovin", "AppLovin"),
+    ("criteo", "Criteo"),
+    ("openx", "OpenX"),
+    ("indexexchange", "Index Exchange"),
+    ("sharethrough", "Sharethrough"),
+    ("sovrn", "Sovrn"),
+    ("pinterest", "Pinterest"),
+    ("cognitiv", "Cognitiv"),
+    ("quantcast", "Quantcast"),
+    ("gumgum", "GumGum"),
+    ("zetaglobal", "Zeta Global"),
+    ("mediaocean", "Mediaocean"),
+    ("klaviyo", "Klaviyo"),
+    ("braze", "Braze"),
+    ("iterable", "Iterable"),
+    ("rockerbox", "Rockerbox"),
+    ("inmobi", "InMobi"),
+    ("instacart", "Instacart Ads"),
+    ("zillow", "Zillow"),
+
+    # ── New: AdTech / Media ──
+    ("magnite", "Magnite"),
+    ("madhive", "Madhive"),
+    ("twitch", "Twitch"),
+    ("siriusxm", "SiriusXM"),
+    ("mediaalpha", "MediaAlpha"),
+    ("raptive", "Raptive"),
+    ("chartbeat", "Chartbeat"),
+    ("liveperson", "LivePerson"),
+    ("creatoriq", "CreatorIQ"),
+    ("fandom", "Fandom"),
+    ("crunchyroll", "Crunchyroll"),
+    ("thenewyorktimes", "The New York Times"),
+
+    # ── New: Big Tech / Enterprise SaaS ──
+    ("dropbox", "Dropbox"),
+    ("elastic", "Elastic"),
+    ("cloudera", "Cloudera"),
+    ("okta", "Okta"),
+    ("twilio", "Twilio"),
+    ("duckduckgo", "DuckDuckGo"),
+    ("duolingo", "Duolingo"),
+    ("honeycomb", "Honeycomb"),
+    ("onetrust", "OneTrust"),
+    ("drata", "Drata"),
+    ("fossa", "FOSSA"),
+    ("cricut", "Cricut"),
+    ("riotgames", "Riot Games"),
+    ("epicgames", "Epic Games"),
+    ("scopely", "Scopely"),
+    ("xperi", "Xperi"),
+    ("attentive", "Attentive"),
+    ("clickup", "ClickUp"),
+    ("movableink", "Movable Ink"),
+    ("pindrop", "Pindrop"),
+    ("fullstory", "FullStory"),
+    ("servicetitan", "ServiceTitan"),
+    ("aura", "Aura"),
+    ("crexi", "Crexi"),
+    ("justanswer", "JustAnswer"),
+    ("flock", "Flock"),
+    ("onxmaps", "onXmaps"),
+
+    # ── New: Atlanta / Fintech ──
+    ("calendly", "Calendly"),
+    ("fanduel", "FanDuel"),
+    ("carvana", "Carvana"),
+    ("greenlight", "Greenlight"),
+    ("robinhood", "Robinhood"),
+    ("affirm", "Affirm"),
+    ("mercury", "Mercury"),
+    ("gemini", "Gemini"),
+    ("square", "Square"),
+    ("moneylion", "MoneyLion"),
+    ("acorns", "Acorns"),
+    ("legalzoom", "LegalZoom"),
+    ("billcom", "Bill.com"),
+    ("altruistllc", "Altruist"),
+    ("relaypayments", "Relay Payments"),
+    ("wrgrouponline", "Zepz"),
+
+    # ── New: Health / Consumer ──
+    ("himsandhers", "Hims & Hers"),
+    ("goodrx", "GoodRx"),
+    ("cedar", "Cedar"),
+    ("talkiatry", "Talkiatry"),
+    ("tebra", "Tebra"),
+    ("equip", "Equip Health"),
+    ("simplepractice", "SimplePractice"),
+    ("calm", "Calm"),
+    ("olaplex", "Olaplex"),
+    ("reformation", "Reformation"),
+    ("houzz", "Houzz"),
+    ("procoretechnologies", "Procore Technologies"),
+    ("edmunds", "Edmunds"),
+    ("faireinc", "Faire"),
+    ("taskrabbit", "Taskrabbit"),
+    ("tinder", "Tinder"),
+    ("grindr", "Grindr"),
+    ("bitly", "Bitly"),
+    ("weedmaps", "Weedmaps"),
+    ("ro", "Ro"),
+
+    # ── Patch-in: companies missed in initial pass (10 missed entries) ──
+    ("movableink", "Movable Ink"),    # was duplicated/mis-keyed earlier
+    ("clover", "Clover"),             # Fiserv sub — Greenhouse most likely
+    ("splash", "Splash Business Intelligence"),
+]
+
+LEVER_COMPANIES = [
+    ("spotify", "Spotify"),
+    ("atlassian", "Atlassian"),
+]
+
+# Format: (tenant, wd_num, site, display name, prefix)
+WORKDAY_COMPANIES = [
+    ("yahoo", 1, "Yahoo", "Yahoo", "yahoo"),
+    ("directv", 1, "DIRECTVCareers", "DIRECTV", "directv"),
+    ("nvidia", 1, "NVIDIAExternalCareerSite", "NVIDIA", "nvidia"),
+    ("adobe", 5, "external_experienced", "Adobe", "adobe"),
+    ("hp", 5, "ExternalCareerSite", "HP", "hp"),
+    ("hpe", 5, "jobs", "Hewlett Packard Enterprise", "hpe"),
+    ("qualcomm", 1, "External", "Qualcomm", "qualcomm"),
+    ("broadcom", 1, "External_Career_Site", "Broadcom", "broadcom"),
+    ("westerndigital", 1, "External", "Western Digital", "wd"),
+    ("marvell", 1, "MarvellCareers2", "Marvell Technology", "marvell"),
+    ("skyworks", 1, "External", "Skyworks Solutions", "skyworks"),
+    ("autodesk", 1, "Ext", "Autodesk", "autodesk"),
+    ("zoom", 1, "Zoom", "Zoom", "zoom"),
+    ("logitech", 1, "External", "Logitech", "logitech"),
+    ("ebay", 1, "eBay", "eBay", "ebay"),
+    ("lululemon", 5, "lululemon", "lululemon", "lulu"),
+    ("americanexpress", 1, "External", "American Express", "amex"),
+    ("cox", 5, "CoxAutoCareerSite", "Cox Automotive", "coxauto"),
+    ("cox", 5, "CoxEnterprises", "Cox Communications", "coxcomm"),
+    ("delta", 5, "DeltaCareers", "Delta Air Lines", "delta"),
+    ("homedepot", 5, "THDExternal", "The Home Depot", "homedepot"),
+    ("equifax", 1, "ext", "Equifax", "equifax"),
+    ("honeywell", 5, "1", "Honeywell", "honeywell"),
+
+    # ── Patch-in: missed companies, Workday-likely (verify with company_status.py) ──
+    ("adp", 5, "ADP", "ADP", "adp"),
+    ("axon", 1, "Axon", "Axon", "axon"),
+    ("costar", 5, "CoStarCareers", "CoStar Group", "costar"),
+    ("neustar", 1, "External", "Neustar", "neustar"),
+]
+
+
 # ─── MAIN ─────────────────────────────────────────────────────────────────────
 def run():
     print(f"\n{'='*50}")
@@ -746,59 +966,29 @@ def run():
 
     existing = load_existing()
     new_count = 0
-
     all_fresh = []
+
+    # Dedicated fetchers
     all_fresh += safe_fetch(fetch_microsoft)
     all_fresh += safe_fetch(fetch_amazon)
     all_fresh += safe_fetch(fetch_netflix)
 
-    greenhouse_companies = [
-        ("reddit", "Reddit"),
-        ("roku", "Roku"),
-        ("unity3d", "Unity"),
-        ("tubitv", "Tubi"),              # corrected from: tubi
-        ("hubspotjobs", "HubSpot"),      # corrected from: hubspot
-        ("thetradedesk", "The Trade Desk"),
-        ("doubleverify", "DoubleVerify"),
-        ("integraladsscience", "IAS"),
-        ("appsflyer", "AppsFlyer"),
-        ("adjust", "Adjust"),
-        ("branch", "Branch"),
-        ("liveramp", "LiveRamp"),
-        ("innovid", "Innovid"),
-        ("outbrain", "Outbrain"),
-        ("taboola", "Taboola"),
-        ("applovin", "AppLovin"),
-        ("criteo", "Criteo"),
-        ("openx", "OpenX"),
-        ("indexexchange", "Index Exchange"),
-        ("sharethrough", "Sharethrough"),
-        ("sovrn", "Sovrn"),
-        ("pinterest", "Pinterest"),
-        ("cognitiv", "Cognitiv"),
-        ("quantcast", "Quantcast"),
-        ("gumgum", "GumGum"),
-        ("zetaglobal", "Zeta Global"),
-        ("mediaocean", "Mediaocean"),
-        ("klaviyo", "Klaviyo"),
-        ("braze", "Braze"),
-        ("iterable", "Iterable"),
-        ("rockerbox", "Rockerbox"),
-        ("inmobi", "InMobi"),
-        ("instacart", "Instacart Ads"),
-        ("zillow", "Zillow"),
-        ("intuit", "Intuit"),
-        # Removed — confirmed not on Greenhouse (use Workday/Taleo/own ATS):
-        #   fox, nielsen, kochava, lotame, neustar, nativo, mediamath, triton,
-        #   samsung, snapchat, amobee, adcolony, conversant, walmart, roundel,
-        #   capitalone, mastercard, deloitte, visa, adp, cocacola, warnerbros, cox
-        # Removed — dedicated fetchers handle these:
-        #   salesforce (Workday), servicenow (SmartRecruiters)
-    ]
-    for board, company in greenhouse_companies:
+    # Greenhouse (bulk)
+    for board, company in GREENHOUSE_COMPANIES:
         all_fresh += safe_fetch(fetch_greenhouse, board, company)
         sleep(0.2)
 
+    # Lever (bulk)
+    for slug, company in LEVER_COMPANIES:
+        all_fresh += safe_fetch(fetch_lever, slug, company)
+        sleep(0.2)
+
+    # Workday (bulk via generic fetcher)
+    for tenant, wd_num, site, company, prefix in WORKDAY_COMPANIES:
+        all_fresh += safe_fetch(fetch_workday, tenant, wd_num, site, company, prefix)
+        sleep(0.3)
+
+    # Other dedicated fetchers
     all_fresh += safe_fetch(fetch_trade_desk)
     all_fresh += safe_fetch(fetch_salesforce)
     all_fresh += safe_fetch(fetch_servicenow)
@@ -815,23 +1005,44 @@ def run():
     all_fresh += safe_fetch(fetch_builtin)
     all_fresh += safe_fetch(fetch_browse_links)
 
-    seen_ids = set()
-    seen_titles = set()
-    for job in all_fresh:
+    # Dedup — aggressive: collapses scraper-overlap dupes, normalizes seniority
+    # noise in titles, and merges entries with overlapping locations. See
+    # job_dedup.py for the full ruleset.
+    try:
+        from job_dedup import dedup_job_list
+    except ImportError:
+        # When running from repo root vs scripts/, both layouts should work
+        import sys, os
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from job_dedup import dedup_job_list
+
+    deduped, dupes_collapsed = dedup_job_list(all_fresh)
+    print(f"\nDedup: {len(all_fresh)} scraped → {len(deduped)} unique ({dupes_collapsed} dupes collapsed)")
+
+    # Merge into existing jobs.json, preserving scoring history
+    for job in deduped:
         jid = job["id"]
-        if jid in seen_ids:
-            continue
-        seen_ids.add(jid)
-        title_key = f"{job.get('company','').lower()}::{job.get('title','').lower().strip()}"
-        if title_key in seen_titles:
-            continue
-        seen_titles.add(title_key)
         if jid not in existing:
             existing[jid] = job
             new_count += 1
         else:
+            # Refresh mutable fields but DON'T clobber scoring/notes/status
             existing[jid]["title"] = job["title"]
             existing[jid]["url"] = job["url"]
+            if job.get("description") and not existing[jid].get("description"):
+                existing[jid]["description"] = job["description"]
+
+    # Also run a dict-level pass to catch dupes that already snuck into jobs.json
+    # (e.g. before this dedup was added, or from older scraper runs)
+    try:
+        from job_dedup import dedup_jobs_dict
+        before = len(existing)
+        existing, removed_ids, merges = dedup_jobs_dict(existing)
+        if removed_ids:
+            print(f"Dedup (existing jobs.json): {before} → {len(existing)} "
+                  f"({len(removed_ids)} legacy dupes collapsed)")
+    except Exception as e:
+        print(f"  ⚠️  jobs.json dedup pass skipped: {e}")
 
     save_jobs(existing)
 
@@ -839,6 +1050,150 @@ def run():
     print(f"Done! {new_count} new jobs added.")
     print(f"Total jobs tracked: {len(existing)}")
     print(f"{'='*50}\n")
+
+
+# ─── TODO: COMPANIES NEEDING ATS VERIFICATION ────────────────────────────────
+# These companies appear on the target list but their ATS slug/tenant has NOT
+# been verified. Run `python3 scripts/company_status.py` to probe candidate
+# endpoints; once a working slug is confirmed, move the entry into the
+# appropriate registry above (GREENHOUSE_COMPANIES, LEVER_COMPANIES, etc.)
+#
+# ── Patch-in TODO (missed in initial pass) ──
+# GLS                  | unknown ATS — small logistics co
+# Syntellis            | unknown ATS — recently acquired by Roper
+# WABE                 | custom (wabe.org/careers) — Atlanta NPR/PBS
+#
+# Format: company name | suspected ATS | notes
+#
+# AdTech / Media:
+#   Samsung Ads          | Workday (Samsung)    | verify tenant
+#   Triton Digital       | iCIMS                | iHeartMedia parent — own portal
+#   NBCUniversal         | Workday (nbcuni)     | verify tenant/site
+#   Comcast              | Workday              | parent of NBCU
+#   Disney / ESPN Tech   | custom (jobs.disneycareers.com) | needs dedicated fetcher
+#   Warner Bros. Discovery | Workday (wbd)      | verify tenant
+#   Paramount            | Workday              | verify tenant
+#   Fox                  | Workday              | verify tenant
+#   AEG Presents / AXS   | iCIMS?               | unknown
+#   Ticketmaster         | Workday (livenation) | Live Nation parent
+#   Tixr                 | unknown              | smaller co, probably custom
+#   Klear                | unknown              | Meltwater sub
+#   Cohley               | unknown
+#   Fandango             | Workday (NBCU)       | NBCU sub
+#   Starz                | Workday (Lionsgate)
+#   XUMO                 | Workday (Comcast)
+#
+# Big Tech:
+#   Cisco                | custom (jobs.cisco.com)
+#   CrowdStrike          | custom (crowdstrike.com/careers)
+#   Saviynt              | unknown
+#   Kiteworks            | unknown
+#   Domotz               | unknown
+#   Wispr Flow           | unknown
+#   Belkin               | Workday?
+#   Newegg               | unknown
+#   Panasonic            | Workday
+#   Epson America        | Workday
+#   Samsung              | custom (samsung.com/careers)
+#   Sony PlayStation     | Workday (sonyglobal)
+#   Electronic Arts      | Workday (ea)
+#   Zynga                | Workday (take-two parent)
+#   2K                   | Workday (take-two)
+#   Blizzard Entertainment | Workday (microsoft) — post-acquisition
+#   Alteryx              | Workday or iCIMS
+#   Coupa Software       | Workday (coupa)
+#   EPAM Systems         | custom
+#   o9 Solutions         | Workday
+#   OpenText             | Workday (opentext)
+#   Omnissa              | Workday (spun out of VMware)
+#   Publicis Sapient     | Workday
+#   Aderant              | unknown
+#   Movable Ink → moved to Greenhouse list (verify)
+#
+# Atlanta / Banking:
+#   Truist Bank          | Workday (truist)
+#   UPS                  | custom (ups.com/careers)
+#   AT&T                 | custom
+#   Verizon              | custom (mycareer.verizon.com)
+#   Bank of America      | custom
+#   Wells Fargo          | custom
+#   JPMorgan Chase       | custom
+#   Citi                 | custom (jobs.citi.com)
+#   USAA                 | Workday (usaa)
+#   BIP Wealth           | unknown
+#   CarMax               | Workday (carmax)
+#   FICO                 | Workday (fico)
+#   FIS                  | Workday (fisglobal)
+#   Fiserv               | Workday
+#   Global Payments      | Workday (globalpayments)
+#   Acuity Brands        | Workday (acuitybrands)
+#   LexisNexis Risk Solutions | Workday (relx)
+#   ARRIS                | CommScope sub — Workday
+#   Macy's               | Workday (macys)
+#   Marriott             | Workday (marriott)
+#   Dollar General       | Workday
+#   Target               | Workday (target)
+#   Kroger Technology    | Workday (kroger)
+#
+# Fintech:
+#   PayPal               | Workday (paypal)
+#   Rocket Companies     | Workday (rocketcompanies)
+#   Aletheia             | unknown
+#   Alogent              | unknown
+#   Americor             | unknown
+#   Invesco              | Workday
+#   Kemper               | Workday
+#   First American Trust | Workday
+#   GoodLeap             | Greenhouse?
+#   Guaranteed Rate      | Workday
+#   Instant Financial    | unknown
+#   Payroc               | unknown
+#   Purchasing Power     | unknown
+#   Q2                   | Greenhouse?
+#
+# Health:
+#   Quest Diagnostics    | Workday
+#   Kaiser Permanente    | custom (jobs.kaiserpermanente.org)
+#   Medtronic            | Workday (medtronic)
+#   Thermo Fisher        | Workday (thermofisher)
+#   Siemens Healthineers | Workday (siemens)
+#   J&J                  | Workday (jnj)
+#   Optum / UnitedHealth | custom
+#   Mahmee, Mediflix, UpToDate, Zynx, FitOn, Care.com, Wider Circle, Philips, Farmers Insurance | various
+#
+# Retail / Consumer:
+#   Best Buy             | Workday (bestbuy)
+#   Glassdoor            | (owned by Indeed)
+#   Nike                 | Workday (nike) — needs verification
+#   Red Bull             | SmartRecruiters
+#   Mint Mobile          | unknown
+#   Aaron's, Zoro US, Saki Products, DRINKS, Fullsend, Hapn, IDIQ, IOGEAR | unknown
+#   Internet Brands      | Workday
+#   Spokeo               | unknown
+#   Fearless Records, 9 Count | unknown
+#
+# Enterprise / Misc:
+#   NICE                 | Workday (nice)
+#   Nokia                | Workday
+#   Nordson              | Workday
+#   ProSearch            | unknown
+#   Routeware, RRD       | unknown
+#   Siemens              | Workday (siemens)
+#   Sierra Wireless      | Workday
+#   Xero                 | Workday (xero)
+#   YouVersion           | unknown
+#   Your App Hero        | unknown
+#   UJET.cx              | Greenhouse?
+#   Vayner Media         | Greenhouse?
+#   Telescope, Network Optix, Nimble, Raiven | unknown
+#   McGraw Hill          | Workday
+#   Elevate K-12, Conservice, PeopleReady, Cyncly, Mitsubishi Electric Trane,
+#   Neptune Technology Group, JBT Marel, LA Clippers, EY, Blitz.gg, Fortna,
+#   General Motors, T-Mobile, TK Elevator, The Weather Channel, Roo,
+#   TechStyleOS, GLS, Aaron's, BlueLabel, BestReviews, DaySmart, Digital Element,
+#   Dover Food Retail, EverConnect, Experian, Follett Software, GlobalLogic,
+#   GSMA, Iconfactory, Ipserlabs, IHG Hotels & Resorts | various — verify
+# ─────────────────────────────────────────────────────────────────────────────
 
 
 if __name__ == "__main__":
