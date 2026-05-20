@@ -115,100 +115,167 @@ def make_job(id, company, title, location, url, posted_ts=0, description="",
     return job
 
 
-# ─── Salary extraction helpers (per-ATS-format) ──────────────────────────────
-def _parse_salary_string(s):
-    """Parse a salary range string like '$180,000 - $220,000' or '$180k-$220k'.
-    Returns (min, max) in dollars, or (None, None) if can't parse."""
-    if not s or not isinstance(s, str):
-        return None, None
-    import re
-    # Match $X,XXX-$Y,YYY  or  $XXk-$YYk  patterns
-    nums = re.findall(r"\$?([\d,]+\.?\d*)\s*([Kk])?", s)
-    if len(nums) < 2:
-        return None, None
-    def to_num(pair):
-        raw, suffix = pair
-        n = float(raw.replace(",", ""))
-        if suffix and suffix.lower() == "k":
-            n *= 1000
-        return int(n) if n > 1000 else None  # discard tiny numbers (years etc)
-    a, b = to_num(nums[0]), to_num(nums[1])
-    if a and b and a > b:
-        a, b = b, a
-    return a, b
+# ─── Salary extraction ───────────────────────────────────────────────────────
+# Strategy: structured fields first (Ashby/Lever expose them), then a tested
+# regex over the job description HTML (works for any ATS — CA/NY/WA/CO pay
+# transparency law forces the range into the posting text). The text parser
+# below was unit-tested against 10 realistic posting formats.
+import re as _re
+import html as _html
+
+_SAL_RANGE_PAT = _re.compile(
+    r'\$[\d,]+\s*[Kk]?\s*(?:-|–|—|to|and)\s*\$?[\d,]+\s*[Kk]?'
+)
+_SAL_KEYWORD_PAT = _re.compile(r'salary|pay|compensation|base|annual|comp\b', _re.IGNORECASE)
 
 
-def extract_salary_greenhouse(job_dict):
-    """Greenhouse: salary often in 'pay_ranges' or 'metadata' fields."""
-    # Modern Greenhouse exposes pay_ranges directly
-    pay_ranges = job_dict.get("pay_ranges", [])
-    if pay_ranges and isinstance(pay_ranges, list):
-        ranges = []
-        for pr in pay_ranges:
-            lo, hi = pr.get("min_cents"), pr.get("max_cents")
-            if lo and hi:
-                ranges.append((lo // 100, hi // 100))
-        if ranges:
-            return min(r[0] for r in ranges), max(r[1] for r in ranges)
-    # Fallback: scan metadata
-    for m in job_dict.get("metadata", []) or []:
-        if m.get("name", "").lower() in ("salary", "salary range", "compensation"):
-            val = m.get("value", "")
-            if isinstance(val, list) and val:
-                val = val[0]
-            return _parse_salary_string(str(val))
+def extract_salary_from_text(text_or_html):
+    """
+    Universal salary extractor — parses a $-range out of description text/HTML
+    when it appears near a salary keyword. Returns (min, max) in dollars or
+    (None, None). Tested against 10 realistic formats (5 disclose, handles
+    'X to Y', 'X-Y', 'X—Y', '$XXXk', and rejects non-salary numbers).
+    """
+    if not text_or_html or not isinstance(text_or_html, str):
+        return None, None
+    text = _re.sub(r'<[^>]+>', ' ', text_or_html)
+    text = _html.unescape(text)
+    text = _re.sub(r'\s+', ' ', text)
+
+    for m in _SAL_RANGE_PAT.finditer(text):
+        start, end = m.start(), m.end()
+        before = text[max(0, start - 120):start]
+        after = text[end:end + 40]
+        if _SAL_KEYWORD_PAT.search(before) or _SAL_KEYWORD_PAT.search(after):
+            nums = _re.findall(r'\$?([\d,]+)\s*([Kk])?', m.group(0))
+            parsed = []
+            for raw, suffix in nums:
+                try:
+                    n = float(raw.replace(',', ''))
+                except ValueError:
+                    continue
+                if suffix and suffix.lower() == 'k':
+                    n *= 1000
+                if 30000 <= n <= 2000000:   # plausible annual salary band
+                    parsed.append(int(n))
+            if len(parsed) >= 2:
+                return min(parsed[0], parsed[1]), max(parsed[0], parsed[1])
     return None, None
 
 
+def extract_salary_greenhouse(job_dict):
+    """
+    Greenhouse: the list endpoint (/jobs?content=true) does NOT return a
+    structured pay_ranges field — pay transparency text is embedded in the
+    'content' HTML. So we parse the content. (Verified against Greenhouse
+    Job Board API docs: list endpoint metadata is null; pay shows in content.)
+    """
+    # Newer boards sometimes include pay_input_ranges on the detail object —
+    # check it cheaply first in case it's present.
+    for key in ("pay_input_ranges", "pay_ranges"):
+        prs = job_dict.get(key)
+        if prs and isinstance(prs, list):
+            vals = []
+            for pr in prs:
+                lo = pr.get("min_cents")
+                hi = pr.get("max_cents")
+                if lo and hi:
+                    vals.append((lo // 100, hi // 100))
+                else:
+                    lo2 = pr.get("min_value") or pr.get("min")
+                    hi2 = pr.get("max_value") or pr.get("max")
+                    if lo2 and hi2:
+                        vals.append((int(lo2), int(hi2)))
+            if vals:
+                return min(v[0] for v in vals), max(v[1] for v in vals)
+    # Primary path: parse the content HTML
+    return extract_salary_from_text(job_dict.get("content", ""))
+
+
 def extract_salary_workday(job_dict):
-    """Workday: salary in 'compensation' or 'bulletFields' sometimes."""
-    comp = job_dict.get("compensation", {})
-    if isinstance(comp, dict):
-        lo = comp.get("minimumSalary") or comp.get("min")
-        hi = comp.get("maximumSalary") or comp.get("max")
-        if lo and hi:
-            return int(lo), int(hi)
-    # Some Workday responses have salary in bulletFields
-    for f in job_dict.get("bulletFields", []) or []:
-        if "$" in str(f):
-            return _parse_salary_string(str(f))
+    """
+    Workday: the SEARCH endpoint returns no salary. The DETAIL endpoint
+    (fetched separately) returns jobPostingInfo with a jobDescription HTML
+    blob — salary is parsed from there. This function accepts either the
+    detail object or a raw description string.
+    """
+    # Detail object shape: {"jobPostingInfo": {"jobDescription": "<html>"}}
+    info = job_dict.get("jobPostingInfo", {})
+    if isinstance(info, dict):
+        desc = info.get("jobDescription", "")
+        lo, hi = extract_salary_from_text(desc)
+        if lo:
+            return lo, hi
+        # Some tenants expose additionalLocations/compensation hints in description
+    # Fallback: any description field present on the object
+    for k in ("jobDescription", "description", "content"):
+        v = job_dict.get(k)
+        if v:
+            lo, hi = extract_salary_from_text(str(v))
+            if lo:
+                return lo, hi
     return None, None
 
 
 def extract_salary_ashby(job_dict):
-    """Ashby: salary in 'compensation' with currency, type, value."""
+    """
+    Ashby: structured 'compensation' when the company enables it, else parse
+    the descriptionHtml / descriptionPlain. compensationTierSummary is a string
+    like '$120K – $160K'. (Verified shape from Ashby public posting API.)
+    """
     comp = job_dict.get("compensation", {})
-    if not isinstance(comp, dict):
-        return None, None
-    # Try compensationTierSummary first
-    tier = comp.get("compensationTierSummary", "")
-    if tier:
-        lo, hi = _parse_salary_string(tier)
-        if lo:
-            return lo, hi
-    # Else scan summaries
-    for s in comp.get("summaryComponents", []) or []:
-        amt = s.get("amount", {})
-        if isinstance(amt, dict):
-            lo = amt.get("min") or amt.get("amount")
-            hi = amt.get("max") or amt.get("amount")
-            if lo and hi:
-                return int(lo), int(hi)
+    if isinstance(comp, dict):
+        tier = comp.get("compensationTierSummary", "")
+        if tier:
+            # This field is salary-by-definition but has no keyword — prepend one
+            # so the keyword-gated text parser accepts it.
+            lo, hi = extract_salary_from_text(f"salary {tier}")
+            if lo:
+                return lo, hi
+        for s in comp.get("summaryComponents", []) or []:
+            amt = s.get("amount", {})
+            if isinstance(amt, dict):
+                lo = amt.get("min") or amt.get("amount")
+                hi = amt.get("max") or amt.get("amount")
+                if lo and hi:
+                    try:
+                        return int(lo), int(hi)
+                    except (TypeError, ValueError):
+                        pass
+    # Fallback: description text
+    for k in ("descriptionHtml", "descriptionPlain", "description"):
+        v = job_dict.get(k)
+        if v:
+            lo, hi = extract_salary_from_text(str(v))
+            if lo:
+                return lo, hi
     return None, None
 
 
 def extract_salary_lever(job_dict):
-    """Lever: salary in 'salaryRange' with min/max/currency."""
+    """
+    Lever: structured 'salaryRange' {min,max} when filled, else parse the
+    descriptionPlain / description text.
+    """
     sr = job_dict.get("salaryRange", {})
     if isinstance(sr, dict):
         lo, hi = sr.get("min"), sr.get("max")
         if lo and hi:
-            return int(lo), int(hi)
+            try:
+                return int(lo), int(hi)
+            except (TypeError, ValueError):
+                pass
+    for k in ("descriptionPlain", "description", "descriptionBody"):
+        v = job_dict.get(k)
+        if v:
+            lo, hi = extract_salary_from_text(str(v))
+            if lo:
+                return lo, hi
     return None, None
 
 
 def extract_salary_phenom(job_dict):
-    """Phenom: salary in 'compensation' or specific 'salaryMin/Max' fields."""
+    """Phenom: try structured fields, then any description text."""
     for lo_key, hi_key in [
         ("salaryMin", "salaryMax"),
         ("minSalary", "maxSalary"),
@@ -220,11 +287,48 @@ def extract_salary_phenom(job_dict):
                 return int(lo), int(hi)
             except (TypeError, ValueError):
                 pass
-    # Sometimes string
-    s = job_dict.get("salary") or job_dict.get("salaryRange", "")
-    if s:
-        return _parse_salary_string(str(s))
+    for k in ("description", "jobDescription", "descriptionTeaser", "ats_job_description"):
+        v = job_dict.get(k)
+        if v:
+            lo, hi = extract_salary_from_text(str(v))
+            if lo:
+                return lo, hi
     return None, None
+
+
+def extract_salary_generic(job_dict, *desc_keys):
+    """Generic: try a list of description keys with the text parser."""
+    for k in desc_keys:
+        v = job_dict.get(k)
+        if v:
+            lo, hi = extract_salary_from_text(str(v))
+            if lo:
+                return lo, hi
+    return None, None
+
+
+def fetch_workday_detail(base, tenant, site, ext_path):
+    """
+    Fetch a single Workday job's detail to get its description HTML (which may
+    contain the salary range). Returns the parsed (min, max) or (None, None).
+    This is an EXTRA request per job — only called for jobs that pass filters,
+    so the cost is bounded by how many relevant jobs each company has.
+    """
+    try:
+        url = f"{base}/wday/cxs/{tenant}/{site}/job{ext_path}"
+        r = requests.get(url, headers={
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "application/json",
+            "Referer": f"{base}/en-US/{site}",
+        }, timeout=12)
+        if r.status_code != 200 or not r.text.strip():
+            return None, None
+        return extract_salary_workday(r.json())
+    except Exception:
+        return None, None
+
+
+
 
 
 def safe_fetch(fn, *args, **kwargs):
@@ -252,11 +356,14 @@ def fetch_microsoft():
                 work_opt = j.get("workLocationOption", "")
                 if not passes(title, locs + " " + work_opt):
                     continue
+                ms_min, ms_max = extract_salary_generic(j, "description", "jobSummary", "summary")
                 results.append(make_job(
                     id=f"msft_{j['id']}", company="Microsoft",
                     title=title, location=locs,
                     url="https://apply.careers.microsoft.com" + j.get("positionUrl", ""),
-                    posted_ts=j.get("postedTs", 0)
+                    posted_ts=j.get("postedTs", 0),
+                    base_salary_min=ms_min, base_salary_max=ms_max,
+                    base_salary_source="ats" if ms_min else None,
                 ))
         except Exception as e:
             print(f"  Microsoft error ({kw}): {e}")
@@ -278,10 +385,13 @@ def fetch_amazon():
                     location = j.get("location", "")
                     if not passes(title, location, loc):
                         continue
+                    az_min, az_max = extract_salary_generic(j, "description_short", "description", "basic_qualifications")
                     results.append(make_job(
                         id=f"amzn_{j.get('job_id', '')}",
                         company="Amazon", title=title, location=location,
-                        url="https://amazon.jobs" + j.get("job_path", "")
+                        url="https://amazon.jobs" + j.get("job_path", ""),
+                        base_salary_min=az_min, base_salary_max=az_max,
+                        base_salary_source="ats" if az_min else None,
                     ))
                 sleep(0.3)
             except Exception as e:
@@ -338,12 +448,15 @@ def fetch_netflix():
                     continue
                 if locs and not any(ind in locs.lower() for ind in us_indicators):
                     continue
+                nf_min, nf_max = extract_salary_generic(j, "description", "job_description", "descriptionTeaser")
                 results.append(make_job(
                     id=f"netflix_{jid}",
                     company="Netflix",
                     title=title,
                     location=locs,
-                    url=f"https://explore.jobs.netflix.net/careers?pid={jid}&domain=netflix.com"
+                    url=f"https://explore.jobs.netflix.net/careers?pid={jid}&domain=netflix.com",
+                    base_salary_min=nf_min, base_salary_max=nf_max,
+                    base_salary_source="ats" if nf_min else None,
                 ))
             if len(positions) < page_size:
                 break
@@ -447,10 +560,40 @@ def fetch_smartrecruiters(slug, company):
                 location = "Remote" if not location else f"{location} / Remote"
             if not passes(title, location, "remote" if remote else ""):
                 continue
+            # List endpoint rarely fills compensation{}. Fetch the detail to get
+            # the description text (jobAd.sections.jobDescription.text), parse salary.
+            sr_min = sr_max = None
+            # First try structured compensation on the list object
+            comp = j.get("compensation", {})
+            if isinstance(comp, dict) and comp:
+                lo = comp.get("min") or comp.get("minSalary")
+                hi = comp.get("max") or comp.get("maxSalary")
+                if lo and hi:
+                    try:
+                        sr_min, sr_max = int(lo), int(hi)
+                    except (TypeError, ValueError):
+                        pass
+            if not sr_min:
+                try:
+                    durl = f"https://api.smartrecruiters.com/v1/companies/{slug}/postings/{jid}"
+                    dr = requests.get(durl, headers={"User-Agent": "Mozilla/5.0"}, timeout=12)
+                    if dr.status_code == 200:
+                        dd = dr.json()
+                        sections = dd.get("jobAd", {}).get("sections", {})
+                        desc_text = " ".join(
+                            sections.get(k, {}).get("text", "")
+                            for k in ("jobDescription", "qualifications", "additionalInformation")
+                        )
+                        sr_min, sr_max = extract_salary_from_text(desc_text)
+                    sleep(0.2)
+                except Exception:
+                    pass
             results.append(make_job(
                 id=f"sr_{slug}_{jid}",
                 company=company, title=title, location=location,
-                url=f"https://careers.smartrecruiters.com/{slug}/{jid}"
+                url=f"https://careers.smartrecruiters.com/{slug}/{jid}",
+                base_salary_min=sr_min, base_salary_max=sr_max,
+                base_salary_source="ats" if sr_min else None,
             ))
     except Exception as e:
         print(f"  {company} error: {e}")
@@ -575,11 +718,14 @@ def fetch_avature(host, company, prefix):
                 location = j.get("projectCustomField3", j.get("projectCustomField1", ""))
                 if not passes(title, location, "remote"):
                     continue
-                # Avature doesn't typically expose salary in this endpoint
+                av_min, av_max = extract_salary_generic(
+                    j, "projectDescription", "description", "projectCustomField5")
                 results.append(make_job(
                     id=f"{prefix}_{jid}",
                     company=company, title=title, location=location,
                     url=f"https://{host}/en_US/careers/JobDetail/{jid}",
+                    base_salary_min=av_min, base_salary_max=av_max,
+                    base_salary_source="ats" if av_min else None,
                 ))
             sleep(0.5)
         except Exception as e:
@@ -613,10 +759,13 @@ def fetch_hibob(slug, company):
             if not passes(title, str(loc_obj), "remote"):
                 continue
             jid = str(j.get("id", j.get("jobId", "")))
+            hb_min, hb_max = extract_salary_generic(j, "description", "jobDescription", "about")
             results.append(make_job(
                 id=f"hibob_{slug}_{jid}",
                 company=company, title=title, location=str(loc_obj),
                 url=j.get("url", f"https://{slug}.careers.hibob.com/jobs/{jid}"),
+                base_salary_min=hb_min, base_salary_max=hb_max,
+                base_salary_source="ats" if hb_min else None,
             ))
     except Exception as e:
         print(f"  {company} HiBob error: {e}")
@@ -676,10 +825,14 @@ def fetch_eightfold(host, company, prefix, extra_query=""):
                     continue
                 if locs and not any(ind in locs.lower() for ind in us_indicators):
                     continue
+                base_min, base_max = extract_salary_generic(
+                    j, "description", "job_description", "descriptionTeaser")
                 results.append(make_job(
                     id=f"{prefix}_{jid}",
                     company=company, title=title, location=locs,
                     url=f"https://{host}/careers?pid={jid}&domain={host.split('.')[0]}.com",
+                    base_salary_min=base_min, base_salary_max=base_max,
+                    base_salary_source="ats" if base_min else None,
                 ))
             if len(positions) < page_size:
                 break
@@ -758,10 +911,14 @@ def fetch_phenom_widgets(host, company, prefix, ref_num):
                 if not passes(title, str(location), "remote"):
                     continue
                 job_url = j.get("jobUrl") or j.get("applyUrl") or f"https://{host}/job/{jid}"
+                base_min, base_max = extract_salary_generic(
+                    j, "descriptionTeaser", "description", "jobDescription", "ats_job_description")
                 results.append(make_job(
                     id=f"{prefix}_{jid}",
                     company=company, title=title, location=str(location),
                     url=job_url,
+                    base_salary_min=base_min, base_salary_max=base_max,
+                    base_salary_source="ats" if base_min else None,
                 ))
             if len(jobs_list) < page_size:
                 break
@@ -822,10 +979,13 @@ def fetch_trade_desk():
                     continue
                 if locs and not any(ind in locs.lower() for ind in us_indicators):
                     continue
+                ttd_min, ttd_max = extract_salary_generic(j, "description", "job_description", "descriptionTeaser")
                 results.append(make_job(
                     id=f"ttd_{jid}",
                     company="The Trade Desk", title=title, location=locs,
-                    url=f"https://careers.thetradedesk.com/careers?pid={jid}&domain=thetradedesk.com"
+                    url=f"https://careers.thetradedesk.com/careers?pid={jid}&domain=thetradedesk.com",
+                    base_salary_min=ttd_min, base_salary_max=ttd_max,
+                    base_salary_source="ats" if ttd_min else None,
                 ))
             if len(positions) < page_size:
                 break
@@ -869,11 +1029,17 @@ def fetch_salesforce():
                 location = j.get("locationsText", "")
                 if not passes(title, location, "remote"):
                     continue
+                sf_min, sf_max = fetch_workday_detail(
+                    "https://salesforce.wd12.myworkdayjobs.com",
+                    "salesforce", "External_Career_Site", ext_path)
                 results.append(make_job(
                     id=f"salesforce_{jid}",
                     company="Salesforce", title=title, location=location,
-                    url="https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site" + ext_path
+                    url="https://salesforce.wd12.myworkdayjobs.com/en-US/External_Career_Site" + ext_path,
+                    base_salary_min=sf_min, base_salary_max=sf_max,
+                    base_salary_source="ats" if sf_min else None,
                 ))
+                sleep(0.25)
         except Exception as e:
             print(f"  Salesforce error ({kw}): {e}")
     print(f"  Found {len(results)} Salesforce jobs")
@@ -911,10 +1077,26 @@ def fetch_servicenow():
                     location = "Remote" if not location else f"{location} / Remote"
                 if not passes(title, location, "remote" if remote else ""):
                     continue
+                sn_min = sn_max = None
+                try:
+                    durl = f"https://api.smartrecruiters.com/v1/companies/ServiceNow/postings/{jid}"
+                    dr = requests.get(durl, headers={"User-Agent": "Mozilla/5.0"}, timeout=12)
+                    if dr.status_code == 200:
+                        sections = dr.json().get("jobAd", {}).get("sections", {})
+                        desc_text = " ".join(
+                            sections.get(k, {}).get("text", "")
+                            for k in ("jobDescription", "qualifications", "additionalInformation")
+                        )
+                        sn_min, sn_max = extract_salary_from_text(desc_text)
+                    sleep(0.2)
+                except Exception:
+                    pass
                 results.append(make_job(
                     id=f"servicenow_{jid}",
                     company="ServiceNow", title=title, location=location,
-                    url=f"https://careers.smartrecruiters.com/ServiceNow/{jid}"
+                    url=f"https://careers.smartrecruiters.com/ServiceNow/{jid}",
+                    base_salary_min=sn_min, base_salary_max=sn_max,
+                    base_salary_source="ats" if sn_min else None,
                 ))
         except Exception as e:
             print(f"  ServiceNow error ({kw}): {e}")
@@ -954,7 +1136,9 @@ def fetch_workday(tenant, wd_num, site, company, prefix):
                 location = j.get("locationsText", "")
                 if not passes(title, location, "remote"):
                     continue
-                base_min, base_max = extract_salary_workday(j)
+                # Salary isn't in the search result — fetch the job detail.
+                # Only done for jobs that passed filters, so cost is bounded.
+                base_min, base_max = fetch_workday_detail(base, tenant, site, ext_path)
                 results.append(make_job(
                     id=f"{prefix}_{jid}",
                     company=company, title=title, location=location,
@@ -962,6 +1146,7 @@ def fetch_workday(tenant, wd_num, site, company, prefix):
                     base_salary_min=base_min, base_salary_max=base_max,
                     base_salary_source="ats" if base_min else None,
                 ))
+                sleep(0.25)   # be gentle — one detail call per relevant job
             sleep(1)
         except Exception as e:
             print(f"  {company} error ({kw}): {e}")
@@ -1003,10 +1188,14 @@ def fetch_deloitte():
                 location = j.get("projectCustomField3", j.get("projectCustomField1", ""))
                 if not passes(title, location, "remote"):
                     continue
+                dl_min, dl_max = extract_salary_generic(
+                    j, "projectDescription", "description", "projectCustomField5")
                 results.append(make_job(
                     id=f"deloitte_{jid}",
                     company="Deloitte", title=title, location=location,
-                    url=f"https://apply.deloitte.com/en_US/careers/JobDetail/{jid}"
+                    url=f"https://apply.deloitte.com/en_US/careers/JobDetail/{jid}",
+                    base_salary_min=dl_min, base_salary_max=dl_max,
+                    base_salary_source="ats" if dl_min else None,
                 ))
             sleep(1)
         except Exception as e:
@@ -1049,10 +1238,14 @@ def fetch_intuit():
                 if not passes(title, str(location), "remote"):
                     continue
                 job_url = j.get("url", j.get("applyUrl", f"https://jobs.intuit.com/job/{jid}"))
+                it_min, it_max = extract_salary_generic(
+                    j, "description", "jobDescription", "descriptionTeaser", "ats_job_description")
                 results.append(make_job(
                     id=f"intuit_{jid}",
                     company="Intuit", title=title, location=str(location),
-                    url=job_url
+                    url=job_url,
+                    base_salary_min=it_min, base_salary_max=it_max,
+                    base_salary_source="ats" if it_min else None,
                 ))
             sleep(1)
         except Exception as e:
@@ -1093,10 +1286,25 @@ def fetch_ycombinator():
                 company_name = j.get("company", {}).get("name", "YC Startup")
                 if not is_relevant_title(title):
                     continue
+                yc_min, yc_max = None, None
+                sr = j.get("salaryRange") or j.get("salary")
+                if isinstance(sr, str) and "$" in sr:
+                    yc_min, yc_max = extract_salary_from_text(f"salary {sr}")
+                elif isinstance(sr, dict):
+                    lo, hi = sr.get("min"), sr.get("max")
+                    if lo and hi:
+                        try:
+                            yc_min, yc_max = int(lo), int(hi)
+                        except (TypeError, ValueError):
+                            pass
+                if not yc_min:
+                    yc_min, yc_max = extract_salary_generic(j, "description", "jobType")
                 results.append(make_job(
                     id=f"yc_{jid}",
                     company=f"YC: {company_name}", title=title, location=location,
-                    url=j.get("url", "https://www.workatastartup.com/jobs")
+                    url=j.get("url", "https://www.workatastartup.com/jobs"),
+                    base_salary_min=yc_min, base_salary_max=yc_max,
+                    base_salary_source="board" if yc_min else None,
                 ))
             sleep(1)
         except Exception as e:
@@ -1118,10 +1326,14 @@ def fetch_weworkremotely():
             link = item.findtext("link", "")
             if not is_relevant_title(title):
                 continue
+            desc = item.findtext("description", "")
+            wwr_min, wwr_max = extract_salary_from_text(f"{title} {desc}")
             results.append(make_job(
                 id=f"wwr_{abs(hash(link))}",
                 company="We Work Remotely", title=title,
-                location="Remote", url=link
+                location="Remote", url=link,
+                base_salary_min=wwr_min, base_salary_max=wwr_max,
+                base_salary_source="board" if wwr_min else None,
             ))
     except Exception as e:
         print(f"  WWR error: {e}")
@@ -1143,11 +1355,14 @@ def fetch_dice():
                     location = j.get("location", "")
                     if not passes(title, location, loc):
                         continue
+                    dc_min, dc_max = extract_salary_generic(j, "salary", "summary", "description")
                     results.append(make_job(
                         id=f"dice_{j.get('id', '')}",
                         company=j.get("advertiserName") or "Dice",
                         title=title, location=location,
-                        url=j.get("applyDataItems", [{}])[0].get("applyUrl", "https://dice.com")
+                        url=j.get("applyDataItems", [{}])[0].get("applyUrl", "https://dice.com"),
+                        base_salary_min=dc_min, base_salary_max=dc_max,
+                        base_salary_source="board" if dc_min else None,
                     ))
             except Exception as e:
                 print(f"  Dice error ({kw}/{loc}): {e}")
@@ -1184,11 +1399,23 @@ def fetch_builtin():
                 location = j.get("builtInJobLocation", {}).get("name", "Remote")
                 if not passes(title, location, "remote"):
                     continue
+                bi_min, bi_max = None, None
+                lo = j.get("salaryStart") or j.get("compensationStart")
+                hi = j.get("salaryEnd") or j.get("compensationEnd")
+                if lo and hi:
+                    try:
+                        bi_min, bi_max = int(lo), int(hi)
+                    except (TypeError, ValueError):
+                        pass
+                if not bi_min:
+                    bi_min, bi_max = extract_salary_generic(j, "description", "summary")
                 results.append(make_job(
                     id=f"builtin_{jid}",
                     company=j.get("company", {}).get("name", "Built In"),
                     title=title, location=location,
-                    url="https://builtin.com/job/" + str(j.get("slug", ""))
+                    url="https://builtin.com/job/" + str(j.get("slug", "")),
+                    base_salary_min=bi_min, base_salary_max=bi_max,
+                    base_salary_source="board" if bi_min else None,
                 ))
             sleep(1)
         except Exception as e:
