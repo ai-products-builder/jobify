@@ -854,7 +854,8 @@
     "tc_estimate_max": 359600,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": "high"
+    "salary_confidence": "high",
+    "description_source": "none"
   },
   "ashby_Acorns_8ac268c2-7e82-417a-8e69-d08e532586dd": {
     "id": "ashby_Acorns_8ac268c2-7e82-417a-8e69-d08e532586dd",
@@ -11154,7 +11155,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_3e44c47429763d5b03d0d3a264414f8d": {
     "id": "dice_3e44c47429763d5b03d0d3a264414f8d",
@@ -16022,7 +16030,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_8747897e84ef9650f1d9842a0b27a45e": {
     "id": "dice_8747897e84ef9650f1d9842a0b27a45e",
@@ -42056,7 +42071,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "snap_AI-Community-Program-Manager_R0044661-1": {
     "id": "snap_AI-Community-Program-Manager_R0044661-1",
@@ -45177,7 +45193,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "visa_Analyst--Intelligence---Data-Solutions--IDS---Data-Science_REF082404W": {
     "id": "visa_Analyst--Intelligence---Data-Solutions--IDS---Data-Science_REF082404W",
