@@ -624,6 +624,155 @@ def fetch_hibob(slug, company):
     return results
 
 
+# ─── EIGHTFOLD FETCHER ────────────────────────────────────────────────────────
+def fetch_eightfold(host, company, prefix, extra_query=""):
+    """
+    Generic Eightfold AI ATS fetcher. host is e.g. "nvidia.eightfold.ai".
+    Uses the same /api/apply/v2/jobs endpoint that powers Netflix's existing
+    fetch_netflix() function. Paginates 10 at a time.
+    """
+    print(f"Fetching {company} (Eightfold)...")
+    results = []
+    seen = set()
+    page_size = 10
+    start = 0
+    us_indicators = ["united states", "us", "remote", "ca", "ny", "tx", "ga",
+                     "los angeles", "atlanta", "san francisco", "santa clara",
+                     "seattle", "new york", "austin"]
+    while start < 200:  # cap at 20 pages = 200 jobs
+        try:
+            url = (
+                f"https://{host}/api/apply/v2/jobs"
+                f"?domain={host.split('.')[0]}.com"
+                f"&start={start}&num={page_size}"
+                f"{extra_query}"
+            )
+            r = requests.get(url, headers={
+                "User-Agent": "Mozilla/5.0",
+                "Accept": "application/json",
+                "Referer": f"https://{host}/careers",
+            }, timeout=15)
+            if r.status_code != 200 or not r.text.strip():
+                if start == 0:
+                    print(f"  {company} Eightfold: HTTP {r.status_code}")
+                break
+            data = r.json()
+            positions = data.get("positions", [])
+            if not positions:
+                break
+            for j in positions:
+                if not isinstance(j, dict):
+                    continue
+                jid = str(j.get("id", ""))
+                if not jid or jid in seen:
+                    continue
+                seen.add(jid)
+                title = j.get("name", j.get("posting_name", ""))
+                raw_loc = j.get("location", "")
+                if isinstance(raw_loc, list):
+                    raw_loc = raw_loc[0] if raw_loc else ""
+                locs = ", ".join([p.strip() for p in raw_loc.split(",")]) if raw_loc else ""
+                if not is_relevant_title(title):
+                    continue
+                if locs and not any(ind in locs.lower() for ind in us_indicators):
+                    continue
+                results.append(make_job(
+                    id=f"{prefix}_{jid}",
+                    company=company, title=title, location=locs,
+                    url=f"https://{host}/careers?pid={jid}&domain={host.split('.')[0]}.com",
+                ))
+            if len(positions) < page_size:
+                break
+            start += page_size
+            sleep(0.4)
+        except Exception as e:
+            print(f"  {company} Eightfold error (start={start}): {e}")
+            break
+    print(f"  Found {len(results)} {company} jobs")
+    return results
+
+
+# ─── PHENOM WIDGETS FETCHER (for sites that need refNum + CSRF) ──────────────
+def fetch_phenom_widgets(host, company, prefix, ref_num):
+    """
+    Phenom widgets API — POST to /widgets with refNum + ddoKey.
+    More reliable than the /api/jobs path used by fetch_phenom() but requires
+    knowing the per-company refNum (extractable from page HTML).
+    Currently used for: eBay (EBAEBAUS).
+    """
+    print(f"Fetching {company} (Phenom widgets)...")
+    results = []
+    seen = set()
+    page_size = 20
+    for start_page in range(0, 5):  # 5 pages × 20 = up to 100 jobs
+        try:
+            url = f"https://{host}/widgets"
+            payload = {
+                "lang": "en_us",
+                "deviceType": "desktop",
+                "country": "United States",
+                "pageName": "search-results",
+                "size": page_size,
+                "from": start_page * page_size,
+                "jobs": True,
+                "counts": True,
+                "all_fields": ["category", "country", "city", "type"],
+                "clearAll": False,
+                "jdsource": "facets",
+                "isSliderEnable": False,
+                "pageId": "page20",
+                "siteType": "external",
+                "keywords": "product manager",
+                "global": False,
+                "selected_fields": {},
+                "sort": {"order": "desc", "field": "postedDate"},
+                "locationData": {},
+                "refNum": ref_num,
+                "ddoKey": "refineSearch",
+            }
+            r = requests.post(url, json=payload, headers={
+                "User-Agent": "Mozilla/5.0",
+                "Content-Type": "application/json",
+                "Accept": "application/json",
+                "Referer": f"https://{host}/us/en/search-results",
+            }, timeout=15)
+            if r.status_code != 200 or not r.text.strip():
+                if start_page == 0:
+                    print(f"  {company} Phenom widgets: HTTP {r.status_code}")
+                break
+            data = r.json()
+            jobs_list = data.get("refineSearch", {}).get("data", {}).get("jobs", [])
+            if not jobs_list:
+                break
+            for j in jobs_list:
+                if not isinstance(j, dict):
+                    continue
+                jid = str(j.get("jobId", j.get("jobSeqNo", "")))
+                if not jid or jid in seen:
+                    continue
+                seen.add(jid)
+                title = j.get("title", j.get("jobTitle", ""))
+                location = j.get("location", "")
+                if isinstance(location, list):
+                    location = ", ".join(location[:2])
+                if not passes(title, str(location), "remote"):
+                    continue
+                job_url = j.get("jobUrl") or j.get("applyUrl") or f"https://{host}/job/{jid}"
+                results.append(make_job(
+                    id=f"{prefix}_{jid}",
+                    company=company, title=title, location=str(location),
+                    url=job_url,
+                ))
+            if len(jobs_list) < page_size:
+                break
+            sleep(0.3)
+        except Exception as e:
+            print(f"  {company} Phenom widgets error (page {start_page}): {e}")
+            break
+    print(f"  Found {len(results)} {company} jobs")
+    return results
+
+
 # ─── THE TRADE DESK ───────────────────────────────────────────────────────────
 def fetch_trade_desk():
     print("Fetching The Trade Desk...")
@@ -1175,20 +1324,33 @@ ASHBY_COMPANIES = [
 ]
 
 
-# ── PHENOM COMPANIES ──
-# Format: (host, display name, prefix)
-# Confirmed from URLs with /search-jobs/, /api/jobs, ?pid=, etc.
+# ── PHENOM COMPANIES (basic /api/jobs path) ──
+# Only kept the ones that actually respond on /api/jobs (Intuit-style).
+# NVIDIA/Qualcomm/eBay/Zoom/Equifax/Home Depot don't use this path — they
+# use the widgets API (see PHENOM_WIDGETS_COMPANIES below) or aren't on Phenom.
 PHENOM_COMPANIES = [
-    ("jobs.nvidia.com",       "NVIDIA",       "nvidia"),
-    ("careers.qualcomm.com",  "Qualcomm",     "qualcomm"),
-    ("careers.zoom.us",       "Zoom",         "zoom"),
-    ("jobs.ebayinc.com",      "eBay",         "ebay"),
-    ("careers.homedepot.com", "The Home Depot", "homedepot"),
-    ("careers.equifax.com",   "Equifax",      "equifax"),
     ("careers.procore.com",   "Procore",      "procore"),
     ("jobs.adp.com",          "ADP",          "adp"),
     ("jobs.directv.com",      "DIRECTV",      "directv"),
     ("jobs.coxenterprises.com","Cox Enterprises","cox"),
+]
+
+
+# ── EIGHTFOLD COMPANIES (Netflix-style API) ──
+# Format: (host, display name, prefix, extra_query)
+# extra_query optional — e.g. "&Teams=Product%20Management" to pre-filter
+EIGHTFOLD_COMPANIES = [
+    # NVIDIA confirmed at nvidia.eightfold.ai (also has Workday — both work)
+    ("nvidia.eightfold.ai", "NVIDIA", "nvidia", ""),
+]
+
+
+# ── PHENOM WIDGETS COMPANIES (refNum-based) ──
+# Format: (host, display name, prefix, refNum)
+# refNum is extracted from each company's careers page HTML.
+# These work via POST /widgets with refNum + ddoKey: "refineSearch"
+PHENOM_WIDGETS_COMPANIES = [
+    ("jobs.ebayinc.com", "eBay", "ebay", "EBAEBAUS"),
 ]
 
 
@@ -1224,6 +1386,12 @@ WORKDAY_COMPANIES = [
 
     # ── Existing: Atlanta / fintech ──
     ("americanexpress", 1, "External", "American Express", "amex"),  # NOTE: may be Oracle HCM — flag for verification
+
+    # ── Patch-in: NVIDIA also has a Workday — keeping as backup to Eightfold ──
+    ("nvidia",      5, "NVIDIAExternalCareerSite", "NVIDIA (Workday)", "nvidiawd"),
+
+    # ── Qualcomm Workday — needs verification; trying common qualcomm.wd5 path ──
+    ("qualcomm",    5, "External",                 "Qualcomm",         "qualcomm"),
 ]
 
 
@@ -1264,9 +1432,19 @@ def run():
         all_fresh += safe_fetch(fetch_workday, tenant, wd_num, site, company, prefix)
         sleep(0.3)
 
-    # Phenom People (bulk via generic fetcher) — NVIDIA, Qualcomm, Zoom, eBay etc.
+    # Phenom People (bulk via generic fetcher) — for sites using /api/jobs
     for host, company, prefix in PHENOM_COMPANIES:
         all_fresh += safe_fetch(fetch_phenom, host, company, prefix)
+        sleep(0.3)
+
+    # Eightfold AI (Netflix-style) — for NVIDIA
+    for host, company, prefix, extra_q in EIGHTFOLD_COMPANIES:
+        all_fresh += safe_fetch(fetch_eightfold, host, company, prefix, extra_q)
+        sleep(0.4)
+
+    # Phenom widgets (POST /widgets with refNum) — for eBay
+    for host, company, prefix, ref_num in PHENOM_WIDGETS_COMPANIES:
+        all_fresh += safe_fetch(fetch_phenom_widgets, host, company, prefix, ref_num)
         sleep(0.3)
 
     # Avature (bulk) — Delta, lululemon
