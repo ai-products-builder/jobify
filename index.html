@@ -14,6 +14,8 @@
     --green: #16a34a; --green-bg: #dcfce7;
     --yellow: #ca8a04; --yellow-bg: #fef9c3;
     --red: #dc2626; --red-bg: #fee2e2;
+    --comp-base-bg: #dcfce7; --comp-base-text: #166534;
+    --comp-tc-bg: #dbeafe; --comp-tc-text: #1e40af;
     --radius: 12px; --sidebar: 240px;
   }
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -65,6 +67,15 @@
   .badge-atlanta { background: #dbeafe; color: #1d4ed8; }
   .badge-new { background: #fef9c3; color: #ca8a04; }
   .badge-status { background: var(--accent-bg); color: var(--accent); }
+
+  /* ── COMPENSATION BADGES ─────────────────────────────────────────────── */
+  .job-comp { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+  .comp-badge { display: inline-flex; align-items: center; gap: 4px; padding: 4px 10px; border-radius: 99px; font-size: 11px; font-weight: 600; }
+  .comp-base { background: var(--comp-base-bg); color: var(--comp-base-text); }
+  .comp-tc { background: var(--comp-tc-bg); color: var(--comp-tc-text); }
+  .comp-missing { background: #f3f4f6; color: #9ca3af; font-style: italic; font-weight: 500; }
+  /* ────────────────────────────────────────────────────────────────────── */
+
   .card-summary { font-size: 13px; color: var(--muted); line-height: 1.5; margin-bottom: 10px; }
   .card-gap { font-size: 12px; color: var(--yellow); margin-bottom: 10px; line-height: 1.4; }
   .card-bottom { display: flex; justify-content: space-between; align-items: center; }
@@ -114,6 +125,19 @@
   .open-link { display: block; text-align: center; padding: 10px; border-radius: 8px; background: var(--text); color: #fff; font-size: 13px; font-weight: 500; text-decoration: none; margin-top: 8px; }
   .open-link:hover { background: #333; }
   .panel-desc { font-size: 13px; color: var(--muted); line-height: 1.6; }
+
+  /* ── COMPENSATION BREAKDOWN (DETAIL PANEL) ──────────────────────────── */
+  .comp-breakdown { background: var(--bg); border-radius: 10px; padding: 14px; }
+  .comp-row { display: flex; justify-content: space-between; align-items: center; padding: 7px 0; font-size: 13px; }
+  .comp-row + .comp-row { border-top: 1px dashed var(--border); }
+  .comp-row.total { font-weight: 700; padding-top: 10px; margin-top: 4px; border-top: 2px solid var(--accent); }
+  .comp-row.total .comp-row-value { color: var(--accent); font-size: 15px; }
+  .comp-row-label { color: var(--muted); }
+  .comp-row-label small { color: var(--hint); font-size: 11px; font-weight: 400; }
+  .comp-row-value { font-weight: 600; color: var(--text); }
+  .comp-caveat { font-size: 11px; color: var(--hint); line-height: 1.5; margin-top: 10px; font-style: italic; }
+  .comp-empty { font-size: 13px; color: var(--hint); padding: 14px; background: var(--bg); border-radius: 10px; text-align: center; }
+  /* ────────────────────────────────────────────────────────────────────── */
 
   .pipeline { display: flex; margin-bottom: 24px; background: var(--surface); border: 1px solid var(--border); border-radius: var(--radius); overflow: hidden; }
   .pipe-stage { flex: 1; padding: 14px 16px; text-align: center; border-right: 1px solid var(--border); }
@@ -207,6 +231,10 @@
         <option value="score">Sort: Best Match</option>
         <option value="date">Sort: Newest First</option>
         <option value="ats">Sort: ATS Score</option>
+        <option value="base_desc">Sort: Base Salary (high → low)</option>
+        <option value="base_asc">Sort: Base Salary (low → high)</option>
+        <option value="tc_desc">Sort: Est. TC (high → low)</option>
+        <option value="tc_asc">Sort: Est. TC (low → high)</option>
       </select>
       <select class="filter" onchange="renderJobs()" id="time-filter">
         <option value="0" selected>All time</option>
@@ -229,7 +257,7 @@
     <div class="pipeline" id="pipeline"></div>
     <div class="table-wrap">
       <table>
-        <thead><tr><th>Company</th><th>Job Title</th><th>Location</th><th>Status</th><th>Match</th><th>ATS</th><th>Found</th></tr></thead>
+        <thead><tr><th>Company</th><th>Job Title</th><th>Location</th><th>Status</th><th>Match</th><th>ATS</th><th>Base</th><th>Est. TC</th><th>Found</th></tr></thead>
         <tbody id="app-table-body"></tbody>
       </table>
     </div>
@@ -250,6 +278,10 @@
     <div class="panel-section">
       <div class="panel-section-title">AI Fit Analysis</div>
       <div id="panel-fit-score"></div>
+    </div>
+    <div class="panel-section">
+      <div class="panel-section-title">Compensation</div>
+      <div id="panel-comp"></div>
     </div>
     <div class="panel-section">
       <div class="panel-section-title">Track Application</div>
@@ -328,9 +360,9 @@ let tracker = JSON.parse(localStorage.getItem('jobify_tracker')||'{}');
 let apiKey = localStorage.getItem('jobify_api_key')||'';
 
 const SAMPLES = {
-  "msft_1":{ id:"msft_1", company:"Microsoft", title:"Senior Product Manager – Ads Platform", location:"United States, Georgia, Atlanta", url:"https://apply.careers.microsoft.com/careers", posted_ts:NOW_S-3600, found_date:new Date().toISOString(), match_score:88, ats_score:82, confidence:"high", resume_used:"ADS", reason:"Direct match to ads platform and data background.", skills_gap:"Strong match — no significant gaps", description_source:"fetched", description:"Lead product strategy for Microsoft's advertising platform." },
+  "msft_1":{ id:"msft_1", company:"Microsoft", title:"Senior Product Manager – Ads Platform", location:"United States, Georgia, Atlanta", url:"https://apply.careers.microsoft.com/careers", posted_ts:NOW_S-3600, found_date:new Date().toISOString(), match_score:88, ats_score:82, confidence:"high", resume_used:"ADS", reason:"Direct match to ads platform and data background.", skills_gap:"Strong match — no significant gaps", description_source:"fetched", description:"Lead product strategy for Microsoft's advertising platform.", base_salary_min:185000, base_salary_max:225000, base_salary_source:"ats", bonus_pct:15, equity_pct:40, tc_estimate_min:286750, tc_estimate_max:348750, salary_tier:"bigtech", salary_level:"senior_pm", salary_confidence:"high" },
   "goog_1":{ id:"goog_1", company:"Google", title:"Product Manager, Data Analytics", location:"Remote", url:"https://careers.google.com", posted_ts:NOW_S-7200, found_date:new Date().toISOString(), match_score:80, ats_score:75, confidence:"high", resume_used:"DATA", reason:"Strong fit for data product background.", skills_gap:"Missing BigQuery-specific experience", description_source:"fetched", description:"Drive product vision for Google's advertiser analytics suite." },
-  "amzn_1":{ id:"amzn_1", company:"Amazon", title:"Sr. PM – Advertising Data Products", location:"Remote", url:"https://amazon.jobs", posted_ts:NOW_S-86400, found_date:new Date().toISOString(), match_score:92, ats_score:88, confidence:"high", resume_used:"ADS", reason:"Near-perfect match at ads and data intersection.", skills_gap:"Strong match — no significant gaps", description_source:"stored", description:"Own the roadmap for Amazon's advertising data products." },
+  "amzn_1":{ id:"amzn_1", company:"Amazon", title:"Sr. PM – Advertising Data Products", location:"Remote", url:"https://amazon.jobs", posted_ts:NOW_S-86400, found_date:new Date().toISOString(), match_score:92, ats_score:88, confidence:"high", resume_used:"ADS", reason:"Near-perfect match at ads and data intersection.", skills_gap:"Strong match — no significant gaps", description_source:"stored", description:"Own the roadmap for Amazon's advertising data products.", base_salary_min:200000, base_salary_max:240000, base_salary_source:"ats", bonus_pct:15, equity_pct:40, tc_estimate_min:310000, tc_estimate_max:372000, salary_tier:"bigtech", salary_level:"senior_pm", salary_confidence:"high" },
   "reddit_1":{ id:"reddit_1", company:"Reddit", title:"Senior Director of Product, Ads Platform", location:"Remote - United States", url:"https://job-boards.greenhouse.io/reddit", posted_ts:NOW_S-172800, found_date:new Date().toISOString(), match_score:85, ats_score:79, confidence:"medium", resume_used:"ADS", reason:"Strong ads platform leadership alignment.", skills_gap:"Missing consumer social platform experience", description_source:"stored", description:"Lead Reddit's ads platform product org." }
 };
 
@@ -355,6 +387,52 @@ function statusLabel(s){
 function statusPillClass(s){
   return {new:'s-new',saved:'s-saved',applied:'s-applied',phone_screen:'s-phone_screen',interview:'s-interview',offer:'s-offer',rejected:'s-rejected',irrelevant:'s-rejected'}[s]||'s-new';
 }
+
+// ── COMPENSATION HELPERS ─────────────────────────────────────────────────
+/**
+ * Format $K range like "$180K–$220K" or "$200K" if min===max. Returns null if missing.
+ */
+function fmtSalaryRange(lo, hi) {
+  if (lo == null && hi == null) return null;
+  const toK = n => '$' + Math.round(n / 1000) + 'K';
+  if (lo && hi && lo !== hi) return `${toK(lo)}–${toK(hi)}`;
+  return toK(lo || hi);
+}
+
+/**
+ * Returns { baseLabel, tcLabel, tcTooltip } — labels use "—" for missing.
+ */
+function formatCompensation(job) {
+  const base = fmtSalaryRange(job.base_salary_min, job.base_salary_max);
+  const tc = fmtSalaryRange(job.tc_estimate_min, job.tc_estimate_max);
+  let tcTooltip = null;
+  if (tc) {
+    const bonus = job.bonus_pct != null ? job.bonus_pct : 15;
+    const eq = job.equity_pct != null ? job.equity_pct : 0;
+    const tier = job.salary_tier || 'default';
+    const level = job.salary_level || 'IC';
+    tcTooltip = `Base + ${bonus}% bonus + ${eq}% equity (${tier} tier, ${level})`;
+  }
+  return {
+    baseLabel: base || '—',
+    tcLabel: tc || '—',
+    tcTooltip,
+    hasBase: !!base,
+    hasTC: !!tc,
+  };
+}
+
+/**
+ * Midpoint of a salary range for sorting. Returns 0 when both bounds missing.
+ */
+function salaryMidpoint(job, field) {
+  const lo = job[`${field}_min`];
+  const hi = job[`${field}_max`];
+  if (lo == null && hi == null) return 0;
+  if (lo != null && hi != null) return (lo + hi) / 2;
+  return lo != null ? lo : hi;
+}
+// ─────────────────────────────────────────────────────────────────────────
 
 async function loadJobs(){
   document.getElementById('sync-time').textContent='Syncing...';
@@ -416,10 +494,29 @@ function getFiltered(){
     return true;
   });
 
+  // Sorting — including the new salary/TC options
   if(sort==='score') {
     jobs.sort((a,b)=>(b.match_score||0)-(a.match_score||0));
   } else if(sort==='ats') {
     jobs.sort((a,b)=>(b.ats_score||0)-(a.ats_score||0));
+  } else if(sort==='base_desc') {
+    // High to low — jobs without salary go to bottom (treated as 0)
+    jobs.sort((a,b)=>salaryMidpoint(b,'base_salary')-salaryMidpoint(a,'base_salary'));
+  } else if(sort==='base_asc') {
+    // Low to high — jobs without salary sink to bottom (treated as Infinity)
+    jobs.sort((a,b)=>{
+      const av = salaryMidpoint(a,'base_salary') || Infinity;
+      const bv = salaryMidpoint(b,'base_salary') || Infinity;
+      return av - bv;
+    });
+  } else if(sort==='tc_desc') {
+    jobs.sort((a,b)=>salaryMidpoint(b,'tc_estimate')-salaryMidpoint(a,'tc_estimate'));
+  } else if(sort==='tc_asc') {
+    jobs.sort((a,b)=>{
+      const av = salaryMidpoint(a,'tc_estimate') || Infinity;
+      const bv = salaryMidpoint(b,'tc_estimate') || Infinity;
+      return av - bv;
+    });
   } else {
     jobs.sort((a,b)=>(b.posted_ts||0)-(a.posted_ts||0));
   }
@@ -433,12 +530,13 @@ function renderJobs(){
   const remote=jobs.filter(j=>(j.location||'').toLowerCase().includes('remote')).length;
   const atlanta=jobs.filter(j=>(j.location||'').toLowerCase().includes('atlanta')).length;
   const highMatch=jobs.filter(j=>(j.match_score||0)>=80).length;
+  const withSalary=jobs.filter(j=>j.base_salary_min!=null).length;
 
   document.getElementById('stats-grid').innerHTML=`
     <div class="stat-card"><div class="stat-label">New Today</div><div class="stat-value" style="color:var(--yellow)">${newToday}</div><div class="stat-sub">posted in last 24h</div></div>
     <div class="stat-card"><div class="stat-label">Total Jobs</div><div class="stat-value" style="color:var(--accent)">${jobs.length}</div><div class="stat-sub">matching filters</div></div>
     <div class="stat-card"><div class="stat-label">Strong Match</div><div class="stat-value" style="color:var(--green)">${highMatch}</div><div class="stat-sub">score 80+ — apply these</div></div>
-    <div class="stat-card"><div class="stat-label">Remote</div><div class="stat-value" style="color:var(--msft)">${remote}</div><div class="stat-sub">work from anywhere</div></div>`;
+    <div class="stat-card"><div class="stat-label">With Salary</div><div class="stat-value" style="color:var(--comp-base-text)">${withSalary}</div><div class="stat-sub">base disclosed by employer</div></div>`;
 
   if(!jobs.length){ document.getElementById('jobs-grid').innerHTML='<div class="empty" style="grid-column:1/-1"><div class="empty-title">No jobs found</div>Try adjusting your filters</div>'; return; }
 
@@ -466,6 +564,15 @@ function renderJobs(){
 
     const hasGap = skillsGap && skillsGap!=='N/A' && !skillsGap.toLowerCase().includes('strong match') && !skillsGap.toLowerCase().includes('no significant');
 
+    // ── Compensation row ──
+    const comp = formatCompensation(j);
+    const compBaseHtml = comp.hasBase
+      ? `<span class="comp-badge comp-base" title="Base salary disclosed by employer">💵 Base: ${comp.baseLabel}</span>`
+      : `<span class="comp-badge comp-missing" title="Employer did not disclose base salary">💵 Base: —</span>`;
+    const compTcHtml = comp.hasTC
+      ? `<span class="comp-badge comp-tc" title="${comp.tcTooltip}">📊 Est. TC: ${comp.tcLabel}</span>`
+      : `<span class="comp-badge comp-missing" title="TC requires base salary to estimate">📊 Est. TC: —</span>`;
+
     return `<div class="job-card" style="border-left-color:${color}" onclick="openPanel('${j.id}')">
       <div class="card-top">
         <div class="card-company"><span class="dot" style="background:${color}"></span>${j.company}</div>
@@ -479,6 +586,10 @@ function renderJobs(){
         ${status!=='new'?`<span class="badge badge-status">${statusLabel(status)}</span>`:''}
         ${confidenceBadge}
         ${descBadge}
+      </div>
+      <div class="job-comp">
+        ${compBaseHtml}
+        ${compTcHtml}
       </div>
       ${reason?`<div class="card-summary">${reason}</div>`:''}
       ${hasGap?`<div class="card-gap">⚠️ Gap: ${skillsGap}</div>`:''}
@@ -506,7 +617,7 @@ function renderApplications(){
     </div>`).join('');
 
   const tracked=jobs.filter(j=>getStatus(j.id)!=='new').sort((a,b)=>(b.posted_ts||0)-(a.posted_ts||0));
-  if(!tracked.length){ document.getElementById('app-table-body').innerHTML=`<tr><td colspan="7" style="text-align:center;color:var(--hint);padding:40px">No applications yet. Open a job and set its status.</td></tr>`; return; }
+  if(!tracked.length){ document.getElementById('app-table-body').innerHTML=`<tr><td colspan="9" style="text-align:center;color:var(--hint);padding:40px">No applications yet. Open a job and set its status.</td></tr>`; return; }
 
   document.getElementById('app-table-body').innerHTML=tracked.map(j=>{
     const color=COLORS[j.company]||'#888';
@@ -515,6 +626,7 @@ function renderApplications(){
     const locShort=l.includes('remote')?'Remote':l.includes('atlanta')?'Atlanta':(j.location||'').split(',').slice(-1)[0]?.trim()||'';
     const matchScore=j.match_score??null;
     const atsScore=j.ats_score??null;
+    const comp=formatCompensation(j);
     return `<tr>
       <td><div style="display:flex;align-items:center;gap:6px"><span class="dot" style="background:${color}"></span>${j.company}</div></td>
       <td><span class="table-title" onclick="openPanel('${j.id}')">${j.title||'Untitled'}</span></td>
@@ -522,6 +634,8 @@ function renderApplications(){
       <td><span class="status-pill ${statusPillClass(s)}">${statusLabel(s)}</span></td>
       <td>${matchScore!=null?`<span style="font-weight:600;color:${matchScore>=80?'var(--green)':matchScore>=60?'var(--yellow)':'var(--red)'}">${matchScore}</span>`:'—'}</td>
       <td>${atsScore!=null?`<span style="font-weight:600;color:${atsScore>=80?'var(--green)':atsScore>=60?'var(--yellow)':'var(--red)'}">${atsScore}</span>`:'—'}</td>
+      <td style="color:${comp.hasBase?'var(--comp-base-text)':'var(--hint)'};font-weight:${comp.hasBase?'600':'400'}">${comp.baseLabel}</td>
+      <td style="color:${comp.hasTC?'var(--comp-tc-text)':'var(--hint)'};font-weight:${comp.hasTC?'600':'400'}" title="${comp.tcTooltip||''}">${comp.tcLabel}</td>
       <td>${j.found_date?new Date(j.found_date).toLocaleDateString():'—'}</td>
     </tr>`;
   }).join('');
@@ -570,6 +684,50 @@ function openPanel(id){
     </div>`}
     <div class="score-meta">Resume: ${j.resume_used||'—'} · Source: ${j.description_source||'—'} · Confidence: ${j.confidence||'—'}</div>
   ` : '<div style="font-size:13px;color:var(--hint);padding:12px 0">No AI score yet — run Score Jobs workflow in GitHub Actions</div>';
+
+  // ── Compensation panel ──
+  const comp = formatCompensation(j);
+  let compHtml = '';
+  if (comp.hasBase) {
+    const baseMid = ((j.base_salary_min||0) + (j.base_salary_max||0)) / 2;
+    const bonusPct = j.bonus_pct != null ? j.bonus_pct : 15;
+    const equityPct = j.equity_pct != null ? j.equity_pct : 0;
+    const bonusDollars = Math.round(baseMid * bonusPct / 100);
+    const equityDollars = Math.round(baseMid * equityPct / 100);
+    const tier = j.salary_tier || 'default';
+    const level = j.salary_level || 'IC';
+
+    compHtml = `
+      <div class="comp-breakdown">
+        <div class="comp-row">
+          <span class="comp-row-label">Base Salary <small>(from ATS)</small></span>
+          <span class="comp-row-value">${comp.baseLabel}</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-row-label">+ Bonus <small>(${bonusPct}% target)</small></span>
+          <span class="comp-row-value">$${Math.round(bonusDollars/1000)}K</span>
+        </div>
+        <div class="comp-row">
+          <span class="comp-row-label">+ Equity <small>(${equityPct}% — ${tier} tier, ${level})</small></span>
+          <span class="comp-row-value">${equityDollars>0?`$${Math.round(equityDollars/1000)}K`:'—'}</span>
+        </div>
+        <div class="comp-row total">
+          <span class="comp-row-label">Estimated Total Comp</span>
+          <span class="comp-row-value">${comp.tcLabel}</span>
+        </div>
+        <div class="comp-caveat">
+          Base salary is directly from the job posting. TC is an estimate using
+          tier-based bonus + equity multipliers — actual offers vary significantly.
+        </div>
+      </div>`;
+  } else {
+    compHtml = `
+      <div class="comp-empty">
+        Salary not disclosed in job posting.<br>
+        <small style="color:var(--hint)">Most employers only disclose when required by state pay-transparency laws.</small>
+      </div>`;
+  }
+  document.getElementById('panel-comp').innerHTML = compHtml;
 
   document.getElementById('panel-status-select').value=getStatus(j.id);
   document.getElementById('panel-notes').value=getNotes(j.id);
