@@ -86,6 +86,7 @@ def make_job(id, company, title, location, url, posted_ts=0, description="",
         "url": url,
         "posted_ts": posted_ts,
         "found_date": datetime.now().isoformat(),
+        "last_seen": datetime.now().isoformat(),
         "status": "new",
         "description": description,
         "base_salary_min": base_salary_min,
@@ -1844,8 +1845,11 @@ def run():
         "tc_estimate_min", "tc_estimate_max",
         "salary_tier", "salary_level", "salary_confidence",
     )
+    NOW_ISO = datetime.now().isoformat()
+    seen_this_run = set()
     for job in deduped:
         jid = job["id"]
+        seen_this_run.add(jid)
         if jid not in existing:
             existing[jid] = job
             new_count += 1
@@ -1853,6 +1857,11 @@ def run():
             # Refresh mutable fields but DON'T clobber scoring/notes/status
             existing[jid]["title"] = job["title"]
             existing[jid]["url"] = job["url"]
+            existing[jid]["last_seen"] = NOW_ISO   # mark as still live
+            # If it had been auto-closed but reappeared, reopen it (unless the
+            # user manually tracked it — never override a user status).
+            if existing[jid].get("status") == "closed":
+                existing[jid]["status"] = "new"
             if job.get("description") and not existing[jid].get("description"):
                 existing[jid]["description"] = job["description"]
 
@@ -1878,6 +1887,49 @@ def run():
                   f"({len(removed_ids)} legacy dupes collapsed)")
     except Exception as e:
         print(f"  ⚠️  jobs.json dedup pass skipped: {e}")
+
+    # ── STALENESS SWEEP ──────────────────────────────────────────────────────
+    # Jobs the company has taken down stop appearing in scrapes. We mark a job
+    # 'closed' when its last_seen is older than STALE_DAYS — but ONLY for
+    # companies we actually scraped successfully this run (so a broken scraper
+    # doesn't wrongly close every job from a company). We never touch a job the
+    # user has been tracking (applied, interview, etc.).
+    STALE_DAYS = 14
+    USER_TRACKED = {"saved", "applied", "phone_screen", "interview", "offer", "rejected"}
+    now = datetime.now()
+
+    # Which companies did we get fresh results for this run? Only these are
+    # eligible for closing stale jobs. (If a scraper returned zero, we assume it
+    # may be broken and skip closing that company's jobs.)
+    companies_scraped = {existing[j]["company"] for j in seen_this_run if j in existing}
+
+    closed_count = 0
+    for jid, job in existing.items():
+        if jid in seen_this_run:
+            continue                       # still live — already stamped
+        if job.get("status") in USER_TRACKED:
+            continue                       # never auto-close tracked jobs
+        if job.get("status") == "closed":
+            continue                       # already closed
+        if job.get("company") not in companies_scraped:
+            continue                       # company's scraper didn't run/return — don't guess
+        # Backfill last_seen from found_date for legacy jobs missing it
+        last_seen_str = job.get("last_seen") or job.get("found_date")
+        if not last_seen_str:
+            continue
+        try:
+            last_seen = datetime.fromisoformat(last_seen_str)
+        except (ValueError, TypeError):
+            continue
+        if (now - last_seen).days >= STALE_DAYS:
+            job["status"] = "closed"
+            job["closed_date"] = now.isoformat()
+            closed_count += 1
+
+    if closed_count:
+        print(f"Staleness sweep: marked {closed_count} jobs 'closed' "
+              f"(not seen in {STALE_DAYS}+ days, company still actively scraped)")
+    # ──────────────────────────────────────────────────────────────────────────
 
     save_jobs(existing)
 
