@@ -1,110 +1,16 @@
 {
-  "checked_at": "2026-05-20T00:05:50.430207",
+  "checked_at": "2026-05-20T00:20:10.668646",
   "summary": {
-    "total": 273,
-    "ok": 87,
+    "total": 263,
+    "ok": 90,
     "empty": 0,
-    "http_error": 13,
+    "http_error": 4,
     "timeout": 0,
-    "exception": 4,
+    "exception": 0,
     "todo": 169,
-    "total_jobs_available": 15946
+    "total_jobs_available": 15944
   },
   "companies": [
-    {
-      "status": "EXCEPTION",
-      "http_code": 0,
-      "jobs_total": 0,
-      "url": "https://jobs.directv.com/api/jobs",
-      "error": "Expecting value: line 2 column 1 (char 2)",
-      "company": "DIRECTV",
-      "ats": "phenom",
-      "slug": "jobs.directv.com"
-    },
-    {
-      "status": "EXCEPTION",
-      "http_code": 0,
-      "jobs_total": 0,
-      "url": "https://apply.deloitte.com/en_US/careers/SearchJobs/product?projectOffset=0&projectSort=POSTING_DATE",
-      "error": "Expecting value: line 15 column 17 (char 14442)",
-      "company": "Deloitte",
-      "ats": "avature",
-      "slug": "dedicated"
-    },
-    {
-      "status": "EXCEPTION",
-      "http_code": 0,
-      "jobs_total": 0,
-      "url": "https://jobs.intuit.com/api/jobs?query=product&page=1&pageSize=10",
-      "error": "Expecting value: line 3 column 1 (char 4)",
-      "company": "Intuit",
-      "ats": "phenom",
-      "slug": "dedicated"
-    },
-    {
-      "status": "EXCEPTION",
-      "http_code": 0,
-      "jobs_total": 0,
-      "url": "https://careers.lululemon.com/en_US/careers/SearchJobs/product?projectOffset=0&projectSort=POSTING_DATE",
-      "error": "Expecting value: line 13 column 17 (char 88)",
-      "company": "lululemon",
-      "ats": "avature",
-      "slug": "careers.lululemon.com"
-    },
-    {
-      "status": "HTTP_ERROR",
-      "http_code": 403,
-      "jobs_total": 0,
-      "url": "https://jobs.adp.com/api/jobs",
-      "company": "ADP",
-      "ats": "phenom",
-      "slug": "jobs.adp.com"
-    },
-    {
-      "status": "HTTP_ERROR",
-      "http_code": 404,
-      "jobs_total": 0,
-      "url": "https://boards-api.greenhouse.io/v1/boards/acorns/jobs",
-      "company": "Acorns",
-      "ats": "greenhouse",
-      "slug": "acorns"
-    },
-    {
-      "status": "HTTP_ERROR",
-      "http_code": 422,
-      "jobs_total": 0,
-      "url": "https://americanexpress.wd1.myworkdayjobs.com/wday/cxs/americanexpress/External/jobs",
-      "company": "American Express",
-      "ats": "workday",
-      "slug": "americanexpress:External"
-    },
-    {
-      "status": "HTTP_ERROR",
-      "http_code": 403,
-      "jobs_total": 0,
-      "url": "https://jobs.coxenterprises.com/api/jobs",
-      "company": "Cox Enterprises",
-      "ats": "phenom",
-      "slug": "jobs.coxenterprises.com"
-    },
-    {
-      "status": "HTTP_ERROR",
-      "http_code": 404,
-      "jobs_total": 0,
-      "url": "https://boards-api.greenhouse.io/v1/boards/creatoriq/jobs",
-      "company": "CreatorIQ",
-      "ats": "greenhouse",
-      "slug": "creatoriq"
-    },
-    {
-      "status": "HTTP_ERROR",
-      "http_code": 404,
-      "jobs_total": 0,
-      "url": "https://boards-api.greenhouse.io/v1/boards/cricut/jobs",
-      "company": "Cricut",
-      "ats": "greenhouse",
-      "slug": "cricut"
-    },
     {
       "status": "HTTP_ERROR",
       "http_code": 202,
@@ -113,33 +19,6 @@
       "company": "Delta Air Lines",
       "ats": "avature",
       "slug": "delta.avature.net"
-    },
-    {
-      "status": "HTTP_ERROR",
-      "http_code": 404,
-      "jobs_total": 0,
-      "url": "https://boards-api.greenhouse.io/v1/boards/faireinc/jobs",
-      "company": "Faire",
-      "ats": "greenhouse",
-      "slug": "faireinc"
-    },
-    {
-      "status": "HTTP_ERROR",
-      "http_code": 403,
-      "jobs_total": 0,
-      "url": "https://nvidia.eightfold.ai/api/apply/v2/jobs?domain=nvidia.com&start=0&num=5",
-      "company": "NVIDIA",
-      "ats": "eightfold",
-      "slug": "nvidia.eightfold.ai"
-    },
-    {
-      "status": "HTTP_ERROR",
-      "http_code": 404,
-      "jobs_total": 0,
-      "url": "https://careers.procore.com/api/jobs",
-      "company": "Procore",
-      "ats": "phenom",
-      "slug": "careers.procore.com"
     },
     {
       "status": "HTTP_ERROR",
@@ -154,7 +33,7 @@
       "status": "HTTP_ERROR",
       "http_code": 404,
       "jobs_total": 0,
-      "url": "https://careers.thetradedesk.com/api/apply/v2/jobs?domain=thetradedesk.com&start=0&num=10&keyword=product%20manager",
+      "url": "https://careers.thetradedesk.com/api/apply/v2/jobs?domain=thetradedesk.com&start=0&num=5&Teams=Product%20Management&Region=ucan",
       "company": "The Trade Desk",
       "ats": "custom-eightfold",
       "slug": "dedicated"
@@ -234,7 +113,7 @@
     {
       "status": "OK",
       "http_code": 200,
-      "jobs_total": 471,
+      "jobs_total": 472,
       "url": "https://autodesk.wd1.myworkdayjobs.com/wday/cxs/autodesk/Ext/jobs",
       "company": "Autodesk",
       "ats": "workday",
@@ -383,6 +262,16 @@
       "company": "Crunchyroll",
       "ats": "greenhouse",
       "slug": "crunchyroll"
+    },
+    {
+      "status": "OK",
+      "http_code": 200,
+      "jobs_total": -1,
+      "url": "https://apply.deloitte.com/en_US/careers/SearchJobs/product?projectOffset=0&projectSort=POSTING_DATE",
+      "error": "probe got HTML (fetcher uses different request shape)",
+      "company": "Deloitte",
+      "ats": "avature",
+      "slug": "dedicated"
     },
     {
       "status": "OK",
@@ -558,6 +447,16 @@
     {
       "status": "OK",
       "http_code": 200,
+      "jobs_total": -1,
+      "url": "https://jobs.intuit.com/api/jobs?query=product&page=1&pageSize=10",
+      "error": "probe got HTML (fetcher uses different request shape)",
+      "company": "Intuit",
+      "ats": "phenom",
+      "slug": "dedicated"
+    },
+    {
+      "status": "OK",
+      "http_code": 200,
       "jobs_total": 38,
       "url": "https://boards-api.greenhouse.io/v1/boards/iterable/jobs",
       "company": "Iterable",
@@ -648,7 +547,7 @@
     {
       "status": "OK",
       "http_code": 200,
-      "jobs_total": 1125,
+      "jobs_total": 1124,
       "url": "https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs",
       "company": "NVIDIA (Workday)",
       "ats": "workday",
@@ -702,7 +601,7 @@
     {
       "status": "OK",
       "http_code": 200,
-      "jobs_total": 153,
+      "jobs_total": 154,
       "url": "https://boards-api.greenhouse.io/v1/boards/reddit/jobs",
       "company": "Reddit",
       "ats": "greenhouse",
@@ -941,6 +840,16 @@
       "company": "eBay",
       "ats": "phenom-widgets",
       "slug": "jobs.ebayinc.com:EBAEBAUS"
+    },
+    {
+      "status": "OK",
+      "http_code": 200,
+      "jobs_total": -1,
+      "url": "https://careers.lululemon.com/en_US/careers/SearchJobs/product?projectOffset=0&projectSort=POSTING_DATE",
+      "error": "probe got HTML (Avature variant \u2014 fetcher may still work)",
+      "company": "lululemon",
+      "ats": "avature",
+      "slug": "careers.lululemon.com"
     },
     {
       "status": "OK",
