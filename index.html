@@ -484,6 +484,10 @@ function getFiltered(){
   let jobs = Object.values(allJobs).filter(j=>{
     if(irrelevant.includes(j.id)) return false;
     if(j.match_score===0 && j.description_source==='skipped') return false;
+    // Hide jobs the company has taken down (auto-closed by the staleness sweep),
+    // unless the user has been tracking this one in their pipeline.
+    const st = getStatus(j.id);
+    if(j.status==='closed' && st==='new') return false;
     if(search&&!(j.title||'').toLowerCase().includes(search)&&!(j.company||'').toLowerCase().includes(search)) return false;
     if(companies.length && !companies.some(c=>j.company===c||j.company?.startsWith(c))) return false;
     const l=(j.location||'').toLowerCase();
@@ -649,6 +653,7 @@ function openPanel(id){
   document.getElementById('panel-company').innerHTML=`<span class="dot" style="background:${color}"></span>${j.company}`;
   document.getElementById('panel-title').textContent=j.title||'Untitled';
   document.getElementById('panel-meta').innerHTML=`
+    ${j.status==='closed'?'<span class="badge" style="background:var(--red-bg);color:var(--red)">⊘ Likely Closed</span>':''}
     ${l.includes('remote')?'<span class="badge badge-remote">Remote</span>':''}
     ${l.includes('atlanta')?'<span class="badge badge-atlanta">Atlanta</span>':''}
     <span class="badge" style="background:var(--bg);color:var(--muted)">${j.location||''}</span>
