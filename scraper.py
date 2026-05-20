@@ -194,20 +194,30 @@ def extract_salary_greenhouse(job_dict):
 
 def extract_salary_workday(job_dict):
     """
-    Workday: the SEARCH endpoint returns no salary. The DETAIL endpoint
-    (fetched separately) returns jobPostingInfo with a jobDescription HTML
-    blob — salary is parsed from there. This function accepts either the
-    detail object or a raw description string.
+    Workday detail response. The description HTML lives at
+    jobPostingInfo.jobDescription (most tenants). Salary, when present, is in
+    that HTML. We also check a few alternate locations defensively.
     """
-    # Detail object shape: {"jobPostingInfo": {"jobDescription": "<html>"}}
+    # Standard location
     info = job_dict.get("jobPostingInfo", {})
     if isinstance(info, dict):
-        desc = info.get("jobDescription", "")
-        lo, hi = extract_salary_from_text(desc)
-        if lo:
-            return lo, hi
-        # Some tenants expose additionalLocations/compensation hints in description
-    # Fallback: any description field present on the object
+        for k in ("jobDescription", "description", "jobRequirements"):
+            desc = info.get(k, "")
+            if desc:
+                lo, hi = extract_salary_from_text(str(desc))
+                if lo:
+                    return lo, hi
+        # Some tenants expose a structured 'jobPostingPay' or similar
+        pay = info.get("jobPostingPay") or info.get("compensation")
+        if isinstance(pay, dict):
+            lo = pay.get("min") or pay.get("minimum")
+            hi = pay.get("max") or pay.get("maximum")
+            if lo and hi:
+                try:
+                    return int(float(lo)), int(float(hi))
+                except (TypeError, ValueError):
+                    pass
+    # Fallback: any description-ish field at top level
     for k in ("jobDescription", "description", "content"):
         v = job_dict.get(k)
         if v:
@@ -255,7 +265,8 @@ def extract_salary_ashby(job_dict):
 def extract_salary_lever(job_dict):
     """
     Lever: structured 'salaryRange' {min,max} when filled, else parse the
-    descriptionPlain / description text.
+    descriptionPlain and the 'lists' array (Lever puts Compensation/Benefits
+    bullets there as {text, content} objects).
     """
     sr = job_dict.get("salaryRange", {})
     if isinstance(sr, dict):
@@ -265,7 +276,15 @@ def extract_salary_lever(job_dict):
                 return int(lo), int(hi)
             except (TypeError, ValueError):
                 pass
-    for k in ("descriptionPlain", "description", "descriptionBody"):
+    # Scan the lists array (Compensation section often lives here)
+    for lst in job_dict.get("lists", []) or []:
+        if isinstance(lst, dict):
+            combined = f"{lst.get('text','')} {lst.get('content','')}"
+            lo, hi = extract_salary_from_text(combined)
+            if lo:
+                return lo, hi
+    # Description text
+    for k in ("descriptionPlain", "description", "descriptionBody", "additional"):
         v = job_dict.get(k)
         if v:
             lo, hi = extract_salary_from_text(str(v))
@@ -311,14 +330,26 @@ def fetch_workday_detail(base, tenant, site, ext_path):
     """
     Fetch a single Workday job's detail to get its description HTML (which may
     contain the salary range). Returns the parsed (min, max) or (None, None).
-    This is an EXTRA request per job — only called for jobs that pass filters,
-    so the cost is bounded by how many relevant jobs each company has.
+
+    IMPORTANT: Workday's externalPath already starts with '/job/...'. The detail
+    endpoint is /wday/cxs/{tenant}/{site}{externalPath}. Earlier this function
+    inserted an extra '/job' producing '.../job/job/...' → 404 → no salary.
+    We normalize defensively so it works whether or not ext_path leads with /job.
     """
+    if not ext_path:
+        return None, None
     try:
-        url = f"{base}/wday/cxs/{tenant}/{site}/job{ext_path}"
+        cxs = f"{base}/wday/cxs/{tenant}/{site}"
+        ep = ext_path if ext_path.startswith("/") else "/" + ext_path
+        # If ep already contains '/job/', use it as-is after the cxs root.
+        if ep.startswith("/job/"):
+            url = f"{cxs}{ep}"
+        else:
+            url = f"{cxs}/job{ep}"
         r = requests.get(url, headers={
-            "User-Agent": "Mozilla/5.0",
+            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
             "Accept": "application/json",
+            "Accept-Language": "en-US",
             "Referer": f"{base}/en-US/{site}",
         }, timeout=12)
         if r.status_code != 200 or not r.text.strip():
@@ -401,6 +432,35 @@ def fetch_amazon():
 
 
 # ─── NETFLIX ──────────────────────────────────────────────────────────────────
+def fetch_eightfold_detail(host, pid, domain=None):
+    """
+    Fetch a single Eightfold position's detail to get its full job_description
+    (the listing API usually returns job_description=''). Parse salary from it.
+    Endpoint: /api/apply/v2/jobs/{pid}?domain={domain}
+    Returns (min, max) or (None, None).
+    """
+    if not pid:
+        return None, None
+    if domain is None:
+        domain = host.split(".")[0] + ".com"
+    try:
+        url = f"https://{host}/api/apply/v2/jobs/{pid}?domain={domain}"
+        r = requests.get(url, headers={
+            "User-Agent": "Mozilla/5.0",
+            "Accept": "application/json",
+            "Referer": f"https://{host}/careers",
+        }, timeout=12)
+        if r.status_code != 200 or not r.text.strip():
+            return None, None
+        d = r.json()
+        # detail may nest under 'job' or be top-level
+        obj = d.get("job", d)
+        return extract_salary_generic(
+            obj, "job_description", "description", "jobDescription", "descriptionTeaser")
+    except Exception:
+        return None, None
+
+
 def fetch_netflix():
     """Netflix uses Eightfold AI ATS. API caps at 10/page — paginate."""
     print("Fetching Netflix...")
@@ -448,7 +508,10 @@ def fetch_netflix():
                     continue
                 if locs and not any(ind in locs.lower() for ind in us_indicators):
                     continue
-                nf_min, nf_max = extract_salary_generic(j, "description", "job_description", "descriptionTeaser")
+                nf_min, nf_max = extract_salary_generic(j, "job_description", "description", "descriptionTeaser")
+                if not nf_min:
+                    nf_min, nf_max = fetch_eightfold_detail("explore.jobs.netflix.net", jid, "netflix.com")
+                    sleep(0.3)
                 results.append(make_job(
                     id=f"netflix_{jid}",
                     company="Netflix",
@@ -826,7 +889,10 @@ def fetch_eightfold(host, company, prefix, extra_query=""):
                 if locs and not any(ind in locs.lower() for ind in us_indicators):
                     continue
                 base_min, base_max = extract_salary_generic(
-                    j, "description", "job_description", "descriptionTeaser")
+                    j, "job_description", "description", "descriptionTeaser")
+                if not base_min:
+                    base_min, base_max = fetch_eightfold_detail(host, jid)
+                    sleep(0.3)
                 results.append(make_job(
                     id=f"{prefix}_{jid}",
                     company=company, title=title, location=locs,
@@ -979,7 +1045,10 @@ def fetch_trade_desk():
                     continue
                 if locs and not any(ind in locs.lower() for ind in us_indicators):
                     continue
-                ttd_min, ttd_max = extract_salary_generic(j, "description", "job_description", "descriptionTeaser")
+                ttd_min, ttd_max = extract_salary_generic(j, "job_description", "description", "descriptionTeaser")
+                if not ttd_min:
+                    ttd_min, ttd_max = fetch_eightfold_detail("careers.thetradedesk.com", jid, "thetradedesk.com")
+                    sleep(0.3)
                 results.append(make_job(
                     id=f"ttd_{jid}",
                     company="The Trade Desk", title=title, location=locs,
