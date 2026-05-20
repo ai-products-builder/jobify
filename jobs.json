@@ -23461,7 +23461,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0072906": {
     "id": "ebay_R0072906",
@@ -23658,7 +23659,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0074343": {
     "id": "ebay_R0074343",
