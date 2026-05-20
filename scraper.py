@@ -775,42 +775,65 @@ def fetch_phenom_widgets(host, company, prefix, ref_num):
 
 # ─── THE TRADE DESK ───────────────────────────────────────────────────────────
 def fetch_trade_desk():
+    """
+    Trade Desk uses Eightfold AI ATS (same as Netflix).
+    Pagination: 10 per page. Uses Teams/Region filters instead of keyword.
+    """
     print("Fetching The Trade Desk...")
     results = []
     seen = set()
-    for kw in SEARCH_QUERIES:
+    page_size = 10
+    start = 0
+    us_indicators = ["united states", "us", "remote", "los angeles", "ventura",
+                     "santa monica", "culver city", "atlanta", "ca", "ga"]
+
+    while start < 200:
         try:
             url = (
                 f"https://careers.thetradedesk.com/api/apply/v2/jobs"
-                f"?domain=thetradedesk.com&start=0&num=50"
-                f"&keyword={requests.utils.quote(kw)}"
+                f"?domain=thetradedesk.com&start={start}&num={page_size}"
+                f"&Teams=Product%20Management&Region=ucan"
             )
             r = requests.get(url, headers={
                 "User-Agent": "Mozilla/5.0",
                 "Accept": "application/json",
                 "Referer": "https://careers.thetradedesk.com/"
             }, timeout=15)
-            print(f"  Trade Desk status: {r.status_code} | {kw}")
             if r.status_code != 200 or not r.text.strip():
-                continue
+                if start == 0:
+                    print(f"  Trade Desk: HTTP {r.status_code}")
+                break
             data = r.json()
-            for j in data.get("positions", []):
+            positions = data.get("positions", [])
+            print(f"  Trade Desk page start={start}: {len(positions)} positions")
+            for j in positions:
+                if not isinstance(j, dict):
+                    continue
                 jid = str(j.get("id", ""))
                 if not jid or jid in seen:
                     continue
                 seen.add(jid)
-                title = j.get("name", "")
-                locs = ", ".join(j.get("locations", []))
-                if not passes(title, locs, "remote"):
+                title = j.get("name", j.get("posting_name", ""))
+                raw_loc = j.get("location", "")
+                if isinstance(raw_loc, list):
+                    raw_loc = raw_loc[0] if raw_loc else ""
+                locs = ", ".join([p.strip() for p in raw_loc.split(",")]) if raw_loc else ""
+                if not is_relevant_title(title):
+                    continue
+                if locs and not any(ind in locs.lower() for ind in us_indicators):
                     continue
                 results.append(make_job(
                     id=f"ttd_{jid}",
                     company="The Trade Desk", title=title, location=locs,
-                    url="https://careers.thetradedesk.com/us/en/job/" + jid
+                    url=f"https://careers.thetradedesk.com/careers?pid={jid}&domain=thetradedesk.com"
                 ))
-            sleep(1)
+            if len(positions) < page_size:
+                break
+            start += page_size
+            sleep(0.4)
         except Exception as e:
-            print(f"  Trade Desk error ({kw}): {e}")
+            print(f"  Trade Desk error (start={start}): {e}")
+            break
     print(f"  Found {len(results)} Trade Desk jobs")
     return results
 
@@ -1252,7 +1275,6 @@ GREENHOUSE_COMPANIES = [
     # ── New: AdTech / Media ──
     ("twitch", "Twitch"),
     ("mediaalpha", "MediaAlpha"),
-    ("creatoriq", "CreatorIQ"),
     ("fandom", "Fandom"),
     ("crunchyroll", "Crunchyroll"),
     ("thenewyorktimes", "The New York Times"),
@@ -1265,7 +1287,6 @@ GREENHOUSE_COMPANIES = [
     ("duolingo", "Duolingo"),
     ("honeycomb", "Honeycomb"),
     ("onetrust", "OneTrust"),
-    ("cricut", "Cricut"),
     ("riotgames", "Riot Games"),
     ("epicgames", "Epic Games"),
     ("scopely", "Scopely"),
@@ -1283,7 +1304,6 @@ GREENHOUSE_COMPANIES = [
     ("affirm", "Affirm"),
     ("mercury", "Mercury"),
     ("gemini", "Gemini"),
-    ("acorns", "Acorns"),  # NOTE: also has Ashby, registry below catches both
     ("billcom", "Bill.com"),
     ("relaypayments", "Relay Payments"),
 
@@ -1291,7 +1311,6 @@ GREENHOUSE_COMPANIES = [
     ("tebra", "Tebra"),
     ("calm", "Calm"),
     ("reformation", "Reformation"),
-    ("faireinc", "Faire"),
     ("taskrabbit", "Taskrabbit"),
 
     # ── VERIFIED corrections from career-URL session ──
@@ -1326,22 +1345,20 @@ ASHBY_COMPANIES = [
 
 # ── PHENOM COMPANIES (basic /api/jobs path) ──
 # Only kept the ones that actually respond on /api/jobs (Intuit-style).
-# NVIDIA/Qualcomm/eBay/Zoom/Equifax/Home Depot don't use this path — they
-# use the widgets API (see PHENOM_WIDGETS_COMPANIES below) or aren't on Phenom.
+# Removed: NVIDIA/Qualcomm/eBay/Zoom/Equifax/Home Depot (use widgets API),
+# ADP/Cox/Procore (403/404 — Cloudflare-blocked), DIRECTV (uses /api with different path).
 PHENOM_COMPANIES = [
-    ("careers.procore.com",   "Procore",      "procore"),
-    ("jobs.adp.com",          "ADP",          "adp"),
-    ("jobs.directv.com",      "DIRECTV",      "directv"),
-    ("jobs.coxenterprises.com","Cox Enterprises","cox"),
+    # Intentionally empty for now — Intuit has its own dedicated fetcher.
+    # Phenom is too fragmented per-customer to scrape generically.
 ]
 
 
 # ── EIGHTFOLD COMPANIES (Netflix-style API) ──
 # Format: (host, display name, prefix, extra_query)
 # extra_query optional — e.g. "&Teams=Product%20Management" to pre-filter
+# Empty for now — NVIDIA Eightfold endpoint returns 403 (anti-bot).
+# NVIDIA Workday entry below should be the primary path.
 EIGHTFOLD_COMPANIES = [
-    # NVIDIA confirmed at nvidia.eightfold.ai (also has Workday — both work)
-    ("nvidia.eightfold.ai", "NVIDIA", "nvidia", ""),
 ]
 
 
@@ -1385,7 +1402,7 @@ WORKDAY_COMPANIES = [
     ("autodesk", 1, "Ext", "Autodesk", "autodesk"),
 
     # ── Existing: Atlanta / fintech ──
-    ("americanexpress", 1, "External", "American Express", "amex"),  # NOTE: may be Oracle HCM — flag for verification
+    # American Express removed — confirmed Oracle Recruiting Cloud, not Workday
 
     # ── Patch-in: NVIDIA also has a Workday — keeping as backup to Eightfold ──
     ("nvidia",      5, "NVIDIAExternalCareerSite", "NVIDIA (Workday)", "nvidiawd"),
