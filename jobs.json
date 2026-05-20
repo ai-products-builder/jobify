@@ -8113,7 +8113,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_1d010d95413b5b3ce35697dc7e6a7a77": {
     "id": "dice_1d010d95413b5b3ce35697dc7e6a7a77",
@@ -28209,7 +28216,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "lever_spotify_ca78242e-f174-4c52-a630-960ca4bf24c3": {
     "id": "lever_spotify_ca78242e-f174-4c52-a630-960ca4bf24c3",
