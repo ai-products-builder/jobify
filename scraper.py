@@ -326,37 +326,56 @@ def extract_salary_generic(job_dict, *desc_keys):
     return None, None
 
 
-def fetch_workday_detail(base, tenant, site, ext_path):
+def fetch_workday_detail(base, tenant, site, ext_path, max_retries=3):
     """
-    Fetch a single Workday job's detail to get its description HTML (which may
-    contain the salary range). Returns the parsed (min, max) or (None, None).
+    Fetch a single Workday job's detail to get its description HTML (salary).
+    Returns (min, max, status) where status is one of:
+      'ok'        — 200, salary found
+      'no_salary' — 200, but no salary in description
+      'throttled' — 429 (after exhausting retries)
+      'http_err'  — other non-200
+      'timeout'   — request timed out
+      'error'     — exception
+      'skipped'   — no ext_path
 
-    IMPORTANT: Workday's externalPath already starts with '/job/...'. The detail
-    endpoint is /wday/cxs/{tenant}/{site}{externalPath}. Earlier this function
-    inserted an extra '/job' producing '.../job/job/...' → 404 → no salary.
-    We normalize defensively so it works whether or not ext_path leads with /job.
+    Retries on 429 / timeout with exponential backoff (1s, 2s, 4s).
+
+    Workday's externalPath already starts with '/job/...'; the detail endpoint
+    is /wday/cxs/{tenant}/{site}{externalPath}. We normalize defensively.
     """
     if not ext_path:
-        return None, None
-    try:
-        cxs = f"{base}/wday/cxs/{tenant}/{site}"
-        ep = ext_path if ext_path.startswith("/") else "/" + ext_path
-        # If ep already contains '/job/', use it as-is after the cxs root.
-        if ep.startswith("/job/"):
-            url = f"{cxs}{ep}"
-        else:
-            url = f"{cxs}/job{ep}"
-        r = requests.get(url, headers={
-            "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-            "Accept": "application/json",
-            "Accept-Language": "en-US",
-            "Referer": f"{base}/en-US/{site}",
-        }, timeout=12)
-        if r.status_code != 200 or not r.text.strip():
-            return None, None
-        return extract_salary_workday(r.json())
-    except Exception:
-        return None, None
+        return None, None, "skipped"
+    cxs = f"{base}/wday/cxs/{tenant}/{site}"
+    ep = ext_path if ext_path.startswith("/") else "/" + ext_path
+    url = f"{cxs}{ep}" if ep.startswith("/job/") else f"{cxs}/job{ep}"
+    headers = {
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+        "Accept": "application/json",
+        "Accept-Language": "en-US",
+        "Referer": f"{base}/en-US/{site}",
+    }
+    backoff = 1.0
+    for attempt in range(max_retries):
+        try:
+            r = requests.get(url, headers=headers, timeout=15)
+            if r.status_code == 429:
+                # Throttled — honor Retry-After if given, else exponential backoff
+                wait = float(r.headers.get("Retry-After", backoff))
+                sleep(min(wait, 8.0))
+                backoff *= 2
+                continue
+            if r.status_code != 200 or not r.text.strip():
+                return None, None, "http_err"
+            lo, hi = extract_salary_workday(r.json())
+            return lo, hi, ("ok" if lo else "no_salary")
+        except requests.exceptions.Timeout:
+            sleep(backoff)
+            backoff *= 2
+            continue
+        except Exception:
+            return None, None, "error"
+    # Exhausted retries (all 429s or timeouts)
+    return None, None, "throttled"
 
 
 
@@ -432,33 +451,44 @@ def fetch_amazon():
 
 
 # ─── NETFLIX ──────────────────────────────────────────────────────────────────
-def fetch_eightfold_detail(host, pid, domain=None):
+def fetch_eightfold_detail(host, pid, domain=None, max_retries=3):
     """
     Fetch a single Eightfold position's detail to get its full job_description
     (the listing API usually returns job_description=''). Parse salary from it.
     Endpoint: /api/apply/v2/jobs/{pid}?domain={domain}
-    Returns (min, max) or (None, None).
+    Retries on 429/timeout with exponential backoff. Returns (min, max).
     """
     if not pid:
         return None, None
     if domain is None:
         domain = host.split(".")[0] + ".com"
-    try:
-        url = f"https://{host}/api/apply/v2/jobs/{pid}?domain={domain}"
-        r = requests.get(url, headers={
-            "User-Agent": "Mozilla/5.0",
-            "Accept": "application/json",
-            "Referer": f"https://{host}/careers",
-        }, timeout=12)
-        if r.status_code != 200 or not r.text.strip():
+    url = f"https://{host}/api/apply/v2/jobs/{pid}?domain={domain}"
+    headers = {
+        "User-Agent": "Mozilla/5.0",
+        "Accept": "application/json",
+        "Referer": f"https://{host}/careers",
+    }
+    backoff = 1.0
+    for attempt in range(max_retries):
+        try:
+            r = requests.get(url, headers=headers, timeout=15)
+            if r.status_code == 429:
+                wait = float(r.headers.get("Retry-After", backoff))
+                sleep(min(wait, 8.0))
+                backoff *= 2
+                continue
+            if r.status_code != 200 or not r.text.strip():
+                return None, None
+            obj = r.json().get("job", r.json())
+            return extract_salary_generic(
+                obj, "job_description", "description", "jobDescription", "descriptionTeaser")
+        except requests.exceptions.Timeout:
+            sleep(backoff)
+            backoff *= 2
+            continue
+        except Exception:
             return None, None
-        d = r.json()
-        # detail may nest under 'job' or be top-level
-        obj = d.get("job", d)
-        return extract_salary_generic(
-            obj, "job_description", "description", "jobDescription", "descriptionTeaser")
-    except Exception:
-        return None, None
+    return None, None
 
 
 def fetch_netflix():
@@ -1098,7 +1128,7 @@ def fetch_salesforce():
                 location = j.get("locationsText", "")
                 if not passes(title, location, "remote"):
                     continue
-                sf_min, sf_max = fetch_workday_detail(
+                sf_min, sf_max, _status = fetch_workday_detail(
                     "https://salesforce.wd12.myworkdayjobs.com",
                     "salesforce", "External_Career_Site", ext_path)
                 results.append(make_job(
@@ -1108,7 +1138,7 @@ def fetch_salesforce():
                     base_salary_min=sf_min, base_salary_max=sf_max,
                     base_salary_source="ats" if sf_min else None,
                 ))
-                sleep(0.25)
+                sleep(0.5)
         except Exception as e:
             print(f"  Salesforce error ({kw}): {e}")
     print(f"  Found {len(results)} Salesforce jobs")
@@ -1181,6 +1211,8 @@ def fetch_workday(tenant, wd_num, site, company, prefix):
     seen = set()
     base = f"https://{tenant}.wd{wd_num}.myworkdayjobs.com"
     api_url = f"{base}/wday/cxs/{tenant}/{site}/jobs"
+    detail_stats = {"ok": 0, "no_salary": 0, "throttled": 0,
+                    "http_err": 0, "timeout": 0, "error": 0, "skipped": 0}
     for kw in SEARCH_QUERIES:
         try:
             payload = {"appliedFacets": {}, "limit": 20, "offset": 0, "searchText": kw}
@@ -1207,7 +1239,8 @@ def fetch_workday(tenant, wd_num, site, company, prefix):
                     continue
                 # Salary isn't in the search result — fetch the job detail.
                 # Only done for jobs that passed filters, so cost is bounded.
-                base_min, base_max = fetch_workday_detail(base, tenant, site, ext_path)
+                base_min, base_max, status = fetch_workday_detail(base, tenant, site, ext_path)
+                detail_stats[status] = detail_stats.get(status, 0) + 1
                 results.append(make_job(
                     id=f"{prefix}_{jid}",
                     company=company, title=title, location=location,
@@ -1215,11 +1248,15 @@ def fetch_workday(tenant, wd_num, site, company, prefix):
                     base_salary_min=base_min, base_salary_max=base_max,
                     base_salary_source="ats" if base_min else None,
                 ))
-                sleep(0.25)   # be gentle — one detail call per relevant job
+                sleep(0.5)   # gentler — reduce throttling on high-volume companies
             sleep(1)
         except Exception as e:
             print(f"  {company} error ({kw}): {e}")
-    print(f"  Found {len(results)} {company} jobs")
+    # Diagnostic: show why detail calls succeeded/failed (the truth-teller)
+    print(f"  Found {len(results)} {company} jobs | detail calls: "
+          f"{detail_stats['ok']} ok, {detail_stats['no_salary']} no-salary, "
+          f"{detail_stats['throttled']} throttled, {detail_stats['http_err']} http-err, "
+          f"{detail_stats['timeout']} timeout, {detail_stats['error']} error")
     return results
 
 
