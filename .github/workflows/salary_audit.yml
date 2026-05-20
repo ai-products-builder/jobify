@@ -1,0 +1,34 @@
+name: Salary Coverage Audit
+
+# Run manually from the Actions tab, or right after a scrape.
+on:
+  workflow_dispatch:        # manual "Run workflow" button
+  workflow_run:             # auto-run after the scraper finishes
+    workflows: ["Daily Job Scraper"]
+    types: [completed]
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Run salary coverage audit
+        run: |
+          python3 salary_audit.py | tee audit_output.txt
+
+      - name: Add audit to job summary
+        if: always()
+        run: |
+          {
+            echo '## Salary Coverage Audit'
+            echo '```'
+            cat audit_output.txt
+            echo '```'
+          } >> "$GITHUB_STEP_SUMMARY"
