@@ -52,6 +52,8 @@ from scraper import (
     PHENOM_COMPANIES,
     AVATURE_COMPANIES,
     HIBOB_COMPANIES,
+    EIGHTFOLD_COMPANIES,
+    PHENOM_WIDGETS_COMPANIES,
 )
 
 STATUS_FILE = os.path.join(os.path.dirname(__file__), "company_status.json")
@@ -218,6 +220,52 @@ def probe_hibob(slug):
             total = len(data.get("positions", []))
         return {"status": "OK" if total > 0 else "EMPTY", "http_code": 200,
                 "jobs_total": total, "url": url}
+    except Exception as e:
+        return {"status": "EXCEPTION", "http_code": 0, "jobs_total": 0, "url": url, "error": str(e)[:200]}
+
+
+def probe_eightfold(host):
+    """Eightfold probe — same /api/apply/v2/jobs path Netflix uses."""
+    domain = host.split(".")[0] + ".com"
+    url = f"https://{host}/api/apply/v2/jobs?domain={domain}&start=0&num=5"
+    try:
+        r = requests.get(url, headers={
+            **HEADERS,
+            "Referer": f"https://{host}/careers",
+        }, timeout=TIMEOUT)
+        if r.status_code != 200:
+            return {"status": "HTTP_ERROR", "http_code": r.status_code, "jobs_total": 0, "url": url}
+        data = r.json()
+        positions = data.get("positions", [])
+        return {"status": "OK" if positions else "EMPTY", "http_code": 200,
+                "jobs_total": len(positions), "url": url}
+    except Exception as e:
+        return {"status": "EXCEPTION", "http_code": 0, "jobs_total": 0, "url": url, "error": str(e)[:200]}
+
+
+def probe_phenom_widgets(host, ref_num):
+    """Phenom widgets probe — POST to /widgets with refNum."""
+    url = f"https://{host}/widgets"
+    payload = {
+        "lang": "en_us", "deviceType": "desktop", "country": "United States",
+        "pageName": "search-results", "size": 5, "from": 0, "jobs": True,
+        "counts": True, "all_fields": [], "clearAll": False, "jdsource": "facets",
+        "isSliderEnable": False, "pageId": "page20", "siteType": "external",
+        "keywords": "product manager", "global": False, "selected_fields": {},
+        "sort": {"order": "desc", "field": "postedDate"}, "locationData": {},
+        "refNum": ref_num, "ddoKey": "refineSearch",
+    }
+    try:
+        r = requests.post(url, json=payload, headers={
+            **HEADERS, "Content-Type": "application/json",
+            "Referer": f"https://{host}/us/en/search-results",
+        }, timeout=TIMEOUT)
+        if r.status_code != 200:
+            return {"status": "HTTP_ERROR", "http_code": r.status_code, "jobs_total": 0, "url": url}
+        data = r.json()
+        jobs = data.get("refineSearch", {}).get("data", {}).get("jobs", [])
+        return {"status": "OK" if jobs else "EMPTY", "http_code": 200,
+                "jobs_total": len(jobs), "url": url}
     except Exception as e:
         return {"status": "EXCEPTION", "http_code": 0, "jobs_total": 0, "url": url, "error": str(e)[:200]}
 
@@ -407,6 +455,22 @@ def check_all():
         res.update({"company": company, "ats": "hibob", "slug": slug})
         results.append(res)
         sleep(0.15)
+
+    # Eightfold
+    print(f"Checking {len(EIGHTFOLD_COMPANIES)} Eightfold companies...")
+    for host, company, prefix, extra_q in EIGHTFOLD_COMPANIES:
+        res = probe_eightfold(host)
+        res.update({"company": company, "ats": "eightfold", "slug": host})
+        results.append(res)
+        sleep(0.2)
+
+    # Phenom widgets
+    print(f"Checking {len(PHENOM_WIDGETS_COMPANIES)} Phenom-widgets companies...")
+    for host, company, prefix, ref_num in PHENOM_WIDGETS_COMPANIES:
+        res = probe_phenom_widgets(host, ref_num)
+        res.update({"company": company, "ats": "phenom-widgets", "slug": f"{host}:{ref_num}"})
+        results.append(res)
+        sleep(0.2)
 
     # Dedicated fetchers
     print("Checking dedicated fetchers...")
