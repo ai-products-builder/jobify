@@ -18,7 +18,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7533759003": {
     "id": "affirm_7533759003",
@@ -39,7 +40,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7605850003": {
     "id": "affirm_7605850003",
@@ -60,7 +62,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7605852003": {
     "id": "affirm_7605852003",
@@ -81,7 +84,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7620527003": {
     "id": "affirm_7620527003",
@@ -102,7 +106,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7620529003": {
     "id": "affirm_7620529003",
@@ -123,7 +128,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7686481003": {
     "id": "affirm_7686481003",
@@ -144,7 +150,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7686483003": {
     "id": "affirm_7686483003",
@@ -165,7 +172,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7694938003": {
     "id": "affirm_7694938003",
@@ -186,7 +194,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7694940003": {
     "id": "affirm_7694940003",
@@ -207,7 +216,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7704631003": {
     "id": "affirm_7704631003",
@@ -228,7 +238,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7713579003": {
     "id": "affirm_7713579003",
@@ -249,7 +260,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7718616003": {
     "id": "affirm_7718616003",
@@ -270,7 +282,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7718618003": {
     "id": "affirm_7718618003",
@@ -291,7 +304,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7718659003": {
     "id": "affirm_7718659003",
@@ -312,7 +326,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7718661003": {
     "id": "affirm_7718661003",
@@ -333,7 +348,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7726627003": {
     "id": "affirm_7726627003",
@@ -354,7 +370,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7726632003": {
     "id": "affirm_7726632003",
@@ -375,7 +392,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7728589003": {
     "id": "affirm_7728589003",
@@ -396,7 +414,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7728591003": {
     "id": "affirm_7728591003",
@@ -417,7 +436,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "affirm_7732706003": {
     "id": "affirm_7732706003",
@@ -438,7 +458,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "altruist_5802378004": {
     "id": "altruist_5802378004",
@@ -459,7 +480,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "altruist_5802380004": {
     "id": "altruist_5802380004",
@@ -480,7 +502,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "altruist_5802381004": {
     "id": "altruist_5802381004",
@@ -501,7 +524,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "altruist_5858825004": {
     "id": "altruist_5858825004",
@@ -522,7 +546,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "altruist_5835025004": {
     "id": "altruist_5835025004",
@@ -543,7 +568,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "altruist_5835026004": {
     "id": "altruist_5835026004",
@@ -564,7 +590,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "amzn_": {
     "id": "amzn_",
@@ -777,7 +804,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_Acorns_8cc539a8-8b2e-41f2-9ca5-599aedbae14c": {
     "id": "ashby_Acorns_8cc539a8-8b2e-41f2-9ca5-599aedbae14c",
@@ -798,7 +826,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_Acorns_f221bf93-f4e3-41cd-9beb-c745bf8c0123": {
     "id": "ashby_Acorns_f221bf93-f4e3-41cd-9beb-c745bf8c0123",
@@ -819,7 +848,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_Flock Safety_b1168162-8f2d-40bc-894c-f15dee8651f4": {
     "id": "ashby_Flock Safety_b1168162-8f2d-40bc-894c-f15dee8651f4",
@@ -840,7 +870,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_clickup_312d217b-dc4a-43b4-8bd3-6d24e342fd90": {
     "id": "ashby_clickup_312d217b-dc4a-43b4-8bd3-6d24e342fd90",
@@ -861,7 +892,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_clickup_37c53272-fb9e-4a01-8f1a-8395b922f28c": {
     "id": "ashby_clickup_37c53272-fb9e-4a01-8f1a-8395b922f28c",
@@ -882,7 +914,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_clickup_692843ca-2945-4d97-89eb-a56ed264db80": {
     "id": "ashby_clickup_692843ca-2945-4d97-89eb-a56ed264db80",
@@ -903,7 +936,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_creatoriq_49848569-d7f6-482f-b38b-effdcd5490b1": {
     "id": "ashby_creatoriq_49848569-d7f6-482f-b38b-effdcd5490b1",
@@ -924,7 +958,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_creatoriq_9cfbe731-ce67-4e23-a763-97034d5672c4": {
     "id": "ashby_creatoriq_9cfbe731-ce67-4e23-a763-97034d5672c4",
@@ -945,7 +980,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_drata_08fa01d9-ceaf-42d9-8182-f47fa48bb82d": {
     "id": "ashby_drata_08fa01d9-ceaf-42d9-8182-f47fa48bb82d",
@@ -966,7 +1002,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_drata_cf5e1a06-8720-4e5c-93c6-5494c39c862c": {
     "id": "ashby_drata_cf5e1a06-8720-4e5c-93c6-5494c39c862c",
@@ -987,7 +1024,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_drata_dd8970b7-40cc-4de1-9f26-a059775706e0": {
     "id": "ashby_drata_dd8970b7-40cc-4de1-9f26-a059775706e0",
@@ -1008,7 +1046,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_hims-and-hers_1d771e0a-facf-44ac-a3fa-a7f9344482ab": {
     "id": "ashby_hims-and-hers_1d771e0a-facf-44ac-a3fa-a7f9344482ab",
@@ -1029,7 +1068,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_hims-and-hers_4e1db1d3-7864-44c3-9737-5768cff19541": {
     "id": "ashby_hims-and-hers_4e1db1d3-7864-44c3-9737-5768cff19541",
@@ -1050,7 +1090,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_hims-and-hers_67ee2d18-aa50-45cb-9dbf-787184aaabab": {
     "id": "ashby_hims-and-hers_67ee2d18-aa50-45cb-9dbf-787184aaabab",
@@ -1071,7 +1112,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_madhive_a4b53c36-b031-4722-bf4d-8bc96c273659": {
     "id": "ashby_madhive_a4b53c36-b031-4722-bf4d-8bc96c273659",
@@ -1092,7 +1134,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_raptive_04a92f8f-6ee6-4474-ad7d-1fad20aba012": {
     "id": "ashby_raptive_04a92f8f-6ee6-4474-ad7d-1fad20aba012",
@@ -1113,7 +1156,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_raptive_1057b6b1-7fd9-4026-b899-179721e1721a": {
     "id": "ashby_raptive_1057b6b1-7fd9-4026-b899-179721e1721a",
@@ -1134,7 +1178,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_raptive_b1f4fb00-33af-4c64-8234-45a2603e519a": {
     "id": "ashby_raptive_b1f4fb00-33af-4c64-8234-45a2603e519a",
@@ -1155,7 +1200,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "vp",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_raptive_d2e000ac-654e-4c95-9f62-5930a9f00422": {
     "id": "ashby_raptive_d2e000ac-654e-4c95-9f62-5930a9f00422",
@@ -1176,7 +1222,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ashby_raptive_f3891f3b-42a5-4db1-836f-4143f96c7cf7": {
     "id": "ashby_raptive_f3891f3b-42a5-4db1-836f-4143f96c7cf7",
@@ -1197,7 +1244,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "attentive_4120613009": {
     "id": "attentive_4120613009",
@@ -1218,7 +1266,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "attentive_4121118009": {
     "id": "attentive_4121118009",
@@ -1239,7 +1288,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "attentive_4163560009": {
     "id": "attentive_4163560009",
@@ -1260,7 +1310,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "attentive_4163561009": {
     "id": "attentive_4163561009",
@@ -1281,7 +1332,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "attentive_4179423009": {
     "id": "attentive_4179423009",
@@ -1302,7 +1354,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "attentive_4205531009": {
     "id": "attentive_4205531009",
@@ -1323,7 +1376,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "attentive_4236105009": {
     "id": "attentive_4236105009",
@@ -1344,7 +1398,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "attentive_4247514009": {
     "id": "attentive_4247514009",
@@ -1365,7 +1420,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "autodesk_Corporate-Counsel--Marketing---Advertising_26WD96253-1": {
     "id": "autodesk_Corporate-Counsel--Marketing---Advertising_26WD96253-1",
@@ -1386,7 +1442,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Director--Events-Technology---Data_25WD94449-1": {
     "id": "autodesk_Director--Events-Technology---Data_25WD94449-1",
@@ -1407,7 +1464,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Director--Fusion-Growth-Marketing----Operations_26WD94819-1": {
     "id": "autodesk_Director--Fusion-Growth-Marketing----Operations_26WD94819-1",
@@ -1428,7 +1486,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Director-of-Product-Management_26WD97833-2": {
     "id": "autodesk_Director-of-Product-Management_26WD97833-2",
@@ -1449,7 +1508,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_India-P4-Product-Manager_26WD96615-2": {
     "id": "autodesk_India-P4-Product-Manager_26WD96615-2",
@@ -1470,7 +1530,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Product-Manager_26WD95347-1": {
     "id": "autodesk_Product-Manager_26WD95347-1",
@@ -1491,7 +1552,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Product-Manager_26WD96183-1": {
     "id": "autodesk_Product-Manager_26WD96183-1",
@@ -1512,7 +1574,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Product-Manager_26WD98131-1": {
     "id": "autodesk_Product-Manager_26WD98131-1",
@@ -1533,7 +1596,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Manager--Revenue-Analytics--FP-A_26WD95714": {
     "id": "autodesk_Manager--Revenue-Analytics--FP-A_26WD95714",
@@ -1554,7 +1618,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_PPL-M-A-Program-Manager_26WD98213-1": {
     "id": "autodesk_PPL-M-A-Program-Manager_26WD98213-1",
@@ -1575,7 +1640,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Principal-Product-Manager--Field-Delivery_26WD97813-1": {
     "id": "autodesk_Principal-Product-Manager--Field-Delivery_26WD97813-1",
@@ -1596,7 +1662,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Senior-Product-Manager--Field-Delivery_26WD97680": {
     "id": "autodesk_Senior-Product-Manager--Field-Delivery_26WD97680",
@@ -1617,7 +1684,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Principal-Solution-Development-Manager_26WD97786-1": {
     "id": "autodesk_Principal-Solution-Development-Manager_26WD97786-1",
@@ -1638,7 +1706,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Principal-Technical-Program-Manager---Remote--California_26WD97789-1": {
     "id": "autodesk_Principal-Technical-Program-Manager---Remote--California_26WD97789-1",
@@ -1659,7 +1728,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Principal-Technical-Program-Manager--Foundations---Generative-AI_26WD97130-2": {
     "id": "autodesk_Principal-Technical-Program-Manager--Foundations---Generative-AI_26WD97130-2",
@@ -1680,7 +1750,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Product-Manager---Automation_25WD94385": {
     "id": "autodesk_Product-Manager---Automation_25WD94385",
@@ -1701,7 +1772,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Product-Manager---Fusion_26WD96672-1": {
     "id": "autodesk_Product-Manager---Fusion_26WD96672-1",
@@ -1722,7 +1794,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Product-Manager---Visualization-Solutions_26WD97458-1": {
     "id": "autodesk_Product-Manager---Visualization-Solutions_26WD97458-1",
@@ -1743,7 +1816,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Product-Manager--Ecosystem---Extensions---Forma-Design_26WD97205-1": {
     "id": "autodesk_Product-Manager--Ecosystem---Extensions---Forma-Design_26WD97205-1",
@@ -1764,7 +1838,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Product-Manager--Generative-AI--APIs_26WD95497-1": {
     "id": "autodesk_Product-Manager--Generative-AI--APIs_26WD95497-1",
@@ -1785,7 +1860,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Product-Owner---AEC-Data_26WD97478-1": {
     "id": "autodesk_Product-Owner---AEC-Data_26WD97478-1",
@@ -1806,7 +1882,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Senior-Data-Analyst--3d-Design-Data_26WD96440-1": {
     "id": "autodesk_Senior-Data-Analyst--3d-Design-Data_26WD96440-1",
@@ -1827,7 +1904,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Senior-Data-Strategist--GTM-Customer-Data_26WD97820-2": {
     "id": "autodesk_Senior-Data-Strategist--GTM-Customer-Data_26WD97820-2",
@@ -1848,7 +1926,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Senior-Financial-Analyst--Revenue-Analytics--FP-A_26WD95715": {
     "id": "autodesk_Senior-Financial-Analyst--Revenue-Analytics--FP-A_26WD95715",
@@ -1869,7 +1948,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Senior-Product-Manager--Analytics---Insights_26WD97124-1": {
     "id": "autodesk_Senior-Product-Manager--Analytics---Insights_26WD97124-1",
@@ -1890,7 +1970,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Senior-Product-Manager--Cloud-Licensing_26WD96784-2": {
     "id": "autodesk_Senior-Product-Manager--Cloud-Licensing_26WD96784-2",
@@ -1911,7 +1992,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Senior-Program-Manager--API-Business-Models_26WD95377-1": {
     "id": "autodesk_Senior-Program-Manager--API-Business-Models_26WD95377-1",
@@ -1932,7 +2014,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Senior-Technical-Product-Manager--Search-and-AI-_26WD95938-1": {
     "id": "autodesk_Senior-Technical-Product-Manager--Search-and-AI-_26WD95938-1",
@@ -1953,7 +2036,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Senior-Technical-Program-Manager---Platform-M-E_26WD97079-1": {
     "id": "autodesk_Senior-Technical-Program-Manager---Platform-M-E_26WD97079-1",
@@ -1974,7 +2058,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Sr-Technical-Program-Manager---AI---Agentic-Personalization_26WD96725": {
     "id": "autodesk_Sr-Technical-Program-Manager---AI---Agentic-Personalization_26WD96725",
@@ -1995,7 +2080,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Sustainability-Data-Product-Manager_26WD96220": {
     "id": "autodesk_Sustainability-Data-Product-Manager_26WD96220",
@@ -2016,7 +2102,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Technical-Project-Manager_26WD96539-1": {
     "id": "autodesk_Technical-Project-Manager_26WD96539-1",
@@ -2037,7 +2124,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Unified-Feedback-Hub-Product-Manager_26WD98047": {
     "id": "autodesk_Unified-Feedback-Hub-Product-Manager_26WD98047",
@@ -2058,7 +2146,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "autodesk_Workday-Data-Privacy-Lead_26WD97444-1": {
     "id": "autodesk_Workday-Data-Privacy-Lead_26WD97444-1",
@@ -2079,7 +2168,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "axon_6688794003": {
     "id": "axon_6688794003",
@@ -2100,7 +2190,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7481986003": {
     "id": "axon_7481986003",
@@ -2121,7 +2212,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7607212003": {
     "id": "axon_7607212003",
@@ -2142,7 +2234,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7609355003": {
     "id": "axon_7609355003",
@@ -2163,7 +2256,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7612062003": {
     "id": "axon_7612062003",
@@ -2184,7 +2278,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7618156003": {
     "id": "axon_7618156003",
@@ -2205,7 +2300,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7618530003": {
     "id": "axon_7618530003",
@@ -2226,7 +2322,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7624092003": {
     "id": "axon_7624092003",
@@ -2247,7 +2344,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7624119003": {
     "id": "axon_7624119003",
@@ -2268,7 +2366,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7624162003": {
     "id": "axon_7624162003",
@@ -2289,7 +2388,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7619919003": {
     "id": "axon_7619919003",
@@ -2310,7 +2410,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7626501003": {
     "id": "axon_7626501003",
@@ -2331,7 +2432,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7637698003": {
     "id": "axon_7637698003",
@@ -2352,7 +2454,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7661961003": {
     "id": "axon_7661961003",
@@ -2373,7 +2476,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7666412003": {
     "id": "axon_7666412003",
@@ -2394,7 +2498,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7679352003": {
     "id": "axon_7679352003",
@@ -2415,7 +2520,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7688045003": {
     "id": "axon_7688045003",
@@ -2436,7 +2542,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7688048003": {
     "id": "axon_7688048003",
@@ -2457,7 +2564,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7692254003": {
     "id": "axon_7692254003",
@@ -2478,7 +2586,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7712138003": {
     "id": "axon_7712138003",
@@ -2499,7 +2608,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7712155003": {
     "id": "axon_7712155003",
@@ -2520,7 +2630,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7712162003": {
     "id": "axon_7712162003",
@@ -2541,7 +2652,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7712168003": {
     "id": "axon_7712168003",
@@ -2562,7 +2674,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7726072003": {
     "id": "axon_7726072003",
@@ -2583,7 +2696,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7726555003": {
     "id": "axon_7726555003",
@@ -2604,7 +2718,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "axon_7727573003": {
     "id": "axon_7727573003",
@@ -2625,7 +2740,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "billcom_5826279004": {
     "id": "billcom_5826279004",
@@ -2646,7 +2762,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "billcom_5849946004": {
     "id": "billcom_5849946004",
@@ -2667,7 +2784,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "billcom_5986037004": {
     "id": "billcom_5986037004",
@@ -2688,7 +2806,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "branch_7718494003": {
     "id": "branch_7718494003",
@@ -2817,7 +2936,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "broadcom_Client-Services-Consultant-Data-Management_R026080": {
     "id": "broadcom_Client-Services-Consultant-Data-Management_R026080",
@@ -2838,7 +2958,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "broadcom_Product-Owner--Mainframe-Networking---Observability_R025485": {
     "id": "broadcom_Product-Owner--Mainframe-Networking---Observability_R025485",
@@ -2859,7 +2980,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "broadcom_Senior-Consultant---Datacom_R025844": {
     "id": "broadcom_Senior-Consultant---Datacom_R025844",
@@ -2880,7 +3002,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "broadcom_Senior-Consultant---Datacom_R025845": {
     "id": "broadcom_Senior-Consultant---Datacom_R025845",
@@ -2901,7 +3024,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "broadcom_Workload-Automation-Product-Manager_R025738": {
     "id": "broadcom_Workload-Automation-Product-Manager_R025738",
@@ -2922,7 +3046,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "calendly_8139892002": {
     "id": "calendly_8139892002",
@@ -2943,7 +3068,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "calendly_8395120002": {
     "id": "calendly_8395120002",
@@ -2964,7 +3090,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "vp",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "calendly_8450989002": {
     "id": "calendly_8450989002",
@@ -2985,7 +3112,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "calendly_8536015002": {
     "id": "calendly_8536015002",
@@ -3006,7 +3134,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "vp",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "capitalone_Applied-Researcher-I--AI-Foundations--LLM-Customization--Finetuning--Reinforcement-Learning-_R241364-1": {
     "id": "capitalone_Applied-Researcher-I--AI-Foundations--LLM-Customization--Finetuning--Reinforcement-Learning-_R241364-1",
@@ -3555,7 +3684,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:28:39.342317",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "capitalone_Director--Technology---Data-Risk-Management_R234842-2": {
     "id": "capitalone_Director--Technology---Data-Risk-Management_R234842-2",
@@ -3620,7 +3750,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:28:43.464775",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "capitalone_Manager---XP-Analytics-Growth--ECP_R239046-2": {
     "id": "capitalone_Manager---XP-Analytics-Growth--ECP_R239046-2",
@@ -4005,7 +4136,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "capitalone_Manager--Product-Management---Dynamic-Experiences-Technical-Product-Manager_R241788-1": {
     "id": "capitalone_Manager--Product-Management---Dynamic-Experiences-Technical-Product-Manager_R241788-1",
@@ -4124,7 +4256,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:28:39.342334",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "capitalone_Manager--Product-Manager---Emerging-Verticals--Capital-One-Travel_R240447-1": {
     "id": "capitalone_Manager--Product-Manager---Emerging-Verticals--Capital-One-Travel_R240447-1",
@@ -4207,7 +4340,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:28:39.342297",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "capitalone_Manager--Product-Manager--Global-Payment-Network_R242384-1": {
     "id": "capitalone_Manager--Product-Manager--Global-Payment-Network_R242384-1",
@@ -5056,7 +5190,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "capitalone_Senior-Associate--S-G-Program-Manager--Analyst-Emerging-Talent-_R240126-1": {
     "id": "capitalone_Senior-Associate--S-G-Program-Manager--Analyst-Emerging-Talent-_R240126-1",
@@ -5947,7 +6082,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "carvana_7508836": {
     "id": "carvana_7508836",
@@ -5968,7 +6104,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "carvana_7736217": {
     "id": "carvana_7736217",
@@ -5989,7 +6126,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "carvana_7736266": {
     "id": "carvana_7736266",
@@ -6010,7 +6148,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "carvana_7852902": {
     "id": "carvana_7852902",
@@ -6031,7 +6170,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "chartbeatinc_5087276007": {
     "id": "chartbeatinc_5087276007",
@@ -6052,7 +6192,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "vp",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "cloudera_Field-Enablement-Program-Manager_260580-1": {
     "id": "cloudera_Field-Enablement-Program-Manager_260580-1",
@@ -6073,7 +6214,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "cloudera_Principal-Product-Manager---Director-Cloudera-Data-Warehouse--Hive---Impala-_260602-1": {
     "id": "cloudera_Principal-Product-Manager---Director-Cloudera-Data-Warehouse--Hive---Impala-_260602-1",
@@ -6094,7 +6236,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "cloudera_Senior-Product-Manager---AI_260592": {
     "id": "cloudera_Senior-Product-Manager---AI_260592",
@@ -6115,7 +6258,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "cognitiv_4184836009": {
     "id": "cognitiv_4184836009",
@@ -6154,7 +6298,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "crunchyroll_7530973": {
     "id": "crunchyroll_7530973",
@@ -6175,7 +6320,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "crunchyroll_7758660": {
     "id": "crunchyroll_7758660",
@@ -6196,7 +6342,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "crunchyroll_7793797": {
     "id": "crunchyroll_7793797",
@@ -6217,7 +6364,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "dice_00b0d3ff12c1d37034eb4e626dace2bc": {
     "id": "dice_00b0d3ff12c1d37034eb4e626dace2bc",
@@ -6382,7 +6530,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:31:01.176685",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_02d5c9c2f36eca5f306923e426e70e4a": {
     "id": "dice_02d5c9c2f36eca5f306923e426e70e4a",
@@ -8089,7 +8244,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:30:35.912944",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_214b2034df20b22186e35527b3854889": {
     "id": "dice_214b2034df20b22186e35527b3854889",
@@ -8164,7 +8326,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_224d9aad3c12ecfe40fa753044d989c9": {
     "id": "dice_224d9aad3c12ecfe40fa753044d989c9",
@@ -8905,7 +9074,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:30:15.133617",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2d7e83465e0db6897e85e6d9d9247c30": {
     "id": "dice_2d7e83465e0db6897e85e6d9d9247c30",
@@ -9070,7 +9246,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2eb01b84613bed172c81461bf9d023a5": {
     "id": "dice_2eb01b84613bed172c81461bf9d023a5",
@@ -9351,7 +9534,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:31:05.301267",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_327427a2aaaef5b7c2c94b7fa19eb3b9": {
     "id": "dice_327427a2aaaef5b7c2c94b7fa19eb3b9",
@@ -9686,7 +9876,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:30:37.702069",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_35efe2611fa17d03fb5c55244d007d2c": {
     "id": "dice_35efe2611fa17d03fb5c55244d007d2c",
@@ -10877,7 +11074,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "vp",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_476042b4ecc5f8bcb91a802af7510f8b": {
     "id": "dice_476042b4ecc5f8bcb91a802af7510f8b",
@@ -10980,7 +11184,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_48ca79783b4ff6f5069f560b54afc512": {
     "id": "dice_48ca79783b4ff6f5069f560b54afc512",
@@ -11389,7 +11600,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_50727ecbcec86572bcd81aaad8680512": {
     "id": "dice_50727ecbcec86572bcd81aaad8680512",
@@ -11680,7 +11898,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:31:03.997396",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_5528a882f2082cffbf458ef5d7ed58bf": {
     "id": "dice_5528a882f2082cffbf458ef5d7ed58bf",
@@ -11719,7 +11944,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_556396df5285cce44c8ff74814fb43b0": {
     "id": "dice_556396df5285cce44c8ff74814fb43b0",
@@ -12820,7 +13052,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:30:49.356461",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_685924a14ea38fac48d8625177f44e9d": {
     "id": "dice_685924a14ea38fac48d8625177f44e9d",
@@ -13047,7 +13286,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:31:05.301273",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_6d1636c8e5f658169fa5546e3d2adaac": {
     "id": "dice_6d1636c8e5f658169fa5546e3d2adaac",
@@ -13302,7 +13548,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_71700c9e0ac2f1c2bbafe756fcba16cb": {
     "id": "dice_71700c9e0ac2f1c2bbafe756fcba16cb",
@@ -13503,7 +13756,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:30:49.356468",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_72f7a4f990c254d94d8ff31d03eadf93": {
     "id": "dice_72f7a4f990c254d94d8ff31d03eadf93",
@@ -14840,7 +15100,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_8b0268138d5827bdfd93841ec124f91b": {
     "id": "dice_8b0268138d5827bdfd93841ec124f91b",
@@ -15113,7 +15380,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:31:05.301225",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_8d86fab7541cedecec08b8c15f66a937": {
     "id": "dice_8d86fab7541cedecec08b8c15f66a937",
@@ -15448,7 +15722,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:30:46.317460",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_93ddae8dab19bcd0342e24681b7ab664": {
     "id": "dice_93ddae8dab19bcd0342e24681b7ab664",
@@ -16395,7 +16676,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:30:16.027520",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e4819cbcca08dbf9d0cd484f25c27d52": {
     "id": "dice_e4819cbcca08dbf9d0cd484f25c27d52",
@@ -17172,7 +17460,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:30:35.912963",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_adc00ca0f1705a6d183d61752925bb3f": {
     "id": "dice_adc00ca0f1705a6d183d61752925bb3f",
@@ -17753,7 +18048,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_b772fcca3b1afdbb8da2d17cd2773c31": {
     "id": "dice_b772fcca3b1afdbb8da2d17cd2773c31",
@@ -18800,7 +19102,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_c902226df913a6f05db19b91335842fb": {
     "id": "dice_c902226df913a6f05db19b91335842fb",
@@ -20081,7 +20390,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_ddc9d39015cd7160ea168544662ade47": {
     "id": "dice_ddc9d39015cd7160ea168544662ade47",
@@ -20812,7 +21128,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:31:05.301167",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e88035a99ea6733def283056ca6926b3": {
     "id": "dice_e88035a99ea6733def283056ca6926b3",
@@ -20877,7 +21200,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:30:56.028255",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_e95578e324ab89980ba238fc8145837a": {
     "id": "dice_e95578e324ab89980ba238fc8145837a",
@@ -21230,7 +21560,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:30:37.702046",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_edcde273d3573fd81c186d6b5ac3817b": {
     "id": "dice_edcde273d3573fd81c186d6b5ac3817b",
@@ -21655,7 +21992,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:30:50.958075",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f4ac6730b49cd5c43ac131414a2215cb": {
     "id": "dice_f4ac6730b49cd5c43ac131414a2215cb",
@@ -21990,7 +22334,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:30:56.028262",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_fa94339c919ff2916ab572dc728aaaad": {
     "id": "dice_fa94339c919ff2916ab572dc728aaaad",
@@ -22109,7 +22460,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:30:35.912986",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_fd81bf5ee45b3abb2496504aa8ba63a1": {
     "id": "dice_fd81bf5ee45b3abb2496504aa8ba63a1",
@@ -22282,7 +22640,14 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:31:05.301198",
     "status": "new",
-    "description": ""
+    "description": "",
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "doubleverify_8418850002": {
     "id": "doubleverify_8418850002",
@@ -22477,7 +22842,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "dropbox_7807876": {
     "id": "dropbox_7807876",
@@ -22498,7 +22864,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "dropbox_7812024": {
     "id": "dropbox_7812024",
@@ -22519,7 +22886,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "dropbox_7812025": {
     "id": "dropbox_7812025",
@@ -22540,7 +22908,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "dropbox_7931206": {
     "id": "dropbox_7931206",
@@ -22561,7 +22930,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "duolingo_7833425002": {
     "id": "duolingo_7833425002",
@@ -22582,7 +22952,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "duolingo_8377539002": {
     "id": "duolingo_8377539002",
@@ -22603,7 +22974,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "duolingo_8230258002": {
     "id": "duolingo_8230258002",
@@ -22624,7 +22996,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "duolingo_8393330002": {
     "id": "duolingo_8393330002",
@@ -22645,7 +23018,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "duolingo_8398180002": {
     "id": "duolingo_8398180002",
@@ -22666,7 +23040,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "duolingo_8398191002": {
     "id": "duolingo_8398191002",
@@ -22687,7 +23062,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "duolingo_8400738002": {
     "id": "duolingo_8400738002",
@@ -22708,7 +23084,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "duolingo_8405083002": {
     "id": "duolingo_8405083002",
@@ -22729,7 +23106,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "duolingo_8409034002": {
     "id": "duolingo_8409034002",
@@ -22750,7 +23128,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "duolingo_8455943002": {
     "id": "duolingo_8455943002",
@@ -22771,7 +23150,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "duolingo_8474673002": {
     "id": "duolingo_8474673002",
@@ -22792,7 +23172,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "duolingo_8508337002": {
     "id": "duolingo_8508337002",
@@ -22813,7 +23194,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "duolingo_8508389002": {
     "id": "duolingo_8508389002",
@@ -22834,7 +23216,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "duolingo_8530395002": {
     "id": "duolingo_8530395002",
@@ -22855,7 +23238,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "ebay_R0069759": {
     "id": "ebay_R0069759",
@@ -22876,7 +23260,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0072906": {
     "id": "ebay_R0072906",
@@ -22897,7 +23282,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0072907": {
     "id": "ebay_R0072907",
@@ -22918,7 +23304,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0072947": {
     "id": "ebay_R0072947",
@@ -22939,7 +23326,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0072974": {
     "id": "ebay_R0072974",
@@ -22960,7 +23348,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0073371": {
     "id": "ebay_R0073371",
@@ -22981,7 +23370,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0073504": {
     "id": "ebay_R0073504",
@@ -23002,7 +23392,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0073921": {
     "id": "ebay_R0073921",
@@ -23023,7 +23414,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0074031": {
     "id": "ebay_R0074031",
@@ -23044,7 +23436,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0074343": {
     "id": "ebay_R0074343",
@@ -23065,7 +23458,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0074344": {
     "id": "ebay_R0074344",
@@ -23086,7 +23480,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0074392": {
     "id": "ebay_R0074392",
@@ -23107,7 +23502,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0074541": {
     "id": "ebay_R0074541",
@@ -23128,7 +23524,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0074598": {
     "id": "ebay_R0074598",
@@ -23149,7 +23546,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0074633": {
     "id": "ebay_R0074633",
@@ -23170,7 +23568,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0074646": {
     "id": "ebay_R0074646",
@@ -23191,7 +23590,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0074805": {
     "id": "ebay_R0074805",
@@ -23212,7 +23612,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ebay_R0074806": {
     "id": "ebay_R0074806",
@@ -23233,7 +23634,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "elastic_7624142": {
     "id": "elastic_7624142",
@@ -23254,7 +23656,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "elastic_7772907": {
     "id": "elastic_7772907",
@@ -23275,7 +23678,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "elastic_7798174": {
     "id": "elastic_7798174",
@@ -23296,7 +23700,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "elastic_7875644": {
     "id": "elastic_7875644",
@@ -23317,7 +23722,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "epicgames_5892150004": {
     "id": "epicgames_5892150004",
@@ -23338,7 +23744,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "epicgames_5892152004": {
     "id": "epicgames_5892152004",
@@ -23359,7 +23766,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "epicgames_5921260004": {
     "id": "epicgames_5921260004",
@@ -23380,7 +23788,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fandom_7921653": {
     "id": "fandom_7921653",
@@ -23401,7 +23810,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7642695": {
     "id": "fanduel_7642695",
@@ -23422,7 +23832,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "fanduel_7642788": {
     "id": "fanduel_7642788",
@@ -23443,7 +23854,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "fanduel_7646654": {
     "id": "fanduel_7646654",
@@ -23464,7 +23876,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "vp",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7675264": {
     "id": "fanduel_7675264",
@@ -23485,7 +23898,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7675336": {
     "id": "fanduel_7675336",
@@ -23506,7 +23920,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7684414": {
     "id": "fanduel_7684414",
@@ -23527,7 +23942,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7687504": {
     "id": "fanduel_7687504",
@@ -23548,7 +23964,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7688713": {
     "id": "fanduel_7688713",
@@ -23569,7 +23986,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7728083": {
     "id": "fanduel_7728083",
@@ -23590,7 +24008,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7728111": {
     "id": "fanduel_7728111",
@@ -23611,7 +24030,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7728115": {
     "id": "fanduel_7728115",
@@ -23632,7 +24052,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7746345": {
     "id": "fanduel_7746345",
@@ -23653,7 +24074,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7772805": {
     "id": "fanduel_7772805",
@@ -23674,7 +24096,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7772822": {
     "id": "fanduel_7772822",
@@ -23695,7 +24118,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7793129": {
     "id": "fanduel_7793129",
@@ -23716,7 +24140,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "vp",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7793147": {
     "id": "fanduel_7793147",
@@ -23737,7 +24162,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "vp",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7814962": {
     "id": "fanduel_7814962",
@@ -23758,7 +24184,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "fanduel_7816125": {
     "id": "fanduel_7816125",
@@ -23779,7 +24206,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7838096": {
     "id": "fanduel_7838096",
@@ -23800,7 +24228,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7846824": {
     "id": "fanduel_7846824",
@@ -23821,7 +24250,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7847085": {
     "id": "fanduel_7847085",
@@ -23842,7 +24272,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7847368": {
     "id": "fanduel_7847368",
@@ -23863,7 +24294,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7908941": {
     "id": "fanduel_7908941",
@@ -23884,7 +24316,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "fanduel_7909038": {
     "id": "fanduel_7909038",
@@ -23905,7 +24338,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "gemini_7749232": {
     "id": "gemini_7749232",
@@ -23926,7 +24360,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "gemini_7768460": {
     "id": "gemini_7768460",
@@ -23947,7 +24382,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "gemini_7818279": {
     "id": "gemini_7818279",
@@ -23968,7 +24404,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "glassdoor_atlanta": {
     "id": "glassdoor_atlanta",
@@ -24079,7 +24516,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "goodrx_Privacy-Compliance-Program-Manager_JR100599": {
     "id": "goodrx_Privacy-Compliance-Program-Manager_JR100599",
@@ -24100,7 +24538,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "goodrx_Product-Manager--Revenue-Cycle-Management_JR100601": {
     "id": "goodrx_Product-Manager--Revenue-Cycle-Management_JR100601",
@@ -24121,7 +24560,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "gumgum_6628791003": {
     "id": "gumgum_6628791003",
@@ -24580,7 +25020,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ias_Senior-Staff-Product-Manager_R-101237-1": {
     "id": "ias_Senior-Staff-Product-Manager_R-101237-1",
@@ -24601,7 +25042,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ias_Staff-Product-Manager--Social_R-101476-1": {
     "id": "ias_Staff-Product-Manager--Social_R-101476-1",
@@ -24622,7 +25064,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "indeed_advertising+product+manager_atlanta_ga": {
     "id": "indeed_advertising+product+manager_atlanta_ga",
@@ -26143,7 +26586,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "justanswer_8467633002": {
     "id": "justanswer_8467633002",
@@ -26164,7 +26608,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "vp",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "justanswer_8501363002": {
     "id": "justanswer_8501363002",
@@ -26185,7 +26630,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "klaviyo_7453469003": {
     "id": "klaviyo_7453469003",
@@ -26836,7 +27282,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "klaviyo_7724065003": {
     "id": "klaviyo_7724065003",
@@ -26875,7 +27322,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "klaviyo_7725304003": {
     "id": "klaviyo_7725304003",
@@ -26926,7 +27374,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_houzz_c9eaf854-dd7f-4b91-99b8-f7c936c0b03a": {
     "id": "lever_houzz_c9eaf854-dd7f-4b91-99b8-f7c936c0b03a",
@@ -26947,7 +27396,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "lever_houzz_d7309026-bc44-4cea-b54a-a43a006caff7": {
     "id": "lever_houzz_d7309026-bc44-4cea-b54a-a43a006caff7",
@@ -26968,7 +27418,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_spotify_008e0a44-088b-48f2-b100-cce07e40a45b": {
     "id": "lever_spotify_008e0a44-088b-48f2-b100-cce07e40a45b",
@@ -26989,7 +27440,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_spotify_27038bc5-ae38-4c5c-b1f5-447242f6d596": {
     "id": "lever_spotify_27038bc5-ae38-4c5c-b1f5-447242f6d596",
@@ -27010,7 +27462,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_spotify_2a3b6947-2a3b-4d4a-a58d-eb242c3a2cae": {
     "id": "lever_spotify_2a3b6947-2a3b-4d4a-a58d-eb242c3a2cae",
@@ -27031,7 +27484,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_spotify_3e76b5e6-c86c-42eb-8be7-05d9246dd901": {
     "id": "lever_spotify_3e76b5e6-c86c-42eb-8be7-05d9246dd901",
@@ -27052,7 +27506,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_spotify_7374bb62-07bf-4541-8cb8-c7ea3c1fc41b": {
     "id": "lever_spotify_7374bb62-07bf-4541-8cb8-c7ea3c1fc41b",
@@ -27073,7 +27528,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_spotify_7d4e94b7-ca5f-41a0-9222-5d6bb24e4950": {
     "id": "lever_spotify_7d4e94b7-ca5f-41a0-9222-5d6bb24e4950",
@@ -27094,7 +27550,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "lever_spotify_a16e1738-56f4-489d-8964-3cb249351ca8": {
     "id": "lever_spotify_a16e1738-56f4-489d-8964-3cb249351ca8",
@@ -27115,7 +27572,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_spotify_a69512de-6754-411c-a83f-1f944820e559": {
     "id": "lever_spotify_a69512de-6754-411c-a83f-1f944820e559",
@@ -27136,7 +27594,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_spotify_aa4220b2-b5fd-4db6-9ef6-2b34fde9f6ef": {
     "id": "lever_spotify_aa4220b2-b5fd-4db6-9ef6-2b34fde9f6ef",
@@ -27157,7 +27616,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_spotify_aced8bea-4eef-435b-b32f-734ca776d31e": {
     "id": "lever_spotify_aced8bea-4eef-435b-b32f-734ca776d31e",
@@ -27178,7 +27638,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_spotify_ba28dba6-91d0-49ce-881d-dbe2c2ae85e5": {
     "id": "lever_spotify_ba28dba6-91d0-49ce-881d-dbe2c2ae85e5",
@@ -27199,7 +27660,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_spotify_ca78242e-f174-4c52-a630-960ca4bf24c3": {
     "id": "lever_spotify_ca78242e-f174-4c52-a630-960ca4bf24c3",
@@ -27220,7 +27682,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_spotify_cb8a79bd-e133-4258-86c1-f566c6e45b18": {
     "id": "lever_spotify_cb8a79bd-e133-4258-86c1-f566c6e45b18",
@@ -27241,7 +27704,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_spotify_d30af7c7-67aa-404a-a1a5-b8b3838e08c3": {
     "id": "lever_spotify_d30af7c7-67aa-404a-a1a5-b8b3838e08c3",
@@ -27262,7 +27726,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_spotify_d7066333-3706-4ac9-a643-8b72ba2f278d": {
     "id": "lever_spotify_d7066333-3706-4ac9-a643-8b72ba2f278d",
@@ -27283,7 +27748,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "lever_spotify_f38133ce-c2d7-4473-ab69-6bdcb1703297": {
     "id": "lever_spotify_f38133ce-c2d7-4473-ab69-6bdcb1703297",
@@ -27304,7 +27770,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "liveramp_Principal--Revenue-Enablement_JR012205": {
     "id": "liveramp_Principal--Revenue-Enablement_JR012205",
@@ -27325,7 +27792,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "liveramp_Senior-Manager--Data-Science-Services_JR012124": {
     "id": "liveramp_Senior-Manager--Data-Science-Services_JR012124",
@@ -27346,7 +27814,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "liveramp_Senior-Product-Manager--Healthcare-Compliance_JR012204": {
     "id": "liveramp_Senior-Product-Manager--Healthcare-Compliance_JR012204",
@@ -27367,7 +27836,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "liveramp_Sr-Product-Manager---Identity-Resolution_JR012071": {
     "id": "liveramp_Sr-Product-Manager---Identity-Resolution_JR012071",
@@ -27388,7 +27858,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "liveramp_Sr-Technical-Program-Manager_JR012044": {
     "id": "liveramp_Sr-Technical-Program-Manager_JR012044",
@@ -27409,7 +27880,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "logitech_CPQ-Product-Owner-Analyst_144984": {
     "id": "logitech_CPQ-Product-Owner-Analyst_144984",
@@ -27430,7 +27902,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "logitech_Data-Analyst_144638": {
     "id": "logitech_Data-Analyst_144638",
@@ -27451,7 +27924,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "logitech_Principal-Product-Manager--Video-Collaboration-Hardware_145269": {
     "id": "logitech_Principal-Product-Manager--Video-Collaboration-Hardware_145269",
@@ -27472,7 +27946,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "logitech_Product-Manager_144017": {
     "id": "logitech_Product-Manager_144017",
@@ -27493,7 +27968,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "logitech_Senior-Product-Manager--Mobile-and-Audio-Solutions_145990": {
     "id": "logitech_Senior-Product-Manager--Mobile-and-Audio-Solutions_145990",
@@ -27514,7 +27990,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "logitech_Sr-Product-Manager---Logitech-for-Business-Services-Growth_146014": {
     "id": "logitech_Sr-Product-Manager---Logitech-for-Business-Services-Growth_146014",
@@ -27535,7 +28012,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "mastercard_ARC-Research-Consultant---Quantitative-Research--Data-Visualization--L8-_R-274735": {
     "id": "mastercard_ARC-Research-Consultant---Quantitative-Research--Data-Visualization--L8-_R-274735",
@@ -28318,7 +28796,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "mastercard_Director--Strategic-Analytics--Go-to-Market-_R-276145": {
     "id": "mastercard_Director--Strategic-Analytics--Go-to-Market-_R-276145",
@@ -28921,7 +29400,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "mastercard_Manager-Analytics--Services-EEMEA---South-Africa_R-267657": {
     "id": "mastercard_Manager-Analytics--Services-EEMEA---South-Africa_R-267657",
@@ -29088,7 +29568,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:28:50.726638",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "mastercard_Principal--Project-Manager---Career-Ecosystem_R-274491": {
     "id": "mastercard_Principal--Project-Manager---Career-Ecosystem_R-274491",
@@ -29427,7 +29908,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "mastercard_Senior-Counsel--Privacy---Data-Protection_R-277091": {
     "id": "mastercard_Senior-Counsel--Privacy---Data-Protection_R-277091",
@@ -29706,7 +30188,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "mediaalpha_8540404002": {
     "id": "mediaalpha_8540404002",
@@ -29727,7 +30210,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "mercury_5780305004": {
     "id": "mercury_5780305004",
@@ -29748,7 +30232,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "fetched"
   },
   "mercury_5789686004": {
     "id": "mercury_5789686004",
@@ -29769,7 +30254,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "vp",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "mercury_5806201004": {
     "id": "mercury_5806201004",
@@ -29790,7 +30276,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "mercury_5812238004": {
     "id": "mercury_5812238004",
@@ -29811,7 +30298,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "vp",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "mercury_5847980004": {
     "id": "mercury_5847980004",
@@ -29832,7 +30320,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "mercury_5848243004": {
     "id": "mercury_5848243004",
@@ -29853,7 +30342,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "mercury_5856800004": {
     "id": "mercury_5856800004",
@@ -29874,7 +30364,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "mercury_5867562004": {
     "id": "mercury_5867562004",
@@ -29895,7 +30386,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "mercury_5987513004": {
     "id": "mercury_5987513004",
@@ -29916,7 +30408,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "mercury_5993466004": {
     "id": "mercury_5993466004",
@@ -29937,7 +30430,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "mindtheproduct_browse": {
     "id": "mindtheproduct_browse",
@@ -31832,7 +32326,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Capacity-Operations-and-Analytics-Manager_JR2017487": {
     "id": "nvidiawd_Capacity-Operations-and-Analytics-Manager_JR2017487",
@@ -31853,7 +32348,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Customer-Program-Manager---Auto_JR1989272": {
     "id": "nvidiawd_Customer-Program-Manager---Auto_JR1989272",
@@ -31874,7 +32370,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Customer-Program-Manager---Auto_JR2016383": {
     "id": "nvidiawd_Customer-Program-Manager---Auto_JR2016383",
@@ -31895,7 +32392,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Customer-Program-Manager---Generative-AI_JR2010261": {
     "id": "nvidiawd_Customer-Program-Manager---Generative-AI_JR2010261",
@@ -31916,7 +32414,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Customer-Quality-Program-Manager_JR2012703": {
     "id": "nvidiawd_Customer-Quality-Program-Manager_JR2012703",
@@ -31937,7 +32436,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Hackathon-Program-Manager---APAC_JR2002853": {
     "id": "nvidiawd_Hackathon-Program-Manager---APAC_JR2002853",
@@ -31958,7 +32458,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Manager--Developer-Technology_JR2011456-1": {
     "id": "nvidiawd_Manager--Developer-Technology_JR2011456-1",
@@ -31979,7 +32480,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Operation-Program-Manager_JR2015612": {
     "id": "nvidiawd_Operation-Program-Manager_JR2015612",
@@ -32000,7 +32502,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Principal-Product-Manager---AI-Products_JR2018040": {
     "id": "nvidiawd_Principal-Product-Manager---AI-Products_JR2018040",
@@ -32021,7 +32524,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Principal-Product-Manager--AI-Frameworks_JR2011865": {
     "id": "nvidiawd_Principal-Product-Manager--AI-Frameworks_JR2011865",
@@ -32042,7 +32546,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Principal-Product-Manager_JR2017591": {
     "id": "nvidiawd_Principal-Product-Manager_JR2017591",
@@ -32063,7 +32568,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Principal-Services-Program-Manager_JR2016629": {
     "id": "nvidiawd_Principal-Services-Program-Manager_JR2016629",
@@ -32084,7 +32590,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Principal-Sourcer--Supply-Chain-Sourcing-Strategy-and-Analytics_JR2012574": {
     "id": "nvidiawd_Principal-Sourcer--Supply-Chain-Sourcing-Strategy-and-Analytics_JR2012574",
@@ -32105,7 +32612,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Principal-Technical-Program-Manager---Networking_JR2015276": {
     "id": "nvidiawd_Principal-Technical-Program-Manager---Networking_JR2015276",
@@ -32126,7 +32634,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Product-Manager---DGX-Serviceability_JR2005196": {
     "id": "nvidiawd_Product-Manager---DGX-Serviceability_JR2005196",
@@ -32147,7 +32656,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Product-Manager---Open-Models_JR2009572-1": {
     "id": "nvidiawd_Product-Manager---Open-Models_JR2009572-1",
@@ -32168,7 +32678,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Product-Manager--AI-Partner-Solutions-and-OEM-Ecosystem_JR2002512": {
     "id": "nvidiawd_Product-Manager--AI-Partner-Solutions-and-OEM-Ecosystem_JR2002512",
@@ -32189,7 +32700,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Product-Manager--AI-Platform-Kernels-and-Communication-Libraries_JR1998788": {
     "id": "nvidiawd_Product-Manager--AI-Platform-Kernels-and-Communication-Libraries_JR1998788",
@@ -32210,7 +32722,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Product-Manager--AI-Platform-SW---Agentic-AI-Kernel-Generation_JR2016992": {
     "id": "nvidiawd_Product-Manager--AI-Platform-SW---Agentic-AI-Kernel-Generation_JR2016992",
@@ -32231,7 +32744,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Product-Manager--CUDA-Q_JR2015280": {
     "id": "nvidiawd_Product-Manager--CUDA-Q_JR2015280",
@@ -32252,7 +32766,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Product-Program-Manager_JR2005467": {
     "id": "nvidiawd_Product-Program-Manager_JR2005467",
@@ -32273,7 +32788,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Senior-ADAS-Product-Manager---Autonomous-Vehicles_JR2013832": {
     "id": "nvidiawd_Senior-ADAS-Product-Manager---Autonomous-Vehicles_JR2013832",
@@ -32294,7 +32810,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Senior-Accelerated-Computing-Product-Manager_JR2008293": {
     "id": "nvidiawd_Senior-Accelerated-Computing-Product-Manager_JR2008293",
@@ -32315,7 +32832,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Senior-Hardware-Program-Manager_JR2014736": {
     "id": "nvidiawd_Senior-Hardware-Program-Manager_JR2014736",
@@ -32336,7 +32854,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Senior-Product-Manager---AIOps_JR2017455": {
     "id": "nvidiawd_Senior-Product-Manager---AIOps_JR2017455",
@@ -32357,7 +32876,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Senior-Product-Manager--AI-Inference---Dynamo_JR2016092": {
     "id": "nvidiawd_Senior-Product-Manager--AI-Inference---Dynamo_JR2016092",
@@ -32378,7 +32898,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Senior-Product-Manager--Kubernetes-AI-Platform-and-Operational-Tools_JR2014222": {
     "id": "nvidiawd_Senior-Product-Manager--Kubernetes-AI-Platform-and-Operational-Tools_JR2014222",
@@ -32399,7 +32920,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Senior-Product-Manager--Local-AI-and-Agents-for-Enterprise_JR2016964": {
     "id": "nvidiawd_Senior-Product-Manager--Local-AI-and-Agents-for-Enterprise_JR2016964",
@@ -32420,7 +32942,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Senior-Product-Manager--NVIDIA-Mission-Control_JR2017360-1": {
     "id": "nvidiawd_Senior-Product-Manager--NVIDIA-Mission-Control_JR2017360-1",
@@ -32441,7 +32964,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Senior-Product-Manager--STX_JR2015740-1": {
     "id": "nvidiawd_Senior-Product-Manager--STX_JR2015740-1",
@@ -32462,7 +32986,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Senior-Technical-Product-Manager---In-Vehicle-Generative-AI-Experiences_JR2018168": {
     "id": "nvidiawd_Senior-Technical-Product-Manager---In-Vehicle-Generative-AI-Experiences_JR2018168",
@@ -32483,7 +33008,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Senior-Technical-Program-Manager---Robotics_JR2015734-1": {
     "id": "nvidiawd_Senior-Technical-Program-Manager---Robotics_JR2015734-1",
@@ -32504,7 +33030,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Senior-Technical-Program-Manager_JR2009636": {
     "id": "nvidiawd_Senior-Technical-Program-Manager_JR2009636",
@@ -32525,7 +33052,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Supplier-Operations-Program-Manager_JR2014803": {
     "id": "nvidiawd_Supplier-Operations-Program-Manager_JR2014803",
@@ -32546,7 +33074,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Technical-Program-Manager---Capacity-Systems_JR2014919": {
     "id": "nvidiawd_Technical-Program-Manager---Capacity-Systems_JR2014919",
@@ -32567,7 +33096,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Technical-Program-Manager---VLSI_JR2015102": {
     "id": "nvidiawd_Technical-Program-Manager---VLSI_JR2015102",
@@ -32588,7 +33118,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "nvidiawd_Well-being-Program-Manager_JR2017499": {
     "id": "nvidiawd_Well-being-Program-Manager_JR2017499",
@@ -32609,7 +33140,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "okta_6856431": {
     "id": "okta_6856431",
@@ -32630,7 +33162,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "okta_7254769": {
     "id": "okta_7254769",
@@ -32651,7 +33184,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "okta_7603685": {
     "id": "okta_7603685",
@@ -32672,7 +33206,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "okta_7633452": {
     "id": "okta_7633452",
@@ -32693,7 +33228,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "okta_7681401": {
     "id": "okta_7681401",
@@ -32714,7 +33250,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "okta_7728562": {
     "id": "okta_7728562",
@@ -32735,7 +33272,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "okta_7768847": {
     "id": "okta_7768847",
@@ -32756,7 +33294,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "okta_7780488": {
     "id": "okta_7780488",
@@ -32777,7 +33316,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "okta_7839344": {
     "id": "okta_7839344",
@@ -32798,7 +33338,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "okta_7847166": {
     "id": "okta_7847166",
@@ -32819,7 +33360,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "okta_7893951": {
     "id": "okta_7893951",
@@ -32840,7 +33382,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "okta_7895690": {
     "id": "okta_7895690",
@@ -32861,7 +33404,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "okta_7913787": {
     "id": "okta_7913787",
@@ -32882,7 +33426,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "okta_7926062": {
     "id": "okta_7926062",
@@ -32903,7 +33448,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "onetrust_7778725": {
     "id": "onetrust_7778725",
@@ -32924,7 +33470,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "onetrust_7812002": {
     "id": "onetrust_7812002",
@@ -32945,7 +33492,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "onetrust_7825554": {
     "id": "onetrust_7825554",
@@ -32966,7 +33514,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "onetrust_7825559": {
     "id": "onetrust_7825559",
@@ -32987,7 +33536,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "onetrust_7825565": {
     "id": "onetrust_7825565",
@@ -33008,7 +33558,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "onetrust_7851865": {
     "id": "onetrust_7851865",
@@ -33029,7 +33580,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "onetrust_7909076": {
     "id": "onetrust_7909076",
@@ -33050,7 +33602,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "onxmaps_4666346006": {
     "id": "onxmaps_4666346006",
@@ -33071,7 +33624,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "pinterest_6378121": {
     "id": "pinterest_6378121",
@@ -34130,7 +34684,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "reformation_7776504": {
     "id": "reformation_7776504",
@@ -34151,7 +34706,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": "vp",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "reformation_7926698": {
     "id": "reformation_7926698",
@@ -34172,7 +34728,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "riotgames_6197738": {
     "id": "riotgames_6197738",
@@ -34193,7 +34750,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "riotgames_7236634": {
     "id": "riotgames_7236634",
@@ -34214,7 +34772,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "riotgames_7551366": {
     "id": "riotgames_7551366",
@@ -34235,7 +34794,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "riotgames_7674335": {
     "id": "riotgames_7674335",
@@ -34256,7 +34816,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "riotgames_7695533": {
     "id": "riotgames_7695533",
@@ -34277,7 +34838,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "riotgames_7782357": {
     "id": "riotgames_7782357",
@@ -34298,7 +34860,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "riotgames_7838544": {
     "id": "riotgames_7838544",
@@ -34319,7 +34882,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "robinhood_7587151": {
     "id": "robinhood_7587151",
@@ -34340,7 +34904,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "robinhood_7707158": {
     "id": "robinhood_7707158",
@@ -34361,7 +34926,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "robinhood_7747728": {
     "id": "robinhood_7747728",
@@ -34382,7 +34948,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "robinhood_7773503": {
     "id": "robinhood_7773503",
@@ -34403,7 +34970,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "robinhood_7821803": {
     "id": "robinhood_7821803",
@@ -34424,7 +34992,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "roku_7269400": {
     "id": "roku_7269400",
@@ -35357,7 +35926,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "roku_7812786": {
     "id": "roku_7812786",
@@ -35574,7 +36144,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "roku_7913338": {
     "id": "roku_7913338",
@@ -36139,7 +36710,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "salesforce_Director--Recruiting-Data-Analytics---Insights_JR323801": {
     "id": "salesforce_Director--Recruiting-Data-Analytics---Insights_JR323801",
@@ -36286,7 +36858,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "salesforce_Events-Creative-Program-Manager_JR342904": {
     "id": "salesforce_Events-Creative-Program-Manager_JR342904",
@@ -36307,7 +36880,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "salesforce_Forward-Deployed-Product-Manager_JR339744": {
     "id": "salesforce_Forward-Deployed-Product-Manager_JR339744",
@@ -37444,7 +38018,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_4982485008": {
     "id": "scopely_4982485008",
@@ -37465,7 +38040,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_4994957008": {
     "id": "scopely_4994957008",
@@ -37486,7 +38062,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5105376008": {
     "id": "scopely_5105376008",
@@ -37507,7 +38084,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5116884008": {
     "id": "scopely_5116884008",
@@ -37528,7 +38106,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5122249008": {
     "id": "scopely_5122249008",
@@ -37549,7 +38128,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5123355008": {
     "id": "scopely_5123355008",
@@ -37570,7 +38150,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5126884008": {
     "id": "scopely_5126884008",
@@ -37591,7 +38172,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5151654008": {
     "id": "scopely_5151654008",
@@ -37612,7 +38194,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5180554008": {
     "id": "scopely_5180554008",
@@ -37633,7 +38216,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5180564008": {
     "id": "scopely_5180564008",
@@ -37654,7 +38238,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "vp",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5180566008": {
     "id": "scopely_5180566008",
@@ -37675,7 +38260,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5180568008": {
     "id": "scopely_5180568008",
@@ -37696,7 +38282,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5181050008": {
     "id": "scopely_5181050008",
@@ -37717,7 +38304,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5191999008": {
     "id": "scopely_5191999008",
@@ -37738,7 +38326,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5200034008": {
     "id": "scopely_5200034008",
@@ -37759,7 +38348,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5198233008": {
     "id": "scopely_5198233008",
@@ -37780,7 +38370,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5204332008": {
     "id": "scopely_5204332008",
@@ -37801,7 +38392,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5204525008": {
     "id": "scopely_5204525008",
@@ -37822,7 +38414,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5205958008": {
     "id": "scopely_5205958008",
@@ -37843,7 +38436,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5206680008": {
     "id": "scopely_5206680008",
@@ -37864,7 +38458,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5210078008": {
     "id": "scopely_5210078008",
@@ -37885,7 +38480,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "servicenow_744000088238535": {
     "id": "servicenow_744000088238535",
@@ -38068,7 +38664,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "servicetitan_Data-Quality-Analyst_JR114325-1": {
     "id": "servicetitan_Data-Quality-Analyst_JR114325-1",
@@ -38089,7 +38686,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "servicetitan_Data-Quality-Analyst_JR114757": {
     "id": "servicetitan_Data-Quality-Analyst_JR114757",
@@ -38110,7 +38708,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "servicetitan_Director--Product-Analytics_JR114135": {
     "id": "servicetitan_Director--Product-Analytics_JR114135",
@@ -38131,7 +38730,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "servicetitan_Manager--Revenue-Operations_JR114583": {
     "id": "servicetitan_Manager--Revenue-Operations_JR114583",
@@ -38152,7 +38752,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "servicetitan_Senior-Analyst--People-Analytics_JR114339": {
     "id": "servicetitan_Senior-Analyst--People-Analytics_JR114339",
@@ -38173,7 +38774,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "servicetitan_Senior-Product-Manager_JR114521": {
     "id": "servicetitan_Senior-Product-Manager_JR114521",
@@ -38194,7 +38796,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "servicetitan_Senior-Product-Manager_JR114659": {
     "id": "servicetitan_Senior-Product-Manager_JR114659",
@@ -38215,7 +38818,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "servicetitan_Senior-Product-Manager_JR114806": {
     "id": "servicetitan_Senior-Product-Manager_JR114806",
@@ -38236,7 +38840,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "servicetitan_Sr-Manager--Revenue-FP-A_JR114471": {
     "id": "servicetitan_Sr-Manager--Revenue-FP-A_JR114471",
@@ -38257,7 +38862,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "servicetitan_Staff-Product-Manager--Australia_JR114061-1": {
     "id": "servicetitan_Staff-Product-Manager--Australia_JR114061-1",
@@ -38278,7 +38884,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "snap_AI-Community-Program-Manager_R0044661-1": {
     "id": "snap_AI-Community-Program-Manager_R0044661-1",
@@ -38389,7 +38996,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "snap_Technical-Operations-Program-Manager_R0042988": {
     "id": "snap_Technical-Operations-Program-Manager_R0042988",
@@ -38662,7 +39270,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4646234005": {
     "id": "thenewyorktimes_4646234005",
@@ -38683,7 +39292,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4646237005": {
     "id": "thenewyorktimes_4646237005",
@@ -38704,7 +39314,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4663730005": {
     "id": "thenewyorktimes_4663730005",
@@ -38725,7 +39336,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4669945005": {
     "id": "thenewyorktimes_4669945005",
@@ -38746,7 +39358,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4671484005": {
     "id": "thenewyorktimes_4671484005",
@@ -38767,7 +39380,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4672515005": {
     "id": "thenewyorktimes_4672515005",
@@ -38788,7 +39402,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4680052005": {
     "id": "thenewyorktimes_4680052005",
@@ -38809,7 +39424,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4680056005": {
     "id": "thenewyorktimes_4680056005",
@@ -38830,7 +39446,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4681393005": {
     "id": "thenewyorktimes_4681393005",
@@ -38851,7 +39468,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4685332005": {
     "id": "thenewyorktimes_4685332005",
@@ -38872,7 +39490,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4685834005": {
     "id": "thenewyorktimes_4685834005",
@@ -38893,7 +39512,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4686928005": {
     "id": "thenewyorktimes_4686928005",
@@ -38914,7 +39534,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4688249005": {
     "id": "thenewyorktimes_4688249005",
@@ -38935,7 +39556,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4688259005": {
     "id": "thenewyorktimes_4688259005",
@@ -38956,7 +39578,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4692533005": {
     "id": "thenewyorktimes_4692533005",
@@ -38977,7 +39600,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4694318005": {
     "id": "thenewyorktimes_4694318005",
@@ -38998,7 +39622,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4696602005": {
     "id": "thenewyorktimes_4696602005",
@@ -39019,7 +39644,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4696606005": {
     "id": "thenewyorktimes_4696606005",
@@ -39040,7 +39666,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4696964005": {
     "id": "thenewyorktimes_4696964005",
@@ -39061,7 +39688,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thetradedesk_4682475007": {
     "id": "thetradedesk_4682475007",
@@ -39664,7 +40292,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twilio_7531453": {
     "id": "twilio_7531453",
@@ -39685,7 +40314,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twilio_7664688": {
     "id": "twilio_7664688",
@@ -39706,7 +40336,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twilio_7818178": {
     "id": "twilio_7818178",
@@ -39727,7 +40358,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twilio_7821526": {
     "id": "twilio_7821526",
@@ -39748,7 +40380,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twilio_7821489": {
     "id": "twilio_7821489",
@@ -39769,7 +40402,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twilio_7918885": {
     "id": "twilio_7918885",
@@ -39790,7 +40424,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twilio_7923207": {
     "id": "twilio_7923207",
@@ -39811,7 +40446,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twitch_8445507002": {
     "id": "twitch_8445507002",
@@ -39832,7 +40468,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twitch_8449763002": {
     "id": "twitch_8449763002",
@@ -39853,7 +40490,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twitch_8494138002": {
     "id": "twitch_8494138002",
@@ -39874,7 +40512,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twitch_8532650002": {
     "id": "twitch_8532650002",
@@ -39895,7 +40534,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twitch_8537000002": {
     "id": "twitch_8537000002",
@@ -39916,7 +40556,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twitch_8539977002": {
     "id": "twitch_8539977002",
@@ -39937,7 +40578,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twitch_8539978002": {
     "id": "twitch_8539978002",
@@ -39958,7 +40600,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twitch_8539981002": {
     "id": "twitch_8539981002",
@@ -39979,7 +40622,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twitch_8544719002": {
     "id": "twitch_8544719002",
@@ -40000,7 +40644,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twitch_8551033002": {
     "id": "twitch_8551033002",
@@ -40021,7 +40666,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twitch_8551034002": {
     "id": "twitch_8551034002",
@@ -40042,7 +40688,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twitch_8551036002": {
     "id": "twitch_8551036002",
@@ -40063,7 +40710,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twitch_8546342002": {
     "id": "twitch_8546342002",
@@ -40084,7 +40732,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twitch_8551040002": {
     "id": "twitch_8551040002",
@@ -40105,7 +40754,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "twitch_8551041002": {
     "id": "twitch_8551041002",
@@ -40126,7 +40776,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "underdog_browse": {
     "id": "underdog_browse",
@@ -40861,7 +41512,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:28:03.629235",
     "status": "new",
-    "description": "&lt;p&gt;&lt;strong&gt;The opportunity&lt;/strong&gt;&lt;br&gt;We\u2019re looking for a versatile and strategic Product Manager to join our Marketplace &amp;amp; Commerce team. In this role, you won&#39;t be tethered to a single feature. Instead, you will work across multiple workstreams, serving as the connective tissue between our marketing, web, commerce, and individual product layers. Your mission is to understand and optimize the entire user journey\u2014learning how our users move from the top of th"
+    "description": "&lt;p&gt;&lt;strong&gt;The opportunity&lt;/strong&gt;&lt;br&gt;We\u2019re looking for a versatile and strategic Product Manager to join our Marketplace &amp;amp; Commerce team. In this role, you won&#39;t be tethered to a single feature. Instead, you will work across multiple workstreams, serving as the connective tissue between our marketing, web, commerce, and individual product layers. Your mission is to understand and optimize the entire user journey\u2014learning how our users move from the top of th",
+    "description_source": "stored"
   },
   "unity3d_7913865": {
     "id": "unity3d_7913865",
@@ -41046,7 +41698,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:29:06.893932",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "visa_Analyst--Visa-Consulting-and-Analytics--VCA---Core-Consulting-Practice_REF082219W": {
     "id": "visa_Analyst--Visa-Consulting-and-Analytics--VCA---Core-Consulting-Practice_REF082219W",
@@ -41057,7 +41710,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:29:12.741078",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "visa_Analyst--Visa-Consulting-and-Analytics--VCA---Implementation-Services--VIS-_REF078761W": {
     "id": "visa_Analyst--Visa-Consulting-and-Analytics--VCA---Implementation-Services--VIS-_REF078761W",
@@ -41308,7 +41962,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:29:12.741032",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "visa_Director--Acceptance--Visa-Consulting---Analytics_REF078167W": {
     "id": "visa_Director--Acceptance--Visa-Consulting---Analytics_REF078167W",
@@ -41643,7 +42298,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:29:14.701195",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "visa_Product-Analytics-Manager--AI-and-Data-Platforms_REF081562W": {
     "id": "visa_Product-Analytics-Manager--AI-and-Data-Platforms_REF081562W",
@@ -41690,7 +42346,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:29:12.741094",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "visa_Product-Manager--Innovation_REF082060W": {
     "id": "visa_Product-Manager--Innovation_REF082060W",
@@ -41701,7 +42358,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:29:06.893981",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "visa_Product-Manager-Go-to-Market-Germany_REF078435W": {
     "id": "visa_Product-Manager-Go-to-Market-Germany_REF078435W",
@@ -41800,7 +42458,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:29:14.701221",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "visa_Senior-Product-Manager_REF081327W": {
     "id": "visa_Senior-Product-Manager_REF081327W",
@@ -42349,7 +43008,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "visa_Sr-Product-Manager---Payment-Rails-LAC_REF081990W": {
     "id": "visa_Sr-Product-Manager---Payment-Rails-LAC_REF081990W",
@@ -42600,7 +43260,8 @@
     "posted_ts": 0,
     "found_date": "2026-05-19T16:29:12.741058",
     "status": "new",
-    "description": ""
+    "description": "",
+    "description_source": "none"
   },
   "walmart_Data-Analyst-II---Data-Ventures_R-2410197-1": {
     "id": "walmart_Data-Analyst-II---Data-Ventures_R-2410197-1",
@@ -42759,7 +43420,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "walmart_Group-Director--Data-Analytics---Business-Analytics-and-Tools_R-2496589": {
     "id": "walmart_Group-Director--Data-Analytics---Business-Analytics-and-Tools_R-2496589",
@@ -42880,7 +43542,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "walmart_Manager--Advanced-Analytics_R-2503833": {
     "id": "walmart_Manager--Advanced-Analytics_R-2503833",
@@ -42901,7 +43564,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "walmart_Senior-Manager--Advanced-Analytics_R-2431093": {
     "id": "walmart_Senior-Manager--Advanced-Analytics_R-2431093",
@@ -43166,7 +43830,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "walmart_Principal-Technical-Program-Manager_R-2451462-1": {
     "id": "walmart_Principal-Technical-Program-Manager_R-2451462-1",
@@ -43279,7 +43944,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "walmart_Staff-Technical-Program-Manager_R-2470322-1": {
     "id": "walmart_Staff-Technical-Program-Manager_R-2470322-1",
@@ -43492,7 +44158,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "walmart_Principal-Product-Manager_R-2451360-1": {
     "id": "walmart_Principal-Product-Manager_R-2451360-1",
@@ -44011,7 +44678,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "walmart_XMLNAME--USA--Senior-Manager--Advanced-Analytics_R-2363249": {
     "id": "walmart_XMLNAME--USA--Senior-Manager--Advanced-Analytics_R-2363249",
@@ -44414,7 +45082,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "walmart_XMLNAME--USA--Staff--Product-Manager---Analytics-Platforms_R-2462833": {
     "id": "walmart_XMLNAME--USA--Staff--Product-Manager---Analytics-Platforms_R-2462833",
@@ -44489,7 +45158,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "weedmaps77_8479768002": {
     "id": "weedmaps77_8479768002",
@@ -44510,7 +45180,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "weedmaps77_8487398002": {
     "id": "weedmaps77_8487398002",
@@ -44531,7 +45202,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "weedmaps77_8487417002": {
     "id": "weedmaps77_8487417002",
@@ -44552,7 +45224,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "weedmaps77_8487428002": {
     "id": "weedmaps77_8487428002",
@@ -44573,7 +45246,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "weedmaps77_8500082002": {
     "id": "weedmaps77_8500082002",
@@ -44594,7 +45268,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "weedmaps77_8535958002": {
     "id": "weedmaps77_8535958002",
@@ -44615,7 +45290,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "weedmaps77_8539692002": {
     "id": "weedmaps77_8539692002",
@@ -44636,7 +45312,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "weedmaps77_8539708002": {
     "id": "weedmaps77_8539708002",
@@ -44657,7 +45334,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "wellfound_browse": {
     "id": "wellfound_browse",
@@ -44886,7 +45564,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "yahoo_Principal-Product-Manager--Client-Platforms---Yahoo-Mail_JR0026909": {
     "id": "yahoo_Principal-Product-Manager--Client-Platforms---Yahoo-Mail_JR0026909",
@@ -44907,7 +45586,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "yahoo_Principal-Product-Manager--Identity-Fraud_JR0027079": {
     "id": "yahoo_Principal-Product-Manager--Identity-Fraud_JR0027079",
@@ -44928,7 +45608,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "yahoo_Product-Manager---Ad-Revenue-Optimization--Monetization-and-Media-Ecosystem--Yahoo-Taiwan_JR0027087": {
     "id": "yahoo_Product-Manager---Ad-Revenue-Optimization--Monetization-and-Media-Ecosystem--Yahoo-Taiwan_JR0027087",
@@ -44949,7 +45630,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "yahoo_Product-Manager--Discovery_JR0026879": {
     "id": "yahoo_Product-Manager--Discovery_JR0026879",
@@ -44970,7 +45652,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "yahoo_Senior-Product-Manager---Content-Serving---Extensibility_JR0026882": {
     "id": "yahoo_Senior-Product-Manager---Content-Serving---Extensibility_JR0026882",
@@ -44991,7 +45674,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "yahoo_Senior-Product-Manager--Ads-Monetization---Yahoo-Mail_JR0027064": {
     "id": "yahoo_Senior-Product-Manager--Ads-Monetization---Yahoo-Mail_JR0027064",
@@ -45012,7 +45696,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "yahoo_Sr-Director-Consumer-Data-Product---Activation_JR0026917-1": {
     "id": "yahoo_Sr-Director-Consumer-Data-Product---Activation_JR0026917-1",
@@ -45033,7 +45718,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "vp",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "yahoo_Sr-Product-Manager---Partnerships--Yahoo-Mail-_JR0027184-1": {
     "id": "yahoo_Sr-Product-Manager---Partnerships--Yahoo-Mail-_JR0027184-1",
@@ -45054,7 +45740,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "yahoo_Sr-Product-Manager--Central-Data_JR0027048": {
     "id": "yahoo_Sr-Product-Manager--Central-Data_JR0027048",
@@ -45075,7 +45762,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "yahoo_Sr-Product-Manager--Platforms_JR0026959": {
     "id": "yahoo_Sr-Product-Manager--Platforms_JR0026959",
@@ -45096,7 +45784,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "zetaglobal_5557459004": {
     "id": "zetaglobal_5557459004",
@@ -45525,7 +46214,8 @@
     "tc_estimate_max": null,
     "salary_tier": "late_private",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "zillow_Manager--SDE---Industry-Data-and-Analytics_P749853-1": {
     "id": "zillow_Manager--SDE---Industry-Data-and-Analytics_P749853-1",
@@ -45546,7 +46236,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "zillow_Principal-Product-Manager--Customer-Experience-Technology_P749370-1": {
     "id": "zillow_Principal-Product-Manager--Customer-Experience-Technology_P749370-1",
@@ -45567,7 +46258,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "zillow_Senior-Manager--Ads-and-Marketing-Data-Science_P750305": {
     "id": "zillow_Senior-Manager--Ads-and-Marketing-Data-Science_P750305",
@@ -45588,7 +46280,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "zillow_Senior-Product-Manager--AI-Platform---Ecosystem_P750062": {
     "id": "zillow_Senior-Product-Manager--AI-Platform---Ecosystem_P750062",
@@ -45609,7 +46302,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "zillow_Senior-Product-Manager--Agent-Performance_P749365-1": {
     "id": "zillow_Senior-Product-Manager--Agent-Performance_P749365-1",
@@ -45630,7 +46324,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "zillow_Senior-Product-Manager--Quote-to-Cash_P748761-1": {
     "id": "zillow_Senior-Product-Manager--Quote-to-Cash_P748761-1",
@@ -45651,7 +46346,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "zillow_Senior-Product-Manager--Search---Evaluate---StreetEasy_P750065-1": {
     "id": "zillow_Senior-Product-Manager--Search---Evaluate---StreetEasy_P750065-1",
@@ -45672,7 +46368,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "zillow_Senior-Product-Manager--Seller_P747692": {
     "id": "zillow_Senior-Product-Manager--Seller_P747692",
@@ -45693,7 +46390,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "zillow_Senior-Product-Manager--Touring-and-Connections_P749261-1": {
     "id": "zillow_Senior-Product-Manager--Touring-and-Connections_P749261-1",
@@ -45714,7 +46412,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "zillow_Senior-Product-Manager--Workday_P749459-2": {
     "id": "zillow_Senior-Product-Manager--Workday_P749459-2",
@@ -45735,7 +46434,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "zillow_Senior-Product-Manager_P749740-1": {
     "id": "zillow_Senior-Product-Manager_P749740-1",
@@ -45756,7 +46456,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "zillow_Senior-Product-Manager_P750354-1": {
     "id": "zillow_Senior-Product-Manager_P750354-1",
@@ -45777,7 +46478,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "zillow_Senior-Program-Manager--ZRAM_P750037-1": {
     "id": "zillow_Senior-Program-Manager--ZRAM_P750037-1",
@@ -45798,7 +46500,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "zillow_Senior-Technical-Program-Manager_P749541": {
     "id": "zillow_Senior-Technical-Program-Manager_P749541",
@@ -45819,7 +46522,8 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "zillow_Senior-Technical-Program-Manager_P750010-2": {
     "id": "zillow_Senior-Technical-Program-Manager_P750010-2",
@@ -45840,6 +46544,7 @@
     "tc_estimate_max": null,
     "salary_tier": "growth",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   }
 }
