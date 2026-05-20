@@ -1818,7 +1818,8 @@
     "tc_estimate_max": 387502,
     "salary_tier": "bigtech",
     "salary_level": "principal",
-    "salary_confidence": "high"
+    "salary_confidence": "high",
+    "description_source": "none"
   },
   "autodesk_Principal-Solution-Development-Manager_26WD97786-1": {
     "id": "autodesk_Principal-Solution-Development-Manager_26WD97786-1",
@@ -3645,7 +3646,8 @@
     "tc_estimate_max": 206850,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": "high"
+    "salary_confidence": "high",
+    "description_source": "none"
   },
   "capitalone_Core-Ops-Data-Integrity-Reviewer--QC-_R239768-1": {
     "id": "capitalone_Core-Ops-Data-Integrity-Reviewer--QC-_R239768-1",
@@ -9272,7 +9274,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_2911aa1cdd44c929812b8bae04638ce6": {
     "id": "dice_2911aa1cdd44c929812b8bae04638ce6",
@@ -11967,7 +11976,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_493e0dc1f65f6606fad33e0fc9431ff8": {
     "id": "dice_493e0dc1f65f6606fad33e0fc9431ff8",
@@ -23361,7 +23377,14 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "match_score": 0,
+    "ats_score": 0,
+    "resume_used": "N/A",
+    "reason": "Auto-skipped: Job board aggregator: dice",
+    "skills_gap": "N/A",
+    "confidence": "N/A",
+    "description_source": "skipped"
   },
   "dice_f2c3dcf4301ff9922355aae7ae49c6f7": {
     "id": "dice_f2c3dcf4301ff9922355aae7ae49c6f7",
@@ -26818,7 +26841,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "ias_Senior-Data-Analyst_R-101337": {
     "id": "ias_Senior-Data-Analyst_R-101337",
@@ -30233,7 +30257,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "mastercard_ARC-Research-Manager---Quantitative-Research--Fieldwork--L7-_R-274733": {
     "id": "mastercard_ARC-Research-Manager---Quantitative-Research--Fieldwork--L7-_R-274733",
@@ -30255,7 +30280,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "mastercard_ARC-Research-Manager---Quantitative-Research-Consultant--Data-Processing--L8-_R-276193": {
     "id": "mastercard_ARC-Research-Manager---Quantitative-Research-Consultant--Data-Processing--L8-_R-276193",
@@ -30277,7 +30303,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "mastercard_Analyst--Analytics---Metrics_R-269629": {
     "id": "mastercard_Analyst--Analytics---Metrics_R-269629",
@@ -31306,7 +31333,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "mastercard_Senior-Product-Manager---Technical_R-275942": {
     "id": "mastercard_Senior-Product-Manager---Technical_R-275942",
@@ -31526,7 +31554,8 @@
     "tc_estimate_max": 215050,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": "medium"
+    "salary_confidence": "medium",
+    "description_source": "none"
   },
   "mastercard_Manager--Analytics---Metrics_R-275715": {
     "id": "mastercard_Manager--Analytics---Metrics_R-275715",
@@ -40728,7 +40757,8 @@
     "tc_estimate_max": 403155,
     "salary_tier": "bigtech",
     "salary_level": "senior_pm",
-    "salary_confidence": "high"
+    "salary_confidence": "high",
+    "description_source": "none"
   },
   "salesforce_Senior-Product-Manager--MuleSoft-Agent-Fabric_JR329478-1": {
     "id": "salesforce_Senior-Product-Manager--MuleSoft-Agent-Fabric_JR329478-1",
@@ -40922,7 +40952,8 @@
     "tc_estimate_max": null,
     "salary_tier": "bigtech",
     "salary_level": "senior_pm",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "salesforce_Strategy---Operations-Senior-Manager--Data-Solutions_JR340194-1": {
     "id": "salesforce_Strategy---Operations-Senior-Manager--Data-Solutions_JR340194-1",
@@ -41556,7 +41587,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "scopely_5224786008": {
     "id": "scopely_5224786008",
@@ -41578,7 +41610,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midstage",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "servicenow_744000088238535": {
     "id": "servicenow_744000088238535",
@@ -42064,7 +42097,8 @@
     "tc_estimate_max": 468600,
     "salary_tier": "growth",
     "salary_level": "principal",
-    "salary_confidence": "high"
+    "salary_confidence": "high",
+    "description_source": "none"
   },
   "snap_Product-Manager---Ads-Platform_R0045214-1": {
     "id": "snap_Product-Manager---Ads-Platform_R0045214-1",
@@ -42858,7 +42892,8 @@
     "tc_estimate_max": null,
     "salary_tier": "midcap",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "stored"
   },
   "thenewyorktimes_4694318005": {
     "id": "thenewyorktimes_4694318005",
@@ -45164,7 +45199,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "visa_Analyst--Loyalty-Analytics_REF081442W": {
     "id": "visa_Analyst--Loyalty-Analytics_REF081442W",
@@ -45268,7 +45304,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "visa_Client-Consulting-Analyst---Visa-Consulting---Analytics--VCA-_REF081591W-1": {
     "id": "visa_Client-Consulting-Analyst---Visa-Consulting---Analytics--VCA-_REF081591W-1",
@@ -45536,7 +45573,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "director",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "visa_Director--Flex-and-Installment-Solutions_REF081375W-1": {
     "id": "visa_Director--Flex-and-Installment-Solutions_REF081375W-1",
@@ -45634,7 +45672,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "visa_Head-of-Generative-AI-Research_REF075116W": {
     "id": "visa_Head-of-Generative-AI-Research_REF075116W",
@@ -46325,7 +46364,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "visa_Senior-Manager--Visa-Consulting-and-Analytics--VCA-_REF080793W": {
     "id": "visa_Senior-Manager--Visa-Consulting-and-Analytics--VCA-_REF080793W",
@@ -46914,7 +46954,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": null,
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "visa_XMLNAME--Consulting---Analytics-Manager_REF081729W": {
     "id": "visa_XMLNAME--Consulting---Analytics-Manager_REF081729W",
