@@ -45478,7 +45478,8 @@
     "tc_estimate_max": null,
     "salary_tier": "default",
     "salary_level": "principal",
-    "salary_confidence": null
+    "salary_confidence": null,
+    "description_source": "none"
   },
   "walmart_Staff-Product-Analytics-Manager_R-2451489-1": {
     "id": "walmart_Staff-Product-Analytics-Manager_R-2451489-1",
