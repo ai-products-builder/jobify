@@ -1505,6 +1505,12 @@ def run():
     print(f"\nDedup: {len(all_fresh)} scraped → {len(deduped)} unique ({dupes_collapsed} dupes collapsed)")
 
     # Merge into existing jobs.json, preserving scoring history
+    SALARY_FIELDS = (
+        "base_salary_min", "base_salary_max", "base_salary_source",
+        "bonus_pct", "equity_pct",
+        "tc_estimate_min", "tc_estimate_max",
+        "salary_tier", "salary_level", "salary_confidence",
+    )
     for job in deduped:
         jid = job["id"]
         if jid not in existing:
@@ -1516,6 +1522,17 @@ def run():
             existing[jid]["url"] = job["url"]
             if job.get("description") and not existing[jid].get("description"):
                 existing[jid]["description"] = job["description"]
+
+            # Backfill salary/TC fields: if the existing record is missing them
+            # (or has them as None), copy from the fresh scrape. This handles
+            # the case where jobs.json was populated before salary extraction
+            # was added. We never overwrite an already-populated salary value
+            # (employers don't change disclosed pay between scrapes).
+            for f in SALARY_FIELDS:
+                existing_val = existing[jid].get(f)
+                new_val = job.get(f)
+                if existing_val in (None, "") and new_val not in (None, ""):
+                    existing[jid][f] = new_val
 
     # Also run a dict-level pass to catch dupes that already snuck into jobs.json
     # (e.g. before this dedup was added, or from older scraper runs)
