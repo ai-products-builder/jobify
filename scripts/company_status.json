@@ -1,14 +1,14 @@
 {
-  "checked_at": "2026-05-19T22:40:42.317018",
+  "checked_at": "2026-05-20T00:05:50.430207",
   "summary": {
-    "total": 275,
-    "ok": 85,
+    "total": 273,
+    "ok": 87,
     "empty": 0,
-    "http_error": 17,
+    "http_error": 13,
     "timeout": 0,
     "exception": 4,
     "todo": 169,
-    "total_jobs_available": 14811
+    "total_jobs_available": 15946
   },
   "companies": [
     {
@@ -116,15 +116,6 @@
     },
     {
       "status": "HTTP_ERROR",
-      "http_code": 403,
-      "jobs_total": 0,
-      "url": "https://careers.equifax.com/api/jobs",
-      "company": "Equifax",
-      "ats": "phenom",
-      "slug": "careers.equifax.com"
-    },
-    {
-      "status": "HTTP_ERROR",
       "http_code": 404,
       "jobs_total": 0,
       "url": "https://boards-api.greenhouse.io/v1/boards/faireinc/jobs",
@@ -134,12 +125,12 @@
     },
     {
       "status": "HTTP_ERROR",
-      "http_code": 404,
+      "http_code": 403,
       "jobs_total": 0,
-      "url": "https://jobs.nvidia.com/api/jobs",
+      "url": "https://nvidia.eightfold.ai/api/apply/v2/jobs?domain=nvidia.com&start=0&num=5",
       "company": "NVIDIA",
-      "ats": "phenom",
-      "slug": "jobs.nvidia.com"
+      "ats": "eightfold",
+      "slug": "nvidia.eightfold.ai"
     },
     {
       "status": "HTTP_ERROR",
@@ -152,21 +143,12 @@
     },
     {
       "status": "HTTP_ERROR",
-      "http_code": 404,
+      "http_code": 422,
       "jobs_total": 0,
-      "url": "https://careers.qualcomm.com/api/jobs",
+      "url": "https://qualcomm.wd5.myworkdayjobs.com/wday/cxs/qualcomm/External/jobs",
       "company": "Qualcomm",
-      "ats": "phenom",
-      "slug": "careers.qualcomm.com"
-    },
-    {
-      "status": "HTTP_ERROR",
-      "http_code": 403,
-      "jobs_total": 0,
-      "url": "https://careers.homedepot.com/api/jobs",
-      "company": "The Home Depot",
-      "ats": "phenom",
-      "slug": "careers.homedepot.com"
+      "ats": "workday",
+      "slug": "qualcomm:External"
     },
     {
       "status": "HTTP_ERROR",
@@ -185,24 +167,6 @@
       "company": "Zepz",
       "ats": "hibob",
       "slug": "zepz"
-    },
-    {
-      "status": "HTTP_ERROR",
-      "http_code": 404,
-      "jobs_total": 0,
-      "url": "https://careers.zoom.us/api/jobs",
-      "company": "Zoom",
-      "ats": "phenom",
-      "slug": "careers.zoom.us"
-    },
-    {
-      "status": "HTTP_ERROR",
-      "http_code": 500,
-      "jobs_total": 0,
-      "url": "https://jobs.ebayinc.com/api/jobs",
-      "company": "eBay",
-      "ats": "phenom",
-      "slug": "jobs.ebayinc.com"
     },
     {
       "status": "OK",
@@ -270,7 +234,7 @@
     {
       "status": "OK",
       "http_code": 200,
-      "jobs_total": 472,
+      "jobs_total": 471,
       "url": "https://autodesk.wd1.myworkdayjobs.com/wday/cxs/autodesk/Ext/jobs",
       "company": "Autodesk",
       "ats": "workday",
@@ -279,7 +243,7 @@
     {
       "status": "OK",
       "http_code": 200,
-      "jobs_total": 584,
+      "jobs_total": 585,
       "url": "https://boards-api.greenhouse.io/v1/boards/axon/jobs",
       "company": "Axon",
       "ats": "greenhouse",
@@ -351,7 +315,7 @@
     {
       "status": "OK",
       "http_code": 200,
-      "jobs_total": 2108,
+      "jobs_total": 2114,
       "url": "https://boards-api.greenhouse.io/v1/boards/carvana/jobs",
       "company": "Carvana",
       "ats": "greenhouse",
@@ -513,7 +477,7 @@
     {
       "status": "OK",
       "http_code": 200,
-      "jobs_total": 26,
+      "jobs_total": 25,
       "url": "https://boards-api.greenhouse.io/v1/boards/gemini/jobs",
       "company": "Gemini",
       "ats": "greenhouse",
@@ -585,7 +549,7 @@
     {
       "status": "OK",
       "http_code": 200,
-      "jobs_total": 126,
+      "jobs_total": 125,
       "url": "https://boards-api.greenhouse.io/v1/boards/instacart/jobs",
       "company": "Instacart Ads",
       "ats": "greenhouse",
@@ -648,7 +612,7 @@
     {
       "status": "OK",
       "http_code": 200,
-      "jobs_total": 671,
+      "jobs_total": 670,
       "url": "https://mastercard.wd1.myworkdayjobs.com/wday/cxs/mastercard/CorporateCareers/jobs",
       "company": "Mastercard",
       "ats": "workday",
@@ -680,6 +644,15 @@
       "company": "Microsoft",
       "ats": "custom-pcsx",
       "slug": "dedicated"
+    },
+    {
+      "status": "OK",
+      "http_code": 200,
+      "jobs_total": 1125,
+      "url": "https://nvidia.wd5.myworkdayjobs.com/wday/cxs/nvidia/NVIDIAExternalCareerSite/jobs",
+      "company": "NVIDIA (Workday)",
+      "ats": "workday",
+      "slug": "nvidia:NVIDIAExternalCareerSite"
     },
     {
       "status": "OK",
@@ -729,7 +702,7 @@
     {
       "status": "OK",
       "http_code": 200,
-      "jobs_total": 150,
+      "jobs_total": 153,
       "url": "https://boards-api.greenhouse.io/v1/boards/reddit/jobs",
       "company": "Reddit",
       "ats": "greenhouse",
@@ -738,7 +711,7 @@
     {
       "status": "OK",
       "http_code": 200,
-      "jobs_total": 119,
+      "jobs_total": 120,
       "url": "https://boards-api.greenhouse.io/v1/boards/reformation/jobs",
       "company": "Reformation",
       "ats": "greenhouse",
@@ -810,7 +783,7 @@
     {
       "status": "OK",
       "http_code": 200,
-      "jobs_total": 91,
+      "jobs_total": 90,
       "url": "https://servicetitan.wd1.myworkdayjobs.com/wday/cxs/servicetitan/ServiceTitan/jobs",
       "company": "ServiceTitan",
       "ats": "workday",
@@ -855,7 +828,7 @@
     {
       "status": "OK",
       "http_code": 200,
-      "jobs_total": 165,
+      "jobs_total": 164,
       "url": "https://boards-api.greenhouse.io/v1/boards/thenewyorktimes/jobs",
       "company": "The New York Times",
       "ats": "greenhouse",
@@ -882,7 +855,7 @@
     {
       "status": "OK",
       "http_code": 200,
-      "jobs_total": 158,
+      "jobs_total": 159,
       "url": "https://boards-api.greenhouse.io/v1/boards/twilio/jobs",
       "company": "Twilio",
       "ats": "greenhouse",
@@ -936,7 +909,7 @@
     {
       "status": "OK",
       "http_code": 200,
-      "jobs_total": 71,
+      "jobs_total": 70,
       "url": "https://ouryahoo.wd5.myworkdayjobs.com/wday/cxs/ouryahoo/careers/jobs",
       "company": "Yahoo",
       "ats": "workday",
@@ -959,6 +932,15 @@
       "company": "Zillow",
       "ats": "workday",
       "slug": "zillow:Zillow_Group_External"
+    },
+    {
+      "status": "OK",
+      "http_code": 200,
+      "jobs_total": 5,
+      "url": "https://jobs.ebayinc.com/widgets",
+      "company": "eBay",
+      "ats": "phenom-widgets",
+      "slug": "jobs.ebayinc.com:EBAEBAUS"
     },
     {
       "status": "OK",
